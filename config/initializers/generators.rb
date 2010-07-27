@@ -1,4 +1,4 @@
-Features::Application.configure do
+Rails3Base::Application.configure do
   config.generators do |g|
     g.template_engine :erb
     g.integration_tool :cucumber

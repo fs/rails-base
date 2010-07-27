@@ -1,4 +1,4 @@
-Features::Application.routes.draw do
+Rails3Base::Application.routes.draw do
   devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout' }
   match 'login', :to => 'devise/sessions#new', :as => 'new_user_session'
   match 'logout', :to  => 'devise/sessions#destroy', :as => 'destroy_user_session'
