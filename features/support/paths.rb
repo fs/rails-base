@@ -10,17 +10,14 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
-    when /^the edit unit page with id: (\d+)$/i
-      edit_unit_path(:id => $1)
-    when /^the edit room page with id: (\d+)$/i
-      edit_room_path(:id => $1)
-    when /^the room page with id: (\d+)$/i
-      room_path(:id => $1)
-    when /^the user page with id: (\d+)$/i
-      user_path(:id => $1)
-    when /^the user units page with id: (\d+)$/i
-      user_units_path(:user_id => $1)
-
+    when /^the (.*) page with id: (\d+)$/i
+      begin
+        id, path_components = $2.to_i, $1.split(/\s+/)
+        self.send(path_components.push('path').join('_').to_sym, :id => id)
+      rescue Object => e
+        raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
+          "Now, go and add a mapping in #{__FILE__}"
+      end
     else
       begin
         page_name =~ /the (.*) page/
