@@ -9,6 +9,7 @@
 * Default host for mailer from config, checkout config/initializers/mailer.rb
 * Added time formats, checkout config/initializers/time_formats.rb
 * Cucumber, rspec, factory girl, pickle, autotest
+* Heroku ready http://fs-rails3-base.heroku.com
 
 == Quick start
 

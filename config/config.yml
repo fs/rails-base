@@ -1,6 +1,6 @@
 defaults: &defaults
   app_name: Features
-  noreply: noreply@features.flatsoft.com
+  noreply: noreply@fs-rails3-base.heroku.com
   host: localhost:3000
 
 development:
@@ -11,4 +11,4 @@ test:
 
 production:
   <<: *defaults
-  host: features.flatsoft.com
+  host: fs-rails3-base.heroku.com
