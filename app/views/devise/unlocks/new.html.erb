@@ -1,0 +1,11 @@
+<%  title 'Resend unlock instructions' %>
+
+<%= semantic_form_for(resource, :as => resource_name, :url => unlock_path(resource_name)) do |form| %>
+  <%= form.inputs do %>
+    <%= form.input :email, :required => true %>
+  <% end %>
+
+  <%= form.buttons do %>
+    <%= form.commit_button 'Resend unlock instructions' %>
+  <% end %>
+<% end %>

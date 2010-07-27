@@ -1,0 +1,11 @@
+<% title 'Resend confirmation instructions' %>
+
+<%= semantic_form_for(resource, :as => resource_name, :url => confirmation_path(resource_name)) do |form| %>
+  <%= form.inputs do %>
+    <%= form.input :email, :required => true %>
+  <% end %>
+
+  <%= form.buttons do %>
+    <%= form.commit_button 'Resend confirmation instructions' %>
+  <% end %>
+<% end %>

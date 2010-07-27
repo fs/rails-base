@@ -1,0 +1,14 @@
+defaults: &defaults
+  app_name: Features
+  noreply: noreply@features.flatsoft.com
+  host: localhost:3000
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+  host: features.flatsoft.com

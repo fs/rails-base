@@ -1,0 +1,17 @@
+<% title "Edit #{resource_name.to_s.humanize}" %>
+
+<%= semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |form| %>
+  <%= form.inputs do %>
+    <%= form.input :full_name, :required => true %>
+    <%= form.input :email, :required => true %>
+    <%= form.input :password, :required => true, :hint => "leave blank if you don't want to change it" %>
+    <%= form.input :password_confirmation, :required => true %>
+    <%= form.input :current_password, :required => true, :hint => "we need your current password to confirm your changes" %>
+  <% end %>
+
+  <%= form.buttons do %>
+    <%= form.commit_button 'Update' %>
+  <% end %>
+<% end %>
+
+<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete %>.</p>

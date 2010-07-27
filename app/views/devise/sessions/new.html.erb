@@ -1,0 +1,15 @@
+<% title 'Sign in' %>
+
+<%= semantic_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |form| %>
+  <%= form.inputs do %>
+    <%= form.input :email, :required => true %>
+    <%= form.input :password, :required => true %>
+    <%= form.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
+  <% end %>
+
+  <%= form.buttons do %>
+    <%= form.commit_button 'Sign in' %>
+  <% end %>
+<% end %>
+
+<%= render :partial => "devise/shared/links" %>

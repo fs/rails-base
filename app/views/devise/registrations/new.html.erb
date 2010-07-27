@@ -1,0 +1,16 @@
+<% title 'Sing up' %>
+
+<%= semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |form| %>
+  <%= form.inputs do %>
+    <%= form.input :full_name, :required => true %>
+    <%= form.input :email, :required => true %>
+    <%= form.input :password, :required => true %>
+    <%= form.input :password_confirmation, :required => true %>
+  <% end %>
+
+  <%= form.buttons do %>
+    <%= form.commit_button 'Sing up' %>
+  <% end %>
+<% end %>
+
+<%= render :partial => 'devise/shared/links' %>
