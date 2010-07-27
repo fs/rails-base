@@ -7,7 +7,7 @@ gem 'rails', '3.0.0.beta4'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'devise', '1.1.rc2'
 gem 'simple-navigation'
-gem 'formtastic', :git => "http://github.com/justinfrench/formtastic.git", :branch => "rails3"
+gem 'formtastic', :git => "git://github.com/justinfrench/formtastic.git", :branch => "rails3"
 gem 'flutie'
 
 # Heroku hack b/c we don't want use these gem on heroku env
