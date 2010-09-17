@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title><%= APP_CONFIG['app_name'] %> - <%= yield(:title) || 'Home' %></title>
-    <%= stylesheet_link_tag :flutie, 'application', 'fcbkcomplete' %>
+    <%= stylesheet_link_tag :flutie, 'application' %>
     <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js' %>
     <%= javascript_include_tag :all %>
     <%= csrf_meta_tag %>
