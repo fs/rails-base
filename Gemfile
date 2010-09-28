@@ -20,7 +20,7 @@ group :test do
   gem 'rspec-rails', '>= 2.0.0.beta.20'
   gem 'cucumber', '0.8.5'
   gem 'cucumber-rails', '0.3.2'
-  gem 'launchy'
+  gem 'launchy', '0.3.7'
   gem 'capybara', '0.3.8'
   gem 'autotest-rails', '4.1.0'
   gem 'autotest', '4.3.2'
