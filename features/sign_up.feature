@@ -1,21 +1,19 @@
 Feature: Sign up
-  As a newcomer to the application
-  I want to sign up
+  In order to log into the system
+  As a user
+  I want to register a new account with the system
 
   Scenario: User signs up
-    When I go to the new user registration page
-    And I fill in "user_full_name" with "Timur Vafin"
-    And I fill in "user_email" with "me@timurv.ru"
-    And I fill in "user_password" with "123456"
-    And I fill in "user_password_confirmation" with "123456"
-    And I press "Sign up"
-    Then I should be on the new user session page
-    And I should see "You have signed up successfully. If enabled, a confirmation was sent to your e-mail."
+    When I go to the sign up page
+    And I submit my registration information
+    Then I should receive an email with a link to a confirmation page
+    And I should be on the sign in page
+    When I click on the confirmation link in the confirmation email
+    Then I should be signed in
+    And I should be on the home page
+
 
   Scenario: User signs up with invalid date
-    When I go to the new user registration page
-    And I fill in "user_email" with "me@timurv.ru"
-    And I fill in "user_password" with "123456"
-    And I press "Sign up"
-    Then I should see "can't be blank" error for "user_full_name"
-    And I should see "doesn't match confirmation" error for "user_password"
+    When I go to the sign up page
+    And I submit invalid registration information
+    Then I should see errors for the registration information

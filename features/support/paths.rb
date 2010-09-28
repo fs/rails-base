@@ -10,6 +10,12 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
+    when /the sign up page/
+      new_user_registration_path
+    when /the sign in page/
+      new_user_session_path
+    when /the sign out page/
+      destroy_user_session_path
     when /^the (.*) page with id: (\d+)$/i
       begin
         id, path_components = $2.to_i, $1.split(/\s+/)

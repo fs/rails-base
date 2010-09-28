@@ -3,17 +3,21 @@ Feature: Sign in
   I want to sign in
 
   Scenario: User sign in
-    Given a user: "current_user" exists with email: "me@timurv.ru", password: "123456"
-    When I go to the new user session page
-    And I fill in "user_email" with "me@timurv.ru"
-    And I fill in "user_password" with "123456"
-    And I press "Sign in"
-    Then I should be on the home page
+    Given I exist in the application as registered user
+    When I go to the sign in page
+    And submit my sign in informaion
+    Then I should be signed in
+    And I should be on the home page
     And I should see "Signed in successfully."
 
   Scenario: User sign in with invalid credentials
-    When I go to the new user session page
-    And I fill in "user_email" with "me@timurv.ru"
-    And I fill in "user_password" with "123456"
-    And I press "Sign in"
+    When I go to the sign in page
+    And submit invalid sign in informaion
     Then I should see "Invalid email or password."
+
+  Scenario: User has not confirmed email address
+    Given I exist in the application as registered user with not confirmed email
+    When I go to the new user session page
+    And submit my sign in informaion
+    Then I should see "You have to confirm your account before continuing."
+
