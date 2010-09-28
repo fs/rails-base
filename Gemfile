@@ -9,6 +9,7 @@ gem 'devise', '1.1.1'
 gem 'simple-navigation', '2.7.3'
 gem 'formtastic', '1.1.0'
 gem 'flutie', '1.0.4'
+gem 'inherited_resources', '1.1.2'
 
 group :test do
   gem 'redgreen', '1.2.2'
