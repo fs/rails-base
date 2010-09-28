@@ -4,6 +4,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.database_authenticatable :null => false
       t.recoverable
       t.rememberable
+      t.confirmable
       t.trackable
       t.timestamps
       t.string :full_name
