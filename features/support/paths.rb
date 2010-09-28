@@ -20,6 +20,8 @@ module NavigationHelpers
       new_user_password_path
     when /the resend confirmation instructions page/
       new_user_confirmation_path
+    when /the edit account page/
+      edit_user_registration_path
     when /^the (.*) page with id: (\d+)$/i
       begin
         id, path_components = $2.to_i, $1.split(/\s+/)

@@ -1,3 +1,8 @@
+Given /^I am an authenticated user$/ do
+  Given %Q{I exist in the application as registered user}
+  Given %Q{I am logged in}
+end
+
 Given /^I am logged out$/ do
   visit(destroy_user_session_path)
 end
