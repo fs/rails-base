@@ -6,7 +6,7 @@ gem 'rails', '3.0.0'
 gem 'jquery-rails', '0.1.3'
 
 gem 'devise', '1.1.1'
-gem 'simple-navigation', '2.7.3'
+gem 'simple-navigation', '3.0.0'
 gem 'formtastic', '1.1.0'
 gem 'flutie', '1.0.4'
 gem 'inherited_resources', '1.1.2'
