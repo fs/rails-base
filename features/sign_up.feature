@@ -9,8 +9,8 @@ Feature: Sign up
     And I fill in "user_password" with "123456"
     And I fill in "user_password_confirmation" with "123456"
     And I press "Sign up"
-    Then I should be on the home page
-    And I should see "You have signed up successfully."
+    Then I should be on the new user session page
+    And I should see "You have signed up successfully. If enabled, a confirmation was sent to your e-mail."
 
   Scenario: User signs up with invalid date
     When I go to the new user registration page

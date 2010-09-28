@@ -6,4 +6,5 @@ Factory.define :user do |u|
   u.full_name 'User name'
   u.email { Factory.next(:email) }
   u.password '123456'
+  u.confirmed_at 1.hour.ago
 end
