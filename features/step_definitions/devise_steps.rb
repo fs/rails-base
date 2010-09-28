@@ -19,13 +19,13 @@ end
 When /^submit my sign in informaion$/ do
   fill_in 'user_email', :with => @current_user.email
   fill_in 'user_password', :with => @current_user.password
-  click_button 'Sign in'
+  click_button 'user_submit'
 end
 
 When /^submit invalid sign in informaion$/ do
   fill_in 'user_email', :with => 'invalid email'
   fill_in 'user_password', :with => 'invalid password'
-  click_button 'Sign in'
+  click_button 'user_submit'
 end
 
 When /^I submit my registration information$/ do
@@ -35,18 +35,28 @@ When /^I submit my registration information$/ do
   fill_in 'user_email', :with => @current_user.email
   fill_in 'user_password', :with => @current_user.password
   fill_in 'user_password_confirmation', :with => @current_user.password
-  click_button 'Sign up'
+  click_button 'user_submit'
 end
 
 When /^I submit invalid registration information$/ do
   @current_user = Factory.build(:user)
   
   fill_in 'user_full_name', :with => @current_user.full_name
-  click_button 'Sign up'
+  click_button 'user_submit'
 end
 
 When /^I click on the confirmation link in the confirmation email$/ do
   click_email_link_matching /confirm/i
+end
+
+When /^I submit send password instructions form$/ do
+  fill_in 'user_email', :with => @current_user.email
+  click_button 'user_submit'
+end
+
+When /^I submit resend confirmation form$/ do
+  fill_in 'user_email', :with => @current_user.email
+  click_button 'user_submit'
 end
 
 Then /^I should be signed in$/ do
@@ -54,13 +64,17 @@ Then /^I should be signed in$/ do
 end
 
 Then /^(?:I|they) should receive an email with a link to a confirmation page$/ do
-  unread_emails_for(current_email_address).size.should == 1
-
   open_last_email_for(last_email_address)
   current_email.should have_subject(/confirmation/i)
-  current_email.should have_body_text('John Smith')
+  current_email.should have_body_text(@current_user.full_name)
 end
 
 Then /^I should see errors for the registration information$/ do
   Then %Q{I should see "can't be blank" error for "user_email"}
+end
+
+Then /^I should receive an email with a link to a password instructions page$/ do
+  open_last_email_for(last_email_address)
+  current_email.should have_subject(/password/i)
+  current_email.should have_body_text(@current_user.full_name)
 end

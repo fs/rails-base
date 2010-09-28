@@ -12,6 +12,11 @@ Feature: Sign up
     Then I should be signed in
     And I should be on the home page
 
+  Scenario: User resends email confirmation instructions
+    Given I exist in the application as registered user with not confirmed email
+    And I go to the resend confirmation instructions page
+    When I submit resend confirmation form
+    And I should receive an email with a link to a confirmation page
 
   Scenario: User signs up with invalid date
     When I go to the sign up page
