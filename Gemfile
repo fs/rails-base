@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'mysql', '2.8.1'
 gem 'sqlite3-ruby', '1.3.1'
 gem 'rails', '3.0.0'
+gem 'jquery-rails', '0.1.3'
 
 gem 'devise', '1.1.1'
 gem 'simple-navigation', '2.7.3'
