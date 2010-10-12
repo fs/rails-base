@@ -26,6 +26,5 @@ group :test, :development do
   gem 'capybara', '0.3.9'
   gem 'autotest-rails', '4.1.0'
   gem 'autotest', '4.4.1'
-  gem 'ruby-debug', '0.10.3'
   gem 'rails_best_practices'
 end
