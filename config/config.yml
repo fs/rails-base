@@ -1,5 +1,5 @@
 defaults: &defaults
-  app_name: Features
+  app_name: Rails 3 Base example site
   noreply: noreply@fs-rails3-base.heroku.com
   host: localhost:3000
 

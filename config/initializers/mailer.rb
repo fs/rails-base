@@ -1,1 +1,1 @@
-ActionMailer::Base.default_url_options[:host] = APP_CONFIG['host']
+ActionMailer::Base.default_url_options[:host] = configatron.host

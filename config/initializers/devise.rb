@@ -3,7 +3,7 @@
 Devise.setup do |config|
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in DeviseMailer.
-  config.mailer_sender = APP_CONFIG['noreply']
+  config.mailer_sender = configatron.noreply
 
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"

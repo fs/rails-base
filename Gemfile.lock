@@ -44,6 +44,8 @@ GEM
       rack-test (>= 0.5.2)
       selenium-webdriver (>= 0.0.3)
     columnize (0.3.1)
+    configatron (2.6.3)
+      yamler (>= 0.1.0)
     configuration (1.1.0)
     cucumber (0.8.5)
       builder (~> 2.1.2)
@@ -150,6 +152,7 @@ GEM
     tzinfo (0.3.23)
     warden (0.10.7)
       rack (>= 1.0.0)
+    yamler (0.1.0)
 
 PLATFORMS
   ruby
@@ -158,6 +161,7 @@ DEPENDENCIES
   autotest (= 4.3.2)
   autotest-rails (= 4.1.0)
   capybara (= 0.3.8)
+  configatron
   cucumber (= 0.8.5)
   cucumber-rails (= 0.3.2)
   devise (= 1.1.1)
