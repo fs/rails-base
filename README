@@ -9,6 +9,7 @@
 * Default host for mailer from config, checkout config/initializers/mailer.rb
 * Added time formats, checkout config/initializers/time_formats.rb
 * Cucumber, rspec, factory girl, pickle, autotest
+* rails_best_practices
 * Heroku ready http://fs-rails3-base.heroku.com
 
 == Quick start
@@ -22,7 +23,6 @@
 * rake cucumber
 * for autotest run in the shell "export AUTOFEATURE=true" and than run autotest command
 * feel free to to use pull request or patch you application code with new features from skeleton usign fork queue github feature
-
 
 Thanks,
 Flatsoft
