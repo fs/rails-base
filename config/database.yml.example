@@ -9,11 +9,11 @@ development:
   database: db/development.sqlite3
   <<: *defaults_developmet
 
-test: &test
+test:
   database: db/test.sqlite3
   <<: *defaults_developmet
 
-test: &test
+cucumber:
   database: db/cucumber.sqlite3
   <<: *defaults_developmet
 
@@ -27,13 +27,13 @@ test: &test
 #  password:
 #
 #development:
-#  database: features_dev
+#  database: application_dev
 #  <<: *defaults_developmet
 #
 #test:
-#  database: features_test
+#  database: application_test
 #  <<: *defaults_developmet
 #
 #cucumber:
-#  database: features_test
+#  database: application_test
 #  <<: *defaults_developmet
