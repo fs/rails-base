@@ -1,7 +1,3 @@
-Factory.sequence :email do |n|
-  "somebody#{n}@example.com"
-end
-
 Factory.define :user do |u|
   u.full_name 'John Smith'
   u.email { Factory.next(:email) }
