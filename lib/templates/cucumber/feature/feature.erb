@@ -1,0 +1,34 @@
+Feature: Manage <%= plural_name %>
+  In order to [goal]
+  [stakeholder]
+  wants [behaviour]
+
+  Background:
+    Given I am an authenticated user
+
+  Scenario: Listing <%= plural_name %>
+    Given 5 <%= plural_name %> exist
+    When I am on the <%= plural_name %> page
+    Then I should see all existing <%= plural_name %>
+
+  Scenario: Create new <%= singular_name %> with valid data
+    When I am on the new <%= singular_name %> page
+    And I submit valid <%= singular_name %> information
+    Then new <%= singular_name %> should exists
+
+  Scenario: Create new <%= singular_name %> with invalid data
+    When I am on the new <%= singular_name %> page
+    And I submit invalid <%= singular_name %> information
+    Then new <%= singular_name %> should not exists
+
+  Scenario: Update <%= singular_name %> with valid data
+    Given a <%= singular_name %> exists
+    And I am on the edit <%= singular_name %> page for existing <%= singular_name %>
+    When I submit valid <%= singular_name %> information
+    Then exsisting <%= singular_name %> should be updated
+
+  Scenario: Update <%= singular_name %> with invalid data
+    Given a <%= singular_name %> exists
+    And I am on the edit <%= singular_name %> page for existing <%= singular_name %>
+    When I submit invalid <%= singular_name %> information
+    Then exsisting <%= singular_name %> should not be updated
