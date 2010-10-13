@@ -1,0 +1,9 @@
+<%%= semantic_form_for(resource) do |form| %>
+  <%%= form.inputs do %>
+<% for attribute in attributes -%>
+    <%%= form.input :<%= attribute.name %> %>
+<% end -%>
+  <%% end %>
+
+  <%%= form.buttons %> or <%%= link_to 'cancel', resource %>
+<%% end %>
