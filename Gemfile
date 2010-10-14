@@ -1,7 +1,6 @@
 source :rubygems
 
 gem 'mysql', '2.8.1'
-gem 'sqlite3-ruby', '1.3.1'
 gem 'rails', '3.0.0'
 gem 'jquery-rails', '0.2.2'
 gem 'configatron', '2.6.4'
@@ -14,6 +13,7 @@ gem 'flutie', '1.0.4'
 gem 'inherited_resources', '1.1.2'
 
 group :test, :development do
+  gem 'sqlite3-ruby', '1.3.1'
   gem 'redgreen', '1.2.2'
   gem 'shoulda', '2.11.3'
   gem 'rr', '1.0.0'
