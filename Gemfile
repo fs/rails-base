@@ -27,4 +27,5 @@ group :test, :development do
   gem 'autotest', '4.4.1'
   gem 'ruby-debug', '0.10.3'
   gem 'rails_best_practices'
+  gem 'rails3-generators'
 end
