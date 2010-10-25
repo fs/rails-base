@@ -16,6 +16,7 @@ Feature: Manage <%= plural_name %>
     And I submit valid <%= singular_name %> information
     Then new <%= singular_name %> should exists
 
+  @wip
   Scenario: Create new <%= singular_name %> with invalid data
     When I am on the new <%= singular_name %> page
     And I submit invalid <%= singular_name %> information

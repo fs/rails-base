@@ -13,15 +13,15 @@
 When /^I submit valid <%= singular_name %> information$/ do
   @new_<%= singular_name %> = Factory.build(:<%= singular_name %>)
 
-  When %Q{I fill in "<%= singular_name %>_<%= attribute %>" with "#{@new_<%= singular_name %>.<%= attribute %>}"}
-  When %Q{I press "<%= singular_name %>_submit"}
+  fill_in '<%= singular_name %>_<%= attribute %>', :with => @new_<%= singular_name %>.<%= attribute %>
+  click_button '<%= singular_name %>_submit'
 end
 
 When /^I submit invalid <%= singular_name %> information$/ do
   @new_<%= singular_name %> = Factory.build(:<%= singular_name %>)
 
-  When %Q{I fill in "<%= singular_name %>_<%= attribute %>" with ""}
-  When %Q{I press "<%= singular_name %>_submit"}
+  fill_in '<%= singular_name %>_<%= attribute %>', :with => ''
+  click_button '<%= singular_name %>_submit'
 end
 
 Then /^I should see all existing <%= plural_name %>$/ do
