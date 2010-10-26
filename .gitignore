@@ -4,3 +4,4 @@ log/*.log
 tmp/**/*
 rerun.txt
 config/database.yml
+doc/**/*

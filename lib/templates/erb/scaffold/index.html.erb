@@ -1,27 +1,7 @@
 <%% title 'Listing <%= plural_table_name %>' %>
 
 <%% unless @<%= plural_table_name %>.blank? %>
-  <table>
-    <tr>
-<% for attribute in attributes -%>
-      <th><%= attribute.human_name %></th>
-<% end -%>
-      <th>Actions</th>
-    </tr>
-
-    <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
-    <tr>
-<% for attribute in attributes -%>
-      <td><%%= <%= singular_table_name %>.<%= attribute.name %> %></td>
-<% end -%>
-      <td class="actions">
-        <%%= link_to 'Show', <%= singular_table_name %> %>
-        <%%= link_to 'Edit', edit_<%= singular_table_name %>_path(<%= singular_table_name %>) %>
-        <%%= link_to 'Destroy', <%= singular_table_name %>, :confirm => 'Are you sure?', :method => :delete %>
-      </td>
-    </tr>
-    <%% end %>
-  </table>
+  <%%= table_for(@<%= plural_table_name %>) %>
 <%% else %>
   <p>Now it's time to create some data here. To create new entry, please use the button below.</p>
   <br /><br />
