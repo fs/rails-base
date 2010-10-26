@@ -26,5 +26,6 @@ group :test, :development do
   gem 'capybara', '0.3.9'
   gem 'autotest-rails', '4.1.0'
   gem 'autotest', '4.4.1'
-  gem 'rails_best_practices'
+  gem 'rails_best_practices', '0.4.5'
+  gem 'rails3-generators', '0.14.0'
 end
