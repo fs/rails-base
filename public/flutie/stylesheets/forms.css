@@ -115,3 +115,9 @@ form ol li.datetime select, form ol li.date select, form ol li.time select {
 form ol li.date label, form ol li.time label {
   display: none;
 }
+a.button, fieldset.buttons input { background: url("/images/button_bg.gif") bottom left repeat-x; border:0; height:32px; overflow:visible; cursor:pointer; border:solid 1px #d2d2d2; line-height:30px; padding: 0 10px; font-weight:bold; text-shadow: 1px 1px #fff; border-radius:3px; -khtml-border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; margin:0; text-transform:uppercase; color:#000; text-decoration:none; }
+a.button:hover, fieldset.buttons input:hover { color:#555; }
+a.button:focus, fieldset.buttons input:focus { background-position:top left; border-bottom:solid 1px #f3f3f3; }
+a.button { line-height:30px; display:block; height:30px; float:left; clear:both; }
+div.buttons { overflow:hidden; }
+a.button.add span { background:url("/images/icon_add.gif") center left no-repeat; padding-left:20px; }
