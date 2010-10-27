@@ -25,3 +25,13 @@ tr,td,th {
 
 /* Use this if you use span-x classes on th/td. */
 table .last { padding-right: 0; } 
+
+table.list th { white-space:nowrap; background:#f1f1f1; padding: 0.5em; }
+table.list td { padding: 0.5em; }
+table.list tr.odd td { background: #fafafa; }
+table.list td.actions img { margin: 2px 1px; }
+table.list th.numeric,
+table.list td.numeric { text-align:right; }
+div.gauge { border:solid 1px #ccc; width:100%; position:relative; height:10px; }
+div.gauge-line { height:10px; background:#f0f0f0; position:absolute; top:0; left:0; }
+div.percent { text-align:center; font-size:10px; position:relative; z-index:9; width:100%; }
