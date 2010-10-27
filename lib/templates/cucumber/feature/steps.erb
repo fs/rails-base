@@ -1,11 +1,5 @@
 <% attribute = named_args.blank? ? (class_name.constantize.column_names - ['id', 'created_at', 'updated_at']).first : named_args.first.name -%>
-# Make sure you have created Factory for <%= class_name %> model
-#
-#   Factory.define :<%= singular_name %> do |<%= singular_name.at(0) %>|
-#     <%= singular_name.at(0) %>.<%= attribute %> { Factory.next(:<%= attribute %>) }
-#   end
-#
-# And defined path in the support/path.rb for
+# Make sure you have defined path in the support/path.rb for
 #    when /the edit <%= singular_name %> page for existing <%= singular_name %>/
 #      edit_<%= singular_name %>_path(:id => <%= class_name %>.first.id)
 #
