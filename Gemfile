@@ -9,7 +9,7 @@ gem 'devise', '1.1.3'
 gem 'simple-navigation', '3.0.0'
 gem 'formtastic', '1.1.0'
 gem 'tabletastic', '0.2.0.pre5'
-gem 'flutie', '1.0.4'
+gem 'flutie', '1.1.1'
 gem 'inherited_resources', '1.1.2'
 
 group :test, :development do
