@@ -65,7 +65,7 @@ When /^I submit resend confirmation form$/ do
 end
 
 Then /^I should be signed in$/ do
-  page.should have_content('My Account')
+  page.should have_content(@current_user.full_name_with_email)
 end
 
 Then /^(?:I|they) should receive an email with a link to a confirmation page$/ do
