@@ -1,6 +1,6 @@
 Feature: Cancel account
-  When I do not want to use this service any more
-  As a dissatisfied user
+  I order to delete my private information from the system
+  As a registered user
   I want to be able to cancel my account
 
   Background:

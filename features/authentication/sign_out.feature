@@ -1,6 +1,7 @@
-Feature: As a logged in user
+Feature: Sign out
+  In order to protect my identity
+  As a registerred user
   I want to sign out
-  To protect my identity
 
   Scenario: Logged in user signs out
     Given I am an authenticated user
