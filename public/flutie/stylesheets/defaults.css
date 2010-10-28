@@ -17,6 +17,7 @@ div.error, div.alert, div.notice, div.success,
   border: 1px solid #ddd;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
+  border-radius: 8px;
 }
 div.error, div.alert,
 #flash_failure, #flash_alert {

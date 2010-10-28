@@ -39,6 +39,9 @@ fieldset {
   background: #f1f1f1;
   padding: 1.5em 1.5em 1em 1.5em;
   border: 1px solid #e3e3e3;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
 }
 fieldset fieldset, fieldset fieldset fieldset {
   padding: 0;
@@ -61,6 +64,22 @@ input[type="text"], input[type="password"] {
   width: 300px;
   padding: 3px 2px;
   font-size: inherit;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border-color:#A7A7A7 #E3E3E3 #E3E3E3 #A7A7A7;
+  border-style:solid;
+  border-width:1px;
+}
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus {
+    -moz-box-shadow: 0 0 5px #FFF6BF;
+    box-shadow: 0 0 5px #FFF6BF;
+    -webkit-box-shadow: 0 0 5px #FFF6BF;
+}
+li.error input[type="text"]:focus, li.error input[type="password"]:focus, li.error textarea:focus{
+    -moz-box-shadow: 0 0 5px #FBE3E4;
+    box-shadow: 0 0 5px #FBE3E4;
+    -webkit-box-shadow: 0 0 5px #FBE3E4;
 }
 input[disabled='disabled'] {
   background-color: #fcfcfc;
@@ -92,6 +111,13 @@ textarea {
   margin: 0 0.5em 0.5em 0;
   padding: 5px;
   font-size: inherit;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border-color:#A7A7A7 #E3E3E3 #E3E3E3 #A7A7A7;
+  border-style:solid;
+  border-width:1px;
+
 }
 
 /* Select fields */
