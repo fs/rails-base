@@ -1,7 +1,8 @@
 .bundle
 db/*.sqlite3
 log/*.log
-tmp/**/*
+tmp/*
+coverage/*
 rerun.txt
 config/database.yml
 doc/**/*
