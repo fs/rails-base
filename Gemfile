@@ -11,6 +11,7 @@ gem 'formtastic', '1.1.0'
 gem 'tabletastic', '0.2.0.pre5'
 gem 'flutie', '1.0.4'
 gem 'inherited_resources', '1.1.2'
+gem 'will_paginate', '3.0.pre2'
 
 group :test, :development do
   gem 'sqlite3-ruby', '1.3.1'
