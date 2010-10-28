@@ -2,6 +2,7 @@
 
 <%% unless @<%= plural_table_name %>.blank? %>
   <%%= table_for(@<%= plural_table_name %>) %>
+  <%%= will_paginate(@<%= plural_table_name %>) %>
 <%% else %>
   <p>Now it's time to create some data here. To create new entry, please use the button below.</p>
   <br /><br />
