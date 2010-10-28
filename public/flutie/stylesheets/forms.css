@@ -20,7 +20,7 @@ input[type="submit"]::-moz-focus-inner {
     padding: 10px;
   }
 
-  form abbr { border-bottom: 0; }
+  form abbr { border-bottom: 0; color: red; font-size: 1.2em; margin-left: 0.2em; }
 
   label { display: block; }
   .required label { font-weight: bold; }
@@ -100,7 +100,8 @@ fieldset .select select {
   font-size: 0.9em;
 } 
 optgroup { margin: 0 0 .5em 0; }
-
+form ol li.password, form ol li.date, form ol li.time, form ol li.select, form ol li.radio, form ol li.check_boxes, form ol li.string { width:350px; float: left; }
+form ol li.datetime, form ol li.text { clear: both; width: 700px; }
 /* Date & Time */
 form ol li.date ol li, form ol li.time ol li {
   display: inline;
@@ -121,3 +122,5 @@ a.button:focus, fieldset.buttons input:focus { background-position:top left; bor
 a.button { line-height:30px; display:block; height:30px; float:left; clear:both; }
 div.buttons { overflow:hidden; }
 a.button.add span { background:url("/images/icon_add.gif") center left no-repeat; padding-left:20px; }
+h5.legend { font-size:1.2em; }
+fieldset.buttons li.commit { margin-right: 1em; }
