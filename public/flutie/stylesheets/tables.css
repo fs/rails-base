@@ -35,3 +35,9 @@ table.list td.numeric { text-align:right; }
 div.gauge { border:solid 1px #ccc; width:100%; position:relative; height:10px; }
 div.gauge-line { height:10px; background:#f0f0f0; position:absolute; top:0; left:0; }
 div.percent { text-align:center; font-size:10px; position:relative; z-index:9; width:100%; }
+table.list td.actions { padding: 0 0.1em; }
+table.list td.actions a { width:20px; height:20px; text-indent:-9999em; overflow:hidden; display:block; float:left; background-position: 0 0; background-repeat:no-repeat; }
+table.list td.actions a:hover { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50); -moz-opacity: 0.5; -khtml-opacity: 0.5; opacity: 0.5; }
+.edit_link a { background-image: url("/images/icon_edit.gif"); }
+.destroy_link a { background-image: url("/images/icon_delete.gif"); }
+.show_link a { background-image: url("/images/icon_view.gif"); }
