@@ -166,6 +166,7 @@ GEM
     tzinfo (0.3.23)
     warden (0.10.7)
       rack (>= 1.0.0)
+    will_paginate (3.0.pre2)
     yamler (0.1.0)
 
 PLATFORMS
@@ -198,3 +199,4 @@ DEPENDENCIES
   simple-navigation (= 3.0.0)
   sqlite3-ruby (= 1.3.1)
   tabletastic (= 0.2.0.pre5)
+  will_paginate (= 3.0.pre2)
