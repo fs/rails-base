@@ -32,7 +32,8 @@ body { background-color: #dadada;}
   color: black
 }
 
-
+div.alert { border: 1px solid #ddd; -moz-border-radius: 8px; -webkit-border-radius: 8px; margin-bottom: 1em; padding: 0.8em; background: #FBE3E4; border-color: #FBC2C4; color: #D12F19;}
+div.error a { color: #D12F19; }
 table.list th { white-space:nowrap; background:#f1f1f1; padding: 0.5em; }
 table.list td { padding: 0.5em; }
 table.list tr.odd td { background: #fafafa; }
