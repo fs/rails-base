@@ -1,0 +1,95 @@
+body {
+  color: #222;
+  font-size: 13px;
+  font-family: arial, "helvetica neue", helvetica, "lucida grande", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #111;
+  font-family: "helvetica neue", Helvetica, arial, sans-serif;
+}
+
+/* Success, error & notice boxes for messages and errors. */
+div.error, div.notice, div.success,
+#flash_failure, #flash_success, #flash_notice {
+  border: 1px solid #ddd;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  margin-bottom: 1em;
+  padding: 0.8em;
+}
+
+div.error,
+#flash_failure {
+  background: #FBE3E4;
+  border-color: #FBC2C4;
+  color: #D12F19;
+}
+
+div.error a,
+#flash_failure a {
+  color: #D12F19;
+}
+
+div.notice,
+#flash_notice {
+  background: #FFF6BF;
+  border-color: #FFD324;
+  color: #817134;
+}
+
+div.notice a,
+#flash_notice a {
+  color: #817134;
+}
+
+div.success,
+#flash_success {
+  background: #E6EFC2;
+  border-color: #C6D880;
+  color: #529214;
+}
+
+div.success a,
+#flash_success a {
+  color: #529214;
+}
+
+/* Misc classes and elements */
+/* Use a .box to create a padded box inside a column.  */
+.box {
+  background: #eee;
+  margin-bottom: 1.5em;
+  padding: 1.5em;
+}
+
+/* Use this to create a horizontal ruler across a column. */
+hr {
+  background: #ddd;
+  border: none;
+  clear: both;
+  color: #ddd;
+  float: none;
+  height: 1px;
+  margin: 0 0 1.4em;
+  width: 100%;
+}
+
+hr.space {
+  background: #fff;
+  color: #fff;
+}
+
+/* Clearfix hack I love you */
+.clearfix:after {
+  content:".";
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden;
+}
+
+.clearfix {display:inline-block;}
+/* Hide from IE Mac \*/
+.clearfix {display:block;}
+/* End hide from IE Mac */

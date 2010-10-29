@@ -14,7 +14,7 @@ Application currently based on Rails 3 stable branch.
 * Application config: Configatron, http://github.com/markbates/configatron, config/config.yml
 * JS Framework: Jquery-rails, http://github.com/indirect/jquery-rails
 * Tests: RSpec, Shoulda, RR, Cucumber, Factory Girl, Autotest
-* Code metrics: rails_best_practices, http://github.com/flyerhzm/rails_best_practices
+* Code metrics: rails_best_practices, http://github.com/flyerhzm/rails_best_practices and rcov
 
 === Initializers
 
