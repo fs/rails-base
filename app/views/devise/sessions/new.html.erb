@@ -1,6 +1,6 @@
 <% title 'Sign in' %>
 
-<%= semantic_form_for(resource, :as => :session, :url => session_path(resource_name)) do |form| %>
+<%= semantic_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:id => :session_new}) do |form| %>
   <%= form.inputs do %>
     <%= form.input :email, :required => true %>
     <%= form.input :password, :required => true %>
