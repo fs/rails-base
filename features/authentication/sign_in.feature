@@ -1,5 +1,6 @@
 Feature: Sign in
-  As a registerred user of the application
+  I order to idetify myself in the system
+  As a registerred user
   I want to sign in
 
   Scenario: User signs in
