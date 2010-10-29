@@ -42,8 +42,8 @@ table.list td.numeric { text-align:right; }
 div.gauge { border:solid 1px #ccc; width:100%; position:relative; height:10px; }
 div.gauge-line { height:10px; background:#f0f0f0; position:absolute; top:0; left:0; }
 div.percent { text-align:center; font-size:10px; position:relative; z-index:9; width:100%; }
-table.list td.actions { padding: 0; width:2em; }
-table.list td.actions a { width:20px; height:20px; text-indent:-9999em; overflow:hidden; display:block; float:left; background-position: 0 0; background-repeat:no-repeat; }
+table.list td.actions { padding: 0; width:2em; text-align: center; }
+table.list td.actions a { width:20px; height:20px; text-indent:-9999em; overflow:hidden; display:block; float:left; background-position: 0 0; background-repeat:no-repeat; margin: auto; }
 table.list td.actions a:hover { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50); -moz-opacity: 0.5; -khtml-opacity: 0.5; opacity: 0.5; }
 .edit_link a { background-image: url("/images/icon_edit.gif"); }
 .destroy_link a { background-image: url("/images/icon_delete.gif"); }
@@ -68,3 +68,6 @@ form ol li.password, form ol li.date, form ol li.time, form ol li.select, form o
 form ol li.datetime, form ol li.text { clear: both; width: 700px; }
 form abbr { color:red; font-size:1.2em; margin-left:.2em; }
 #user_remember_me_input { clear:both;}
+.pagination { text-align: center; }
+.pagination span.disabled { color: #888; }
+.pagination em { background: #f0f0f0; padding: 0 5px; -moz-border-radius:6px; -webkit-border-radius:6px; border-radius:6px; margin: 0 2px; border: solid 1px #ddd; }
