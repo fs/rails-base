@@ -111,6 +111,11 @@ Devise.setup do |config|
   # should add them to the navigational formats lists. Default is [:html]
   # config.navigational_formats = [:html, :iphone]
 
+  # ==> OmniAuth
+  # Add a new OmniAuth provider. Check the wiki for more information on setting
+  # up on your models and hooks.
+  config.omniauth :twitter, 'Ank92dam8rUTSfBtxN7AWg', 'kl95VO9BWzb6a4NL8dZJbosJMm4kmiGPoC0LKvdV6OI'
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not (yet) supported by Devise,
   # you can configure them inside the config.warden block. The example below
