@@ -4,8 +4,10 @@
   <%= form.inputs do %>
     <%= form.input :full_name, :required => true %>
     <%= form.input :email, :required => true %>
-    <%= form.input :password, :required => true %>
-    <%= form.input :password_confirmation, :required => true %>
+    <% if resource.password_required? %>
+      <%= form.input :password, :required => true %>
+      <%= form.input :password_confirmation, :required => true %>
+    <% end %>
   <% end %>
 
   <%= form.buttons do %>
