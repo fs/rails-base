@@ -14,6 +14,7 @@ gem 'inherited_resources', '1.1.2'
 gem 'will_paginate', '3.0.pre2'
 
 group :test, :development do
+  gem 'mongrel', '1.2.0.pre2'
   gem 'sqlite3-ruby', '1.3.2'
   gem 'redgreen', '1.2.2'
   gem 'rr', '1.0.2'
