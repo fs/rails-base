@@ -5,7 +5,7 @@ gem 'rails', '3.0.3'
 gem 'jquery-rails', '0.2.5'
 gem 'configatron', '2.6.4'
 
-gem 'devise', '1.1.3'
+gem 'devise', '1.1.4'
 gem 'simple-navigation', '3.0.2'
 gem 'formtastic', '1.2.0'
 gem 'tabletastic', '0.2.1'
