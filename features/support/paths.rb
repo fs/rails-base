@@ -12,10 +12,10 @@ module NavigationHelpers
       '/'
     when /the sign up page/
       new_user_registration_path
-    when /the sign in page/
-      new_user_session_path
     when /the sign in page using Twitter/
       user_omniauth_authorize_path(:twitter)
+    when /the sign in page/
+      new_user_session_path
     when /the sign out page/
       destroy_user_session_path
     when /the send password instructions page/
