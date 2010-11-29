@@ -30,7 +30,7 @@ group :test, :development do
   gem 'autotest-rails', '4.1.0'
   gem 'autotest', '4.4.1'
   gem 'vcr', '1.3.3'
-  gem 'webmock', '1.6.1'
+  gem 'webmock', '1.6.1', :require => false
   gem 'rails_best_practices', '0.4.5'
   gem 'rails3-generators', '0.14.0'
   gem 'rcov', '0.9.9'
