@@ -12,7 +12,7 @@ Feature: Sign up
     Then I should be signed in
     And I should be on the home page
 
-  Scenario: User resends email confirmation instructions
+  Scenario: User resents email confirmation instructions
     Given I exist in the application as registered user with not confirmed email
     And I go to the resend confirmation instructions page
     When I submit resend confirmation form
