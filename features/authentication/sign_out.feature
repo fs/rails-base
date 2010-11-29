@@ -1,6 +1,6 @@
 Feature: Sign out
   In order to protect my identity
-  As a registerred user
+  As a registered user
   I want to sign out
 
   Scenario: Logged in user signs out
