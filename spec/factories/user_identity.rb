@@ -1,5 +1,4 @@
-Factory.define :user_identity do |f|
-  f.user_id 1
+Factory.define :twitter_identity, :class => UserIdentity do |f|
   f.provider 'twitter'
-  f.uid '123456'
+  f.uid '1'
 end
