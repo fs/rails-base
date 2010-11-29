@@ -1,25 +1,25 @@
 Feature: Sign in
-  I order to idetify myself in the system
-  As a registerred user
+  In order to identify myself in the system
+  As a registered user
   I want to sign in
 
   Scenario: User signs in
     Given I exist in the application as registered user
     When I go to the sign in page
-    And submit my sign in informaion
+    And submit my sign in information
     Then I should be signed in
     And I should be on the home page
     And I should see "Signed in successfully."
 
   Scenario: User signs in with invalid credentials
     When I go to the sign in page
-    And submit invalid sign in informaion
+    And submit invalid sign in information
     Then I should see "Invalid email or password."
 
   Scenario: User has not confirmed email address
     Given I exist in the application as registered user with not confirmed email
     When I go to the new user session page
-    And submit my sign in informaion
+    And submit my sign in information
     Then I should see "You have to confirm your account before continuing."
 
   Scenario: User forgets his password
