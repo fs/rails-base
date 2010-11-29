@@ -247,7 +247,7 @@ DEPENDENCIES
   configatron (= 2.6.4)
   cucumber (= 0.9.4)
   cucumber-rails (= 0.3.2)
-  devise (~> 1.2.rc)
+  devise (= 1.2.rc)
   email_spec (= 1.0.0)
   factory_girl_rails (= 1.0)
   flutie (= 1.1.2)
