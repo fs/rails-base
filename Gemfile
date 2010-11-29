@@ -27,6 +27,7 @@ group :test, :development do
   gem 'email_spec', '1.0.0'
   gem 'launchy', '0.3.7'
   gem 'capybara', '0.3.9'
+  gem 'capybara-mechanize', '0.2.3'
   gem 'autotest-rails', '4.1.0'
   gem 'autotest', '4.4.1'
   gem 'vcr', '1.3.3'
