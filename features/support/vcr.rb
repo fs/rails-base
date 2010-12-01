@@ -1,4 +1,3 @@
-require 'webmock'
 require 'vcr'
 require 'capybara/mechanize/cucumber'
 
