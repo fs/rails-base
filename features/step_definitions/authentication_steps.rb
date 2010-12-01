@@ -21,10 +21,6 @@ Given /^I exist in the application as registered user with not confirmed email$/
   @current_user = Factory.create(:not_confirmed_user)
 end
 
-Given /^I have identity for Twitter authorization$/ do
-  @identity = Factory.create(:twitter_identity, :user => @current_user)
-end
-
 When /^submit my sign in information$/ do
   fill_in 'user_email', :with => @current_user.email
   fill_in 'user_password', :with => @current_user.password
