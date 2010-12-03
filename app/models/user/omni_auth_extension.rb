@@ -2,7 +2,7 @@ module User::OmniAuthExtension
   extend ActiveSupport::Concern
 
   included do
-    has_many :identities, :class_name => 'UserIdentity'
+    has_many :identities, :class_name => 'UserIdentity', :dependent => :destroy
     devise :omniauthable
   end
 
