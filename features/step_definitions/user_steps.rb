@@ -8,6 +8,12 @@ When /^I submit my registration information$/ do
   click_button 'user_submit'
 end
 
+When /^I submit my registration information for sign up using Twitter$/ do
+  @current_user = Factory.build(:user)
+  fill_in 'user_email', :with => @current_user.email
+  click_button 'user_submit'
+end
+
 When /^I submit invalid registration information$/ do
   @current_user = Factory.build(:user)
 
