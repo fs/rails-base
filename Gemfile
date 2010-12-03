@@ -19,7 +19,7 @@ group :test, :development do
   gem 'redgreen', '1.2.2'
   gem 'rr', '1.0.2'
   gem 'factory_girl_rails', '1.0'
-  gem 'rspec-rails', '2.1.0'
+  gem 'rspec-rails', '2.2.1'
   gem 'cucumber', '0.9.4'
   gem 'cucumber-rails', '0.3.2'
   gem 'shoulda', '2.11.3'
