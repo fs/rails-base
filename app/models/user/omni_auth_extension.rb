@@ -44,5 +44,14 @@ module User::OmniAuthExtension
     def password_required?
       (identities.empty? || !password.blank?) && super
     end
+
+    def valid_password?(password)
+      return super if password_stored?
+      true
+    end
+
+    def password_stored?
+      encrypted_password_was.present?
+    end
   end
 end

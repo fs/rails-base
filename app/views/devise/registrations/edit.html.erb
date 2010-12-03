@@ -6,7 +6,9 @@
     <%= form.input :email, :required => true %>
     <%= form.input :password, :required => true, :hint => "leave blank if you don't want to change it" %>
     <%= form.input :password_confirmation, :required => true %>
-    <%= form.input :current_password, :required => true, :hint => "we need your current password to confirm your changes" %>
+    <% if resource.password_stored? %>
+      <%= form.input :current_password, :required => true, :hint => "we need your current password to confirm your changes" %>
+    <% end %>
   <% end %>
 
   <%= form.buttons do %>
