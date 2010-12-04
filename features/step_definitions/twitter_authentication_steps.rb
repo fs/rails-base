@@ -1,7 +1,3 @@
-Given /^I have identity for Twitter authorization$/ do
-  @identity = Factory.create(:twitter_identity, :user => @current_user)
-end
-
 Given /^the Twitter OAuth request is successful$/ do
   stub_request(:any, 'https://api.twitter.com/oauth/request_token').
       to_return(:body => {:oauth_token => 'fake', :oauth_token_secret => 'fake'}.to_query)
