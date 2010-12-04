@@ -1,3 +1,15 @@
+Given /^I exist in the application as registered user$/ do
+  @current_user = Factory.create(:confirmed_user)
+end
+
+Given /^I exist in the application as registered over Twitter user$/ do
+  @current_user = Factory.create(:user_registered_over_twitter)
+end
+
+Given /^I exist in the application as registered user with not confirmed email$/ do
+  @current_user = Factory.create(:not_confirmed_user)
+end
+
 When /^I submit my registration information$/ do
   @current_user = Factory.build(:user)
 
