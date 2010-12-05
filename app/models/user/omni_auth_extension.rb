@@ -42,7 +42,7 @@ module User::OmniAuthExtension
 
   module InstanceMethods
     def password_required?
-      (identities.empty? || !password.blank?) && super
+      (identities.empty? || !password.blank? || !password_confirmation.blank?) && super
     end
 
     def valid_password?(password)

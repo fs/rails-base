@@ -3,6 +3,47 @@ require 'spec_helper'
 describe User do
   it { should have_many :identities }
 
+  context '#password_required?' do
+    subject { user.password_required? }
+
+    context 'when user has identity' do
+      let(:user) { Factory(:user_registered_over_twitter) }
+
+      it { should be_false }
+
+      context 'and when #password is in place' do
+        before { user.password = '123456' }
+        it { should be_true }
+      end
+
+      context 'and when #password_confirmation is in place' do
+        before { user.password_confirmation = '123456' }
+        it { should be_true }
+      end
+    end
+
+    context 'when user has no identity' do
+      let(:user) { User.find(Factory(:confirmed_user).id) } # we need clean record from db without password attribute
+
+      it { should be_false }
+
+      context 'and when #password is on place' do
+        before { user.password = '123456' }
+        it { should be_true }
+      end
+
+      context 'and when #password_confirmation is in place' do
+        before { user.password_confirmation = '123456' }
+        it { should be_true }
+      end
+    end
+
+    context 'when use is a new record' do
+      let(:user) { User.new }
+      it { should be_true }
+    end
+  end
+
   context '#valid_password?' do
     context 'when user has no password stored in the db' do
       let(:user) { Factory(:user_registered_over_twitter) }
@@ -13,7 +54,7 @@ describe User do
 
     context 'when user has password in db' do
       let(:user) { Factory(:confirmed_user) }
-      
+
       context 'when right password given' do
         subject { user.valid_password?('123456') }
         it { should be_true }
