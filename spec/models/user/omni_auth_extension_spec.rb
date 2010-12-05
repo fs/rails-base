@@ -41,5 +41,65 @@ describe User do
         end
       end
     end
+
+    context '#new_with_session' do
+      let(:params) { {} }
+      let(:session) { {} }
+      let(:user) { User.new_with_session(params, session) }
+
+      context 'when data in params' do
+        let(:params) { {'full_name' => 'John Smith'} }
+
+        it 'should set fields from params' do
+          user.full_name.should eql 'John Smith'
+        end
+      end
+
+      context 'when omniauth data in session' do
+        let(:session) { {'devise.omniauth_data' => {
+            'user_info' => {
+                'name' => 'John Smith',
+                'email' => 'john@example.com'
+            },
+            'provider' => 'twitter',
+            'uid' => '1'
+        }} }
+
+        it 'should set email from session' do
+          user.email.should eql 'john@example.com'
+        end
+
+        it 'should set name from session' do
+          user.full_name.should eql 'John Smith'
+        end
+
+        it 'should skip confirmation' do
+          user.should be_confirmed
+        end
+
+        context 'new identity' do
+          let(:new_identity) { user.identities.last }
+
+          it 'should be associated with provider from session' do
+            new_identity.provider.should eql('twitter')
+          end
+
+          it 'should be associated with uid from session' do
+            new_identity.uid.should eql('1')
+          end
+        end
+      end
+
+      context 'when data in params and data in session' do
+        let(:params) { {'full_name' => 'John Smith from params'} }
+        let(:session) { {'devise.omniauth_data' => { 'user_info' => {
+          'name' => 'John Smith from session',
+        }}}}
+
+        it 'should set data from params only' do
+          user.full_name.should eql 'John Smith from params'
+        end
+      end
+    end
   end
 end
