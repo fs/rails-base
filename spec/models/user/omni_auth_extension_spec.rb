@@ -3,6 +3,54 @@ require 'spec_helper'
 describe User do
   it { should have_many :identities }
 
+  context '#password_stored?' do
+    context 'when user has password stored in the db' do
+      let(:user) { Factory(:user, :password => '123456') }
+      subject { user.password_stored? }
+
+      it { should be_true }
+
+      context 'when user set #password to blank string without saving'  do
+        before { user.password = '' }
+        it { should be_true }
+      end
+
+      context 'when user set #encrypted_password to blank string without saving' do
+        before { user.encrypted_password = '' }
+        it { should be_true }
+      end
+    end
+
+    context 'when user has blank password stored in the db' do
+      let(:user) { Factory(:user_registered_over_twitter) }
+      subject { user.password_stored? }
+
+      it { should be_false }
+
+      context 'when user set #password without saving' do
+        before { user.password = '123456' }
+        it { should be_false }
+      end
+
+      context 'when user set #encrypted_password without saving' do
+        before { user.encrypted_password = '' }
+        it { should be_false }
+      end
+    end
+
+    context 'when unsaved user given' do
+      context 'with #password' do
+        subject { User.new(:password => '123456').password_stored? }
+        it { should be_false }
+      end
+
+      context 'with #encrypted_password' do
+        subject { User.new(:encrypted_password => '123456').password_stored? }
+        it { should be_false }
+      end
+    end
+  end
+
   context 'class methods:' do
     context '#find_by_identity_for' do
       context 'when current_user given' do
