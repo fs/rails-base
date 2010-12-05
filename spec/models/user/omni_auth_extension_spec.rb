@@ -3,6 +3,29 @@ require 'spec_helper'
 describe User do
   it { should have_many :identities }
 
+  context '#valid_password?' do
+    context 'when user has no password stored in the db' do
+      let(:user) { Factory(:user_registered_over_twitter) }
+      subject { user.valid_password?('any password') }
+
+      it { should be_true }
+    end
+
+    context 'when user has password in db' do
+      let(:user) { Factory(:confirmed_user) }
+      
+      context 'when right password given' do
+        subject { user.valid_password?('123456') }
+        it { should be_true }
+      end
+
+      context 'when wrong password given' do
+        subject { user.valid_password?('right password is 123456') }
+        it { should be_false }
+      end
+    end
+  end
+
   context '#password_stored?' do
     context 'when user has password stored in the db' do
       let(:user) { Factory(:user, :password => '123456') }
@@ -10,7 +33,7 @@ describe User do
 
       it { should be_true }
 
-      context 'when user set #password to blank string without saving'  do
+      context 'when user set #password to blank string without saving' do
         before { user.password = '' }
         it { should be_true }
       end
@@ -140,9 +163,9 @@ describe User do
 
       context 'when data in params and data in session' do
         let(:params) { {'full_name' => 'John Smith from params'} }
-        let(:session) { {'devise.omniauth_data' => { 'user_info' => {
-          'name' => 'John Smith from session',
-        }}}}
+        let(:session) { {'devise.omniauth_data' => {'user_info' => {
+            'name' => 'John Smith from session',
+        }}} }
 
         it 'should set data from params only' do
           user.full_name.should eql 'John Smith from params'
