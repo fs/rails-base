@@ -6,6 +6,7 @@ Application currently based on Rails 3 stable branch.
 === Gems
 
 * Basic auth: Devise http://github.com/plataformatec/devise, app/models/user.rb
+* OAuth auth: Omniauth https://github.com/intridea/omniauth, app/models/user/omni_auth_extension.rb
 * Navigation: SimpleNavigation http://github.com/andi/simple-navigation, config/navigations
 * DRY controllers: Inherited Resources, http://github.com/josevalim/inherited_resources
 * Form builder: Formtastic http://github.com/justinfrench/formtastic, config/initializers/formtastic.rb
@@ -37,6 +38,14 @@ Application currently based on Rails 3 stable branch.
 * bundle install
 * rake cucumber
 * for autotest run in the shell "export AUTOFEATURE=true" and than run autotest command
+
+=== Authorization
+
+We use Devise for login based auth b/c is modular and have a good community support. Take a look at config/initializers/devise.rb
+if you want customize it.
+
+We use Omniauth for authientification over OAuth with Twitter. Please configure key & secret token in the config/config.yml
+If you don't want to use omniauth simply comment it's configuration in the config/initializers/devise.rb
 
 === Scaffolding
 

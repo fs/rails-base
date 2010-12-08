@@ -1,3 +1,15 @@
+Given /^I exist in the application as registered user$/ do
+  @current_user = Factory.create(:confirmed_user)
+end
+
+Given /^I exist in the application as registered over Twitter user$/ do
+  @current_user = Factory.create(:user_registered_over_twitter)
+end
+
+Given /^I exist in the application as registered user with not confirmed email$/ do
+  @current_user = Factory.create(:not_confirmed_user)
+end
+
 When /^I submit my registration information$/ do
   @current_user = Factory.build(:user)
 
@@ -5,6 +17,12 @@ When /^I submit my registration information$/ do
   fill_in 'user_email', :with => @current_user.email
   fill_in 'user_password', :with => @current_user.password
   fill_in 'user_password_confirmation', :with => @current_user.password
+  click_button 'user_submit'
+end
+
+When /^I submit my registration information for sign up using Twitter$/ do
+  @current_user = Factory.build(:user)
+  fill_in 'user_email', :with => @current_user.email
   click_button 'user_submit'
 end
 
@@ -35,6 +53,15 @@ When /^I submit my user information$/ do
   fill_in 'user_password', :with => '123456'
   fill_in 'user_password_confirmation', :with => '123456'
   fill_in 'user_current_password', :with => @current_user.password
+
+  click_button 'user_submit'
+end
+
+When /^I submit my user information without current password$/ do
+  fill_in 'user_full_name', :with => @current_user.full_name
+  fill_in 'user_email', :with => @current_user.email
+  fill_in 'user_password', :with => '123456'
+  fill_in 'user_password_confirmation', :with => '123456'
 
   click_button 'user_submit'
 end
