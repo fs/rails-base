@@ -211,6 +211,15 @@ And then use them in the steps:
   Given a post exists
   Given a unconfirmed post exists
 
+==== Tags
+
+You can use @webmock for enabling webmock functionality around some scenario. It's mean all real HTTP connection will be
+disabled in the given scenario and you need to stub them with stub_request. Checkout twitter_authentication_steps.rb for example.
+
+You can use @vcr for enabling VCR functionality around some scenario. It will also disable all real HTTP connectons
+and will try to replay them from the cassette assotiated with this scenario. Each cassette will be stored in the
+features/cassettes/:feature_name/:scenario_name. 
+
 Checkout also:
 
 * http://collectiveidea.com/blog/archives/2010/09/09/practical-cucumber-factory-girl-steps/
