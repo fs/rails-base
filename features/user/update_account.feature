@@ -1,6 +1,6 @@
 Feature: Update account information
   In order to keep my info up-to-date
-  As a registerred user
+  As a registered user
   I want to be able to update my account information
 
   Background:
