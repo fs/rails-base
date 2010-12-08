@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :confirmable,
-         :recoverable, :rememberable, :trackable, :validatable, :invitable
+         :recoverable, :rememberable, :trackable, :validatable
 
   include User::OmniAuthExtension
 
