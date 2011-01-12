@@ -116,7 +116,7 @@ GEM
       gem_plugin (~> 0.2.3)
     multi_json (0.0.5)
     multipart-post (1.0.1)
-    mysql (2.8.1)
+    mysql2 (0.2.6)
     net-ldap (0.1.1)
     nokogiri (1.4.4)
     oa-basic (0.1.6)
@@ -259,7 +259,7 @@ DEPENDENCIES
   jquery-rails (= 0.2.5)
   launchy (= 0.3.7)
   mongrel (= 1.2.0.pre2)
-  mysql (= 2.8.1)
+  mysql2
   omniauth (= 0.1.6)
   rails (= 3.0.3)
   rails3-generators (= 0.14.0)
