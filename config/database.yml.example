@@ -20,7 +20,7 @@ cucumber:
 # mysql@locahost
 #
 #defaults_developmet: &defaults_developmet
-#  adapter: mysql
+#  adapter: mysql2
 #  encoding: utf8
 #  host: localhost
 #  username: root
