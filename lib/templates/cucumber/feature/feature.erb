@@ -1,35 +1,40 @@
+<% attribute = named_args.blank? ? (class_name.constantize.column_names - ['id', 'created_at', 'updated_at']).first : named_args.first.name -%>
+<% attribute_human_name = attribute.humanize -%>
 Feature: Manage <%= plural_name %>
   In order to [goal]
-  [stakeholder]
-  wants [behaviour]
+  As a [stakeholder]
+  A want [behaviour]
 
   Background:
     Given I am an authenticated user
 
   Scenario: Listing <%= plural_name %>
-    Given 5 <%= plural_name %> exist
-    When I am on the <%= plural_name %> page
-    Then I should see all existing <%= plural_name %>
+    Given a <%= singular_name %> exists with <%= attribute %>: "New <%= singular_name %>"
+    When I am on the posts page
+    Then I should see "New <%= singular_name %>"
 
-  Scenario: Create new <%= singular_name %> with valid data
+  Scenario: Create new <%= singular_name %> with <%= attribute %>
     When I am on the new <%= singular_name %> page
-    And I submit valid <%= singular_name %> information
-    Then new <%= singular_name %> should exists
+    And I fill in "<%= attribute_human_name %>" with "Updated <%= singular_name %>"
+    And I press "Create <%= human_name %>"
+    Then a <%= singular_name %> should exist with <%= attribute %>: "Updated <%= singular_name %>"
 
-  @wip
-  Scenario: Create new <%= singular_name %> with invalid data
+  Scenario: Create new <%= singular_name %> without <%= attribute %>
     When I am on the new <%= singular_name %> page
-    And I submit invalid <%= singular_name %> information
-    Then new <%= singular_name %> should not exists
+    And I fill in "<%= attribute_human_name %>" with ""
+    And I press "Create <%= human_name %>"
+    Then a <%= singular_name %> should not exist with <%= attribute %>: "Updated <%= singular_name %>"
 
-  Scenario: Update <%= singular_name %> with valid data
-    Given a <%= singular_name %> exists
-    And I am on the edit <%= singular_name %> page for existing <%= singular_name %>
-    When I submit valid <%= singular_name %> information
-    Then exsisting <%= singular_name %> should be updated
+  Scenario: Update <%= singular_name %> with <%= attribute %>
+    Given a <%= singular_name %> exists with <%= attribute %>: "New <%= singular_name %>"
+    And I am on the <%= singular_name %>'s edit page
+    And I fill in "<%= attribute_human_name %>" with "Updated <%= singular_name %>"
+    And I press "Update <%= human_name %>"
+    Then a <%= singular_name %> should exist with <%= attribute %>: "Updated <%= singular_name %>"
 
-  Scenario: Update <%= singular_name %> with invalid data
-    Given a <%= singular_name %> exists
-    And I am on the edit <%= singular_name %> page for existing <%= singular_name %>
-    When I submit invalid <%= singular_name %> information
-    Then exsisting <%= singular_name %> should not be updated
+  Scenario: Update <%= singular_name %> without <%= attribute %>
+    Given a <%= singular_name %> exists with <%= attribute %>: "New <%= singular_name %>"
+    And I am on the <%= singular_name %>'s edit page
+    And I fill in "<%= attribute_human_name %>" with ""
+    And I press "Update <%= human_name %>"
+    Then a <%= singular_name %> should not exist with <%= attribute %>: "Updated <%= singular_name %>"
