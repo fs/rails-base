@@ -175,13 +175,6 @@ likely to get overwritten when you update Cucumber so store your stuff in your o
 Scenarios should have the same lifecyle as your code: Red, Green, Refactor to make
 them DRY and easy to read.
 
-Group multiple steps together. For instance:
-  When I fill in "Title" with "New title"
-  And I fill in "Text" with "New text"
-  And I press "Submit"
-could be refactored to:
-  When I submit valid post details
-
 ==== Background: setup the DRY way
 
 Make the feature focus on one business object/action/context and the background
