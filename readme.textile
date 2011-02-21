@@ -1,9 +1,9 @@
-== Skeleton for new Rails 3 based application
+h1. Skeleton for new Rails 3 based application
 
 This simple application includes ruby/rails technology which we use in the Flatsoft for new projects.
 Application currently based on Rails 3 stable branch.
 
-=== Gems
+h2.  Gems
 
 * Basic auth: Devise http://github.com/plataformatec/devise, app/models/user.rb
 * OAuth auth: Omniauth https://github.com/intridea/omniauth, app/models/user/omni_auth_extension.rb
@@ -17,7 +17,7 @@ Application currently based on Rails 3 stable branch.
 * Tests: RSpec, Shoulda, RR, Cucumber, Factory Girl, Autotest
 * Code metrics: rails_best_practices, http://github.com/flyerhzm/rails_best_practices and rcov
 
-=== Initializers
+h2.  Initializers
 
 * config.rb - loads configuration for current Rails environment to the configatron, so you can access them like configatron.app_name
 * devise.rb - setup devise options, mailer_sender and pepper from config
@@ -28,7 +28,7 @@ Application currently based on Rails 3 stable branch.
 * time_formats.rb - setup default time formats, so you can use them like object.create_at.to_s(:us_time)
 * requires.rb - automatically requires everything in lib/ & lib/extensions
 
-=== Quick start
+h2.  Quick start
 
 * clone repository
 * tune gemspec name in the .rvmrc
@@ -39,7 +39,7 @@ Application currently based on Rails 3 stable branch.
 * rake cucumber
 * for autotest run in the shell "export AUTOFEATURE=true" and than run autotest command
 
-=== Authorization
+h2.  Authorization
 
 We use Devise for login based auth b/c is modular and have a good community support. Take a look at config/initializers/devise.rb
 if you want customize it.
@@ -47,7 +47,7 @@ if you want customize it.
 We use Omniauth for authientification over OAuth with Twitter. Please configure key & secret token in the config/config.yml
 If you don't want to use omniauth simply comment it's configuration in the config/initializers/devise.rb
 
-=== Scaffolding
+h2.  Scaffolding
 
 Scaffold generator will create: model with rspec, factory, controller based on inherited resources, views based on formtastic & tabletastic.
 
@@ -57,12 +57,12 @@ Cucumber:feature generator will create: cucumber feature for scaffold resource
 
   $ rails g cucumber:feature post title:string text:text
 
-=== Tests
+h2.  Tests
 
 We use rspec with shoulda matchers for model testing and cucumber with capybara
 for integration testing.
 
-==== Rspec
+h2.   Rspec
 
 You should cover validations, associations with shoulda matchers and test deeply
 complected model methods.
@@ -110,14 +110,14 @@ Only one expectation per it block
 
     context "when name empty" do
       it { should not be_valid }
-      specify { @user.save.should == false }
+      specify { @user.save.should h2. false }
     end
 
     context "when name not empty" do
       before { @user.name = 'Sam' }
 
       it { should be_valid }
-      specify { @user.save.should == true }
+      specify { @user.save.should h2. true }
     end
 
     describe :present do
@@ -152,9 +152,9 @@ Test Valid, Edge and Invalid cases
 
 http://eggsonbread.com/2010/03/28/my-rspec-best-practices-and-tips/
 
-==== Cucumber features
+h2.   Cucumber features
 
-==== Organization
+h2.   Organization
 
 Group steps by model. We’ve found the best way to keep track of them is to group
 them by the primary model they affect. Some steps may affect multiple models,
@@ -170,12 +170,12 @@ and support/env.rb with your own steps, helpers or setup code. These files are
 likely to get overwritten when you update Cucumber so store your stuff in your own files.
 
 
-==== Custom steps make your scenario DRY and accessible
+h2.   Custom steps make your scenario DRY and accessible
 
 Scenarios should have the same lifecyle as your code: Red, Green, Refactor to make
 them DRY and easy to read.
 
-==== Background: setup the DRY way
+h2.   Background: setup the DRY way
 
 Make the feature focus on one business object/action/context and the background
 will get longer than the scenarios.
@@ -184,7 +184,7 @@ Use 'Background' to consolidate common steps in a feature:
   Background:
     Given I am an authenticated user
 
-==== Factory Girl steps
+h2.   Factory Girl steps
 
 Factory girl comes with some really useful cucumber steps.
 Try to use Factories as match as possible. For example if you have Post with
@@ -204,7 +204,7 @@ And then use them in the steps:
   Given a post exists
   Given a unconfirmed post exists
 
-==== Tags
+h2.   Tags
 
 You can use @webmock for enabling webmock functionality around some scenario. It's mean all real HTTP connection will be
 disabled in the given scenario and you need to stub them with stub_request. Checkout twitter_authentication_steps.rb for example.
@@ -220,7 +220,7 @@ Checkout also:
 * http://eggsonbread.com/2010/09/06/my-cucumber-best-practices-and-tips/
 * http://github.com/aslakhellesoy/cucumber/wiki/Tutorials-and-Related-Blog-Posts
 
-=== Formtastic
+h2.  Formtastic
 
 If you have any difficulties with fortastic fill free to use standard form helpers.
 But better to extend fortastic with custom field types.
@@ -249,13 +249,13 @@ But better to extend fortastic with custom field types.
   # in the view
   <%= form.input :price, :as => :money %>
 
-=== Simple Navigation
+h2.  Simple Navigation
 
 Navigation configuration stored in the config/navigations folder.
 We have main and user navigation which accessible for visitor and authorized user accordingly.
 
 
-=== Note on Patches/Pull Requests
+h2.  Note on Patches/Pull Requests
 
 * Fork the project.
 * Make your feature addition or bug fix.
@@ -266,7 +266,7 @@ We have main and user navigation which accessible for visitor and authorized use
 * Also you can send bug reports in the PivotalProject https://www.pivotaltracker.com/projects/140789
 
 
-=== How to update existing project with new changes from rails3-base repo
+h2.  How to update existing project with new changes from rails3-base repo
 
   git remote add rails3-base git://github.com/fs/rails3-base.git
   git checkout -b rails3-base-update
@@ -275,6 +275,3 @@ We have main and user navigation which accessible for visitor and authorized use
   # commit
   # test
   # merge
-
-Thanks,
-Flatsoft
