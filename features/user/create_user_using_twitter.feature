@@ -10,7 +10,8 @@ Feature: Sign up with Twitter account
     And I follow "Sign in with Twitter"
     And Twitter authorizes me as registered user
     Then I should be on the sign up page
-    When I submit my registration information for sign up using Twitter
+    When I fill in "Email" with "user@exampld.com"
+    And press "Sign up"
     Then I should be signed in
     And I should be on the home page
 
