@@ -5,7 +5,7 @@ Feature: Sign in using twitter
   I want to sign in
 
   Scenario: User signs in using linked Twitter account
-    Given I exist in the application as registered over Twitter user
+    Given a user registered over twitter exists with email: "me@example.com"
     And the Twitter OAuth request is successful
     When I go to the sign in page
     And I follow "Sign in with Twitter"

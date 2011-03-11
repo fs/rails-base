@@ -26,7 +26,7 @@
 
 module EmailHelpers
   def current_email_address
-    last_email_address || @current_user.email
+    last_email_address || 'me@example.com'
   end
 end
 
