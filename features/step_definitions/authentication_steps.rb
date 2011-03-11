@@ -1,31 +1,21 @@
 Given /^I am an authenticated user$/ do
-  Given %Q{I exist in the application as registered user}
-  Given %Q{I am logged in}
+  Given %Q{a confirmed user: "me" exists with id: "1", email: "me@example.com", password: 123456, full_name: "Current User"}
+
+  When %Q{I go to the sign in page}
+  When %Q{fill in "Email" with "me@example.com"}
+  When %Q{fill in "Password" with "123456"}
+  When %Q{press "Sign in"}
 end
 
 Given /^I am logged out$/ do
-  visit(destroy_user_session_path)
-end
-
-Given /^I am logged in$/ do
-  visit(new_user_session_path)
-
-  When %Q{submit my sign in information}
-end
-
-When /^submit my sign in information$/ do
-  fill_in 'user_email', :with => @current_user.email
-  fill_in 'user_password', :with => @current_user.password
-  click_button 'user_submit'
-end
-
-When /^submit invalid sign in information$/ do
-  fill_in 'user_email', :with => 'invalid email'
-  fill_in 'user_password', :with => 'invalid password'
-  click_button 'user_submit'
+  Given %Q{I am on the sign out page}
 end
 
 Then /^I should be signed in$/ do
-  page.should have_content(@current_user.full_name_with_email)
+  Then %Q{I should see "Sign out" within "#navigation"}
 end
 
+Then /^access should be denied via authentication rule$/ do
+  Then %Q{I should be on the sign in page}
+  Then %Q{I should see "You need to sign in or sign up before continuing"}
+end
