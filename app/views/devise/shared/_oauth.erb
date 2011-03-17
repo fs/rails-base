@@ -1,0 +1,14 @@
+<div id="oauth">
+  <strong>OR sing in using</strong>
+
+  <fieldset>
+    <% if devise_mapping.omniauthable? %>
+      <% resource_class.omniauth_providers.each do |provider| %>
+        <%= link_to(omniauth_authorize_path(resource_name, provider)) do %>
+          <%= image_tag "oauth/#{provider.to_s}_64.png", :size => '64x64', :alt => provider.to_s.titleize %>
+        <% end %>
+        <br/>
+      <% end %>
+    <% end %>
+  </fieldset>
+</div>
