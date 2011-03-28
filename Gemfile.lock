@@ -153,6 +153,9 @@ GEM
       oa-oauth (= 0.1.6)
       oa-openid (= 0.1.6)
     orm_adapter (0.0.3)
+    parallel (0.5.3)
+    parallel_tests (0.4.11)
+      parallel
     pickle (0.4.4)
       cucumber (>= 0.8)
       rake
@@ -267,6 +270,7 @@ DEPENDENCIES
   mongrel (= 1.2.0.pre2)
   mysql (= 2.8.1)
   omniauth (= 0.1.6)
+  parallel_tests (= 0.4.11)
   pickle (= 0.4.4)
   rails (= 3.0.3)
   rails3-generators (= 0.14.0)
