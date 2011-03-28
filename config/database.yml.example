@@ -10,15 +10,12 @@ development:
   <<: *defaults_developmet
 
 test:
-  database: db/test.sqlite3
+  database: db/test<%= ENV['TEST_ENV_NUMBER'] %>.sqlite3
   <<: *defaults_developmet
 
-cucumber:
-  database: db/cucumber.sqlite3
-  <<: *defaults_developmet
 
-# mysql@locahost
-#
+## mysql@locahost
+##
 #defaults_developmet: &defaults_developmet
 #  adapter: mysql
 #  encoding: utf8
@@ -31,9 +28,5 @@ cucumber:
 #  <<: *defaults_developmet
 #
 #test:
-#  database: application_test
-#  <<: *defaults_developmet
-#
-#cucumber:
-#  database: application_test
+#  database: application_test<%= ENV['TEST_ENV_NUMBER'] %>
 #  <<: *defaults_developmet
