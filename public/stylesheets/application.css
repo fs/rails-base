@@ -6,6 +6,7 @@ body { background-color: #dadada;}
   width: 880px;
   -moz-border-radius: 24px;
   -webkit-border-radius: 24px;
+  overflow: hidden;
 }
 
 #navigation {
@@ -72,8 +73,12 @@ form abbr { color:red; font-size:1.2em; margin-left:.2em; }
 .pagination { text-align: center; }
 .pagination span.disabled { color: #888; }
 .pagination em { background: #f0f0f0; padding: 0 5px; -moz-border-radius:6px; -webkit-border-radius:6px; border-radius:6px; margin: 0 2px; border: solid 1px #ddd; }
-#session_new { width: 400px; float: left;}
+#session_new, #user_new { width: 400px; float: left;}
 
 #oauth { float: right; }
-#oauth strong { font-size: 2em; }
-#oauth fieldset { float: right;}
+#oauth strong { font-size: 2em; float: left; font-size: 32px; margin: 95px 40px 0 0;}
+#oauth fieldset { float: right; width: 320px; position: relative; }
+#oauth fieldset a { margin: 24px 8px 0 8px; overflow: hidden; float: left; }
+#oauth fieldset a img { margin: 0 0 4px; }
+#oauth fieldset a span { display: block; text-align: center; }
+#oauth fieldset legend { position: absolute; top: 23px; left: 34px; }
