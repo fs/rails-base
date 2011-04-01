@@ -9,7 +9,6 @@ Feature: Sign in using twitter
     And the Twitter OAuth request is successful
     When I go to the sign in page
     And I follow "Twitter"
-    And Twitter authorizes me as registered user
     Then I should be signed in
     And I should be on the home page
     And I should see "Successfully authorized from twitter account"

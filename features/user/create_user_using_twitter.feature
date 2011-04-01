@@ -8,7 +8,6 @@ Feature: Sign up with Twitter account
     Given the Twitter OAuth request is successful
     When I go to the sign up page
     And I follow "Twitter"
-    And Twitter authorizes me as registered user
     Then I should be on the sign up page
     When I fill in "Email" with "user@exampld.com"
     And press "Sign up"
