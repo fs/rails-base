@@ -83,6 +83,7 @@ fieldset fieldset fieldset {
 legend {
   font-weight: bold;
 }
+.ie6 legend, .ie7 legend { margin-left: -7px; }
 
 fieldset.buttons {
   background: inherit;
@@ -107,7 +108,7 @@ input[type="datetime-local"],
 input[type="email"],
 input[type="month"],
 input[type="number"],
-input[type="password"]
+input[type="password"],
 input[type="range"],
 input[type="search"],
 input[type="tel"],
@@ -118,6 +119,9 @@ input[type="week"] {
   font-size: inherit;
   padding: 3px 2px;
   width: 300px;
+}
+.ie6 input {
+  vertical-align: text-bottom;
 }
 
 input[disabled='disabled'] {
@@ -130,6 +134,9 @@ input[type="checkbox"] {
   position: relative;
   top: -2px;
   vertical-align: middle;
+}
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
 }
 
 input[type="radio"] {
@@ -156,6 +163,7 @@ textarea {
   margin: 0 0.5em 0.5em 0;
   padding: 5px;
   width: 440px;
+  overflow: auto;
 }
 
 /* Select fields */
