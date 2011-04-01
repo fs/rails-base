@@ -1,8 +1,8 @@
 <%% title 'Listing <%= plural_table_name %>' %>
 
-<%% unless collection.blank? %>
+<%% unless collection.all.blank? %>
   <%%= table_for(collection) %>
-  <%%= will_paginate(collection) %>
+  <%%= paginate(collection) %>
 <%% else %>
   <p>Now it's time to create some data here. To create new entry, please use the button below.</p>
   <br /><br />

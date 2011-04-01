@@ -12,7 +12,7 @@ gem 'client_side_validations', '3.0.0'
 gem 'tabletastic', '0.2.2'
 gem 'flutie', '1.1.5'
 gem 'inherited_resources', '1.2.1'
-gem 'will_paginate', '3.0.pre2'
+gem 'kaminari', '0.10.4'
 
 group :test, :development do
   gem 'mongrel', '1.2.0.pre2'
