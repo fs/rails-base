@@ -6,7 +6,7 @@ end
 Given /^I am logged in with Twitter account$/ do
   Given %Q{the Twitter OAuth request is successful}
   When %Q{I go to the sign in page}
-  When %Q{I follow "Sign in with Twitter"}
+  When %Q{I follow "Twitter"}
   When %Q{Twitter authorizes me as registered user}
   Then %Q{I should be signed in}
 end
