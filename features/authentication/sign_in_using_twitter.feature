@@ -8,8 +8,7 @@ Feature: Sign in using twitter
     Given a user registered over twitter exists with email: "me@example.com"
     And the Twitter OAuth request is successful
     When I go to the sign in page
-    And I follow "Sign in with Twitter"
-    And Twitter authorizes me as registered user
+    And I follow "Twitter"
     Then I should be signed in
     And I should be on the home page
     And I should see "Successfully authorized from twitter account"

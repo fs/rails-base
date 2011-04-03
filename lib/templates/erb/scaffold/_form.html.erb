@@ -1,4 +1,4 @@
-<%%= semantic_form_for(resource) do |form| %>
+<%%= semantic_form_for(resource, :validate => true) do |form| %>
   <%%= form.inputs do %>
 <% for attribute in attributes -%>
     <%%= form.input :<%= attribute.name %> %>

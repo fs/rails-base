@@ -1,0 +1,9 @@
+= Rails 3 Base 0.1
+
+* We now use bundler package and bundler install --path vendor --local instead of RVM gemset, so all required gems
+are in the repo.
+* Kaminari instead of will_paginate
+* Client side validation added
+* New styles for sign in and sign up
+* Added parallel_test gem for runing test more then one CPU core
+* Updated gems to the latest

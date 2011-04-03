@@ -7,8 +7,7 @@ Feature: Sign up with Twitter account
   Scenario: User signs up with Twitter account
     Given the Twitter OAuth request is successful
     When I go to the sign up page
-    And I follow "Sign in with Twitter"
-    And Twitter authorizes me as registered user
+    And I follow "Twitter"
     Then I should be on the sign up page
     When I fill in "Email" with "user@exampld.com"
     And press "Sign up"
