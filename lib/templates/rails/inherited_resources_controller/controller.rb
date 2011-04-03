@@ -7,6 +7,6 @@ class <%= controller_class_name %>Controller < ApplicationController
   protected
 
   def collection
-    @<%= plural_table_name %> ||= end_of_association_chain.paginate(:page => params[:page])
+    @<%= plural_table_name %> ||= end_of_association_chain.page(params[:page])
   end
 end

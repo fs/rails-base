@@ -1,6 +1,9 @@
-<% title 'Sign up' %>
+<% title %Q{Sign up to "#{configatron.app_name}"} %>
 
-<%= semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |form| %>
+Already member? <%= link_to 'Sign in here!', new_session_path(resource_name) %>
+<br /><br />
+
+<%= semantic_form_for(resource, :validate => true, :as => resource_name, :url => registration_path(resource_name)) do |form| %>
   <%= form.inputs do %>
     <%= form.input :full_name, :required => true %>
     <%= form.input :email, :required => true %>
@@ -15,4 +18,4 @@
   <% end %>
 <% end %>
 
-<%= render :partial => 'devise/shared/links' %>
+<%= render :partial => 'devise/shared/oauth' %>

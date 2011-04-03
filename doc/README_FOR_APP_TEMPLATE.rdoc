@@ -14,7 +14,7 @@ Application currently based on Rails 3 stable branch.
 * Default styles for Formtastic: Flutie, github.com/thoughtbot/flutie
 * Application config: Configatron, http://github.com/markbates/configatron, config/config.yml
 * JS Framework: Jquery-rails, http://github.com/indirect/jquery-rails
-* Tests: RSpec, Shoulda, RR, Cucumber, Factory Girl, Autotest
+* Tests: RSpec, Shoulda, RR, Cucumber, Factory Girl, Autotest, Parallel test
 * Code metrics: rails_best_practices, http://github.com/flyerhzm/rails_best_practices and rcov
 
 === Initializers
@@ -31,13 +31,20 @@ Application currently based on Rails 3 stable branch.
 === Quick start
 
 * clone repository
-* tune gemspec name in the .rvmrc
 * tune config/config.yml
 * tune in the sources application name: s/Rails3Base/YouApplicationName/g
 * tune config/database.yml.example and copy it to the config/database.yml
-* bundle install
+* bundle install --path vendor --local
 * rake cucumber
 * for autotest run in the shell "export AUTOFEATURE=true" and than run autotest command
+
+=== Gem managnment 
+
+Instead of using RVM gemset for isolating gems for your new Rails application it's better to use bundler "path" option:
+
+  bundle install --path vendor --local
+
+will install all gems into the vendor/ruby from vendor/cache
 
 === Authorization
 
@@ -211,7 +218,12 @@ disabled in the given scenario and you need to stub them with stub_request. Chec
 
 You can use @vcr for enabling VCR functionality around some scenario. It will also disable all real HTTP connectons
 and will try to replay them from the cassette assotiated with this scenario. Each cassette will be stored in the
-features/cassettes/:feature_name/:scenario_name. 
+features/cassettes/:feature_name/:scenario_name.
+
+==== Parallel test
+
+You can speedup RSpec + Cucumber by running parallel on multiple CPUs(or cores) with https://github.com/grosser/parallel_tests if you have more than 1 core on your development
+machine: rake parallel:create parallel:prepare parallel:spec parallel:features
 
 Checkout also:
 
