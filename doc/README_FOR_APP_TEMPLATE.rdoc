@@ -31,13 +31,20 @@ Application currently based on Rails 3 stable branch.
 === Quick start
 
 * clone repository
-* tune gemspec name in the .rvmrc
 * tune config/config.yml
 * tune in the sources application name: s/Rails3Base/YouApplicationName/g
 * tune config/database.yml.example and copy it to the config/database.yml
-* bundle install
+* bundle install --path vendor --local
 * rake cucumber
 * for autotest run in the shell "export AUTOFEATURE=true" and than run autotest command
+
+=== Gem managnment 
+
+Instead of using RVM gemset for isolating gems for your new Rails application it's better to use bundler "path" option:
+
+  bundle install --path vendor --local
+
+will install all gems into the vendor/ruby from vendor/cache
 
 === Authorization
 
