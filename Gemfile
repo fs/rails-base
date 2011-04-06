@@ -17,7 +17,6 @@ gem 'kaminari', '0.10.4'
 group :test, :development do
   gem 'mongrel', '1.2.0.pre2'
   gem 'sqlite3-ruby', '1.3.3'
-  gem 'redgreen', '1.2.2'
   gem 'rr', '1.0.2'
   gem 'factory_girl_rails', '1.0.1'
   gem 'rspec-rails', '2.5.0'
