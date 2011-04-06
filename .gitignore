@@ -6,3 +6,4 @@ coverage/*
 rerun.txt
 config/database.yml
 doc/**/*
+vendor/ruby
