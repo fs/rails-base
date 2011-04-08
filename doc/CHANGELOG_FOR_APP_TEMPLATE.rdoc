@@ -1,3 +1,7 @@
+= Rails 3 Base 0.1.2
+
+* Cleanup appliaction.css
+
 = Rails 3 Base 0.1.1, hotfix
 
 * Updated Rails to 3.0.6
