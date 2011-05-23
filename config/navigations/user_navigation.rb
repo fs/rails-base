@@ -1,6 +1,6 @@
-SimpleNavigation::Configuration.run do |navigation|  
+SimpleNavigation::Configuration.run do |navigation|
   navigation.autogenerate_item_ids = false
-  
+
   navigation.items do |user|
     user.dom_class = 'user'
 
