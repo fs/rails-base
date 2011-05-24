@@ -35,9 +35,9 @@ table.list td.actions a:hover{filter:progid:DXImageTransform.Microsoft.Alpha(opa
 .show_link a{background-image:url(/images/icon_view.gif)}
 
 /* FORMS */
-a.button,fieldset.buttons input{background:url(/images/button_bg.gif) bottom left repeat-x;height:32px;overflow:visible;cursor:pointer;border:solid 1px #d2d2d2;line-height:30px;font-weight:bold;text-shadow:1px 1px #fff;border-radius:3px;-khtml-border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;text-transform:uppercase;color:#000;text-decoration:none;margin:0;padding:0 10px}
-a.button:hover,fieldset.buttons input:hover{color:#555}
-a.button:focus,fieldset.buttons input:focus{background-position:top left;border-bottom:solid 1px #f3f3f3}
+a.button,input.button{background:url(/images/button_bg.gif) bottom left repeat-x;height:32px;overflow:visible;cursor:pointer;border:solid 1px #d2d2d2;line-height:30px;font-weight:bold;text-shadow:1px 1px #fff;border-radius:3px;-khtml-border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;text-transform:uppercase;color:#000;text-decoration:none;margin:0;padding:0 10px;margin-bottom:1.5em}
+a.button:hover,input.button:hover{color:#555}
+a.button:focus,input.button:focus{background-position:top left;border-bottom:solid 1px #f3f3f3}
 a.button{line-height:30px;display:block;height:30px;float:left;clear:both}
 div.buttons{overflow:hidden}
 a.button.add span{background:url(/images/icon_add.gif) center left no-repeat;padding-left:20px}
@@ -48,8 +48,8 @@ textarea:focus,input[type=text]:focus,input[type=password]:focus{-moz-box-shadow
 li.error input[type=text]:focus,li.error input[type=password]:focus,li.error textarea:focus{-moz-box-shadow:0 0 5px #FBE3E4;box-shadow:0 0 5px #FBE3E4;-webkit-box-shadow:0 0 5px #FBE3E4}
 input[type=text],input[type=password]{-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;width:300px;border-color:#A7A7A7 #E3E3E3 #E3E3E3 #A7A7A7;border-style:solid;border-width:1px;padding:3px 2px}
 fieldset{-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px}
-form ol li.password,form ol li.date,form ol li.time,form ol li.select,form ol li.radio,form ol li.check_boxes,form ol li.string{width:350px;float:left}
-form ol li.datetime,form ol li.text{clear:both;width:700px}
+form .input.string, form .input.select,form .input.boolean {width:350px;float:left}
+form .input.datetime,input.text{clear:both;width:700px}
 form abbr{color:red;font-size:1.2em;margin-left:.2em}
 #user_remember_me_input{clear:both}
 #session_new,#user_new{width:400px;float:left}
