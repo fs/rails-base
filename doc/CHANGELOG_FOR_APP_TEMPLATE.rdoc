@@ -1,4 +1,8 @@
-= 0.1.3
+= 0.1.4
+
+* Auto validates length of field extracted to https://gist.github.com/907485
+
+ = 0.1.3
 
 * Reorganize cucumber features by user roles
 
