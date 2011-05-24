@@ -7,6 +7,8 @@ class CreateUserIdentities < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    add_index :user_identities, [:user_id]
   end
 
   def self.down
