@@ -1,9 +1,9 @@
 <% title 'Resend confirmation instructions' %>
 
 <%= simple_form_for(resource, :as => resource_name, :url => confirmation_path(resource_name)) do |form| %>
-  <%= field_set_tag nil, :class => :inputs do %>
+  <fieldset class="inputs">
     <%= form.input :email, :required => true %>
-  <% end %>
+  </fieldset>
 
   <%= form.button :submit, 'Resend confirmation instructions' %>
 <% end %>

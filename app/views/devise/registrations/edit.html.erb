@@ -1,7 +1,7 @@
 <% title "Edit #{resource_name.to_s.humanize}" %>
 
 <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |form| %>
-  <%= field_set_tag nil, :class => :inputs do %>
+  <fieldset class="inputs">
     <%= form.input :full_name, :required => true %>
     <%= form.input :email, :required => true %>
     <%= form.input :password, :required => true, :hint => "leave blank if you don't want to change it" %>
@@ -9,7 +9,7 @@
     <% if resource.password_stored? %>
       <%= form.input :current_password, :required => true, :hint => "we need your current password to confirm your changes" %>
     <% end %>
-  <% end %>
+  </fieldset>
 
   <%= form.button :submit %>
 <% end %>

@@ -1,9 +1,9 @@
-<%%= semantic_form_for(resource, :validate => true) do |form| %>
-  <%%= form.inputs do %>
+<%%= simple_form_for(resource, :validate => true) do |form| %>
+  <fieldset class="inputs">
 <% for attribute in attributes -%>
     <%%= form.input :<%= attribute.name %> %>
 <% end -%>
-  <%% end %>
+  </fieldset>
 
-  <%%= form.buttons %> or <%%= link_to 'cancel', resource %>
+  <%%= form.button :submit %> or <%%= link_to 'cancel', resource %>
 <%% end %>
