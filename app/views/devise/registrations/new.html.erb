@@ -4,7 +4,7 @@ Already member? <%= link_to 'Sign in here!', new_session_path(resource_name) %>
 <br /><br />
 
 <%= simple_form_for(resource, :validate => true, :as => resource_name, :url => registration_path(resource_name)) do |form| %>
-  <fieldset class="inputs">
+  <fieldset>
     <%= form.input :full_name, :required => true %>
     <%= form.input :email, :required => true %>
     <% if resource.password_required? %>
@@ -12,7 +12,7 @@ Already member? <%= link_to 'Sign in here!', new_session_path(resource_name) %>
       <%= form.input :password_confirmation, :required => true %>
     <% end %>
   </fieldset>
-  
+
   <%= form.button :submit, 'Sign up' %>
 <% end %>
 

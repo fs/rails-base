@@ -4,7 +4,7 @@ Not a member? <%= link_to 'Sign up here!', new_registration_path(resource_name) 
 <br /><br/>
 
 <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:id => :session_new}) do |form| %>
-  <fieldset class="inputs">
+  <fieldset>
     <%= form.input :email, :required => true %>
     <%= form.input :password, :required => true %>
 
