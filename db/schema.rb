@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(:version => 20101122224015) do
     t.datetime "updated_at"
   end
 
+  add_index "user_identities", ["user_id"], :name => "index_user_identities_on_user_id"
+
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
     t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
