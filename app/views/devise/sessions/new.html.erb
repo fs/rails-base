@@ -4,7 +4,7 @@ Not a member? <%= link_to 'Sign up here!', new_registration_path(resource_name) 
 <br /><br/>
 
 <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:id => :session_new}) do |form| %>
-  <%= field_set_tag nil, :class => :inputs do %>
+  <fieldset class="inputs">
     <%= form.input :email, :required => true %>
     <%= form.input :password, :required => true %>
 
@@ -28,7 +28,7 @@ Not a member? <%= link_to 'Sign up here!', new_registration_path(resource_name) 
     <% if devise_mapping.rememberable? %>
       <%= form.input :remember_me, :as => :boolean, :label => 'Remember my login on this computer' %>
     <% end %>
-  <% end %>
+  </fieldset>
   <%= form.button :submit, 'Sign in' %>
 <% end %>
 

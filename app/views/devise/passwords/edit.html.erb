@@ -3,10 +3,10 @@
 <%= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |form| %>
   <%= form.hidden_field :reset_password_token %>
 
-  <%= field_set_tag nil, :class => :inputs do %>
+  <fieldset class="inputs">
     <%= form.input :password, :required => true %>
     <%= form.input :password_confirmation, :required => true %>
-  <% end %>
+  </fieldset>
 
   <%= form.button :submit, 'Change my password' %>
 <% end %>
