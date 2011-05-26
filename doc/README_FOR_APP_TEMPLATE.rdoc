@@ -9,9 +9,8 @@ Application currently based on Rails 3 stable branch.
 * OAuth auth: Omniauth https://github.com/intridea/omniauth, app/models/user/omni_auth_extension.rb
 * Navigation: SimpleNavigation http://github.com/andi/simple-navigation, config/navigations
 * DRY controllers: Inherited Resources, http://github.com/josevalim/inherited_resources
-* Form builder: Formtastic http://github.com/justinfrench/formtastic, config/initializers/formtastic.rb
+* Form builder: SimpleForm https://github.com/plataformatec/simple_form, config/initializers/simple_form.rb
 * List builder: Tabletastic http://github.com/jgdavey/tabletastic, config/initializers/tabletastic.rb
-* Default styles for Formtastic: Flutie, github.com/thoughtbot/flutie
 * Application config: Configatron, http://github.com/markbates/configatron, config/config.yml
 * JS Framework: Jquery-rails, http://github.com/indirect/jquery-rails
 * Tests: RSpec, Shoulda, RR, Cucumber, Factory Girl, Autotest, Parallel test
@@ -21,7 +20,7 @@ Application currently based on Rails 3 stable branch.
 
 * config.rb - loads configuration for current Rails environment to the configatron, so you can access them like configatron.app_name
 * devise.rb - setup devise options, mailer_sender and pepper from config
-* formtastic.rb - setup formtastic options
+* simple_form.rb - setup simple_form options
 * tabletastic.rb -  setup tabletastic options, by default all actions rendered in the list
 * mailer.rb - setup default hosts for mailer from configuration
 * simple_navigation.rb - setup simplae navigation options
@@ -38,7 +37,7 @@ Application currently based on Rails 3 stable branch.
 * rake cucumber
 * for autotest run in the shell "export AUTOFEATURE=true" and than run autotest command
 
-=== Gem managnment 
+=== Gem managnment
 
 Instead of using RVM gemset for isolating gems for your new Rails application it's better to use bundler "path" option:
 
@@ -231,35 +230,6 @@ Checkout also:
 * http://collectiveidea.com/blog/archives/2010/09/13/practical-cucumber-organization/
 * http://eggsonbread.com/2010/09/06/my-cucumber-best-practices-and-tips/
 * http://github.com/aslakhellesoy/cucumber/wiki/Tutorials-and-Related-Blog-Posts
-
-=== Formtastic
-
-If you have any difficulties with fortastic fill free to use standard form helpers.
-But better to extend fortastic with custom field types.
-
-  # lib/formtastic/money.rb
-  module Formtastic
-    module Money
-      protected
-
-      def money_input(method, options = {})
-        html_options = { :size => 6 }.merge(options.delete(:input_html) || {})
-        html_options = default_string_options(method, :string).merge(html_options)
-
-        self.label(method, options_for_label(options)) <<
-          template.content_tag(:span, '$', :class => 'char') <<
-          self.text_field(method, html_options)
-      end
-    end
-  end
-
-  Formtastic::SemanticFormBuilder.send(:include, Formtastic::Money)
-
-  # config/initialisers/formtastic.rb
-  require 'formtastic/money'
-
-  # in the view
-  <%= form.input :price, :as => :money %>
 
 === Simple Navigation
 
