@@ -1,0 +1,97 @@
+/* GLOBAL */
+body{background-color:#dadada}
+h1,h2,h3,h4,h5,h6{margin:0 0 1em}
+
+/* GENERAL */
+.content {
+	background:#fff;
+	width:880px;
+	overflow:hidden;
+	margin:40px auto;
+	padding:40px;
+	@include border-radius(24px);
+}
+
+/* LIST */
+table.list {
+	th {
+		white-space:nowrap;
+		background:#f1f1f1;
+		padding:.5em;
+	}
+	td {
+		padding:.5em;
+	}
+	td.actions img {
+		margin: 2px 1px;
+	}
+	tr.odd td {
+		background:#fafafa;
+	}
+	th.numeric, td.numeric {
+		text-align:right;
+	}
+}
+div.gauge {
+	border:solid 1px #ccc;
+	width:100%;
+	position:relative;
+	height:10px;
+}
+div.gauge-line {
+	height:10px;
+	background:#f0f0f0;
+	position:absolute;
+	top:0;
+	left:0;
+}
+div.percent {
+	text-align:center;
+	font-size:10px;
+	position:relative;
+	z-index:9;
+	width:100%;
+}
+
+/* ACTIONS */
+table.list td.actions {
+	width:2em;
+	text-align:center;
+	padding:0;
+	a {
+		width:20px;
+		height:20px;
+		text-indent:-9999em;
+		overflow:hidden;
+		display:block;
+		float:left;
+		background-position:0 0;
+		background-repeat:no-repeat;
+		margin:auto;
+		&:hover {
+			@include opacity(0.5);
+		}
+	}
+}
+.edit_link a {
+	background-image:url(/images/icon_edit.gif);
+}
+.destroy_link a {
+	background-image:url(/images/icon_delete.gif);
+}
+.show_link a {
+	background-image:url(/images/icon_view.gif);
+}
+
+/* PAGINATION */
+.pagination {
+	text-align:center;
+	.page.current {
+		font-style:italic;
+		background:#f0f0f0;
+		border:solid 1px #ddd;
+		margin:0 2px;
+		padding:0 5px;
+		@include border-radius(6px);
+	}
+}

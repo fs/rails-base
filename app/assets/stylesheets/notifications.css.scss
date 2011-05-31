@@ -1,0 +1,12 @@
+div.alert {
+	border:1px solid #FBC2C4;
+	margin-bottom:1em;
+	background:#FBE3E4;
+	color:#D12F19;
+	padding:.8em;
+	@include border-radius(8px);
+}
+
+div.error a {
+	color:#D12F19;
+}

@@ -1,0 +1,31 @@
+/* TWITTER */
+#oauth {
+	float:right;
+	strong {
+		float:left;
+		font-size:32px;
+		margin:95px 40px 0 0;
+	}
+	fieldset {
+		float:right;
+		width:320px;
+		position:relative;
+		a {
+			overflow:hidden;
+			float:left;
+			margin:24px 8px 0;
+			img {
+				margin:0 0 4px;
+			}
+			span {
+				display:block;
+				text-align:center;
+			}
+		}
+		legend {
+			position:absolute;
+			top:23px;
+			left:34px;
+		}
+	}
+}
