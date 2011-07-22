@@ -1,6 +1,6 @@
 source :rubygems
 
-gem 'rails', '3.1.0.rc1' # 3.1
+gem 'rails', '3.1.0.rc4' # 3.1
 
 # Asset template engines
 gem 'json', '1.5.1' # 3.1
