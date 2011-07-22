@@ -20,6 +20,7 @@ gem 'simple_form', '1.4' # 3.1
 # gem 'client_side_validations', '3.0.4'
 gem 'tabletastic', :git => 'git://github.com/fs/tabletastic.git'
 gem 'flutie', '1.1.5'
+gem 'bourbon', :git => 'git://github.com/thoughtbot/bourbon.git'
 gem 'inherited_resources', '1.2.2' # 3.1
 gem 'kaminari', '0.12.4' # 3.1
 

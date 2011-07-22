@@ -5,6 +5,13 @@ GIT
     tabletastic (0.2.2)
       activesupport (~> 3.1.0.rc1)
 
+GIT
+  remote: git://github.com/thoughtbot/bourbon.git
+  revision: 5d2452f82b318dc073cf68cb98694c8ed1785239
+  specs:
+    bourbon (0.1.1)
+      sass (>= 3.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -287,6 +294,7 @@ PLATFORMS
 DEPENDENCIES
   autotest (= 4.4.6)
   autotest-rails (= 4.1.0)
+  bourbon!
   capybara (= 0.4.1.2)
   capybara-mechanize (= 0.2.7)
   coffee-script (= 2.2.0)
