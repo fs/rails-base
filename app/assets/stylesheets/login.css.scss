@@ -1,7 +1,7 @@
-/* TWITTER */
+/* TWITTER 2 */
 #oauth {
-	float:right;
-	strong {
+float:right;
+    strong {
 		float:left;
 		font-size:32px;
 		margin:95px 40px 0 0;
@@ -13,19 +13,16 @@
 		a {
 			overflow:hidden;
 			float:left;
-			margin:24px 8px 0;
-			img {
-				margin:0 0 4px;
-			}
-			span {
-				display:block;
-				text-align:center;
+            padding:70px 10px 0 10px;
+            background-repeat: no-repeat;
+            background-position: center top;
+			&.twitter {
+			    background-image: url('/assets/oauth/twitter_64.png');
 			}
 		}
 		legend {
-			position:absolute;
-			top:23px;
-			left:34px;
+            float:left;
+			width:100%;
 		}
 	}
 }
