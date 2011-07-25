@@ -1,26 +1,39 @@
-@mixin border-radius($radius) {
-	-moz-border-radius: $radius;
-	-webkit-border-radius: $radius;
-	border-radius: $radius;
-}
-
-@mixin opacity($opacity) {
+/*
+*=depend_on common
+*=depend_on navigation
+*=depend_on notifications
+*=depend_on forms
+*=depend_on login
+*/
+ @mixin opacity($opacity) {
 	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=$opacity);
 	-moz-opacity:$opacity;
 	-khtml-opacity:$opacity;
 	opacity:$opacity;
 }
 
-@mixin box-shadow($one, $two, $three, $color: #FFF6BF) {
-	-moz-box-shadow: $one $two $three $color;
- 	-webkit-box-shadow: $one $two $three $color;
-	-o-box-shadow: $one $two $three $color;
-	box-shadow: $one $two $three $color;
-}
 
-@import "flutie.css.scss";
+@import 'reset';
+@import 'border-radius';
+@import 'box-shadow';
+@import 'box-sizing';
+@import 'inline-block';
+@import 'transition';
+@import 'linear-gradient';
+@import 'defaults';
+@import 'type';
+@import 'forms';
+@import 'tables';
+@import 'lists';
+@import 'screen';
 @import "common.css.scss";
 @import "navigation.css.scss";
 @import "notifications.css.scss";
 @import "forms.css.scss";
 @import "login.css.scss";
+
+
+
+
+
+
