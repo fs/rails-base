@@ -3,14 +3,14 @@ source :rubygems
 gem 'rails', '3.1.0.rc4' # 3.1
 
 # Asset template engines
-gem 'json', '1.5.1' # 3.1
-gem 'sass', '3.1.1' # 3.1
-gem 'coffee-script', '2.2.0' # 3.1
-gem 'uglifier', '0.5.4' # 3.1
+gem 'json'
+gem 'sass-rails', '~> 3.1.0.rc'
+gem 'coffee-script'
+gem 'uglifier'
 
 gem 'mysql2', '0.3.2' # 3.1
 
-gem 'jquery-rails', '1.0.9' # 3.1
+gem 'jquery-rails'
 
 gem 'configatron', '2.8.0' # 3.1
 gem 'devise', '1.3.4' # 3.1
@@ -20,6 +20,7 @@ gem 'simple_form', '1.4' # 3.1
 # gem 'client_side_validations', '3.0.4'
 gem 'tabletastic', :git => 'git://github.com/fs/tabletastic.git'
 gem 'flutie', '1.1.5'
+gem 'bourbon', :git => 'git://github.com/thoughtbot/bourbon.git'
 gem 'inherited_resources', '1.2.2' # 3.1
 gem 'kaminari', '0.12.4' # 3.1
 
