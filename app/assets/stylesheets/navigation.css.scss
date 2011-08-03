@@ -14,11 +14,12 @@
 					color: #000;
 				}
 			}
+            .selected {
+                a {
+                    color: #000;
+                }
+            }
 		}
-		li.selected {
-			a {
-				color: #000;
-			}
-		}
+
 	}
 }
