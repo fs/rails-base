@@ -35,13 +35,12 @@ end
 
 group :development, :test do
   gem 'sqlite3-ruby'
+  gem 'rspec-rails'    
 end
 
 group :test do
   gem 'database_cleaner'
-
   gem 'rr'
-  gem 'rspec-rails'  
   gem 'shoulda-matchers'  
   gem 'email_spec'  
   gem 'factory_girl_rails'
