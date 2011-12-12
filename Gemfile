@@ -26,7 +26,9 @@ gem 'kaminari'
 group :development do
   gem 'heroku'
 
-  # gem 'rails_best_practices'
+  gem 'rails_best_practices'
+  gem 'ripper'
+  
   gem 'rails3-generators'
   gem 'rcov'
 end
@@ -49,7 +51,6 @@ group :test do
   gem 'webmock', :require => false
   gem 'launchy'
 end
-
 
 group :staging, :production do
   gem 'mysql2'
