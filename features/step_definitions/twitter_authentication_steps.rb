@@ -8,8 +8,10 @@ Given /^the Twitter OAuth request is successful$/ do
 end
 
 Given /^I am logged in with Twitter account$/ do
-  Given %Q{the Twitter OAuth request is successful}
-  When %Q{I go to the sign in page}
-  When %Q{I follow "Twitter"}
-  Then %Q{I should be signed in}
+  steps %Q{
+    Given the Twitter OAuth request is successful
+    When I go to the sign in page
+    When I follow "Twitter"
+    Then I should be signed in
+  }
 end
