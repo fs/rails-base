@@ -3,7 +3,7 @@ Given /^the Twitter OAuth request is successful$/ do
   OmniAuth.config.mock_auth[:twitter] = {
     'provider' => 'twitter',
     'uid' => 1,
-    'user_info' => {'name' => 'John Smith'}
+    'info' => {'name' => 'John Smith'}
   }
 end
 
