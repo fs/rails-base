@@ -5,23 +5,11 @@ Feature: Update account information
 
   Background:
     Given I am an authenticated user
-    And I am on the edit account page
 
   Scenario: Update user information successfully
-    When I fill in "Full name" with "Super Man"
-    And fill in "Email" with "super@example.com"
-    And fill in "Password" with "654321"
-    And fill in "Password confirmation" with "654321"
-    And fill in "Current password" with "123456"
-    And press "Update"
-    Then I should see "You updated your account successfully."
-    And I should be on the home page
+    When I submit update account form with valid data
+    Then my account should be updated successfully
 
   Scenario: Wrong current password
-    When I fill in "Full name" with "Super Man"
-    And fill in "Email" with "super@example.com"
-    And fill in "Password" with "654321"
-    And fill in "Password confirmation" with "654321"
-    And fill in "Current password" with "wrong password"
-    And press "Update"
-    Then I should see "is invalid" error for "user_current_password"
+    When I submit update account form with valid data but with wrong current password
+    Then my account should not be updated

@@ -1,14 +1,12 @@
 <% title 'Change your password' %>
 
-<%= semantic_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |form| %>
+<%= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |form| %>
   <%= form.hidden_field :reset_password_token %>
 
-  <%= form.inputs do %>
+  <fieldset>
     <%= form.input :password, :required => true %>
     <%= form.input :password_confirmation, :required => true %>
-  <% end %>
+  </fieldset>
 
-  <%= form.buttons do %>
-    <%= form.commit_button 'Change my password' %>
-  <% end %>
+  <%= form.button :submit, 'Change my password' %>
 <% end %>
