@@ -1,1 +1,3 @@
-before_install: cp config/database.yml.travis config/database.yml && bundle exec rake db:setup
+before_script:
+  - "cp config/database.yml.travis config/database.yml"
+script: "bundle exec rake db:setup rspec features"
