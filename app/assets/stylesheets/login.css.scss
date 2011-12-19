@@ -1,0 +1,28 @@
+/* TWITTER 2 */
+#oauth {
+float:right;
+    strong {
+		float: left;
+		font-size: 32px;
+		padding: 95px 40px 0 0;
+	}
+	fieldset {
+		float: right;
+		width: 320px;
+		position: relative;
+		a {
+			overflow: hidden;
+			float: left;
+            padding: 70px 15px 0;
+            background-repeat: no-repeat;
+            background-position: center top;
+			&.twitter {
+			    background-image: url('/assets/oauth/twitter_64.png');
+			}
+		}
+		legend {
+      float: left;
+			width: 100%;
+		}
+	}
+}
