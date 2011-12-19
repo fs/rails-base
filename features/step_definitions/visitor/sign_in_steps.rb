@@ -44,3 +44,17 @@ When /^I signs in with my Twitter account$/ do
   visit new_user_session_path
   click_link "Twitter"
 end
+
+When /^I request new password$/ do
+  visit new_user_password_path
+  
+  fill_in "Email", :with => @current_user.email
+  click_button "Send me reset password instructions"
+end
+
+Then /^I should receive reset password instructions email$/ do
+  open_email(@current_user.email)
+  
+  current_email.should have_subject /Reset password instructions/
+  current_email.default_part_body.to_s.should =~ /#{@current_user.full_name}/
+end
