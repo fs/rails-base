@@ -6,5 +6,5 @@ Feature: Sign in using twitter
 
   Scenario: User signs in using linked Twitter account
     Given I am registered user over Twitter
-    When I signs in with my Twitter account
+    When I sign in with my Twitter account
     Then I should be signed in
