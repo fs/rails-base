@@ -49,6 +49,8 @@ group :test do
   gem 'pickle'
   gem 'webmock', :require => false
   gem 'launchy'
+  
+  gem 'ruby-debug'  
 end
 
 group :staging, :production do

@@ -38,7 +38,7 @@ When /^I follow Twitter link for sign up$/ do
   OmniAuth.config.test_mode = true
   OmniAuth.config.mock_auth[:twitter] = {
     "provider" => "twitter",
-    "id" => 1,
+    "uid" => 1,
     "info" => { "name" => "John Smith" }
   }  
   
