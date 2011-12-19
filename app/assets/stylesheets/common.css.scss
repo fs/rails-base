@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2.2em;
-  line-height: 1;
+  line-height: 1.4;
 }
 
 h2 {
@@ -207,13 +207,13 @@ div.percent {
 
 /* ACTIONS */
 .edit_link a {
-	background-image:url(/images/icon_edit.gif);
+	background-image:url(/assets/icon_edit.gif);
 }
 .destroy_link a {
-	background-image:url(/images/icon_delete.gif);
+	background-image:url(/assets/icon_delete.gif);
 }
 .show_link a {
-	background-image:url(/images/icon_view.gif);
+	background-image:url(/assets/icon_view.gif);
 }
 
 /* PAGINATION */

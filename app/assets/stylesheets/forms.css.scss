@@ -1,6 +1,6 @@
 /* FORMS */
 a.button, input.button {
-	background: url(/images/button_bg.gif) bottom left repeat-x;
+	background: url('/assets/button_bg.gif') bottom left repeat-x;
 	height: 32px;
 	overflow: visible;
 	cursor: pointer;
@@ -34,7 +34,7 @@ div.buttons {
 	overflow: hidden;
 }
 a.button.add span {
-	background: url(/images/icon_add.gif) left center no-repeat;
+	background: url('/assets/icon_add.gif') left center no-repeat;
 	padding-left: 20px;
 }
 h5.legend {
@@ -88,6 +88,7 @@ form {
 	.input.string, .input.select, .input.boolean {
 		width:350px;
 		float:left;
+		margin: 0 0 3px;
 	}
 	.input.datetime, input.text {
 		clear:both;
@@ -98,11 +99,27 @@ form {
 		font-size:1.2em;
 		margin-left:.2em;
 	}
+	.field_with_errors {
+		input {
+			background: #FBE3E4;
+		}
+	}
+	.error {
+		clear: both;
+		color: #D12F19;
+		display: block;
+	}
 }
 #user_remember_me_input {
 	clear:both;
 }
-#session_new, #user_new {
+#session_new, #user_new, #user_edit {
 	width:400px;
 	float:left;
+}
+
+.notifications {
+	margin: 3px 0 5px;
+	line-height: 20px;
+	clear: both;
 }
