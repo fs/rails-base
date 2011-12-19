@@ -1,3 +1,17 @@
+= 0.2.rc1
+
+* Updated to Rails 3.1
+* CSS converted to scss
+* Added bourbon
+* Formtastic replased with SimpleForm
+* Recreated cucumber features without web_steps
+* Removed VCR
+* Added rails_best_practices gem
+* Moved configuration from config.yml to config/configatron
+* Added Travis CI configuration
+
+
+
 = 0.1.4
 
 * Auto validates length of field extracted to https://gist.github.com/907485
