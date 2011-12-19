@@ -7,7 +7,7 @@ def sign_in_with(email, password)
   click_button "Sign in"
 end
 
-When /^I signs in with my credentials$/ do
+When /^I signs in with valid credentials$/ do
   sign_in_with @current_user.email, "123456"
 end
 
