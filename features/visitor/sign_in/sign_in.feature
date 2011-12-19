@@ -5,17 +5,17 @@ Feature: Sign in
 
   Scenario: User signs in successfully
     Given I am registered user
-    When I signs in with valid credentials
+    When I sign in with valid credentials
     Then I should be signed in
 
   Scenario: User signs in with invalid credentials
     Given I am registered user
-    When I signs in with invalid credentials    
+    When I sign in with invalid credentials    
     Then I should be signed out    
   
   Scenario: User has not confirmed email address
     Given I am registered user with not comfirmed email  
-    When I signs in with valid credentials
+    When I sign in with valid credentials
     Then I should see that my email is not confirmed
   
   Scenario: User forgets his password

@@ -10,7 +10,7 @@ end
 Given /^I am an authenticated user over Twitter$/ do
   steps %Q{
     Given I am registered user over Twitter
-    When I signs in with my Twitter account
+    When I sign in with my Twitter account
   }
 end
 

@@ -5,5 +5,5 @@ Feature: Sign out
 
   Scenario: Logged in user signs out
     Given I am an authenticated user
-    When I signs out
+    When I sign out
     Then I should be signed out
