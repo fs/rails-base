@@ -7,6 +7,13 @@ Given /^I am an authenticated user$/ do
   sign_in_with @current_user.email, "123456"
 end
 
+Given /^I am an authenticated user over Twitter$/ do
+  steps %Q{
+    Given I am registered user over Twitter
+    When I signs in with my Twitter account
+  }
+end
+
 Then /^I should be signed in$/ do
   within "#navigation" do
     page.should have_content "Sign out"
