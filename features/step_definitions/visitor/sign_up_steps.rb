@@ -25,6 +25,10 @@ When /^I follow registration confirmation link in the email$/ do
   visit_in_email "Confirm my account"
 end
 
+Then /^my account should be confirmed$/ do
+  User.find_by_email("chuck@norris.com").should be_confirmed
+end
+
 When /^I submit resent confirmtion instruction form$/ do
   Factory.create :not_confirmed_user, :email => "chuck@norris.com", :full_name => "Chuck Norris"
   
@@ -54,3 +58,4 @@ When /^I submit registration over Twitter form with required fields$/ do
   fill_in "Email", :with => "john@smith.com"
   click_button "Sign up"
 end
+

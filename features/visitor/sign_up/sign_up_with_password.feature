@@ -7,10 +7,10 @@ Feature: Sign up using email and password
     When I submit registration form with required fields
     Then I should receive registration confirmation email
     
-  Scenario: User follows confirmation link
+  Scenario: User comfirms account
     Given I have email with confirmation link 
     When I follow registration confirmation link in the email
-    Then I should confirm my account
+    Then my account should be confirmed
     And I should be signed in
   
   Scenario: User resents email confirmation instructions
