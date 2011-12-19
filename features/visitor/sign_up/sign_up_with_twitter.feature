@@ -5,12 +5,7 @@ Feature: Sign up with Twitter account
   I want to register a new account with the system with my Twitter account
 
   Scenario: User signs up with Twitter account
-    Given the Twitter OAuth request is successful
-    When I go to the sign up page
-    And I follow "Twitter"
-    Then I should be on the sign up page
-    When I fill in "Email" with "user@exampld.com"
-    And press "Sign up"
+    When I follow Twitter link for sign up
+    Then I should see form for completing registration over Twitter with prefilled fields
+    When I submit registration over Twitter form with required fields
     Then I should be signed in
-    And I should be on the home page
-

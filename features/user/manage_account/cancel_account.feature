@@ -5,9 +5,8 @@ Feature: Cancel account
 
   Background:
     Given I am an authenticated user
-    And I am on the edit account page
 
   Scenario: Cancel user account
-    When I follow "Cancel my account"
-    Then I should be on the sign in page
-    And I should not exist
+    When I cancel my account
+    Then I should be signed out 
+    And my account should not exists

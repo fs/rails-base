@@ -169,7 +169,7 @@ describe User do
 
       context 'when omniauth data in session' do
         let(:session) { {'devise.omniauth_data' => {
-            'user_info' => {
+            'info' => {
                 'name' => 'John Smith',
                 'email' => 'john@example.com'
             },
@@ -204,7 +204,7 @@ describe User do
 
       context 'when data in params and data in session' do
         let(:params) { {'full_name' => 'John Smith from params'} }
-        let(:session) { {'devise.omniauth_data' => {'user_info' => {
+        let(:session) { {'devise.omniauth_data' => {'info' => {
             'name' => 'John Smith from session',
         }}} }
 

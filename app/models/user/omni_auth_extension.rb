@@ -28,13 +28,13 @@ module User::OmniAuthExtension
     def new_with_session(params, session)
       super.tap do |user|
         if data = session['devise.omniauth_data']
-          user.email = data['user_info']['email'] if !user.email? && data['user_info']['email'].present?
-          user.full_name = data['user_info']['name'] if !user.full_name? && data['user_info']['name'].present?
+          user.email = data['info']['email'] if user.email.blank? && data['info']['email'].present?
+          user.full_name = data['info']['name'] if user.full_name.blank? && data['info']['name'].present?
           user.skip_confirmation!
 
           user.identities.build(
-              :provider => data['provider'],
-                  :uid => data['uid'])
+            :provider => data['provider'],
+            :uid => data['uid'])
         end
       end
     end
