@@ -3,6 +3,9 @@
 ul, ol {
   list-style-position: inside;
   margin-bottom:  1.5em;
+  li {
+      line-height: 1.4;
+  }
 }
 
 ul {
@@ -16,23 +19,14 @@ ol {
 dl {
   line-height: 1.4;
   margin-bottom: 1.5em;
-}
-
-dl dt {
-  font-weight: bold;
-  margin-top: 0.5em;
-}
-
-dl dd {
-  margin-bottom: 0em;
-}
-
-dd {
-  margin-left: 0.5em;
-}
-
-li {
-  line-height: 1.4;
+  dt {
+      font-weight: bold;
+      margin-top: 0.5em;
+  }
+  dd {
+      margin-bottom: 0em;
+      margin-left: 0.5em;
+  }
 }
 
 ol ol, ol ul, ul ul, ul ol {
