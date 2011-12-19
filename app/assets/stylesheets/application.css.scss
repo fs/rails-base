@@ -1,35 +1,13 @@
-/*
-*=depend_on common
-*=depend_on navigation
-*=depend_on notifications
-*=depend_on forms
-*=depend_on login
-*/
- @mixin opacity($opacity) {
-	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=$opacity);
-	-moz-opacity:$opacity;
-	-khtml-opacity:$opacity;
-	opacity:$opacity;
-}
 @import 'bourbon';
-@import 'reset';
-@import 'border-radius';
-@import 'box-shadow';
-@import 'box-sizing';
-@import 'inline-block';
-@import 'transition';
-@import 'linear-gradient';
-@import 'defaults';
-@import 'type';
+@import 'defaults/reset';
+@import 'defaults/lists';
+@import 'defaults/forms';
+@import 'defaults/tables';
+
+@import 'common';
+@import 'navigation';
 @import 'forms';
-@import 'tables';
-@import 'lists';
-@import 'screen';
-@import "common.css.scss";
-@import "navigation.css.scss";
-@import "notifications.css.scss";
-@import "forms.css.scss";
-@import "login.css.scss";
+@import 'login';
 
 
 
