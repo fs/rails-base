@@ -1,11 +1,9 @@
 <% title 'Forgot your password?' %>
 
-<%= semantic_form_for(resource, :as => resource_name, :url => password_path(resource_name)) do |form| %>
-  <%= form.inputs do %>
+<%= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name)) do |form| %>
+  <fieldset>
     <%= form.input :email, :required => true %>
-  <% end %>
+  </fieldset>
 
-  <%= form.buttons do %>
-    <%= form.commit_button 'Send me reset password instructions' %>
-  <% end %>
+  <%= form.button :submit, 'Send me reset password instructions' %>
 <% end %>

@@ -1,21 +1,29 @@
-Given /^I am an authenticated user$/ do
-  Given %Q{a confirmed user: "me" exists with id: "1", email: "me@example.com", password: 123456, full_name: "Current User"}
-
-  When %Q{I go to the sign in page}
-  When %Q{fill in "Email" with "me@example.com"}
-  When %Q{fill in "Password" with "123456"}
-  When %Q{press "Sign in"}
+Given /^I am registered user$/ do
+  @current_user = Factory.create :confirmed_user
 end
 
-Given /^I am logged out$/ do
-  Given %Q{I am on the sign out page}
+Given /^I am an authenticated user$/ do
+  @current_user = Factory.create :confirmed_user
+  sign_in_with @current_user.email, "123456"
+end
+
+Given /^I am an authenticated user over Twitter$/ do
+  steps %Q{
+    Given I am registered user over Twitter
+    When I sign in with my Twitter account
+  }
 end
 
 Then /^I should be signed in$/ do
-  Then %Q{I should see "Sign out" within "#navigation"}
+  within "#navigation" do
+    page.should have_content "Sign out"
+  end
 end
 
-Then /^access should be denied via authentication rule$/ do
-  Then %Q{I should be on the sign in page}
-  Then %Q{I should see "You need to sign in or sign up before continuing"}
+Then /^I should be signed out$/ do
+  within "#navigation" do
+    page.should_not have_content "Sign out"
+  end
 end
+
+
