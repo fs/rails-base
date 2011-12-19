@@ -1,3 +1,3 @@
 before_script:
   - "cp config/database.yml.travis config/database.yml"
-script: "bundle exec rake db:setup rspec features"
+script: "bundle exec rake db:setup spec features"
