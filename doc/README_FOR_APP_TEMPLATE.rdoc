@@ -34,7 +34,7 @@ Application currently based on Rails 3 stable branch.
 * tune in the sources application name: s/Rails3Base/YouApplicationName/g
 * tune config/database.yml.example and copy it to the config/database.yml
 * bundle install --path vendor --local --binstubs && bundle package
-* bundle exec rake spec features
+* bundle exec rake spec cucumber
 
 === Gem management
 
