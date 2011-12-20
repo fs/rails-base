@@ -13,7 +13,7 @@ Application currently based on Rails 3 stable branch.
 * List builder: Tabletastic http://github.com/jgdavey/tabletastic, config/initializers/tabletastic.rb
 * Application config: Configatron, http://github.com/markbates/configatron, config/configatron
 * JS Framework: Jquery-rails, http://github.com/indirect/jquery-rails
-* Tests: RSpec, Shoulda, RR, Cucumber, Factory Girl, Autotest, Parallel test
+* Tests: RSpec, Shoulda, RR, Cucumber, Factory Girl, Mail Safe
 * Code metrics: rails_best_practices, http://github.com/flyerhzm/rails_best_practices and rcov
 
 === Initializes
@@ -188,6 +188,14 @@ Use 'Background' to consolidate common steps in a feature:
 
 You can use @webmock for enabling webmock functionality around some scenario. It's mean all real HTTP connection will be
 disabled in the given scenario and you need to stub them with stub_request. Checkout twitter_authentication_steps.rb for example.
+
+==== Mail Safe
+
+Make sure we use mail_safe gem. Mail safe provides a safety net while you’re developing an application that uses ActionMailer. It keeps emails from escaping into the wild.
+
+Once you’ve installed and configured this gem, you can rest assure that your app won’t send emails to external email addresses. Instead, emails that would normally be delivered to external addresses will be sent to an address of your choosing, and the body of the email will be appended with a note stating where the email was originally intended to go.
+
+If you have git installed, and you’ve registered your email address with it (check with “git config user.email” in your shell), mail safe will use this. All emails will be sent to this address.
 
 Checkout also:
 
