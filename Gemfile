@@ -17,7 +17,7 @@ gem 'omniauth-twitter'
 gem 'simple-navigation'
 gem 'simple_form'
 gem 'client_side_validations'
-gem 'tabletastic', :git => 'git://github.com/fs/tabletastic.git'
+gem 'tabletastic'
 gem 'flutie'
 gem 'bourbon'
 gem 'inherited_resources'
@@ -46,7 +46,6 @@ group :test do
   gem 'factory_girl_rails'
 
   gem 'cucumber-rails'
-  gem 'pickle'
   gem 'webmock', :require => false
   gem 'launchy'
   
