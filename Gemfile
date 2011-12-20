@@ -46,7 +46,6 @@ group :test do
   gem 'factory_girl_rails'
 
   gem 'cucumber-rails'
-  gem 'pickle'
   gem 'webmock', :require => false
   gem 'launchy'
   
