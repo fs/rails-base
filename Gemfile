@@ -35,7 +35,8 @@ end
 
 group :development, :test do
   gem 'sqlite3-ruby'
-  gem 'rspec-rails'    
+  gem 'rspec-rails'
+  gem 'mail_safe'  
 end
 
 group :test do
