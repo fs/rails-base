@@ -37,6 +37,7 @@ Application currently based on Rails 3 stable branch.
 * tune in the sources application name: s/Rails3Base/YouApplicationName/g
 * tune config/database.yml.example and copy it to the config/database.yml
 * bundle install --path vendor --binstubs
+* chmod +x $rvm_path/hooks/after_cd_bundler - with rvm integration enabled, the “bin” directory is added to your path each time you cd into a project directory with binstubs.
 * bundle exec rake spec cucumber
 
 === Gem management
