@@ -36,16 +36,16 @@ Application currently based on Rails 3 stable branch.
 * tune config/configatron/development.rb
 * tune in the sources application name: s/Rails3Base/YouApplicationName/g
 * tune config/database.yml.example and copy it to the config/database.yml
-* bundle install --path vendor --local --binstubs && bundle package
+* bundle install --path vendor --binstubs
 * bundle exec rake spec cucumber
 
 === Gem management
 
 Instead of using RVM gemset for isolating gems for your new Rails application it's better to use bundler "path" option:
 
-  bundle install --path vendor --local
+  bundle install --path vendor --binstubs
 
-will install all gems into the vendor/ruby from vendor/cache
+will install all gems into the vendor/ruby and all executables to bin/
 
 === Authorization
 

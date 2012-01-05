@@ -7,5 +7,6 @@ rerun.txt
 config/database.yml
 doc/**/*
 vendor/ruby
+vendor/cache
 bin
 .sass-cache
