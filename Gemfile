@@ -1,12 +1,15 @@
 source :rubygems
 
 gem 'rails'
-
-# Asset template engines
 gem 'json'
-gem 'sass-rails'
-gem 'coffee-script'
-gem 'uglifier'
+
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails', '~> 3.1.5'
+  gem 'coffee-rails', '~> 3.1.1'
+  gem 'uglifier', '>= 1.0.3'
+end
 
 gem 'jquery-rails'
 
@@ -29,13 +32,16 @@ group :development do
   gem 'rails_best_practices'
   gem 'ripper'
   
+  gem 'brakeman'
+  
   gem 'rails3-generators'
   gem 'rcov'
 end
 
 group :development, :test do
   gem 'sqlite3-ruby'
-  gem 'rspec-rails'    
+  gem 'rspec-rails'
+  gem 'mail_safe'  
 end
 
 group :test do
