@@ -1,3 +1,9 @@
+= 0.2.rc3
+
+* Added brakeman - a static analysis security vulnerability scanner for Ruby on Rails applications
+* Removed cached gems from repo, for now you could install gems usual way with "bundle install" command
+* Added mail_safe gem - app won’t send emails to external email addresses in the development and test envs
+
 = 0.2.rc1
 
 * Updated to Rails 3.1
