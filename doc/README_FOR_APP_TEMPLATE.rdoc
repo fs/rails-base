@@ -32,13 +32,43 @@ Application currently based on Rails 3 stable branch.
 
 === Quick start
 
-* clone repository
-* tune config/configatron/development.rb
-* tune in the sources application name: s/Rails3Base/YouApplicationName/g
-* tune config/database.yml.example and copy it to the config/database.yml
-* bundle install --path vendor --binstubs
-* chmod +x $rvm_path/hooks/after_cd_bundler - with rvm integration enabled, the “bin” directory is added to your path each time you cd into a project directory with binstubs.
-* bundle exec rake spec cucumber
+Clone application as new project with original repository named "rails3-base"
+
+  git clone git://github.com/fs/rails3-base.git --origin rails3-base [MY-NEW-PROJECT]
+
+Create your new repo on GitHub and push master into it.
+Make sure master branch is tracking origin repo.
+
+  git remote add origin git@github.com:[MY-GITHUB-ACCOUNT]/[MY-NEW-PROJECT].git
+  git push -u origin master
+
+Setup configuration files
+
+  config/configatron/development.rb
+  cp config/database.yml.example config/database.yml
+
+Install gems and enable rvm integration with Bundler (the “bin” directory is added to your path each time you cd into a project directory with binstubs)
+  
+  bundle install --path vendor --binstubs
+  chmod +x $rvm_path/hooks/after_cd_bundler
+  
+Make sure all test are green  
+  
+  bundle exec rake spec cucumber
+  
+=== How to update existing project with new changes from rails3-base repo
+
+You can fetch latest changes from rails3-base repo and merge or cherry-pick commits
+
+  git fetch rails3-base
+  git flow feature start rails3-base-update
+  git merge rails3-base/master
+
+  # fix conflicts
+  # commit
+  # test
+
+  git flow feature finish rails3-base-update
 
 === Gem management
 
@@ -222,16 +252,6 @@ We have main and user navigation which accessible for visitor and authorized use
 * Commit, do not mess with rakefile, version, or history.
   (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
 * Send a pull request. Bonus points for topic branches.
-
-=== How to update existing project with new changes from rails3-base repo
-
-  git remote add rails3-base git://github.com/fs/rails3-base.git
-  git checkout -b rails3-base-update
-  git pull rails3-base master
-  # fix conflicts
-  # commit
-  # test
-  # merge
 
 Thanks,
 FlatStack
