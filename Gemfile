@@ -29,6 +29,8 @@ group :development do
   gem 'rails_best_practices'
   gem 'ripper'
   
+  gem 'brakeman'
+  
   gem 'rails3-generators'
   gem 'rcov'
 end
