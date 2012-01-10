@@ -9,6 +9,8 @@ group :assets do
   gem 'sass-rails', '~> 3.1.5'
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
+  gem 'flutie'
+  gem 'bourbon'
 end
 
 gem 'jquery-rails'
@@ -21,8 +23,6 @@ gem 'simple-navigation'
 gem 'simple_form'
 gem 'client_side_validations'
 gem 'tabletastic'
-gem 'flutie'
-gem 'bourbon'
 gem 'inherited_resources'
 gem 'kaminari'
 
