@@ -60,5 +60,5 @@ group :test do
 end
 
 group :staging, :production do
-  gem 'mysql2'
+  gem 'pg'
 end
