@@ -95,7 +95,6 @@ GEM
       railties (>= 3.0.0)
     fastercsv (1.5.4)
     ffi (1.0.11)
-    flutie (1.3.3)
     gherkin (2.7.1)
       json (>= 1.4.6)
     haml (3.1.4)
@@ -243,6 +242,7 @@ GEM
     sqlite3 (1.3.4)
     sqlite3-ruby (1.3.3)
       sqlite3 (>= 1.3.3)
+    styleguides (0.1)
     tabletastic (0.2.3)
       activesupport (~> 3.0)
     term-ansicolor (1.0.7)
@@ -280,7 +280,6 @@ DEPENDENCIES
   devise
   email_spec
   factory_girl_rails
-  flutie
   heroku
   inherited_resources
   jquery-rails
@@ -304,6 +303,7 @@ DEPENDENCIES
   simple-navigation
   simple_form
   sqlite3-ruby
+  styleguides
   tabletastic
   uglifier (>= 1.0.3)
   webmock
