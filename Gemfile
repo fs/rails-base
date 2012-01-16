@@ -26,7 +26,7 @@ gem 'tabletastic'
 gem 'inherited_resources'
 gem 'kaminari'
 gem 'slim'
-gem 'slim-rails'
+
 
 group :development do
   gem 'heroku'
@@ -37,6 +37,7 @@ group :development do
   gem 'brakeman'
   
   gem 'rails3-generators'
+  gem 'slim-rails'
   gem 'rcov'
 end
 
