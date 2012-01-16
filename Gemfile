@@ -26,6 +26,7 @@ gem 'tabletastic'
 gem 'inherited_resources'
 gem 'kaminari'
 gem 'slim'
+gem 'slim-rails'
 
 group :development do
   gem 'heroku'
