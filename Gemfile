@@ -25,6 +25,7 @@ gem 'client_side_validations'
 gem 'tabletastic'
 gem 'inherited_resources'
 gem 'kaminari'
+gem 'slim'
 
 group :development do
   gem 'heroku'
