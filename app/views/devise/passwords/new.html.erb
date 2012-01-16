@@ -1,9 +1,0 @@
-<% title 'Forgot your password?' %>
-
-<%= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name)) do |form| %>
-  <fieldset>
-    <%= form.input :email, :required => true %>
-  </fieldset>
-
-  <%= form.button :submit, 'Send me reset password instructions' %>
-<% end %>
