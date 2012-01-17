@@ -4,14 +4,11 @@ title 'Listing <%= plural_table_name %>'
   = table_for(collection)
   = paginate(collection)
 - else
-  p
-    | Now it's time to create some data here. To create new entry, please use the button below.
-  br
-  br
+  .no-data
+    p
+      | Now it's time to create some data here. To create new entry, please use the button below.
 
-br
-
-p
-  = link_to 'New <%= human_name %>', new_<%= singular_table_name %>_path, :class => 'button'
+.buttons
+  = link_to 'New <%= human_name %>', new_<%= singular_table_name %>_path, :class => 'add-btn button'
 
 
