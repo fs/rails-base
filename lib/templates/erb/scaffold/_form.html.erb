@@ -1,9 +1,0 @@
-<%%= simple_form_for(resource, :validate => true) do |form| %>
-  <fieldset class="inputs">
-<% for attribute in attributes -%>
-    <%%= form.input :<%= attribute.name %> %>
-<% end -%>
-  </fieldset>
-
-  <%%= form.button :submit %> or <%%= link_to 'cancel', resource %>
-<%% end %>
