@@ -27,6 +27,7 @@ gem 'inherited_resources'
 gem 'kaminari'
 gem 'slim'
 
+
 group :development do
   gem 'heroku'
 
@@ -36,6 +37,7 @@ group :development do
   gem 'brakeman'
   
   gem 'rails3-generators'
+  gem 'slim-rails'
   gem 'rcov'
 end
 
@@ -60,5 +62,5 @@ group :test do
 end
 
 group :staging, :production do
-  gem 'mysql2'
+  gem 'pg'
 end

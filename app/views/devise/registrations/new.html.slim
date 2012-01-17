@@ -1,7 +1,7 @@
 title %Q{Sign up to "#{configatron.app_name}"}
 
 .notifications
-  | Already member?
+  | Already member? 
   = link_to 'Sign in here!', new_session_path(resource_name)
 
 = simple_form_for(resource, :validate => true, :as => resource_name, :url => registration_path(resource_name)) do |form|
