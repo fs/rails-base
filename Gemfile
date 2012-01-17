@@ -17,8 +17,6 @@ gem 'jquery-rails'
 
 gem 'configatron'
 gem 'devise'
-gem 'omniauth'
-gem 'omniauth-twitter'
 gem 'simple-navigation'
 gem 'simple_form'
 gem 'client_side_validations'

@@ -99,7 +99,6 @@ GEM
       json (>= 1.4.6)
     haml (3.1.4)
     has_scope (0.5.1)
-    hashie (1.2.0)
     heroku (2.16.1)
       launchy (>= 0.3.2)
       rest-client (~> 1.6.1)
@@ -131,15 +130,6 @@ GEM
     mime-types (1.17.2)
     multi_json (1.0.4)
     nokogiri (1.5.0)
-    oauth (0.4.5)
-    omniauth (1.0.1)
-      hashie (~> 1.2)
-      rack
-    omniauth-oauth (1.0.0)
-      oauth
-      omniauth (~> 1.0)
-    omniauth-twitter (0.0.7)
-      omniauth-oauth (~> 1.0)
     orm_adapter (0.0.5)
     pdf-writer (1.1.8)
       color (>= 1.4.0)
@@ -293,8 +283,6 @@ DEPENDENCIES
   kaminari
   launchy
   mail_safe
-  omniauth
-  omniauth-twitter
   pg
   rails
   rails3-generators
