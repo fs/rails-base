@@ -8,4 +8,5 @@ p
   | Click the link below to unlock your account:
 
 p
-  = link_to 'Unlock my account', unlock_url(@resource, :unlock_token => @resource.unlock_token)
+  = link_to 'Unlock my account',                                          \
+            unlock_url(@resource, :unlock_token => @resource.unlock_token)
