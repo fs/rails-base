@@ -24,7 +24,7 @@ Then /^I should see that my email is not confirmed$/ do
 end
 
 When /^I sign out$/ do
-  within "#navigation" do
+  within "nav" do
     click_link "Sign out"
   end
 end
@@ -49,7 +49,7 @@ When /^I request new password$/ do
   visit new_user_password_path
   
   fill_in "Email", :with => @current_user.email
-  click_button "Send me reset password instructions"
+  click_button "Send instructions"
 end
 
 Then /^I should receive reset password instructions email$/ do
