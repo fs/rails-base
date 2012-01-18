@@ -4,7 +4,7 @@ Feature: Cancel account
   I want to be able to cancel my account
 
   Background:
-    Given I am an authenticated user
+    Given I am signed in
 
   Scenario: Cancel user account
     When I cancel my account
