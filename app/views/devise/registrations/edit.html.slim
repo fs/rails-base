@@ -1,4 +1,5 @@
-title "Edit #{resource_name.to_s.humanize}"
+- content_for :title do
+  = "Edit #{resource_name.to_s.humanize}"
 
 = simple_form_for(@user,                          \
                   :url => user_registration_path, \

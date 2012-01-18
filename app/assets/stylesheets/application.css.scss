@@ -1,16 +1,12 @@
 @import 'bourbon';
-@import 'defaults/reset';
-@import 'defaults/lists';
-@import 'defaults/forms';
-@import 'defaults/tables';
-
-@import 'common';
-@import 'navigation';
-@import 'forms';
-@import 'login';
+@import 'addons/mixins';
+@import 'addons/vars';
+@import 'addons/micro_clearfix';
+@import 'resets/main';
+@import 'resets/forms';
 
 
-
-
-
-
+@import 'styling/main';
+@import 'styling/header';
+@import 'styling/forms';
+@import 'styling/footer';

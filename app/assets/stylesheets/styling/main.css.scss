@@ -1,0 +1,24 @@
+html {
+	height: 100%;
+}
+body {
+	background: $body_color;
+	font-family: $helvetica;
+	height: 100%;
+	text-align: center;
+	min-width: $min_width;
+	color: #333;
+	font-size: 13px;
+}
+a { 
+	color: #0088d2;
+	&:hover {
+		color: #036;
+	}
+}
+.main-layout {
+		@include linear-gradient(top, darken($body_color, 8%) 12%, $body_color 38%);
+}
+:hover {
+	@include transition (all, 0.5s);
+}
