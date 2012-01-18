@@ -1,8 +1,8 @@
-Given /^I am registered user$/ do
+Given /^I exist as a user$/ do
   @current_user = Factory.create :confirmed_user
 end
 
-Given /^I am an authenticated user$/ do
+Given /^I am signed in$/ do
   @current_user = Factory.create :confirmed_user
   sign_in_with @current_user.email, "123456"
 end
