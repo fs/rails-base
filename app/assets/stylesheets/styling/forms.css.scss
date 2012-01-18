@@ -3,10 +3,23 @@
 		background: #e5e6e9;
 		overflow: hidden;
 		@include box-shadow(inset 0 1px 2px 0 rgba(0, 0, 0, 0.2));
-		@include border-radius(8px);
+		@include border-radius(0 0 12px 12px);
 		text-align: left;
 		display: inline-block;
 		padding: 30px;
+		div.buttons {
+			color: #888;
+			font-size: 15px;
+			input {
+				margin-right: 10px;
+			}
+			a {
+				color: #888;
+				&:hover {
+					color: #333;
+				}
+			}
+		}
 		div.input.field_with_errors {
 			position: relative;
 			span.error {
@@ -39,7 +52,6 @@
 		}
 	}
 }
-
 input[type=submit], a.button {
 		@include box-shadow(inset 0 1px 0 0 #ffffff);
 		@include border-radius(3px);
@@ -69,7 +81,7 @@ input[type=submit], a.button {
 		}
 }
 
-.input.password input, .input.string input {
+.input.password input, .input.string input, textarea {
 	@include box-shadow(inset 0 1px 2px 0 #ccc);
 	border-color: #c7c7c7 #E3E3E3 #E3E3E3 #c7c7c7;
 	border-style: solid;
@@ -77,13 +89,25 @@ input[type=submit], a.button {
 	padding: 5px 8px;
 	@include border-radius(3px);
 	font-size: 15px;
-	margin: 2px 0 15px;
+	margin: 5px 0 15px;
+}
+.app {	
+	.input.password input, .input.string input, textarea {
+		width: 600px;
+	}
 }
 .alert {
   background: #FBE3E4;
   border-color: #FBC2C4;
   color: #D12F19;
-  border: 1px solid #ddd;
+}
+.notice {
+	background: #FFF6BF;
+  border-color: rgba(255, 246, 191, 0.5);
+  color: #817134;
+}
+.alert, .notice {
+	@include fadedown();
   padding: 10px 0;
 	width: 100%;
 	position: fixed;
@@ -91,4 +115,32 @@ input[type=submit], a.button {
 	left: 0;
 	text-align: center;
 	text-shadow: 0 1px 0 #fff;
+  border-style: solid;
+	border-width: 8px 1px;
+}
+.no-data {
+	background: #e5e6e9;
+	overflow: hidden;
+	@include box-shadow(inset 0 1px 2px 0 rgba(0, 0, 0, 0.2));
+	@include border-radius(12px);
+	font-size: 16px;
+	text-align: left;
+	display: inline-block;
+	padding: 30px 30px 70px;
+	margin-top: 20px;
+	margin-bottom: -60px;
+	p {
+		background: #fcfcfc;
+		padding: 10px 20px;
+		@include border-radius(8px);
+	}
+}
+
+.view {
+	background: #fcfcfc;
+	border: 1px solid #f7f8fa;
+	border-width: 8px 1px 1px 1px;
+	@include linear-gradient(top, #fcfcfe 77%, #f3f4f7 100%);
+	margin: 30px;
+	padding: 30px;
 }

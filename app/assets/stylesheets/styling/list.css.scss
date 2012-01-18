@@ -1,0 +1,54 @@
+table.list {
+  width: 100%;
+	margin: 20px 0;
+	th {
+		white-space: nowrap;
+		padding: 8px 15px;
+		@include linear-gradient(top, #fff 0%, #edeff4 100%);
+		border-left: 1px solid #eceff5;
+		text-shadow: 0 1px 0 #fff;
+		cursor: default;
+	}
+	td {
+		padding: 8px 15px;
+		color: #383838;
+		border-left: 1px solid #eceff5;
+		cursor: default;
+	}
+    td.actions {
+        width: 20px;
+        text-align: center;
+        padding: 0;
+        img {
+		    margin: 2px 1px;
+	    }
+        a {
+            width: 20px;
+            height: 20px;
+            text-indent: -9999em;
+            overflow: hidden;
+            display: block;
+            float: left;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            margin: auto;
+            &:hover {
+								@include opacity(50);
+            }
+        }
+    }
+	tr.odd td {
+		background: #f5f9fd;
+	}
+	tr.even td {
+		background: #fff;
+	}
+	th.numeric, td.numeric {
+		text-align: right;
+	}
+	tr:hover {
+		td {
+			color: #000;
+		}
+	}
+}

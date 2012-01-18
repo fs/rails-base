@@ -9,7 +9,7 @@ html
     = javascript_include_tag :application
     = csrf_meta_tag
     = yield(:head)
-  body
+  body[class=(user_signed_in? ? "app" : "")]
     .main-layout
       = render 'layouts/messages'
       header

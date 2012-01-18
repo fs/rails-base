@@ -9,10 +9,10 @@ header {
 			li {
 				display: inline-block;
 				text-shadow: 0 1px 0 rgba(255,255,255, 0.7);
+				font-weight: bold;
 				a {
 					text-decoration: none;
 					color: #000;
-					font-weight: bold;
 					line-height: 30px;
 					display: inline-block;
 					height: 30px;
@@ -27,8 +27,26 @@ header {
 	}
 }
 .sub-head {
-	background: #fcfcfc;
 	padding: 20px 0;
-	border-bottom: 1px solid #CED1D5;
-	margin-bottom: 20px;
+	@include linear-gradient(top, #e3e4e7 8%, #d5d7da 100%);
+	border-top: 1px solid #f5f5f6;
+	@include box-shadow(0 1px 3px 0 rgba(0, 0, 0, 0.1));
+}
+
+.app {		
+	nav {
+		width: 990px;
+		text-align: left;
+		margin: auto;
+		ul {
+			display: inline-block;
+			&.user {
+				float: right;
+				li:first-child {
+					border-right: 1px solid #999;
+					font-weight: normal;
+				}
+			}
+		}
+	}
 }
