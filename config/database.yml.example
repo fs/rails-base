@@ -10,23 +10,23 @@ development:
   <<: *defaults_developmet
 
 test:
-  database: db/test<%= ENV['TEST_ENV_NUMBER'] %>.sqlite3
+  database: db/test.sqlite3
   <<: *defaults_developmet
 
 
-## mysql@locahost
-##
-#defaults_developmet: &defaults_developmet
-#  adapter: mysql
-#  encoding: utf8
-#  host: localhost
-#  username: root
-#  password:
-#
-#development:
-#  database: application_dev
-#  <<: *defaults_developmet
-#
-#test:
-#  database: application_test<%= ENV['TEST_ENV_NUMBER'] %>
-#  <<: *defaults_developmet
+# # mysql@locahost
+# #
+# defaults_developmet: &defaults_developmet
+#   adapter: mysql
+#   encoding: utf8
+#   host: localhost
+#   username: root
+#   password:
+# 
+# development:
+#   database: application_dev
+#   <<: *defaults_developmet
+# 
+# test:
+#   database: application_test
+#   <<: *defaults_developmet
