@@ -10,7 +10,7 @@ development:
   <<: *defaults_developmet
 
 test:
-  database: db/test<%= ENV['TEST_ENV_NUMBER'] %>.sqlite3
+  database: db/test.sqlite3
   <<: *defaults_developmet
 
 
@@ -28,5 +28,5 @@ test:
 #  <<: *defaults_developmet
 #
 #test:
-#  database: application_test<%= ENV['TEST_ENV_NUMBER'] %>
+#  database: application_test
 #  <<: *defaults_developmet
