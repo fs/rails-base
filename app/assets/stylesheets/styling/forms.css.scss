@@ -1,0 +1,94 @@
+.simple_form {
+	fieldset {
+		background: #e5e6e9;
+		overflow: hidden;
+		@include box-shadow(inset 0 1px 2px 0 rgba(0, 0, 0, 0.2));
+		@include border-radius(8px);
+		text-align: left;
+		display: inline-block;
+		padding: 30px;
+		div.input.field_with_errors {
+			position: relative;
+			span.error {
+				position: absolute;
+				right: 0;
+				top: 0;
+				color: #b13734;
+			}
+			input {
+				color: #b13734;
+			}
+		}
+		.input.boolean {
+			padding-bottom: 15px;
+		}
+		label {
+			text-shadow: 0 1px 0 #fff;
+			font-size: 15px;
+		}
+		.notifications {
+			padding: 5px 0 0;
+			margin-top: 20px;
+			@include box-shadow(inset 0 1px 1px 0 rgba(0, 0, 0, 0.1));
+			a {
+				display: block;
+				float: left;
+				clear: both;
+				margin-top: 8px;
+			}
+		}
+	}
+}
+
+input[type=submit], a.button {
+		@include box-shadow(inset 0 1px 0 0 #ffffff);
+		@include border-radius(3px);
+		@include linear-gradient(top, #ecedf1 0%, #bfc4cf 100%);
+		border: 1px solid #8f949f;
+		border-top: 1px solid #b8bdc8;
+		display: inline-block;
+		color: #5e6472;
+		font-size: 18px;
+		font-weight: bold;
+		height: auto;
+		padding: 9px 24px;
+		text-decoration: none;
+		text-shadow: 1px 1px 0 #fff;
+		cursor: pointer;
+		&.small {
+			font-size: 12px;
+			padding: 0 12px;
+		}
+		&:hover {
+			color: #4a4f5a;
+		}
+		&:active {
+			@include linear-gradient(top, #bfc4cf 0%, #ecedf1 100%);
+			border: 1px solid #8f949f;
+			border-top: 1px solid #b8bdc8;
+		}
+}
+
+.input.password input, .input.string input {
+	@include box-shadow(inset 0 1px 2px 0 #ccc);
+	border-color: #c7c7c7 #E3E3E3 #E3E3E3 #c7c7c7;
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px 8px;
+	@include border-radius(3px);
+	font-size: 15px;
+	margin: 2px 0 15px;
+}
+.alert {
+  background: #FBE3E4;
+  border-color: #FBC2C4;
+  color: #D12F19;
+  border: 1px solid #ddd;
+  padding: 10px 0;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	text-shadow: 0 1px 0 #fff;
+}

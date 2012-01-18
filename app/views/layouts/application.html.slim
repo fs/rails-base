@@ -10,12 +10,17 @@ html
     = csrf_meta_tag
     = yield(:head)
   body
-    .content
-      = render 'layouts/navigation'
-      hr
+    .main-layout
       = render 'layouts/messages'
-      - if show_title?
-        h1
-          = yield(:title)
+      header
+        = render 'layouts/navigation'
+      .content
+        - if show_title?
+          h1
+            = yield(:title)
 
-      = yield
+        = yield
+
+      footer
+        | Copyright Flatstack 
+        = Time.now.strftime("%Y")

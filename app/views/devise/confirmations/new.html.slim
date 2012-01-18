@@ -1,7 +1,8 @@
-title 'Resend confirmation instructions'
+- content_for :title do
+  | Resend confirmation instructions
 
 = simple_form_for(@user, :url => user_confirmation_path) do |form|
   fieldset
     = form.input :email, :required => true
-  = form.button :submit, 'Resend confirmation instructions'
+    = form.button :submit, 'Resend instructions'
 
