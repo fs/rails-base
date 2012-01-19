@@ -24,7 +24,7 @@ When /^I submit resent confirmtion instruction form$/ do
   visit new_user_confirmation_path
   
   fill_in "Email", :with => "chuck.norris@example.com"
-  click_button "Resend confirmation instructions"
+  click_button "Resend instructions"
 end
 
 Then /^I should receive registration confirmation email$/ do
