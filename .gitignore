@@ -10,3 +10,4 @@ vendor/ruby
 vendor/cache
 bin
 .sass-cache
+._*

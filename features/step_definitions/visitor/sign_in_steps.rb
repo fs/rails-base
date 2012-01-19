@@ -7,6 +7,10 @@ def sign_in_with(email, password)
   click_button "Sign in"
 end
 
+Given /^I exist as a user with not comfirmed email$/ do
+  @current_user = Factory.create :not_confirmed_user
+end
+
 When /^I sign in with valid credentials$/ do
   sign_in_with @current_user.email, "123456"
 end
@@ -15,41 +19,21 @@ When /^I sign in with invalid credentials$/ do
   sign_in_with "empty@email.com", "empty password"
 end
 
-Given /^I am registered user with not comfirmed email$/ do
-  @current_user = Factory.create :not_confirmed_user
-end
-
-Then /^I should see that my email is not confirmed$/ do
-  page.should have_content "You have to confirm your account before continuing"
-end
-
 When /^I sign out$/ do
-  within "#navigation" do
+  within "nav" do
     click_link "Sign out"
   end
-end
-
-Given /^I am registered user over Twitter$/ do
-  @current_user = Factory.create :user_registered_over_twitter
-end
-
-When /^I sign in with my Twitter account$/ do
-  OmniAuth.config.test_mode = true
-  OmniAuth.config.mock_auth[:twitter] = {
-    "provider" => "twitter",
-    "uid" => 1,
-    "info" => { "name" => @current_user.full_name }
-  }  
-
-  visit new_user_session_path
-  click_link "Twitter"
 end
 
 When /^I request new password$/ do
   visit new_user_password_path
   
   fill_in "Email", :with => @current_user.email
-  click_button "Send me reset password instructions"
+  click_button "Send instructions"
+end
+
+Then /^I should see that my email is not confirmed$/ do
+  page.should have_content "You have to confirm your account before continuing"
 end
 
 Then /^I should receive reset password instructions email$/ do
