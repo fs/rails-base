@@ -2,7 +2,9 @@ doctype 5
 html
   head
     title
-      = yield(:title)
+      = configatron.app_name
+      | -
+      = yield(:title) || 'Home'
     = stylesheet_link_tag :application
     = javascript_include_tag :application
     = csrf_meta_tag
