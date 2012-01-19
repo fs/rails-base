@@ -22,3 +22,49 @@ a {
 :hover {
 	@include transition (all, 0.5s);
 }
+
+
+.view {
+	background: #fcfcfc;
+	border: 1px solid #f7f8fa;
+	border-width: 8px 1px 1px 1px;
+	@include linear-gradient(top, #fcfcfe 77%, #f3f4f7 100%);
+	margin: 30px 0;
+	padding: 30px;
+	text-align: left;
+	@extend .drop-shadow;
+	@extend .curved;
+	hr {
+		margin: 30px 0;
+	}
+	dl { font-size: 15px; }
+}
+
+.app {	
+	.input.password input, .input.string input, textarea {
+		width: 600px;
+	}
+}
+
+.buttons {
+	&.actions {
+		text-align: left;
+		margin-top: 20px;
+		padding-top: 20px;
+		border-top: 1px solid #f0f0f0;
+		a {
+			margin-right: 20px;
+			font-size: 15px;
+			padding: 6px 17px;
+		}
+	}
+	.add-btn {
+		float: left;
+		font-size: 15px;
+		margin: 0 20px;
+	}
+}
+
+.content { 
+	margin: 0 30px 30px;
+}

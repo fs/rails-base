@@ -1,9 +1,11 @@
-.view.<%= singular_table_name %>
-  ul
+.view.lifted.drop-shadow.<%= singular_table_name %>
+  h1
+    | View <%= singular_table_name %>
+  dl
 <% for attribute in attributes -%>
-    li
-      strong <%= attribute.human_name %>
-      span.value= @<%= singular_table_name %>.<%= attribute.name %>
+    dt
+      | <%= attribute.human_name %>
+    dd= @<%= singular_table_name %>.<%= attribute.name %>
 <% end -%>
   .actions.buttons
     = link_to 'Edit', edit_article_path(@article)

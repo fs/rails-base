@@ -19,9 +19,10 @@
         <label class="string optional" for="dummy_name">Optional field</label>
         <input class="string optional" id="dummy_name" maxlength="255" name="dummy[name]" size="50" type="text">
       </div>
-      <div class="input string required">
+      <div class="input string required field_with_errors">
         <label class="string required" for="dummy_name">Text with error<abbr title="required">*</abbr></label>
         <input class="string required" id="dummy_name" maxlength="255" name="dummy[name]" size="50" type="text">
+        <span class="error">can't be blank</span>
       </div>
       <div class="input text required">
         <label class="text required" for="dummy_name">Textarea<abbr title="required">*</abbr></label>
@@ -567,7 +568,7 @@
         <span>
           <input class="radio required" id="dummy_name_radio_10" name="dummy[name]" type="radio" value="Radio 10"><label class="collection_radio" for="dummy_name_radio_10">Radio 10</label>
         </span>
-        <span class="hint">this is some hint text</span>
+        <span class="hint">this is some very very very very long hint text</span>
       </div>
       
       <div class="input check_boxes required">

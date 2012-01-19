@@ -2,6 +2,10 @@ input[type="submit"]::-moz-focus-inner {
   border: none;
 }
 
+form input:-webkit-autofill, form input::-moz-autofill{
+	background-color: #f0f0f0 !important;
+}
+
 p.inline-errors {
   color: #D12F19;
 }
