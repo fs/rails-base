@@ -6,7 +6,6 @@ body {
 	font-family: $helvetica;
 	height: 100%;
 	text-align: center;
-	min-width: $min_width;
 	color: #333;
 	font-size: 13px;
 }
@@ -61,10 +60,12 @@ a {
 	.add-btn {
 		float: left;
 		font-size: 15px;
-		margin: 0 20px;
+		margin: 0 20px 0 0;
 	}
 }
 
 .content { 
-	margin: 0 30px 30px;
+	padding: 0 30px 30px;
+	margin: auto;
+	width: $layout_width;
 }

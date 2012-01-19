@@ -71,13 +71,14 @@ table {
 	font-size: 16px;
 	text-align: left;
 	display: inline-block;
-	padding: 30px 30px 70px;
+	padding: 30px;
 	margin-top: 20px;
-	margin-bottom: -60px;
+	text-align: center;
 	p {
 		background: #fcfcfc;
 		padding: 10px 20px;
 		@include border-radius(8px);
+		text-align: left;
 	}
 }
 
