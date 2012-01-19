@@ -1,0 +1,1 @@
+Slim::Engine.set_default_options(configatron.slim_options)

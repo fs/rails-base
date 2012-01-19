@@ -4,7 +4,7 @@ Feature: Update account information
   I want to be able to update my account information
 
   Background:
-    Given I am an authenticated user
+    Given I am signed in
 
   Scenario: Update user information successfully
     When I submit update account form with valid data

@@ -15,8 +15,12 @@ When /^I cancel my account$/ do
   click_link "Cancel my account"
 end
 
-Then /^my account should not exists$/ do
-  User.exists?(@current_user.id).should be_false
+When /^I submit update account form with valid data but with wrong current password$/ do
+  submit_update_account_form :full_name => 'My new name with invalid password',
+    :email => @current_user.email,
+    :password => '123456',
+    :password_confirmation => '123456',
+    :current_password => 'invalid password'  
 end
 
 When /^I submit update account form with valid data$/ do
@@ -27,34 +31,18 @@ When /^I submit update account form with valid data$/ do
     :current_password => '123456'
 end
 
+Then /^my account should not exists$/ do
+  User.exists?(@current_user.id).should be_false
+end
+
 Then /^my account should be updated successfully$/ do
   @current_user.reload  
   @current_user.full_name.should eql 'My new name'
 end
 
-When /^I submit update account form with valid data but with wrong current password$/ do
-  submit_update_account_form :full_name => 'My new name with invalid password',
-    :email => @current_user.email,
-    :password => '123456',
-    :password_confirmation => '123456',
-    :current_password => 'invalid password'  
-end
-
 Then /^my account should not be updated$/ do
   @current_user.reload
   @current_user.full_name.should_not eql 'My new name with invalid password'
-end
-
-When /^I submit update account form without current password$/ do
-  submit_update_account_form :full_name => 'My new name',
-    :email => @current_user.email
-end
-
-When /^I submit update account form with passwords but without current password$/ do
-  submit_update_account_form :full_name => 'My new name',
-    :email => @current_user.email,
-    :password => 'new-password',
-    :password_confirmation => 'new-password'
 end
 
 Then /^my account should be updated successfully with new passwords$/ do

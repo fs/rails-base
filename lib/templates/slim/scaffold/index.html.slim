@@ -1,0 +1,16 @@
+title 'Listing <%= plural_table_name %>'
+
+- unless collection.all.blank?
+  = table_for(collection)
+  = paginate(collection)
+- else
+  .no-data
+    p
+      | Now it's time to create some data here. To create new entry, please use the button below.
+
+.buttons
+  = link_to 'New <%= human_name %>',              \
+            new_<%= singular_table_name %>_path,  \
+            :class => 'add-btn button'
+
+

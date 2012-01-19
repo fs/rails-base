@@ -9,7 +9,7 @@ group :assets do
   gem 'sass-rails', '~> 3.1.5'
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
-  gem 'flutie'
+  gem 'styleguides'
   gem 'bourbon'
 end
 
@@ -17,14 +17,14 @@ gem 'jquery-rails'
 
 gem 'configatron'
 gem 'devise'
-gem 'omniauth'
-gem 'omniauth-twitter'
 gem 'simple-navigation'
 gem 'simple_form'
 gem 'client_side_validations'
 gem 'tabletastic'
 gem 'inherited_resources'
 gem 'kaminari'
+gem 'slim'
+
 
 group :development do
   gem 'heroku'
@@ -35,6 +35,7 @@ group :development do
   gem 'brakeman'
   
   gem 'rails3-generators'
+  gem 'slim-rails'
   gem 'rcov'
 end
 
@@ -59,5 +60,5 @@ group :test do
 end
 
 group :staging, :production do
-  gem 'mysql2'
+  gem 'pg'
 end
