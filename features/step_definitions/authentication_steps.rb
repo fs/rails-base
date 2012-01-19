@@ -15,13 +15,13 @@ Given /^I am an authenticated user over Twitter$/ do
 end
 
 Then /^I should be signed in$/ do
-  within "#navigation" do
+  within "nav" do
     page.should have_content "Sign out"
   end
 end
 
 Then /^I should be signed out$/ do
-  within "#navigation" do
+  within "nav" do
     page.should_not have_content "Sign out"
   end
 end
