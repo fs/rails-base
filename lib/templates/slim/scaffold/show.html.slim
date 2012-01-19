@@ -8,5 +8,5 @@
     dd= @<%= singular_table_name %>.<%= attribute.name %>
 <% end -%>
   .actions.buttons
-    = link_to 'Edit', edit_article_path(@article)
-    = link_to 'Back', articles_path
+    = link_to 'Edit', edit_<%= singular_table_name %>_path(resource)
+    = link_to 'Back', <%= plural_table_name %>_path
