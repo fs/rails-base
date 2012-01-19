@@ -17,7 +17,7 @@
     width: 50%;
     height: 27%;
     max-width: 300px;
-		@include box-shadow(0 18px 8px rgba(0, 0, 0, 0.1));
+		@include box-shadow(0 18px 8px rgba(0, 0, 0, 0.3));
 		@include transform(rotate(-3deg));
 }
 
