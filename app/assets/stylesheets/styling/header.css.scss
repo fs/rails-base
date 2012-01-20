@@ -19,9 +19,17 @@ header {
 					display: inline-block;
 					height: 30px;
 					padding: 0 10px;
+					margin: 0 1px;
 					&:hover {
 						@include linear-gradient(top, #d1d3d7 78%, #b6b9bf 100%);
 						color: #333;
+					}
+					&.selected {
+						color: #000;
+						@include linear-gradient(top, #d1d3d7 78%, #b6b9bf 100%);
+						border: 1px solid #9396A0;
+						border-width: 0 1px;
+						margin: 0;
 					}
 				}
 			}
@@ -48,6 +56,9 @@ header {
 				li:first-child {
 					border-right: 1px solid #999;
 					font-weight: normal;
+					a {
+						border-right: 0;
+					}
 				}
 			}
 		}
