@@ -1,3 +1,11 @@
+= 0.2.rc4
+
+* We use slim for all views for now
+* New nice styling 
+* flutie gem replaced with styleguides gem (onlu /styleguides support)
+* Removed omniauth from the template b/c we should have very simple app
+* Cleaned up cucumber steps
+
 = 0.2.rc3
 
 * Added brakeman - a static analysis security vulnerability scanner for Ruby on Rails applications

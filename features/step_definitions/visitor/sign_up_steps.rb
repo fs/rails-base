@@ -1,3 +1,7 @@
+Given /^I have email with confirmation link$/ do
+  steps %Q{When I submit registration form with required fields}
+end
+
 When /^I submit registration form with required fields$/ do
   visit new_user_registration_path
 
@@ -9,24 +13,9 @@ When /^I submit registration form with required fields$/ do
   click_button "Sign up"
 end
 
-Then /^I should receive registration confirmation email$/ do
-  open_email "chuck.norris@example.com"
-  
-  current_email.should have_subject /Confirmation instructions/
-  current_email.default_part_body.to_s.should =~ /Chuck Norris/
-end
-
-Given /^I have email with confirmation link$/ do
-  steps %Q{When I submit registration form with required fields}
-end
-
 When /^I follow registration confirmation link in the email$/ do
   open_email "chuck.norris@example.com"
   visit_in_email "Confirm my account"
-end
-
-Then /^my account should be confirmed$/ do
-  User.find_by_email("chuck.norris@example.com").should be_confirmed
 end
 
 When /^I submit resent confirmtion instruction form$/ do
@@ -35,27 +24,16 @@ When /^I submit resent confirmtion instruction form$/ do
   visit new_user_confirmation_path
   
   fill_in "Email", :with => "chuck.norris@example.com"
-  click_button "Resend confirmation instructions"
+  click_button "Resend instructions"
 end
 
-When /^I follow Twitter link for sign up$/ do
-  OmniAuth.config.test_mode = true
-  OmniAuth.config.mock_auth[:twitter] = {
-    "provider" => "twitter",
-    "uid" => 1,
-    "info" => { "name" => "John Smith" }
-  }  
+Then /^I should receive registration confirmation email$/ do
+  open_email "chuck.norris@example.com"
   
-  visit new_user_registration_path
-  click_link "Twitter"
+  current_email.should have_subject /Confirmation instructions/
+  current_email.default_part_body.to_s.should =~ /Chuck Norris/
 end
 
-Then /^I should see form for completing registration over Twitter with prefilled fields$/ do
-  find_field("Full name").value.should =~ /John Smith/
+Then /^my account should be confirmed$/ do
+  User.find_by_email("chuck.norris@example.com").should be_confirmed
 end
-
-When /^I submit registration over Twitter form with required fields$/ do
-  fill_in "Email", :with => "john@smith.com"
-  click_button "Sign up"
-end
-

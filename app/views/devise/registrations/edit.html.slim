@@ -1,4 +1,4 @@
-title "Edit #{resource_name.to_s.humanize}"
+- title "Edit account", false
 
 = simple_form_for(@user,                          \
                   :url => user_registration_path, \
@@ -14,11 +14,9 @@ title "Edit #{resource_name.to_s.humanize}"
     = form.input :current_password,                           \
                   :required => true,                          \
                   :hint => "we need your current password to confirm your changes"
-  = form.button :submit
-
-.notifications
-  | Unhappy? 
-  = link_to "Cancel my account",          \
-            user_registration_path,       \
-            :confirm => "Are you sure?",  \
-            :method => :delete
+    = form.button :submit
+    .notifications
+        = link_to "Cancel account",          \
+                  user_registration_path,       \
+                  :confirm => "Are you sure?",  \
+                  :method => :delete
