@@ -189,6 +189,9 @@ input[type=submit], a.button, .buttons.actions a {
 	@include border-radius(3px);
 	font-size: 15px;
 	margin: 5px 0 15px;
+	&:focus {
+		border-color: #b3b3b3 #d0d0d0 #d0d0d0 #b3b3b3;
+	}
 }
 
 
@@ -198,4 +201,23 @@ input[type=submit], a.button, .buttons.actions a {
 }
 
 
+
+.buttons {
+	&.actions {
+		text-align: left;
+		margin-top: 20px;
+		padding-top: 20px;
+		border-top: 1px solid #f0f0f0;
+		a {
+			margin-right: 20px;
+			font-size: 15px;
+			padding: 6px 17px;
+		}
+	}
+	.add-btn {
+		float: left;
+		font-size: 15px;
+		margin: 0 20px 0 0;
+	}
+}
 
