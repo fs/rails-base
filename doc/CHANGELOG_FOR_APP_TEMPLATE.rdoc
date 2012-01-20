@@ -1,3 +1,7 @@
+= 0.2.rc5
+
+* Fixed titles
+
 = 0.2.rc4
 
 * We use slim for all views for now
