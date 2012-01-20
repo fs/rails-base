@@ -1,6 +1,5 @@
-title %Q{Sign in to your "#{configatron.app_name}" account}
-
-.notifications
+- title %Q{Sign in to your "#{configatron.app_name}" account}, false
+.sub-head
  | Not a member? 
  = link_to 'Sign up here!', new_user_registration_path
 
@@ -11,12 +10,11 @@ title %Q{Sign in to your "#{configatron.app_name}" account}
   fieldset
     = form.input :email, :required => true
     = form.input :password, :required => true
-
-    .notifications
+    = form.input :remember_me,      \
+                  :as => :boolean,  \
+                  :label => 'Remember my login on this computer'
+    = form.button :submit, 'Sign in'
+    .notifications.cf
       = link_to 'Forgot your password? ', new_user_password_path
       = link_to "Didn't receive confirmation instructions? ", \
                 new_user_confirmation_path
-      = form.input :remember_me,      \
-                    :as => :boolean,  \
-                    :label => 'Remember my login on this computer'
-  = form.button :submit, 'Sign in'

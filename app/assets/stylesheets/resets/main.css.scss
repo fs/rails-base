@@ -29,8 +29,13 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
+body {
+    line-height:1;
+}
+
 nav ul {
     list-style: none;
+		margin: 0;
 }
 
 blockquote, q {
@@ -69,20 +74,35 @@ abbr[title], dfn[title] {
     cursor:help;
 }
 
-/* tables still need cellspacing="0" in the markup */
-table {
-    border-collapse:collapse;
-    border-spacing:0;
-}
-
-hr {
-    display:block;
-    height:1px;
-    border:0;
-    border-top:1px solid #ccc;
-    margin:1em 0; padding:0;
-}
-
 input, select {
-    vertical-align:middle;
+    vertical-align: middle;
+}
+
+/* Table resets */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  	width: 100%;
+	  th {
+	     font-weight: bold;
+	     text-align: left;
+	  }
+	  tr, td, th {
+	      vertical-align: middle;
+	  }
+}
+dd { margin: 0 0 0 30px; }
+dt { font-weight: bold; margin-top: 10px; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; border-bottom: 1px solid #fff; }
+
+pre, code, kbd, samp, tt { font: 15px/18px 'andale mono','monotype.com','lucida console',monospace; color:#000; }
+
+tt, pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+blockquote {
+    border-left: 4px solid #D1D1D1;
+    color: #666;
+    font-style: italic;
+    margin: 15px 0;
+    padding-left: 10px;
 }

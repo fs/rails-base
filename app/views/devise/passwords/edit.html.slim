@@ -1,4 +1,4 @@
-title 'Change your password'
+- title "Change your password", false
 
 = simple_form_for(@user,                             \
                   :url => user_password_path,           \
@@ -7,5 +7,5 @@ title 'Change your password'
   fieldset
     = form.input :password, :required => true
     = form.input :password_confirmation, :required => true
-  = form.button :submit, 'Change my password'
+    = form.button :submit, 'Change password'
 
