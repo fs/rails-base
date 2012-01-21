@@ -1,13 +1,13 @@
 source :rubygems
 
-gem 'rails'
+gem 'rails', '3.2.0'
 gem 'json'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', '~> 3.1.5'
-  gem 'coffee-rails', '~> 3.1.1'
+  gem 'sass-rails', '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
   gem 'styleguides'
   gem 'bourbon'
@@ -35,7 +35,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'sqlite3-ruby'
+  gem 'sqlite3'
   gem 'rspec-rails'
   gem 'mail_safe'
 end
