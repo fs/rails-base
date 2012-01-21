@@ -28,35 +28,32 @@ gem 'slim'
 
 group :development do
   gem 'heroku'
-
   gem 'rails_best_practices'
-  gem 'ripper'
-  
   gem 'brakeman'
-  
   gem 'rails3-generators'
   gem 'slim-rails'
-  gem 'rcov'
 end
 
 group :development, :test do
   gem 'sqlite3-ruby'
   gem 'rspec-rails'
-  gem 'mail_safe'  
+  gem 'mail_safe'
 end
 
 group :test do
+  gem 'simplecov', :require => false
+
   gem 'database_cleaner'
   gem 'rr'
-  gem 'shoulda-matchers'  
-  gem 'email_spec'  
+  gem 'shoulda-matchers'
+  gem 'email_spec'
   gem 'factory_girl_rails'
 
   gem 'cucumber-rails'
   gem 'webmock', :require => false
   gem 'launchy'
-  
-  gem 'ruby-debug'  
+
+  gem 'ruby-debug19'
 end
 
 group :staging, :production do
