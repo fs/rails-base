@@ -14,6 +14,6 @@ SimpleCov.start do
   add_group 'Helpers', 'app/helpers'
   add_group 'Libraries', 'lib'
   add_group 'Plugins', 'vendor/plugins'
-  add_group "Cucumber", "/features/step_definitions/" # will help remove unused steps
+  add_group "Cucumber Steps", "/features/step_definitions/" # will help remove unused steps
 end
 
