@@ -5,14 +5,14 @@
 
 
 = simple_form_for(@user,                      \
-                  :url => user_session_path,  \
-                  :html => {:id => :session_new}) do |form|
+                  url: user_session_path,  \
+                  html: {id: :session_new}) do |form|
   fieldset
-    = form.input :email, :required => true
-    = form.input :password, :required => true
+    = form.input :email, required: true
+    = form.input :password, required: true
     = form.input :remember_me,      \
-                  :as => :boolean,  \
-                  :label => 'Remember my login on this computer'
+                  as: :boolean,  \
+                  label: 'Remember my login on this computer'
     = form.button :submit, 'Sign in'
     .notifications.cf
       = link_to 'Forgot your password? ', new_user_password_path

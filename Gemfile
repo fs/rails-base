@@ -41,7 +41,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'simplecov', :require => false
+  gem 'simplecov', require: false
 
   gem 'database_cleaner'
   gem 'rr'
@@ -50,7 +50,7 @@ group :test do
   gem 'factory_girl_rails'
 
   gem 'cucumber-rails'
-  gem 'webmock', :require => false
+  gem 'webmock', require: false
   gem 'launchy'
 
   gem 'ruby-debug19'
