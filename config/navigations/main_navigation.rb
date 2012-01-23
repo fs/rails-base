@@ -4,7 +4,7 @@ SimpleNavigation::Configuration.run do |navigation|
   navigation.items do |primary|
     primary.dom_class = 'main'
 
-    primary.with_options(:if => Proc.new { user_signed_in? }) do |signed_in_user|
+    primary.with_options(if: Proc.new { user_signed_in? }) do |signed_in_user|
       signed_in_user.item :dashboard, 'Dashboard', root_path
     end
   end

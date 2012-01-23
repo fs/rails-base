@@ -1,7 +1,7 @@
 class <%= controller_class_name %>Controller < ApplicationController
   inherit_resources
 <% if options[:singleton] -%>
-  defaults :singleton => true
+  defaults singleton: true
 <% end -%>
 
   protected
