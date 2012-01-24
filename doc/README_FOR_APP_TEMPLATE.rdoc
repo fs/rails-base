@@ -16,6 +16,7 @@ Application currently based on Rails 3.2 stable branch and Ruby 1.9
 * JS Framework: Jquery-rails, http://github.com/indirect/jquery-rails
 * Tests: RSpec, Shoulda, RR, Cucumber, Factory Girl, Mail Safe
 * Code metrics: rails_best_practices, http://github.com/flyerhzm/rails_best_practices and rcov
+* Static analysis security vulnerability scanner: brakeman
 
 === Initializes
 
