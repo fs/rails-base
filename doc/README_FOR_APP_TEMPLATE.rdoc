@@ -3,12 +3,11 @@
 {<img src="https://secure.travis-ci.org/fs/rails3-base.png"/>}[http://travis-ci.org/fs/rails3-base]
 
 This simple application includes ruby/rails technology which we use in the FlatStack for new projects.
-Application currently based on Rails 3 stable branch.
+Application currently based on Rails 3.2 stable branch and Ruby 1.9
 
 === Gems
 
 * Basic auth: Devise http://github.com/plataformatec/devise, app/models/user.rb
-* OAuth auth: Omniauth https://github.com/intridea/omniauth, app/models/user/omni_auth_extension.rb
 * Navigation: SimpleNavigation http://github.com/andi/simple-navigation, config/navigations
 * DRY controllers: Inherited Resources, http://github.com/josevalim/inherited_resources
 * Form builder: SimpleForm https://github.com/plataformatec/simple_form, config/initializers/simple_form.rb
@@ -17,6 +16,7 @@ Application currently based on Rails 3 stable branch.
 * JS Framework: Jquery-rails, http://github.com/indirect/jquery-rails
 * Tests: RSpec, Shoulda, RR, Cucumber, Factory Girl, Mail Safe
 * Code metrics: rails_best_practices, http://github.com/flyerhzm/rails_best_practices and rcov
+* Static analysis security vulnerability scanner: brakeman
 
 === Initializes
 
@@ -48,14 +48,14 @@ Setup configuration files
   cp config/database.yml.example config/database.yml
 
 Install gems and enable rvm integration with Bundler (the “bin” directory is added to your path each time you cd into a project directory with binstubs)
-  
+
   bundle install --path vendor --binstubs
   chmod +x $rvm_path/hooks/after_cd_bundler
-  
-Make sure all test are green  
-  
+
+Make sure all test are green
+
   bundle exec rake spec cucumber
-  
+
 === How to update existing project with new changes from rails3-base repo
 
 You can fetch latest changes from rails3-base repo and merge or cherry-pick commits
@@ -82,9 +82,6 @@ will install all gems into the vendor/ruby and all executables to bin/
 
 We use Devise for login based auth b/c is modular and have a good community support. Take a look at config/initializers/devise.rb
 if you want customize it.
-
-We use Omniauth for authientification over OAuth with Twitter. Please configure key & secret token in the config/config.yml
-If you don't want to use omniauth simply comment it's configuration in the config/initializers/devise.rb
 
 === Scaffolding
 
@@ -221,7 +218,7 @@ Use 'Background' to consolidate common steps in a feature:
 ==== Tags
 
 You can use @webmock for enabling webmock functionality around some scenario. It's mean all real HTTP connection will be
-disabled in the given scenario and you need to stub them with stub_request. Checkout twitter_authentication_steps.rb for example.
+disabled in the given scenario and you need to stub them with stub_request.
 
 ==== Mail Safe
 
