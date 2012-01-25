@@ -1,34 +1,20 @@
-= 0.2.rc5
+= 0.2
 
-* Fixed titles
-
-= 0.2.rc4
-
-* We use slim for all views for now
-* New nice styling 
-* flutie gem replaced with styleguides gem (onlu /styleguides support)
-* Removed omniauth from the template b/c we should have very simple app
-* Cleaned up cucumber steps
-
-= 0.2.rc3
-
-* Added brakeman - a static analysis security vulnerability scanner for Ruby on Rails applications
-* Removed cached gems from repo, for now you could install gems usual way with "bundle install" command
-* Added mail_safe gem - app won’t send emails to external email addresses in the development and test envs
-
-= 0.2.rc1
-
-* Updated to Rails 3.1
-* CSS converted to scss
+* Ruby 1.9
+* Rails 3.2
+* Slim for views
+* New nice styling with scss
+* SimpleForm instead of FormTastic
+* Configatron for configuration
+* Cucumber steps without web_steps
+* Added rails_best_practices
 * Added bourbon
-* Formtastic replased with SimpleForm
-* Recreated cucumber features without web_steps
+* Added brakeman
+* Added mail_safe
+* Removed OmniAuth
+* Replaced flutie gem with styleguides (only /styleguides support)
+* Removed cached gems
 * Removed VCR
-* Added rails_best_practices gem
-* Moved configuration from config.yml to config/configatron
-* Added Travis CI configuration
-
-
 
 = 0.1.4
 
@@ -40,7 +26,7 @@
 
 = 0.1.2
 
-* Cleanup appliaction.css
+* Cleanup application.css
 
 = 0.1.1
 
@@ -54,5 +40,5 @@ are in the repo.
 * Kaminari instead of will_paginate
 * Client side validation added
 * New styles for sign in and sign up
-* Added parallel_test gem for runing test more then one CPU core
+* Added parallel_test gem for running test more then one CPU core
 * Updated gems to the latest
