@@ -1,5 +1,5 @@
 .form
-  = simple_form_for(resource, :validate => true) do |form|
+  = simple_form_for(resource, validate: true) do |form|
     fieldset
       <% for attribute in attributes -%>= form.input :<%= attribute.name %>
       <% end -%>

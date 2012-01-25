@@ -1,8 +1,8 @@
 def sign_in_with(email, password)
   visit new_user_session_path
   
-  fill_in "Email", :with => email
-  fill_in "Password", :with => password
+  fill_in "Email", with: email
+  fill_in "Password", with: password
   
   click_button "Sign in"
 end
@@ -28,7 +28,7 @@ end
 When /^I request new password$/ do
   visit new_user_password_path
   
-  fill_in "Email", :with => @current_user.email
+  fill_in "Email", with: @current_user.email
   click_button "Send instructions"
 end
 

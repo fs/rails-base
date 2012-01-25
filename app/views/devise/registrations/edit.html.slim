@@ -1,22 +1,22 @@
 - title "Edit account", false
 
 = simple_form_for(@user,                          \
-                  :url => user_registration_path, \
-                  :html => { :method => :put }) do |form|
+                  url: user_registration_path, \
+                  html: { method: :put }) do |form|
   fieldset
-    = form.input :full_name, :required => true
-    = form.input :email, :required => true
+    = form.input :full_name, required: true
+    = form.input :email, required: true
     = form.input :password,           \
-                  :required => true,  \
-                  :hint => "leave blank if you don't want to change it"
+                  required: true,  \
+                  hint: "leave blank if you don't want to change it"
     = form.input :password_confirmation,  \
-                  :required => true
+                  required: true
     = form.input :current_password,                           \
-                  :required => true,                          \
-                  :hint => "we need your current password to confirm your changes"
+                  required: true,                          \
+                  hint: "we need your current password to confirm your changes"
     = form.button :submit
     .notifications
         = link_to "Cancel account",          \
                   user_registration_path,       \
-                  :confirm => "Are you sure?",  \
-                  :method => :delete
+                  confirm: "Are you sure?",  \
+                  method: :delete
