@@ -1,1 +1,1 @@
-Slim::Engine.set_default_options(configatron.slim_options)
+Slim::Engine.set_default_options(app_config.slim_options)

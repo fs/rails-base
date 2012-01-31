@@ -74,4 +74,8 @@ Rails3Base::Application.configure do
   #   :password       => ENV['SENDGRID_PASSWORD'],
   #   :domain         => 'heroku.com'
   # }
+
+  # Application specific options
+  #
+  host = "fs-rails3-base.heroku.com"
 end
