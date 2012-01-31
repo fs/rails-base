@@ -15,7 +15,6 @@ end
 
 gem 'jquery-rails'
 
-gem 'configatron'
 gem 'devise'
 gem 'simple-navigation'
 gem 'simple_form'

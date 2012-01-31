@@ -55,5 +55,22 @@ module Rails3Base
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Application specific options
+    #
+    # Name used in the html titles and mailers
+    config.app_name = "Rails 3 Base example site"
+
+    # Slim engine default option, initializers/slim.rb
+    config.slim_options = {}
+
+    # Default token used for sessions and password, initializers/devise.rb, initializers/secret_token.rb
+    config.token = "d77d65f2f8a2ee751d816683e05a8ea2167321958a1bb5e951022317eba080b195dee85610b672bcc1492fb9e2f816"
+
+    # Default e-mail address which will be shown in the "from" devise emails, initializers/devise.rb,
+    config.noreply = "noreply@fs-rails3-base.heroku.com"
+
+    # Default host for action mailer, initializers/mailer.rb
+    config.host = "localhost:3000"
   end
 end
