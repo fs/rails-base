@@ -12,7 +12,6 @@ Application currently based on Rails 3.2 stable branch and Ruby 1.9
 * DRY controllers: Inherited Resources, http://github.com/josevalim/inherited_resources
 * Form builder: SimpleForm https://github.com/plataformatec/simple_form, config/initializers/simple_form.rb
 * List builder: Tabletastic http://github.com/jgdavey/tabletastic, config/initializers/tabletastic.rb
-* Application config: Configatron, http://github.com/markbates/configatron, config/configatron
 * JS Framework: Jquery-rails, http://github.com/indirect/jquery-rails
 * Tests: RSpec, Shoulda, RR, Cucumber, Factory Girl, Mail Safe
 * Code metrics: rails_best_practices, http://github.com/flyerhzm/rails_best_practices and rcov
@@ -20,7 +19,7 @@ Application currently based on Rails 3.2 stable branch and Ruby 1.9
 
 === Initializes
 
-* configatron.rb - loads configuration for current Rails environment to the configatron, so you can access them like configatron.app_name
+* config.rb - defines shortcut for Rails.application.config
 * devise.rb - setup devise options, mailer_sender and pepper from config
 * simple_form.rb - setup simple_form options
 * tabletastic.rb -  setup tabletastic options, by default all actions rendered in the list
