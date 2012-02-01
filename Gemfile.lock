@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/plataformatec/simple_form.git
+  revision: 6c5715d1e763c6d3b4c0e0a69ff51423f2b554de
+  specs:
+    simple_form (2.0.0.dev)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -229,9 +237,6 @@ GEM
     shoulda-matchers (1.0.0)
     simple-navigation (3.6.0)
       activesupport (>= 2.3.2)
-    simple_form (1.5.2)
-      actionpack (~> 3.0)
-      activemodel (~> 3.0)
     simplecov (0.5.4)
       multi_json (~> 1.0.3)
       simplecov-html (~> 0.5.3)
@@ -302,7 +307,7 @@ DEPENDENCIES
   ruby-debug19
   shoulda-matchers
   simple-navigation
-  simple_form
+  simple_form!
   simplecov
   slim
   slim-rails
