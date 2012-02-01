@@ -1,5 +1,6 @@
 SimpleNavigation::Configuration.run do |navigation|
   navigation.autogenerate_item_ids = false
+  navigation.selected_class = 'active'
 
   navigation.items do |user|
     user.dom_class = 'user'
