@@ -4,7 +4,7 @@ SimpleNavigation::Configuration.run do |navigation|
   navigation.active_leaf_class = 'active'
 
   navigation.items do |user|
-    user.dom_class = 'user'
+    user.dom_class = 'user nav'
 
     if user_signed_in?
       user.item :account, current_user.full_name_with_email, edit_user_registration_path

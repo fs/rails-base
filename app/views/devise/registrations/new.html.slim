@@ -1,4 +1,4 @@
-- title %Q{Sign up to "#{app_config.app_name}"}, false
+- title %Q{Sign up to "#{app_config.app_name}"}
 
 .sub-head
   | Already member?
@@ -12,4 +12,4 @@
     = form.input :email, required: true
     = form.input :password, required: true
     = form.input :password_confirmation, required: true
-    = form.button :submit, 'Sign up'
+    = form.button :submit, 'Sign up', :class => 'btn-primary'

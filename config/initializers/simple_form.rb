@@ -45,8 +45,45 @@ SimpleForm.setup do |config|
     b.use :error, :tag => :span, :class => :error
   end
 
-  # The default wrapper to be used by the FormBuilder.
-  config.default_wrapper = :default
+  config.wrappers :bootstrap, :tag => 'div', :class => 'control-group', :error_class => 'error' do |b|
+    b.use :placeholder
+    b.use :label, :class => 'control-label'
+    b.use :tag => 'div', :class => 'controls' do |ba|
+      ba.use :input
+      ba.use :error, :tag => 'span', :class => 'help-inline'
+      ba.use :hint,  :tag => 'p', :class => 'help-block'
+    end
+  end
+
+  config.wrappers :prepend, :tag => 'div', :class => "control-group", :error_class => 'error' do |b|
+    b.use :placeholder
+    b.use :label, :class => 'control-label'
+    b.use :hint,  :tag => 'span', :class => 'help-block'
+    b.use :tag => 'div', :class => 'controls' do |input|
+      input.use :tag => 'div', :class => 'input-prepend' do |prepend|
+        prepend.use :input
+      end
+      input.use :error, :tag => 'span', :class => 'help-inline'
+    end
+  end
+
+  config.wrappers :append, :tag => 'div', :class => "control-group", :error_class => 'error' do |b|
+    b.use :placeholder
+    b.use :label, :class => 'control-label'
+    b.use :hint,  :tag => 'span', :class => 'help-block'
+    b.use :tag => 'div', :class => 'controls' do |input|
+      input.use :tag => 'div', :class => 'input-append' do |append|
+        append.use :input
+      end
+      input.use :error, :tag => 'span', :class => 'help-inline'
+    end
+  end
+
+  # Wrappers for forms and inputs using the Twitter Bootstrap toolkit.
+  # Check the Bootstrap docs (http://twitter.github.com/bootstrap)
+  # to learn about the different styles for forms and inputs,
+  # buttons and other elements.
+  config.default_wrapper = :bootstrap
 
   # Define the way to render check boxes / radio buttons with labels.
   # Defaults to :nested for bootstrap config.

@@ -7,4 +7,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require rails.validations
+//= require twitter/bootstrap/alert
 //= require_tree .
+
+$(document).ready ->
+  $(".alert").alert()
