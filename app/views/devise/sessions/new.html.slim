@@ -1,20 +1,25 @@
-- title %Q{Sign in to your "#{app_config.app_name}" account}, false
-.sub-head
- | Not a member?
- = link_to 'Sign up here!', new_user_registration_path
+- title %Q{Sign in to your "#{app_config.app_name}" account}
+.container-fluid
+  .row-fluid
+    .span6
+      = simple_form_for(@user,                  \
+                        url: user_session_path,  \
+                        html: {id: :session_new, class: 'form-horizontal sigin-forь'}) do |form|
+        fieldset
+          = form.input :email, required: true
+          = form.input :password, required: true
+          = form.input :remember_me,      \
+                        as: :boolean,  \
+                        label: 'Remember my login on this computer'
+          = form.button :submit, 'Sign in', :class => 'btn-primary'
 
+          .notifications.cf
+            = link_to 'Forgot your password? ', new_user_password_path
+            = link_to "Didn't receive confirmation instructions? ", \
+                      new_user_confirmation_path
 
-= simple_form_for(@user,                      \
-                  url: user_session_path,  \
-                  html: {id: :session_new}) do |form|
-  fieldset
-    = form.input :email, required: true
-    = form.input :password, required: true
-    = form.input :remember_me,      \
-                  as: :boolean,  \
-                  label: 'Remember my login on this computer'
-    = form.button :submit, 'Sign in'
-    .notifications.cf
-      = link_to 'Forgot your password? ', new_user_password_path
-      = link_to "Didn't receive confirmation instructions? ", \
-                new_user_confirmation_path
+    .span4
+      h2
+        | Not a member?
+        p
+          = link_to 'Sign up here!', new_user_registration_path, :class => 'btn'
