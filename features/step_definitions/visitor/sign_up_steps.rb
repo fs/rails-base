@@ -18,7 +18,7 @@ When /^I follow registration confirmation link in the email$/ do
   visit_in_email "Confirm my account"
 end
 
-When /^I submit resent confirmtion instruction form$/ do
+When /^I submit resent confirmation instruction form$/ do
   Factory.create :not_confirmed_user, email: "chuck.norris@example.com", full_name: "Chuck Norris"
   
   visit new_user_confirmation_path

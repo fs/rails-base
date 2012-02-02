@@ -14,7 +14,7 @@ Feature: Sign in
     Then I should be signed out    
   
   Scenario: User has not confirmed email address
-    Given I exist as a user with not comfirmed email  
+    Given I exist as a user with not confirmed email
     When I sign in with valid credentials
     Then I should see that my email is not confirmed
   
