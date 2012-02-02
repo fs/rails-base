@@ -1,16 +1,25 @@
 - title 'Listing <%= plural_table_name %>'
 
-- unless collection.all.blank?
-  = table_for(collection)
-  = paginate(collection)
-- else
-  .no-data
-    p
-      | Now it's time to create some data here. To create new entry, please use the button below.
+table
+  tr
+<% for attribute in attributes -%>
+    th <%= attribute.human_name %>
+<% end -%>
+    th
+    th
+    th
 
-.buttons
-  = link_to 'New <%= human_name %>',              \
-            new_<%= singular_table_name %>_path,  \
-            class: 'add-btn button'
+  - <%= plural_table_name %>.each do |<%= singular_table_name %>|
+    tr
+<% for attribute in attributes -%>
+      td= <%= singular_table_name %>.<%= attribute.name %>
+<% end -%>
+      td= link_to 'Show', <%= singular_table_name %>
+      td= link_to 'Edit', edit_<%= singular_table_name %>_path(<%= singular_table_name %>)
+      td= link_to 'Destroy', <%= singular_table_name %>, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New <%= human_name %>', new_<%= singular_table_name %>_path
 
 

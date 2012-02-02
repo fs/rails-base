@@ -9,9 +9,8 @@ Application currently based on Rails 3.2 stable branch and Ruby 1.9
 
 * Basic auth: Devise http://github.com/plataformatec/devise, app/models/user.rb
 * Navigation: SimpleNavigation http://github.com/andi/simple-navigation, config/navigations
-* DRY controllers: Inherited Resources, http://github.com/josevalim/inherited_resources
+* DRY controllers: Decent exposure, https://github.com/voxdolo/decent_exposure
 * Form builder: SimpleForm https://github.com/plataformatec/simple_form, config/initializers/simple_form.rb
-* List builder: Tabletastic http://github.com/jgdavey/tabletastic, config/initializers/tabletastic.rb
 * JS Framework: Jquery-rails, http://github.com/indirect/jquery-rails
 * Tests: RSpec, Shoulda, RR, Cucumber, Factory Girl, Mail Safe
 * Code metrics: rails_best_practices, http://github.com/flyerhzm/rails_best_practices and rcov
@@ -22,7 +21,6 @@ Application currently based on Rails 3.2 stable branch and Ruby 1.9
 * config.rb - shortcut for getting application config with `app_config`
 * devise.rb - setup devise options, mailer_sender and pepper from config
 * simple_form.rb - setup simple_form options
-* tabletastic.rb -  setup tabletastic options, by default all actions rendered in the list
 * mailer.rb - setup default hosts for mailer from configuration
 * simple_navigation.rb - setup simple navigation options
 * time_formats.rb - setup default time formats, so you can use them like object.create_at.to_s(:us_time)
