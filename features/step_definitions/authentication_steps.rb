@@ -8,13 +8,13 @@ Given /^I am signed in$/ do
 end
 
 Then /^I should be signed in$/ do
-  within "nav" do
+  within ".navbar-inner" do
     page.should have_content "Sign out"
   end
 end
 
 Then /^I should be signed out$/ do
-  within "nav" do
+  within ".navbar-inner" do
     page.should_not have_content "Sign out"
   end
 end

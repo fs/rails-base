@@ -20,7 +20,7 @@ When /^I sign in with invalid credentials$/ do
 end
 
 When /^I sign out$/ do
-  within "nav" do
+  within ".navbar-inner" do
     click_link "Sign out"
   end
 end
