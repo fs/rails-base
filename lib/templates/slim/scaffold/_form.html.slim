@@ -1,9 +1,9 @@
 .form
-  = simple_form_for(resource, validate: true) do |form|
+  = simple_form_for(<%= singular_table_name %>, validate: true) do |form|
     fieldset
       <% for attribute in attributes -%>= form.input :<%= attribute.name %>
       <% end -%>
 .buttons
         = form.button :submit
         | or 
-        = link_to 'cancel', resource
+        = link_to 'cancel', <%= singular_table_name %>

@@ -3,6 +3,8 @@ Unreleased
 * Rails updated to 3.2.1
 * Devise updated to 2.0
 * Configatron replaced with native Rails.application.config, checkout config/initializers/config.rb
+* Replaced inherited resources with decent_exposure
+* Removed tabletastic
 
 = 0.2
 

@@ -1,11 +1,12 @@
 - title 'View <%= singular_table_name %>'
+
 .view.lifted.drop-shadow.<%= singular_table_name %>
   dl
 <% for attribute in attributes -%>
     dt
       | <%= attribute.human_name %>
-    dd= @<%= singular_table_name %>.<%= attribute.name %>
+    dd= <%= singular_table_name %>.<%= attribute.name %>
 <% end -%>
   .actions.buttons
-    = link_to 'Edit', edit_<%= singular_table_name %>_path(resource)
+    = link_to 'Edit', edit_<%= singular_table_name %>_path(<%= singular_table_name %>)
     = link_to 'Back', <%= plural_table_name %>_path
