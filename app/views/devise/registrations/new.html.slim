@@ -1,15 +1,13 @@
 - title %Q{Sign up to "#{app_config.app_name}"}
 
-.sub-head
-  | Already member?
-  = link_to 'Sign in here!', new_user_session_path
+h3 Already member? #{link_to('Sign in here!', new_user_session_path)}
 
-= simple_form_for(@user,              \
-                  validate: true,  \
+= simple_form_for(@user,\
+                  validate: true, \
                   url: user_registration_path) do |form|
-  fieldset
-    = form.input :full_name, required: true
-    = form.input :email, required: true
-    = form.input :password, required: true
-    = form.input :password_confirmation, required: true
-    = form.button :submit, 'Sign up', :class => 'btn-primary'
+
+  = form.input :full_name, required: true
+  = form.input :email, required: true
+  = form.input :password, required: true
+  = form.input :password_confirmation, required: true
+  = form.button :submit, 'Sign up'

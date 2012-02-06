@@ -1,7 +1,6 @@
 - title "Forgot your password?"
 
 = simple_form_for(@user, url: user_password_path) do |form|
-  fieldset
-    = form.input :email, required: true
-    = form.button :submit, 'Send instructions'
+  = form.input :email, required: true
+  = form.button :submit, 'Send instructions'
 
