@@ -1,25 +1,31 @@
 - title 'Listing <%= plural_table_name %>'
 
-table
-  tr
-<% for attribute in attributes -%>
-    th <%= attribute.human_name %>
-<% end -%>
-    th
-    th
-    th
+table.table.table-striped
+  thead
+    tr
+  <% for attribute in attributes -%>
+      th <%= attribute.human_name %>
+  <% end -%>
+      th Actions
 
   - <%= plural_table_name %>.each do |<%= singular_table_name %>|
     tr
 <% for attribute in attributes -%>
       td= <%= singular_table_name %>.<%= attribute.name %>
 <% end -%>
-      td= link_to 'Show', <%= singular_table_name %>
-      td= link_to 'Edit', edit_<%= singular_table_name %>_path(<%= singular_table_name %>)
-      td= link_to 'Destroy', <%= singular_table_name %>, :confirm => 'Are you sure?', :method => :delete
+      td.actions
+        = link_to <%= singular_table_name %>, :class => 'btn' do
+          i.icon-eye-open
+          = ' Show'
+        = link_to edit_<%= singular_table_name %>_path(<%= singular_table_name %>), :class => 'btn' do
+          i.icon-edit
+          = ' Edit'
+        = link_to <%= singular_table_name %>, :confirm => 'Are you sure?', :method => :delete, :class => 'btn btn-danger' do
+          i.icon-trash.icon-white
+          = ' Delete'
 
-br
-
-= link_to 'New <%= human_name %>', new_<%= singular_table_name %>_path
+= link_to new_<%= singular_table_name %>_path, :class => 'btn' do
+  i.icon-plus
+  = ' New <%= human_name %>'
 
 

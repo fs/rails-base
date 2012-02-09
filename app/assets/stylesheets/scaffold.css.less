@@ -1,0 +1,49 @@
+@import "twitter/bootstrap/variables";
+@import "twitter/bootstrap/grid";
+@import "twitter/bootstrap/mixins";
+@import "twitter/bootstrap/forms";
+
+.scaffold-form form {
+	.form-horizontal;
+	textarea {
+		height: 150px;
+		#fluidGridSystem > .columns(@fluidGridGutterWidth, @fluidGridColumnWidth, 7);
+	}
+	.string {
+		input {
+			#fluidGridSystem > .columns(@fluidGridGutterWidth, @fluidGridColumnWidth, 7);
+		}
+	}
+	.form-actions {
+		input {
+			margin-right: 15px;
+		}
+	}
+}
+
+table {
+	td.actions {
+		text-align: right;
+		a {
+			margin-left: 10px;
+		}
+	}
+}
+.show-item {
+	a.pull-right {
+		margin-bottom: -20px;
+	}
+	dl {
+		overflow: hidden;
+		width: 100%;
+		dt {
+			float: left;
+			#fluidGridSystem > .columns(@fluidGridGutterWidth, @fluidGridColumnWidth, 3);
+			display: block;
+		}
+		dd {
+			float: left;
+			#fluidGridSystem > .columns(@fluidGridGutterWidth, @fluidGridColumnWidth, 8);			
+		}
+	}
+}
