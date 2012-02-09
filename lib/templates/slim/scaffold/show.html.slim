@@ -1,12 +1,17 @@
 - title 'View <%= singular_table_name %>'
 
-.view.lifted.drop-shadow.<%= singular_table_name %>
-  dl
+.well.show-item.<%= singular_table_name %>
+  = link_to edit_<%= singular_table_name %>_path(<%= singular_table_name %>), :class => 'btn pull-right' do
+    i.icon-pencil
+    = ' Edit'
+
 <% for attribute in attributes -%>
+  dl
     dt
       | <%= attribute.human_name %>
     dd= <%= singular_table_name %>.<%= attribute.name %>
 <% end -%>
-  .actions.buttons
-    = link_to 'Edit', edit_<%= singular_table_name %>_path(<%= singular_table_name %>)
-    = link_to 'Back', <%= plural_table_name %>_path
+
+= link_to <%= plural_table_name %>_path do
+  i.icon-chevron-left
+  | Back
