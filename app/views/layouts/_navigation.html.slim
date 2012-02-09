@@ -8,5 +8,4 @@
       a.brand href="/" = app_config.app_name
       .container.nav-collapse
         = render_navigation(context: :main)
-        .navbar-text.pull-right
-          = render_navigation(context: :user)
+        = render_navigation(context: :user, expand_all: true)
