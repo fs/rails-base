@@ -11,11 +11,11 @@
       = form.input :password, required: true
       = form.input :password_confirmation, required: true
       .form-actions
-        = form.button :submit, 'Sign up', :class => 'btn-primary btn-large'
+        = form.button :submit, "Sign up", :class => "btn-primary btn-large"
 
   .span4.offset1
     .well.sidebar
-      h3 Already member? 
-      = link_to new_user_session_path, :class => 'btn btn-large' do
+      h3 Already member?
+      = link_to new_user_session_path, :class => "btn btn-large" do
         i.icon-user
-        = ' Sign in here!'
+        | Sign in here!

@@ -6,21 +6,21 @@
       = form.input :email, required: true
       = form.input :password, required: true
       = form.input :remember_me, as: :boolean, \
-                    label: 'Remember my login on this computer'
+                    label: "Remember my login on this computer"
       .form-actions
-        = form.button :submit, 'Sign in', :class => 'btn-primary btn btn-large'
+        = form.button :submit, "Sign in", :class => "btn-primary btn btn-large"
   .span4.offset1
     .well.sidebar
       h3 Not a member?
-      = link_to new_user_registration_path, :class => 'btn-success btn btn-large' do
+      = link_to new_user_registration_path, :class => "btn-success btn btn-large" do
         i.icon-ok.icon-white
-        = ' Sign up here!'
+        | Sign up here!
     ul.help
       li
         h3
           i.icon-question-sign
-          = 'Help'
+          | Help
       li
-        = link_to 'Forgot your password? ', new_user_password_path
+        = link_to "Forgot your password? ", new_user_password_path
       li
         = link_to "Didn't receive confirmation instructions? ", new_user_confirmation_path
