@@ -1,17 +1,18 @@
 - title 'View <%= singular_table_name %>'
-
-.well.show-item.<%= singular_table_name %>
-  = link_to edit_<%= singular_table_name %>_path(<%= singular_table_name %>), :class => 'btn pull-right' do
-    i.icon-pencil
-    = ' Edit'
+.show-item
+  .well.<%= singular_table_name %>.form-horizontal
 
 <% for attribute in attributes -%>
-  dl
-    dt
-      | <%= attribute.human_name %>
-    dd= <%= singular_table_name %>.<%= attribute.name %>
+    .control-group
+      label.control-label
+        | <%= attribute.human_name %>
+      .controls
+        .input-xlarge.uneditable-input.<%= attribute.type %>.span7
+          = <%= singular_table_name %>.<%= attribute.name %>
 <% end -%>
-
-= link_to <%= plural_table_name %>_path do
-  i.icon-chevron-left
-  | Back
+  .form-actions
+    = link_to edit_<%= singular_table_name %>_path(<%= singular_table_name %>), :class => 'btn btn-primary' do
+      i.icon-pencil.icon-white
+      = ' Edit'
+    = link_to <%= plural_table_name %>_path, :class => 'btn' do
+      | Back to <%= singular_table_name %>

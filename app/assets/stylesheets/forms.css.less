@@ -1,17 +1,31 @@
 @import "twitter/bootstrap/variables";
 @import "twitter/bootstrap/mixins";
 @import "twitter/bootstrap/forms";
+@import "twitter/bootstrap/alerts";
 @import "twitter/bootstrap/wells";
 
-form {
-  .form-horizontal;
-  .well;
+.alert-alert {
+  .alert-error;
+}
 
-  label.required {
-    font-weight: bold;
+.alert-notice {
+  .alert-info;
+}
 
-    abbr {
-      color: red;
-    }
+abbr {
+  color: #f00;
+  font-size: 15px;
+  margin-left: 3px;
+}
+.form-horizontal {
+  abbr {
+    float: right;
+    margin-right: -3px;
+  }
+}
+
+.datetime, .date, .time {
+  select {
+    width:auto;
   }
 }
