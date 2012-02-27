@@ -18,7 +18,7 @@ gem 'jquery-rails'
 
 gem 'devise'
 gem 'simple-navigation'
-gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
+gem 'simple_form'
 gem 'client_side_validations'
 gem 'decent_exposure'
 gem 'kaminari'
