@@ -1,15 +1,26 @@
 - title %Q{Sign in to your "#{app_config.app_name}" account}
 
-h3 Not a member? #{link_to('Sign up here!', new_user_registration_path)}
-
-= simple_form_for(@user, url: user_session_path) do |form|
-  = form.input :email, required: true
-  = form.input :password, required: true
-  = form.input :remember_me, as: :boolean, \
-                label: 'Remember my login on this computer'
-
-  h4= link_to 'Forgot your password? ', new_user_password_path
-  h4= link_to "Didn't receive confirmation instructions? ", \
-            new_user_confirmation_path
-
-  = form.button :submit, 'Sign in'
+.row
+  .span7.login
+    = simple_form_for(@user, url: user_session_path) do |form|
+      = form.input :email, required: true
+      = form.input :password, required: true
+      = form.input :remember_me, as: :boolean, \
+                    label: 'Remember my login on this computer'
+      .form-actions
+        = form.button :submit, 'Sign in', :class => 'btn-primary btn btn-large'
+  .span4.offset1
+    .well.sidebar
+      h3 Not a member?
+      = link_to new_user_registration_path, :class => 'btn-success btn btn-large' do
+        i.icon-ok.icon-white
+        = ' Sign up here!'
+    ul.help
+      li
+        h3
+          i.icon-question-sign
+          = 'Help'
+      li
+        = link_to 'Forgot your password? ', new_user_password_path
+      li
+        = link_to "Didn't receive confirmation instructions? ", new_user_confirmation_path
