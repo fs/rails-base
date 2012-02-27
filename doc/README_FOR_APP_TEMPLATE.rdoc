@@ -254,5 +254,3 @@ We have main and user navigation which accessible for visitor and authorized use
 * Commit, do not mess with rakefile, version, or history.
   (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
 * Send a pull request. Bonus points for topic branches.
-
-(c) FlatStack
