@@ -7,5 +7,6 @@
   = form.input :reset_password_token, :as => :hidden
   = form.input :password, required: true
   = form.input :password_confirmation, required: true
-  = form.button :submit, 'Change password'
+  .form-actions
+    = form.button :submit, 'Change password', :class => 'btn-primary'
 

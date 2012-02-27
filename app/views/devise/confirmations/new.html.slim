@@ -2,5 +2,6 @@
 
 = simple_form_for(@user, url: user_confirmation_path) do |form|
   = form.input :email, required: true
-  = form.button :submit, 'Resend instructions'
+  .form-actions
+    = form.button :submit, 'Resend instructions', :class => 'btn-primary'
 

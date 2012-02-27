@@ -1,24 +1,27 @@
 - title "Edit account"
-
-= simple_form_for(@user, \
-                  url: user_registration_path, \
-                  html: { method: :put }) do |form|
-
-  = form.input :full_name, required: true
-  = form.input :email, required: true
-  = form.input :password,           \
-                required: true,  \
-                hint: "leave blank if you don't want to change it"
-  = form.input :password_confirmation,  \
-                required: true
-  = form.input :current_password,                           \
-                required: true,                          \
-                hint: "we need your current password to confirm your changes"
-  = form.button :submit
-
-  h4
-    | Unhappy?&nbsp;
-    = link_to "Cancel account.",        \
-            user_registration_path,    \
-            confirm: "Are you sure?",  \
-            method: :delete
+.row
+  .span7
+    = simple_form_for(@user, \
+                      url: user_registration_path, \
+                      html: { method: :put }) do |form|
+      fieldset.form-horizontal
+        = form.input :full_name, required: true
+        = form.input :email, required: true
+        = form.input :password,           \
+                      required: true,  \
+                      hint: "leave blank if you don't want to change it"
+        = form.input :password_confirmation,  \
+                      required: true
+        = form.input :current_password,                           \
+                      required: true,                          \
+                      hint: "we need your current password to confirm your changes"
+        .form-actions
+          = form.button :submit, 'Update profile', :class => 'btn-success btn btn-large'
+  .span3.offset1
+    .well.sidebar
+      h3
+        | Unhappy?
+      = link_to user_registration_path,    \
+              confirm: "Are you sure?", method: :delete, class: "btn btn-danger" do
+        i.icon-ban-circle.icon-white
+        = ' Delete my account'

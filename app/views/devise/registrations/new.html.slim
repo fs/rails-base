@@ -1,13 +1,21 @@
 - title %Q{Sign up to "#{app_config.app_name}"}
 
-h3 Already member? #{link_to('Sign in here!', new_user_session_path)}
+.row
+  .span7
+    = simple_form_for(@user,\
+                      validate: true, \
+                      url: user_registration_path) do |form|
 
-= simple_form_for(@user,\
-                  validate: true, \
-                  url: user_registration_path) do |form|
+      = form.input :full_name, required: true
+      = form.input :email, required: true
+      = form.input :password, required: true
+      = form.input :password_confirmation, required: true
+      .form-actions
+        = form.button :submit, 'Sign up', :class => 'btn-primary btn-large'
 
-  = form.input :full_name, required: true
-  = form.input :email, required: true
-  = form.input :password, required: true
-  = form.input :password_confirmation, required: true
-  = form.button :submit, 'Sign up'
+  .span4.offset1
+    .well.sidebar
+      h3 Already member? 
+      = link_to new_user_session_path, :class => 'btn btn-large' do
+        i.icon-user
+        = ' Sign in here!'
