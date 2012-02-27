@@ -23,27 +23,17 @@
 
 table {
 	td.actions {
-		text-align: right;
 		a {
-			margin-left: 10px;
+			margin-right: 10px;
+			margin-bottom: 5px;
 		}
 	}
 }
 .show-item {
-	a.pull-right {
-		margin-bottom: -20px;
-	}
-	dl {
-		overflow: hidden;
-		width: 100%;
-		dt {
-			float: left;
-			#fluidGridSystem > .columns(@fluidGridGutterWidth, @fluidGridColumnWidth, 3);
-			display: block;
-		}
-		dd {
-			float: left;
-			#fluidGridSystem > .columns(@fluidGridGutterWidth, @fluidGridColumnWidth, 8);			
-		}
-	}
+  a.btn {
+    margin-right: 20px;
+  }
+}
+.uneditable-input.text {
+  height: auto;
 }
