@@ -3,7 +3,7 @@ class <%= controller_class_name %>Controller < ApplicationController
   respond_to :html
 
   expose(:<%= singular_table_name %>)
-  expose(:<%= plural_table_name %>) { <%= class_name %>.scoped }
+  expose(:<%= plural_table_name %>) { <%= class_name %>.page(params[:page]) }
 
   def create
     flash[:notice] = '<%= human_name %> was successfully created.' if <%= singular_table_name %>.save

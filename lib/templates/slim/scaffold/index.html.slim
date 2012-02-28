@@ -23,8 +23,10 @@ table.table.table-striped
         = link_to <%= singular_table_name %>, :confirm => 'Are you sure?', :method => :delete, :class => 'btn btn-danger' do
           i.icon-trash.icon-white
           = ' Delete'
-
-= link_to new_<%= singular_table_name %>_path, :class => 'btn btn-primary' do
+.paginator
+  = paginate <%= plural_table_name %>
+br
+= link_to new_<%= singular_table_name %>_path, :class => 'btn btn-primary btn-large' do
   i.icon-plus.icon-white
   = ' New <%= human_name %>'
 
