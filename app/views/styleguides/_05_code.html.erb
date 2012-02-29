@@ -1,29 +1,30 @@
-<a name="code"></a>
-<h1>Code Styles</h1>
-
-<pre>&lt;pre&gt;
-What light
-  through yonder window breaks</pre>
-
-<code>&lt;code&gt;
-User.new</code>
-
-<pre class="code"><code>&lt;pre class="code"&gt;&lt;code&gt;
-class User &lt; ActiveRecord::Base
-has_many :groups
-belongs_to :account
-
-def name
-  [first_name, last_name].join(' ')
-end
-end</code></pre>
-
-<tt>&lt;tt&gt;
-  This tt text should be monospaced
-  and
-  wrap as if
-  one line of text
-  even though the code has newlines, spaces, and tabs.
-  It should be the same size as &lt;p&gt; text.
-</tt>
-<br><br><br>
+<section class="styleguide">
+  <a name="code"></a>
+  <h1>Code Styles</h1>
+  
+  <pre>&lt;pre&gt;
+  What light
+    through yonder window breaks</pre>
+  
+  <code>&lt;code&gt;
+  User.new</code>
+  
+  <pre class="code"><code>&lt;pre class="code"&gt;&lt;code&gt;
+  class User &lt; ActiveRecord::Base
+  has_many :groups
+  belongs_to :account
+  
+  def name
+    [first_name, last_name].join(' ')
+  end
+  end</code></pre>
+  
+  <tt>&lt;tt&gt;
+    This tt text should be monospaced
+    and
+    wrap as if
+    one line of text
+    even though the code has newlines, spaces, and tabs.
+    It should be the same size as &lt;p&gt; text.
+  </tt>
+</section>
