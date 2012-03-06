@@ -1,9 +1,9 @@
 def sign_in_with(email, password)
   visit new_user_session_path
-  
+
   fill_in "Email", with: email
   fill_in "Password", with: password
-  
+
   click_button "Sign in"
 end
 
@@ -27,7 +27,7 @@ end
 
 When /^I request new password$/ do
   visit new_user_password_path
-  
+
   fill_in "Email", with: @current_user.email
   click_button "Send instructions"
 end
@@ -38,7 +38,7 @@ end
 
 Then /^I should receive reset password instructions email$/ do
   open_email(@current_user.email)
-  
+
   current_email.should have_subject /Reset password instructions/
   current_email.default_part_body.to_s.should =~ /#{@current_user.full_name}/
 end

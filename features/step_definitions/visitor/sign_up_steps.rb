@@ -9,7 +9,7 @@ When /^I submit registration form with required fields$/ do
   fill_in "Email", with: "chuck.norris@example.com"
   fill_in "Password", with: "123456"
   fill_in "Password confirmation", with: "123456"
-  
+
   click_button "Sign up"
 end
 
@@ -20,16 +20,16 @@ end
 
 When /^I submit resent confirmation instruction form$/ do
   Factory.create :not_confirmed_user, email: "chuck.norris@example.com", full_name: "Chuck Norris"
-  
+
   visit new_user_confirmation_path
-  
+
   fill_in "Email", with: "chuck.norris@example.com"
   click_button "Resend instructions"
 end
 
 Then /^I should receive registration confirmation email$/ do
   open_email "chuck.norris@example.com"
-  
+
   current_email.should have_subject /Confirmation instructions/
   current_email.default_part_body.to_s.should =~ /Chuck Norris/
 end
