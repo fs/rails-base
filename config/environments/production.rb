@@ -77,5 +77,5 @@ Rails3Base::Application.configure do
 
   # Application specific options
   #
-  host = "fs-rails3-base.heroku.com"
+  config.host = "fs-rails3-base.heroku.com"
 end

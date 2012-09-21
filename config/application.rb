@@ -64,9 +64,6 @@ module Rails3Base
     # Slim engine default option, initializers/slim.rb
     config.slim_options = {}
 
-    # Default token used for sessions and password, initializers/devise.rb, initializers/secret_token.rb
-    config.token = "d77d65f2f8a2ee751d816683e05a8ea2167321958a1bb5e951022317eba080b195dee85610b672bcc1492fb9e2f816"
-
     # Default e-mail address which will be shown in the "from" devise emails, initializers/devise.rb,
     config.noreply = "noreply@fs-rails3-base.heroku.com"
 
