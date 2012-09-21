@@ -12,7 +12,6 @@ Application currently based on Rails 3.2 stable branch and Ruby 1.9
 * DRY controllers: Inherited Resources, http://github.com/josevalim/inherited_resources
 * Form builder: SimpleForm https://github.com/plataformatec/simple_form, config/initializers/simple_form.rb
 * List builder: Tabletastic http://github.com/jgdavey/tabletastic, config/initializers/tabletastic.rb
-* Application config: Configatron, http://github.com/markbates/configatron, config/configatron
 * JS Framework: Jquery-rails, http://github.com/indirect/jquery-rails
 * Tests: RSpec, Shoulda, RR, Cucumber, Factory Girl, Mail Safe
 * Code metrics: rails_best_practices, http://github.com/flyerhzm/rails_best_practices and rcov
@@ -20,7 +19,7 @@ Application currently based on Rails 3.2 stable branch and Ruby 1.9
 
 === Initializes
 
-* configatron.rb - loads configuration for current Rails environment to the configatron, so you can access them like configatron.app_name
+* config.rb - shortcut for getting application config with `app_config`
 * devise.rb - setup devise options, mailer_sender and pepper from config
 * simple_form.rb - setup simple_form options
 * tabletastic.rb -  setup tabletastic options, by default all actions rendered in the list
@@ -78,10 +77,18 @@ Instead of using RVM gemset for isolating gems for your new Rails application it
 
 will install all gems into the vendor/ruby and all executables to bin/
 
+=== Application configuration
+
+Different application configurations could be stored in different places:
+* `config/initializers/*.rb` - gem related settings.
+* `config/application.rb` - default settings for all environments.
+* `config/environments/*.rb` - overwrite settings for specified environment .
+* `.env` for setting environment variables like API tokens, they will be loaded on application load into ENV.
+
 === Authorization
 
-We use Devise for login based auth b/c is modular and have a good community support. Take a look at config/initializers/devise.rb
-if you want customize it.
+We use Devise for login based auth b/c is modular and have a good community support.
+Take a look at config/initializers/devise.rb if you want customize it.
 
 === Scaffolding
 

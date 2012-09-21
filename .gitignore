@@ -5,6 +5,7 @@ tmp/*
 coverage/*
 rerun.txt
 config/database.yml
+.env
 doc/**/*
 vendor/ruby
 vendor/cache
