@@ -34,6 +34,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'dotenv'
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'mail_safe'
