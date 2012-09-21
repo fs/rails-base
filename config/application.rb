@@ -61,6 +61,9 @@ module Rails3Base
     # Name used in the html titles and mailers
     config.app_name = "Rails 3 Base example site"
 
+    # Slim engine default option, initializers/slim.rb
+    config.slim_options = {}
+
     # Default e-mail address which will be shown in the "from" devise emails, initializers/devise.rb,
     config.noreply = "noreply@fs-rails3-base.heroku.com"
 

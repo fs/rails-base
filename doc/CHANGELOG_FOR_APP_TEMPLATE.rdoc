@@ -1,3 +1,9 @@
+Unreleased
+
+* Rails updated to 3.2.1
+* Devise updated to 2.0
+* Configatron replaced with native Rails.application.config, checkout config/initializers/config.rb
+
 = 0.2
 
 * Ruby 1.9
