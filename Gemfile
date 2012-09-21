@@ -31,6 +31,7 @@ group :development do
   gem 'brakeman'
   gem 'rails3-generators'
   gem 'slim-rails'
+  gem 'knife-solo'
 end
 
 group :development, :test do
