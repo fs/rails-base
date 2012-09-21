@@ -1,22 +1,22 @@
 # sqlite
 #
-defaults_developmet: &defaults_developmet
+defaults_development: &defaults_developmet
   adapter: sqlite3
   pool: 5
   timeout: 5000
 
 development:
   database: db/development.sqlite3
-  <<: *defaults_developmet
+  <<: *defaults_development
 
 test:
   database: db/test.sqlite3
-  <<: *defaults_developmet
+  <<: *defaults_development
 
 
-# # mysql@locahost
+# # mysql@localhost
 # #
-# defaults_developmet: &defaults_developmet
+# defaults_development: &defaults_developmet
 #   adapter: mysql
 #   encoding: utf8
 #   host: localhost
@@ -25,8 +25,8 @@ test:
 # 
 # development:
 #   database: application_dev
-#   <<: *defaults_developmet
+#   <<: *defaults_development
 # 
 # test:
 #   database: application_test
-#   <<: *defaults_developmet
+#   <<: *defaults_development
