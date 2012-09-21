@@ -3,7 +3,7 @@
 = simple_form_for(@user,                             \
                   url: user_password_path,           \
                   html: { method: :put }) do |form|
-  = form.hidden_field :reset_password_token
+  = form.input :reset_password_token, :as => :hidden
   fieldset
     = form.input :password, required: true
     = form.input :password_confirmation, required: true
