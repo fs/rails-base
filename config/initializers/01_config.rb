@@ -9,4 +9,4 @@ end
 # Load .env
 Rails.application.config.before_initialize do
   Dotenv.load
-end
+end if defined?(Dotenv)
