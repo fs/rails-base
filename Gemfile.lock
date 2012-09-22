@@ -125,8 +125,13 @@ GEM
     less-rails (2.2.3)
       actionpack (>= 3.1)
       less (~> 2.2.0)
+    less-rails-bootstrap (2.0.8)
+      less-rails (~> 2.1.0)
     less-rails-bootstrap (2.1.1)
+      less (~> 2.0.7)
       less-rails (~> 2.2.0)
+    letter_opener (0.0.2)
+      launchy
     libv8 (3.3.10.4)
     linecache19 (0.5.12)
       ruby_core_source (>= 0.1.4)
@@ -290,6 +295,7 @@ DEPENDENCIES
   kaminari
   launchy
   less-rails-bootstrap
+  letter_opener
   mail_safe
   pg
   rails (= 3.2.8)
