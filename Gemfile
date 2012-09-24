@@ -1,16 +1,17 @@
 source :rubygems
 
-gem 'rails', '3.2.1'
+gem 'rails', '3.2.2'
 gem 'json'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', '~> 3.2.4'
+  # gem 'sass-rails', '~> 3.2.4'
+  # gem 'bourbon'
   gem 'coffee-rails', '~> 3.2.2'
   gem 'uglifier', '>= 1.2.3'
   gem 'styleguides'
-  gem 'bourbon'
+  gem 'less-rails-bootstrap'
 end
 
 gem 'jquery-rails'
@@ -18,9 +19,9 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'simple-navigation'
 gem 'simple_form'
-gem 'client_side_validations'
-gem 'tabletastic'
-gem 'inherited_resources'
+# gem 'client_side_validations'
+# gem 'client_side_validations-simple_form'
+gem 'decent_exposure'
 gem 'kaminari'
 gem 'slim'
 
