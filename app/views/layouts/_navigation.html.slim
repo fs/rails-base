@@ -1,4 +1,7 @@
-nav
-  = render_navigation(context: :main)
-  = render_navigation(context: :user)
-
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      a.brand href="/" = app_config.app_name
+      .container.nav-collapse
+        = render_navigation(context: :main)
+        = render_navigation(context: :user, expand_all: true)

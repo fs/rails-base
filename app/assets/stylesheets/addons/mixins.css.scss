@@ -1,6 +1,0 @@
-@mixin opacity($property: 100) {
-  filter:alpha(opacity=$property);
-  -moz-opacity: $property/100;
-  -khtml-opacity: $property/100;
-  opacity: $property/100;
-}
