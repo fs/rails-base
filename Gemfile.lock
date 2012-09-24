@@ -223,7 +223,7 @@ GEM
     shoulda-matchers (1.0.0)
     simple-navigation (3.7.0)
       activesupport (>= 2.3.2)
-    simple_form (2.0.1)
+    simple_form (2.0.2)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
     simplecov (0.6.1)
