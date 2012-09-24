@@ -12,7 +12,7 @@ end
 
 When /^I cancel my account$/ do
   visit edit_user_registration_path
-  click_link "Cancel account"
+  click_link "Cancel my account"
 end
 
 When /^I submit update account form with valid data but with wrong current password$/ do

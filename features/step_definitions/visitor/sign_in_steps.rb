@@ -7,8 +7,9 @@ def sign_in_with(email, password)
   click_button "Sign in"
 end
 
+
 Given /^I exist as a user with not confirmed email$/ do
-  @current_user = Factory.create :not_confirmed_user
+  @current_user = FactoryGirl.create :not_confirmed_user
 end
 
 When /^I sign in with valid credentials$/ do
@@ -20,7 +21,7 @@ When /^I sign in with invalid credentials$/ do
 end
 
 When /^I sign out$/ do
-  within "nav" do
+  within ".navbar-inner" do
     click_link "Sign out"
   end
 end
