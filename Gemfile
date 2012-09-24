@@ -8,8 +8,11 @@ gem 'json'
 group :assets do
   gem 'coffee-rails', '~> 3.2.2'
   gem 'uglifier', '>= 1.2.3'
-  gem 'styleguides'
+
+  gem 'therubyracer', :platforms => :ruby
   gem 'less-rails-bootstrap'
+
+  gem 'styleguides'
 end
 
 gem 'jquery-rails'

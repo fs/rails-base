@@ -60,7 +60,7 @@ GEM
     color (1.4.1)
     colored (1.2)
     columnize (0.3.6)
-    commonjs (0.2.5)
+    commonjs (0.2.6)
     crack (0.3.1)
     cucumber (1.1.9)
       builder (>= 2.1.2)
@@ -117,14 +117,13 @@ GEM
       railties (>= 3.0.0)
     launchy (2.1.0)
       addressable (~> 2.2.6)
-    less (2.0.11)
-      commonjs (~> 0.2.0)
-      therubyracer (~> 0.9.9)
-    less-rails (2.1.8)
+    less (2.2.2)
+      commonjs (~> 0.2.6)
+    less-rails (2.2.3)
       actionpack (>= 3.1)
-      less (~> 2.0.7)
-    less-rails-bootstrap (2.0.8)
-      less-rails (~> 2.1.0)
+      less (~> 2.2.0)
+    less-rails-bootstrap (2.1.1)
+      less-rails (~> 2.2.0)
     libv8 (3.3.10.4)
     linecache19 (0.5.12)
       ruby_core_source (>= 0.1.4)
@@ -305,5 +304,6 @@ DEPENDENCIES
   slim-rails
   sqlite3
   styleguides
+  therubyracer
   uglifier (>= 1.2.3)
   webmock
