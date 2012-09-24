@@ -1,2 +1,5 @@
 - flash.each do |type, content|
-  = content_tag :div, content, class: type
+  div class="alert fade in alert-#{type}"
+    = content
+    a.close data-dismiss="alert"
+      | ×
