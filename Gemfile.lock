@@ -221,7 +221,7 @@ GEM
       rubyzip
     sexp_processor (3.1.0)
     shoulda-matchers (1.0.0)
-    simple-navigation (3.7.0)
+    simple-navigation (3.9.0)
       activesupport (>= 2.3.2)
     simple_form (2.0.2)
       actionpack (~> 3.0)
