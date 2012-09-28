@@ -1,24 +1,15 @@
 Deploy with Chef Solo
 =====================
 
-Install Ruby, RubyGems and Chef on a given host.
-  
-    knife prepare user@hostname
-    
-Modify if required `application` recipe in `site-cookbooks`.
+* Make sure you've completed `bundle install`
+* Edit the `site-cookbooks/application/recipes/default.rb`
+* Run `./bootstrap.sh user@hostname`. This installs chef on a given host and applies recipes to it.
+* Use `./apply.sh user@hostname` when you need to reapply recipes. This is the same as bootstrap but doesn't reinstall chef itself.
 
 
-Setup attributes for created node in `nodes` and use recipe.
+For those of you more comfortable with running tools rather than scripts here is the commands to run:
 
-
-    {
-      "mysql": {
-        "server_root_password": "123456"
-      },
-      "run_list": ["recipe[application]"]
-    }
-   
-Upload the current chef repo to the target host and runs `chef-solo` on that host.
-
-
-    knife cook user@hostname
+* `bundle exec librarian-chef install` -- download cookbooks
+* `cp -i nodes/default.json nodes/HOST.json` -- place default runlist in place (you needn't tweak it)
+* `bundle exec knife prepare user@host` -- install chef
+* `bundle exec knife cook user@host` -- apply recipes to the target host

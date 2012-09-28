@@ -3,6 +3,6 @@
 
 site 'http://community.opscode.com/api/v1'
 
-cookbook 'mysql'
-cookbook 'rvm', :git => 'https://github.com/fnichol/chef-rvm'
-cookbook 'git'
+cookbook 'flatstack',
+  :git => 'https://github.com/fs/chef_cookbooks',
+  :ref => 'master'
