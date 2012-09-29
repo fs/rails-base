@@ -1,5 +1,6 @@
 Unreleased
 
+* Add script/bootstrap
 * Add airbrake
 * Add bullet
 * Add letter_opener
