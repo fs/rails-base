@@ -50,7 +50,7 @@ Setup configuration files
 
 Install gems and enable rvm integration with Bundler (the “bin” directory is added to your path each time you cd into a project directory with binstubs)
 
-  bundle install --path vendor --binstubs
+  bundle install --path vendor/bundle --binstubs
   chmod +x $rvm_path/hooks/after_cd_bundler
 
 Make sure all test are green
@@ -75,9 +75,9 @@ You can fetch latest changes from rails3-base repo and merge or cherry-pick comm
 
 Instead of using RVM gemset for isolating gems for your new Rails application it's better to use bundler "path" option:
 
-  bundle install --path vendor --binstubs
+  bundle install --path vendor/bundle --binstubs
 
-will install all gems into the vendor/ruby and all executables to bin/
+will install all gems into the vendor/bundle and all executables to bin/
 
 === Application configuration
 
