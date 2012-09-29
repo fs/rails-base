@@ -1,10 +1,11 @@
 Unreleased
 
+* Add letter_opener
 * Add twitter bootstrap, need to clean up more for scaffold
-* Update simple_form to 2.0
 * Removed bourbon
 * SCSS replaced with less-twitter-bootstrap
-* Rails updated to 3.2.1
+* Update simple_form to 2.0
+* Rails updated to 3.2.8
 * Devise updated to 2.0
 * Configatron replaced with native Rails.application.config, checkout config/initializers/config.rb
 * Replaced inherited resources with decent_exposure
