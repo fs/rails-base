@@ -45,6 +45,7 @@ Make sure master branch is tracking origin repo.
 
 Setup configuration files
 
+  cp .env.example .env
   cp config/database.yml.example config/database.yml
 
 Install gems and enable rvm integration with Bundler (the “bin” directory is added to your path each time you cd into a project directory with binstubs)
