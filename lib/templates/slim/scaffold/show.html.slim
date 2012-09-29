@@ -11,8 +11,8 @@
           = <%= singular_table_name %>.<%= attribute.name %>
 <% end -%>
   .form-actions
-    = link_to edit_<%= singular_table_name %>_path(<%= singular_table_name %>), :class => 'btn btn-primary' do
+    = link_to(edit_<%= singular_table_name %>_path(<%= singular_table_name %>), :class => 'btn btn-primary') do
       i.icon-pencil.icon-white
-      = ' Edit'
-    = link_to <%= plural_table_name %>_path, :class => 'btn' do
-      | Back to listing <%= plural_table_name %>
+      | Edit
+    '  or
+    = link_to 'Back', :back
