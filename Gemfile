@@ -35,6 +35,7 @@ group :development do
   gem 'rails3-generators'
   gem 'slim-rails'
   gem 'foreman'
+  gem 'bullet'
 end
 
 group :development, :test do
