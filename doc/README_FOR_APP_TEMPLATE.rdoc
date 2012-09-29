@@ -15,6 +15,7 @@ Application currently based on Rails 3.2 stable branch and Ruby 1.9
 * Tests: RSpec, Shoulda, RR, Cucumber, Factory Girl, Mail Safe
 * Code metrics: rails_best_practices, http://github.com/flyerhzm/rails_best_practices and rcov
 * Static analysis security vulnerability scanner: brakeman
+* Exceptions handling: airbrake.io
 
 === Initializes
 
@@ -26,6 +27,8 @@ Application currently based on Rails 3.2 stable branch and Ruby 1.9
 * time_formats.rb - setup default time formats, so you can use them like object.create_at.to_s(:us_time)
 * requires.rb - automatically requires everything in lib/ & lib/extensions
 * mail_safe.rb - allow sending emails to the example.com domain, used only in the development and test environments
+* bullet.rb - setup bullet
+* airbrake.rb - setup airbrake API key from ENV
 
 === Quick start
 

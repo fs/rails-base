@@ -11,3 +11,4 @@ vendor/cache
 bin
 .sass-cache
 ._*
+.env
