@@ -1,5 +1,6 @@
 Unreleased
 
+* Add bullet
 * Add letter_opener
 * Add twitter bootstrap, need to clean up more for scaffold
 * Removed bourbon
