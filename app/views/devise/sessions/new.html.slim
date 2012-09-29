@@ -1,26 +1,20 @@
-- title %Q{Sign in to your "#{app_config.app_name}" account}
+- title "Sign in"
 
-.row
-  .span7.login
-    = simple_form_for(@user, url: user_session_path) do |form|
-      = form.input :email, required: true
-      = form.input :password, required: true
-      = form.input :remember_me, as: :boolean, \
-                    label: "Remember my login on this computer"
-      .form-actions
-        = form.button :submit, "Sign in", :class => "btn-primary btn btn-large"
-  .span4.offset1
-    .well.sidebar
-      h3 Not a member?
-      = link_to new_user_registration_path, :class => "btn-success btn btn-large" do
-        i.icon-ok.icon-white
-        | Sign up here!
-    ul.help
-      li
-        h3
-          i.icon-question-sign
-          | Help
-      li
-        = link_to "Forgot your password? ", new_user_password_path
-      li
-        = link_to "Didn't receive confirmation instructions? ", new_user_confirmation_path
+= simple_form_for(resource, :as => resource_name, \
+                  :url => session_path(resource_name)) do |f|
+
+  legend
+    | Enter your "#{app_config.app_name}" account
+
+  .form-inputs
+    = f.input :email, :required => false, :autofocus => true
+    = f.input :password, :required => false
+    = f.input :remember_me, :as => :boolean
+
+  .form-actions
+    = f.button :submit, "Sign in"
+    '  or
+    = link_to "Create a new account", new_registration_path(resource_name)
+
+= render "devise/shared/links"
+
