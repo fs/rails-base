@@ -107,6 +107,7 @@ GEM
     foreman (0.59.0)
       thor (>= 0.13.6)
     gherkin (2.9.3)
+      json (>= 1.4.6)
     haml (3.1.7)
     heroku (2.21.3)
       launchy (>= 0.3.2)
