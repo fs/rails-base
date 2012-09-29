@@ -1,5 +1,6 @@
 Unreleased
 
+* Remove rails3-generators
 * Add script/bootstrap
 * Add airbrake
 * Add bullet

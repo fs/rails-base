@@ -33,7 +33,6 @@ group :development do
   gem 'heroku'
   gem 'rails_best_practices'
   gem 'brakeman'
-  gem 'rails3-generators'
   gem 'slim-rails'
   gem 'foreman'
   gem 'bullet'
