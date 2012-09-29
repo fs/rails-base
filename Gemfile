@@ -26,6 +26,7 @@ gem 'decent_exposure'
 gem 'kaminari'
 gem 'slim'
 gem 'thin'
+gem 'airbrake'
 
 group :development do
   gem 'letter_opener'
