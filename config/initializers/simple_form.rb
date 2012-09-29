@@ -46,6 +46,7 @@ SimpleForm.setup do |config|
   end
 
   config.wrappers :bootstrap, :tag => 'div', :class => 'control-group', :error_class => 'error' do |b|
+    b.use :html5
     b.use :placeholder
     b.use :label
     b.wrapper :tag => 'div', :class => 'controls' do |ba|
@@ -56,6 +57,7 @@ SimpleForm.setup do |config|
   end
 
   config.wrappers :prepend, :tag => 'div', :class => "control-group", :error_class => 'error' do |b|
+    b.use :html5
     b.use :placeholder
     b.use :label
     b.wrapper :tag => 'div', :class => 'controls' do |input|
@@ -68,6 +70,7 @@ SimpleForm.setup do |config|
   end
 
   config.wrappers :append, :tag => 'div', :class => "control-group", :error_class => 'error' do |b|
+    b.use :html5
     b.use :placeholder
     b.use :label
     b.wrapper :tag => 'div', :class => 'controls' do |input|
@@ -94,7 +97,9 @@ SimpleForm.setup do |config|
   # Default class for buttons
   config.button_class = 'btn'
 
-  # Method used to tidy up errors.
+  # Method used to tidy up errors. Specify any Rails Array method.
+  # :first lists the first message for each field.
+  # Use :to_sentence to list all errors for each field.
   # config.error_method = :first
 
   # Default tag used for error notification helper.

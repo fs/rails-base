@@ -1,10 +1,6 @@
 p
-  | Welcome #{@resource.full_name}
-
+  | Welcome #{@resource}!
 p
-  | You can confirm your account through the link below:
-
+  | You can confirm your account email through the link below:
 p
-  = link_to "Confirm my account", \
-            user_confirmation_url( \
-              confirmation_token: @user.confirmation_token)
+  = link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token)

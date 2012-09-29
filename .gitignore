@@ -6,7 +6,7 @@ coverage/*
 rerun.txt
 config/database.yml
 doc/**/*
-vendor/ruby
+vendor/bundle
 vendor/cache
 bin
 .sass-cache
