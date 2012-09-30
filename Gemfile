@@ -55,8 +55,6 @@ group :test do
   gem 'cucumber-rails', require: false
   gem 'webmock', require: false
   gem 'launchy'
-
-  gem 'ruby-debug19'
 end
 
 group :staging, :production do
