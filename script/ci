@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+set -e
+
+cp config/database.yml.example config/database.yml
+bundle exec rake db:setup
+
+bundle exec rspec spec
+bundle exec cucumber features
+script/quality
