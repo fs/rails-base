@@ -29,8 +29,6 @@ gem 'airbrake'
 group :development do
   gem 'letter_opener'
   gem 'heroku'
-  gem 'rails_best_practices'
-  gem 'brakeman'
   gem 'slim-rails'
   gem 'foreman'
   gem 'bullet'
@@ -41,6 +39,8 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'mail_safe'
+  gem 'rails_best_practices'
+  gem 'brakeman'
 end
 
 group :test do
