@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
 
+require 'fileutils'
+
+rails_root = File.expand_path('../../', __FILE__)
+
 def check(key)
   cache_file = "tmp/.#{key}"
   if File.exists?(cache_file)
@@ -10,6 +14,16 @@ def check(key)
 
   version = yield(old_version)
   File.open(cache_file, 'w') { |f| f.puts(version || 'cached') }
+end
+
+unless File.exists?(File.join(rails_root, 'config/database.yml'))
+  puts 'Database configuration file is missing, installing...'
+  FileUtils.cp(File.join(rails_root, 'config/database.yml.example'), File.join(rails_root, 'config/database.yml'))
+end
+
+unless File.exists?(File.join(rails_root, '.env'))
+  puts 'DotEnv configuration file is missing, installing...'
+  FileUtils.cp(File.join(rails_root, '.env.example'), File.join(rails_root, '.env'))
 end
 
 check(:bundler) do |old_version|
@@ -43,3 +57,5 @@ check(:schema) do |old_version|
 
   version
 end
+
+puts "Everything is up to date. Run foreman start and play with app."
