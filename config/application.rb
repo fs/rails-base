@@ -59,6 +59,9 @@ module Rails3Base
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
+    # Partially load your application by setting. Heroku requires this to be false.
+    config.assets.initialize_on_precompile = false
+
     # Application specific options
     #
     # Name used in the html titles and mailers
