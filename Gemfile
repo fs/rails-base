@@ -26,6 +26,8 @@ gem 'slim'
 gem 'thin'
 gem 'airbrake'
 
+gem 'github-markdown' # only for dashboard controller
+
 group :development do
   gem 'letter_opener'
   gem 'heroku'

@@ -1,7 +1,8 @@
-require 'rdoc'
+require 'github/markdown'
 
 class DashboardController < ApplicationController
+  expose(:content) { GitHub::Markdown.render(File.read(File.join(Rails.root, 'doc', 'README_FOR_APP_TEMPLATE.md'))) }
+
   def index
-    @rdoc = RDoc::Markup::ToHtml.new.convert(File.read(File.join(Rails.root, 'doc', 'README_FOR_APP_TEMPLATE.rdoc')))
   end
 end
