@@ -51,6 +51,19 @@ Rails3Base::Application.configure do
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
 
+  # Heroku specific setting for Cedar stack http://devcenter.heroku.com/articles/sendgrid#usage
+  config.action_mailer.smtp_settings = {
+    :address        => 'smtp.sendgrid.net',
+    :port           => '587',
+    :authentication => :plain,
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
+    :domain         => 'heroku.com'
+  }
+
+  # Preview email in the browser instead of sending it.
+  config.action_mailer.delivery_method = :smtp
+
   # Enable threaded mode
   # config.threadsafe!
 
@@ -64,16 +77,6 @@ Rails3Base::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
-
-  # Heroku specific setting for Cedar stack http://devcenter.heroku.com/articles/sendgrid#usage
-  # config.action_mailer.smtp_settings = {
-  #   :address        => 'smtp.sendgrid.net',
-  #   :port           => '587',
-  #   :authentication => :plain,
-  #   :user_name      => ENV['SENDGRID_USERNAME'],
-  #   :password       => ENV['SENDGRID_PASSWORD'],
-  #   :domain         => 'heroku.com'
-  # }
 
   # Application specific options
   #
