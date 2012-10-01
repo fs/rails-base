@@ -1,4 +1,4 @@
-Unreleased
+# Unreleased
 
 * Remove rails3-generators
 * Add script/bootstrap
@@ -15,7 +15,7 @@ Unreleased
 * Replaced inherited resources with decent_exposure
 * Removed tabletastic
 
-= 0.2
+# 0.2
 
 * Ruby 1.9
 * Rails 3.2
@@ -33,24 +33,24 @@ Unreleased
 * Removed cached gems
 * Removed VCR
 
-= 0.1.4
+# 0.1.4
 
 * Auto validates length of field extracted to https://gist.github.com/907485
 
- = 0.1.3
+# 0.1.3
 
 * Reorganize cucumber features by user roles
 
-= 0.1.2
+# 0.1.2
 
 * Cleanup application.css
 
-= 0.1.1
+# 0.1.1
 
 * Updated Rails to 3.0.6
 * Other small fixes
 
-= 0.1
+# 0.1
 
 * We now use bundler package and bundler install --path vendor --local instead of RVM gemset, so all required gems
 are in the repo.
