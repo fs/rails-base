@@ -7,7 +7,9 @@ def rails_root
 end
 
 def check(key)
+  FileUtils.mkdir('tmp') unless File.exists?('tmp')
   cache_file = "tmp/.#{key}"
+
   if File.exists?(cache_file)
     old_version = File.read(cache_file)
   else
