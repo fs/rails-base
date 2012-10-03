@@ -1,8 +1,6 @@
 language: ruby
-before_install:
-  - cp .env.example .env
-  - cp config/database.yml.example config/database.yml
 bundler_args: --binstubs --without development staging production
+before_install: script/bootstrap ci
 rvm:
   - 1.9.2
   - 1.9.3
