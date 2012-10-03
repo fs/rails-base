@@ -1,13 +1,31 @@
 Deploy with Chef Solo
 =====================
 
+Initial bootstrap
+-----------------
+
 * Make sure you've completed `bundle install`
 * Edit the `site-cookbooks/application/recipes/default.rb`
 * Run `./bootstrap.sh user@hostname`. This installs chef on a given host and applies recipes to it.
-* Use `./apply.sh user@hostname` when you need to reapply recipes. This is the same as bootstrap but doesn't reinstall chef itself.
+
+Applying recipes
+----------------
+
+When you need to reapply recipes to the box use `./apply.sh user@hostname`.
+This is also done by bootstrap script so you needn't doing this just after bootstrapping.
+
+*Important*: This does not update recipes to new versions (think bundler's dependecy management).
+
+Updating recipes
+----------------
+
+When you need to update some recipes to new versions use `bundle exec librarian-chef update` and apply recipes as described above.
 
 
-For those of you more comfortable with running tools rather than scripts here is the commands to run:
+Doing changes manually
+----------------------
+
+For those of you more comfortable with running tools rather than scripts here are the commands to run:
 
 * `bundle exec librarian-chef install` -- download cookbooks
 * `cp -i nodes/default.json nodes/HOST.json` -- place default runlist in place (you needn't tweak it)

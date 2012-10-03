@@ -1,9 +1,33 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    apt (1.4.8)
+    build-essential (1.1.2)
+    dmg (1.0.0)
+    git (1.0.2)
+      build-essential (>= 0.0.0)
+      dmg (>= 0.0.0)
+      runit (>= 0.0.0)
+      yum (>= 0.0.0)
+    hostname (0.0.3)
+    htop (0.1.0)
+    motd-tail (1.1.0)
+    runit (0.15.0)
+    vim (1.0.2)
+    yum (0.8.2)
+
 GIT
   remote: https://github.com/fs/chef_cookbooks
   ref: master
-  sha: 43af67d8af9cf6ec3c3b026e848c032cda6d8c27
+  sha: 68d3feeaba6606b7d14499c597fbca089c4ec3e0
   specs:
     flatstack (0.1.0)
+      apt (>= 0.0.0)
+      git (>= 0.0.0)
+      hostname (>= 0.0.0)
+      htop (>= 0.0.0)
+      motd-tail (>= 0.0.0)
+      vim (>= 0.0.0)
 
 DEPENDENCIES
   flatstack (>= 0)
