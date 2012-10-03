@@ -65,7 +65,7 @@ def migrate_db
 
     if version != old_version
      puts 'Schema changed, updating databases...'
-     system('rake db:migrate db:test:prepare') || exit(1)
+     system('bundle exec rake db:migrate db:test:prepare') || exit(1)
     end
 
     version
