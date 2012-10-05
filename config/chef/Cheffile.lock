@@ -2,6 +2,7 @@ SITE
   remote: http://community.opscode.com/api/v1
   specs:
     apt (1.4.8)
+    bluepill (1.1.0)
     build-essential (1.1.2)
     dmg (1.0.0)
     git (1.0.2)
@@ -11,22 +12,41 @@ SITE
       yum (>= 0.0.0)
     hostname (0.0.3)
     htop (0.1.0)
+    magic_shell (0.1.5)
     motd-tail (1.1.0)
+    nginx (1.0.0)
+      bluepill (>= 0.0.0)
+      build-essential (>= 0.0.0)
+      ohai (~> 1.0.2)
+      runit (>= 0.0.0)
+      yum (>= 0.0.0)
+    ohai (1.0.2)
+    rbenv (1.4.0)
+      git (>= 0.0.0)
+      ohai (~> 1.0.2)
     runit (0.15.0)
+    unicorn (1.1.0)
+    user (0.3.0)
     vim (1.0.2)
-    yum (0.8.2)
+    yum (1.0.0)
 
 GIT
   remote: https://github.com/fs/chef_cookbooks
   ref: master
-  sha: 68d3feeaba6606b7d14499c597fbca089c4ec3e0
+  sha: b88cb60f7c1659943163255a515a02b3e87b32b9
   specs:
     flatstack (0.1.0)
       apt (>= 0.0.0)
+      flatstack (>= 0.0.0)
       git (>= 0.0.0)
       hostname (>= 0.0.0)
       htop (>= 0.0.0)
+      magic_shell (>= 0.0.0)
       motd-tail (>= 0.0.0)
+      nginx (= 1.0.0)
+      rbenv (>= 0.0.0)
+      unicorn (>= 0.0.0)
+      user (>= 0.0.0)
       vim (>= 0.0.0)
 
 DEPENDENCIES
