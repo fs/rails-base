@@ -14,7 +14,7 @@ Applying recipes
 When you need to reapply recipes to the box use `./apply.sh user@hostname`.
 This is also done by bootstrap script so you needn't doing this just after bootstrapping.
 
-*Important*: This does not update recipes to new versions (think bundler's dependecy management).
+*Important*: This does not update recipes to new versions (think bundler's dependency management).
 
 Updating recipes
 ----------------
