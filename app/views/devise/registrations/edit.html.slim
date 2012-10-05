@@ -1,22 +1,32 @@
-- title "Edit account", false
+- title "Edit #{resource_name.to_s.humanize}"
 
-= simple_form_for(@user,                          \
-                  url: user_registration_path, \
-                  html: { method: :put }) do |form|
-  fieldset
-    = form.input :full_name, required: true
-    = form.input :email, required: true
-    = form.input :password,           \
-                  required: true,  \
-                  hint: "leave blank if you don't want to change it"
-    = form.input :password_confirmation,  \
-                  required: true
-    = form.input :current_password,                           \
-                  required: true,                          \
-                  hint: "we need your current password to confirm your changes"
-    = form.button :submit
-    .notifications
-        = link_to "Cancel account",          \
-                  user_registration_path,       \
-                  confirm: "Are you sure?",  \
-                  method: :delete
+= simple_form_for(resource, :as => resource_name, \
+                  :url => registration_path(resource_name), \
+                  :html => { :method => :put }) do |f|
+
+  legend
+    | New profile information
+
+  .form-inputs
+    = f.input :full_name, required: true
+    = f.input :email, :required => true, :autofocus => true
+    = f.input :password, :autocomplete => "off", \
+              :hint => "leave it blank if you don't want to change it", \
+              :required => false
+    = f.input :password_confirmation, :required => false
+    = f.input :current_password, \
+              :hint => "we need your current password to confirm your changes", \
+              :required => true
+
+  .form-actions
+    = f.button :submit, "Update"
+
+legend
+  | Cancel my account
+
+p
+  ' Unhappy?
+  = link_to "Cancel my account", \
+            registration_path(resource_name), \
+            :data => { :confirm => "Are you sure?" }, \
+            :method => :delete

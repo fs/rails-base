@@ -1,20 +1,20 @@
-- title %Q{Sign in to your "#{app_config.app_name}" account}, false
-.sub-head
- | Not a member?
- = link_to 'Sign up here!', new_user_registration_path
+- title "Sign in"
 
+= simple_form_for(resource, :as => resource_name, \
+                  :url => session_path(resource_name)) do |f|
 
-= simple_form_for(@user,                      \
-                  url: user_session_path,  \
-                  html: {id: :session_new}) do |form|
-  fieldset
-    = form.input :email, required: true
-    = form.input :password, required: true
-    = form.input :remember_me,      \
-                  as: :boolean,  \
-                  label: 'Remember my login on this computer'
-    = form.button :submit, 'Sign in'
-    .notifications.cf
-      = link_to 'Forgot your password? ', new_user_password_path
-      = link_to "Didn't receive confirmation instructions? ", \
-                new_user_confirmation_path
+  legend
+    | Enter your "#{app_config.app_name}" account
+
+  .form-inputs
+    = f.input :email, :required => false, :autofocus => true
+    = f.input :password, :required => false
+    = f.input :remember_me, :as => :boolean
+
+  .form-actions
+    = f.button :submit, "Sign in"
+    '  or
+    = link_to "Create a new account", new_registration_path(resource_name)
+
+= render "devise/shared/links"
+

@@ -1,14 +1,15 @@
 def sign_in_with(email, password)
   visit new_user_session_path
-  
+
   fill_in "Email", with: email
   fill_in "Password", with: password
-  
+
   click_button "Sign in"
 end
 
-Given /^I exist as a user with not comfirmed email$/ do
-  @current_user = Factory.create :not_confirmed_user
+
+Given /^I exist as a user with not confirmed email$/ do
+  @current_user = FactoryGirl.create :not_confirmed_user
 end
 
 When /^I sign in with valid credentials$/ do
@@ -20,16 +21,16 @@ When /^I sign in with invalid credentials$/ do
 end
 
 When /^I sign out$/ do
-  within "nav" do
+  within ".navbar-inner" do
     click_link "Sign out"
   end
 end
 
 When /^I request new password$/ do
   visit new_user_password_path
-  
+
   fill_in "Email", with: @current_user.email
-  click_button "Send instructions"
+  click_button "Send me reset password instructions"
 end
 
 Then /^I should see that my email is not confirmed$/ do
@@ -38,7 +39,7 @@ end
 
 Then /^I should receive reset password instructions email$/ do
   open_email(@current_user.email)
-  
+
   current_email.should have_subject /Reset password instructions/
   current_email.default_part_body.to_s.should =~ /#{@current_user.full_name}/
 end

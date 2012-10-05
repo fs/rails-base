@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+set -e
+
+bundle exec rspec spec
+bundle exec cucumber features
+
+script/quality
