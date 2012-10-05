@@ -7,8 +7,8 @@
     | Create your "#{app_config.app_name}" account
 
   .form-inputs
-    = f.input :full_name, required: true
-    = f.input :email, :required => true, :autofocus => true
+    = f.input :full_name, required: true, :autofocus => true
+    = f.input :email, :required => true
     = f.input :password, :required => true
     = f.input :password_confirmation, :required => true
 
