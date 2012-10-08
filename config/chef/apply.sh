@@ -11,8 +11,8 @@ EOF
 NODE=$( echo $1 | sed 's,.*@,,' )
 
 echo "Downloading cookbooks..."
-bundle exec librarian-chef install
+bundle exec librarian-chef update # TODO: use install
 
 echo "Applying recipes to the target node ($NODE)"
-bundle exec knife cook $@
+bundle exec knife cook --skip-chef-check --skip-syntax-check $@ # TODO: use checks
 

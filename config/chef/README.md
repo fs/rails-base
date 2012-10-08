@@ -5,7 +5,8 @@ Initial bootstrap
 -----------------
 
 * Make sure you've completed `bundle install`
-* Edit the `site-cookbooks/application/recipes/default.rb`
+* Edit the `site-cookbooks/application/recipes/default.rb` and setup attributes related to your application
+* Setup key based authentication to the target host for example with `ssh-copy-id`
 * Run `./bootstrap.sh user@hostname`. This installs chef on a given host and applies recipes to it.
 
 Applying recipes

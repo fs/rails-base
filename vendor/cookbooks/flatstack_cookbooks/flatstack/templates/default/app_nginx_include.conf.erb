@@ -1,0 +1,48 @@
+server_name_in_redirect off;
+
+root <%= @application_root %>/current/public;
+
+access_log  <%= @application_root %>/shared/log/access.log main;
+error_log   <%= @application_root %>/shared/log/error.log;
+
+include /etc/nginx/helpers/expires.conf;
+include /etc/nginx/helpers/maintenance.conf;
+include /etc/nginx/helpers/invalid_requests.conf;
+include /etc/nginx/helpers/headers.conf;
+
+location /nginx_status {
+  stub_status on;
+  access_log off;
+  allow 127.0.0.1/32;
+  deny all;
+}
+
+location / {
+
+  # use for cloudfront asset cache busting
+  # rewrite  ^/rev_(.+?)/(.*)$ /$2 last;
+
+  proxy_buffer_size 16k;
+  proxy_buffers 8 16k;
+  proxy_busy_buffers_size 32k;
+
+  if (-f $request_filename) {
+     break;
+   }
+
+   if (!-f $request_filename) {
+     proxy_pass http://<%= @application_full_name %>;
+     break;
+   }
+ }
+
+error_page  500 502 503 504 /500.html;
+error_page  404 /404.html;
+
+location = /500.html {
+  root  <%= @application_root %>/current/public;
+}
+
+location = /400.html {
+  root  <%= @application_root %>/current/public;
+}
