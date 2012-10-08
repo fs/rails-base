@@ -1,0 +1,9 @@
+upstream <%= @application_full_name %> {
+  server unix:<%= @application_root %>/shared/sockets/unicorn.sock fail_timeout=0;
+}
+
+server {
+  listen 80;
+  server_name <%= @application_domain %>;
+  include /etc/nginx/sites-include/<%= @application_full_name %>.conf;
+}

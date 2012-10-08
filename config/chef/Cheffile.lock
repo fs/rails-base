@@ -1,0 +1,52 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    apt (1.4.8)
+    build-essential (1.1.2)
+    dmg (1.0.0)
+    git (1.0.2)
+      build-essential (>= 0.0.0)
+      dmg (>= 0.0.0)
+      runit (>= 0.0.0)
+      yum (>= 0.0.0)
+    hostname (0.0.3)
+    ohai (1.0.2)
+    rbenv (1.4.0)
+      git (>= 0.0.0)
+      ohai (~> 1.0.2)
+    runit (0.15.0)
+    user (0.3.0)
+    vim (1.0.2)
+    yum (1.0.0)
+
+GIT
+  remote: git://github.com/jsierles/chef_cookbooks.git
+  path: nginx
+  ref: master
+  sha: 52c6dbfd9c34c4a26b7c4b9daf413c43e970c15f
+  specs:
+    nginx (1.0.0)
+
+PATH
+  remote: ../../vendor/cookbooks/flatstack_cookbooks/flatstack
+  specs:
+    flatstack (0.1.0)
+      apt (>= 0.0.0)
+      git (>= 0.0.0)
+      hostname (>= 0.0.0)
+      nginx (>= 0.0.0)
+      rbenv (>= 0.0.0)
+      users (>= 0.0.0)
+      vim (>= 0.0.0)
+
+PATH
+  remote: ../../vendor/cookbooks/flatstack_cookbooks/users
+  specs:
+    users (0.1.0)
+      user (>= 0.0.0)
+
+DEPENDENCIES
+  flatstack (>= 0)
+  nginx (>= 0)
+  users (>= 0)
+

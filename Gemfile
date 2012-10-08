@@ -32,6 +32,7 @@ group :development do
   gem 'letter_opener'
   gem 'heroku'
   gem 'slim-rails'
+  gem 'knife-solo'
   gem 'foreman'
   gem 'bullet'
 end

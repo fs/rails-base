@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+# cookbook 'flatstack',
+#   :git => 'https://github.com/fs/chef_cookbooks',
+#   :ref => 'master'
+
+cookbook 'flatstack',
+  :path => '../../vendor/cookbooks/flatstack_cookbooks/flatstack'
+
+cookbook 'users',
+  :path => '../../vendor/cookbooks/flatstack_cookbooks/users'
+
+cookbook 'nginx',
+  :git => 'git://github.com/jsierles/chef_cookbooks.git',
+  :path => 'nginx'
