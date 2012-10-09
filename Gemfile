@@ -37,6 +37,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'debugger'
   gem 'dotenv'
   gem 'sqlite3'
   gem 'rspec-rails'
@@ -47,16 +48,15 @@ end
 
 group :test do
   gem 'simplecov', require: false
+  gem 'webmock', require: false
 
+  gem 'capybara'
   gem 'database_cleaner'
-  gem 'rr'
-  gem 'shoulda-matchers'
   gem 'email_spec'
   gem 'factory_girl_rails'
-
-  gem 'cucumber-rails', require: false
-  gem 'webmock', require: false
   gem 'launchy'
+  gem 'shoulda-matchers'
+  gem 'turnip'
 end
 
 group :staging, :production do
