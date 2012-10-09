@@ -165,6 +165,8 @@ GEM
     pg (0.13.2)
     polyglot (0.3.3)
     progressbar (0.11.0)
+    quiet_assets (1.0.1)
+      railties (~> 3.1)
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -308,6 +310,7 @@ DEPENDENCIES
   letter_opener
   mail_safe
   pg
+  quiet_assets
   rails (= 3.2.8)
   rails_best_practices
   rspec-rails

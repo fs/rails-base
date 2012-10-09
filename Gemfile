@@ -29,6 +29,7 @@ gem 'airbrake'
 gem 'github-markdown' # only for dashboard controller
 
 group :development do
+  gem 'quiet_assets'
   gem 'letter_opener'
   gem 'heroku'
   gem 'slim-rails'
