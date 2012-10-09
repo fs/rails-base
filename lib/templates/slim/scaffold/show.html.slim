@@ -1,11 +1,18 @@
 - title 'View <%= singular_table_name %>'
-.view.lifted.drop-shadow.<%= singular_table_name %>
-  dl
+.show-item
+  .well.<%= singular_table_name %>.form-horizontal
+
 <% for attribute in attributes -%>
-    dt
-      | <%= attribute.human_name %>
-    dd= @<%= singular_table_name %>.<%= attribute.name %>
+    .control-group
+      label.control-label
+        | <%= attribute.human_name %>
+      .controls
+        .input-xlarge.uneditable-input.<%= attribute.type %>.span7
+          = <%= singular_table_name %>.<%= attribute.name %>
 <% end -%>
-  .actions.buttons
-    = link_to 'Edit', edit_<%= singular_table_name %>_path(resource)
-    = link_to 'Back', <%= plural_table_name %>_path
+  .form-actions
+    = link_to(edit_<%= singular_table_name %>_path(<%= singular_table_name %>), :class => 'btn btn-primary') do
+      i.icon-pencil.icon-white
+      | Edit
+    '  or
+    = link_to 'Back', :back

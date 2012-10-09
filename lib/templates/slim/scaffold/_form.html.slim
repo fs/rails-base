@@ -1,9 +1,12 @@
-.form
-  = simple_form_for(resource, validate: true) do |form|
-    fieldset
-      <% for attribute in attributes -%>= form.input :<%= attribute.name %>
-      <% end -%>
-.buttons
-        = form.button :submit
-        | or 
-        = link_to 'cancel', resource
+.scaffold-form
+  = simple_form_for(<%= singular_table_name %>) do |f|
+    .form-inputs
+  <%- attributes.each do |attribute| -%>
+      = f.<%= attribute.reference? ? :association : :input %> :<%= attribute.name %>
+  <%- end -%>
+
+    .form-actions
+      = f.button :submit
+      '  or
+      = link_to 'Back', :back
+

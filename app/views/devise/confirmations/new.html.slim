@@ -1,7 +1,16 @@
-- title "Resend confirmation instructions", false
+- title "Resend confirmation instructions"
 
-= simple_form_for(@user, url: user_confirmation_path) do |form|
-  fieldset
-    = form.input :email, required: true
-    = form.button :submit, 'Resend instructions'
+= simple_form_for(resource, :as => resource_name, \
+                  :url => confirmation_path(resource_name), \
+                  :html => { :method => :post }) do |f|
 
+  legend
+    | Enter your email address
+
+  .form-inputs
+    = f.input :email, :required => true
+
+  .form-actions
+    = f.button :submit, "Resend confirmation instructions"
+
+= render "devise/shared/links"

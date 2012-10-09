@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+set -e
+
+bin/brakeman --quiet --skip-libs
+bin/rails_best_practices --silent --spec --features -x lib/templates

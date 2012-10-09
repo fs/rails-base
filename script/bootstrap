@@ -1,0 +1,83 @@
+#!/usr/bin/env ruby
+
+require 'fileutils'
+
+def rails_root
+  @rails_root ||= File.expand_path('../../', __FILE__)
+end
+
+def check(key)
+  FileUtils.mkdir('tmp') unless File.exists?('tmp')
+  cache_file = "tmp/.#{key}"
+
+  if File.exists?(cache_file)
+    old_version = File.read(cache_file)
+  else
+    old_version = nil
+  end
+
+  version = yield(old_version)
+  File.open(cache_file, 'w') { |f| f.puts(version || 'cached') }
+end
+
+def setup_database_yml
+  unless File.exists?(File.join(rails_root, 'config/database.yml'))
+    puts 'Database configuration file is missing, installing...'
+    FileUtils.cp(File.join(rails_root, 'config/database.yml.example'), File.join(rails_root, 'config/database.yml'))
+  end
+end
+
+def setup_dotenv
+  unless File.exists?(File.join(rails_root, '.env'))
+    puts 'DotEnv configuration file is missing, installing...'
+    FileUtils.cp(File.join(rails_root, '.env.example'), File.join(rails_root, '.env'))
+  end
+end
+
+def install_bundler
+  check(:bundler) do |old_version|
+    break if old_version
+
+    unless system('which bundle > /dev/null')
+      puts 'Bundler missing, installing...'
+      system('gem install bundler --no-ri --no-rdoc') || exit(1)
+    end
+  end
+end
+
+def install_gems(without = 'production staging')
+  check(:gemfile) do |old_version|
+    # check both Gemfile and Gemfile.lock as there might be local changes that hasn't been bundled yet
+    version = File.read('Gemfile') + File.read('Gemfile.lock')
+
+    if version != old_version
+      puts 'Gemfile changed, bundling...'
+      system("bundle install --path vendor/bundle --binstubs --without production staging #{without}") || exit(1)
+    end
+
+    version
+  end
+end
+
+def migrate_db
+  check(:schema) do |old_version|
+    version = File.readlines('db/schema.rb').find { |line| line.include?('define(:version') }
+
+    if version != old_version
+     puts 'Schema changed, updating databases...'
+     system('bundle exec rake db:migrate db:test:prepare') || exit(1)
+    end
+
+    version
+  end
+end
+
+is_ci = ARGV.shift == 'ci'
+
+setup_database_yml
+setup_dotenv
+install_bundler
+install_gems(is_ci ? 'development' : '')
+migrate_db
+
+puts 'Everything is up to date.'

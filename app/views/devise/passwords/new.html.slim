@@ -1,7 +1,16 @@
-- title "Forgot your password?", false
+- title "Forgot your password?"
 
-= simple_form_for(@user, url: user_password_path) do |form|
-  fieldset
-    = form.input :email, required: true
-    = form.button :submit, 'Send instructions'
+= simple_form_for(resource, :as => resource_name, \
+                  :url => password_path(resource_name), \
+                  :html => { :method => :post }) do |f|
 
+  legend
+    | Enter your email address
+
+  .form-inputs
+    = f.input :email, :required => true
+
+  .form-actions
+    = f.button :submit, "Send me reset password instructions"
+
+= render "devise/shared/links"
