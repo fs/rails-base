@@ -1,15 +1,16 @@
 - title "Sign in"
 
-= simple_form_for(resource, :as => resource_name, \
-                  :url => session_path(resource_name)) do |f|
+= simple_form_for resource,
+    as: resource_name,
+    url: session_path(resource_name) do |f|
 
   legend
     | Enter your "#{app_config.app_name}" account
 
   .form-inputs
-    = f.input :email, :required => false, :autofocus => true
-    = f.input :password, :required => false
-    = f.input :remember_me, :as => :boolean
+    = f.input :email, required: false, autofocus: true
+    = f.input :password, required: false
+    = f.input :remember_me, as: :boolean
 
   .form-actions
     = f.button :submit, "Sign in"
