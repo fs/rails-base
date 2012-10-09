@@ -8,6 +8,7 @@ config/database.yml
 doc/**/*
 vendor/bundle
 vendor/cache
+vendor/ruby
 bin
 .sass-cache
 ._*
