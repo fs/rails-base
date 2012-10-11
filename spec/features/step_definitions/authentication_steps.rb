@@ -1,9 +1,9 @@
 step 'I exist as a user' do
-  @current_user = FactoryGirl.create :confirmed_user
+  @current_user = FactoryGirl.create :user, :confirmed
 end
 
 step 'I am signed in' do
-  @current_user = FactoryGirl.create :confirmed_user
+  @current_user = FactoryGirl.create :user, :confirmed
   sign_in_with @current_user.email, "123456"
 end
 

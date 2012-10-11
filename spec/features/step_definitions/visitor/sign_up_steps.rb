@@ -23,7 +23,10 @@ step 'I follow registration confirmation link in the email' do
 end
 
 step 'I submit resent confirmation instruction form' do
-  FactoryGirl.create :not_confirmed_user, email: "chuck.norris@example.com", full_name: "Chuck Norris"
+  FactoryGirl.create :user,
+    :not_confirmed,
+    email: "chuck.norris@example.com",
+    full_name: "Chuck Norris"
 
   visit new_user_confirmation_path
 
