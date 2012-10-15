@@ -1,5 +1,7 @@
 # Unreleased
 
+* Replace cucumber with turnip
+* Add script/ci_deploy
 * Remove rails3-generators
 * Add script/bootstrap
 * Add airbrake

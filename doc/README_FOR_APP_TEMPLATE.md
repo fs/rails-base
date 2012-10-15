@@ -29,7 +29,7 @@ Application currently based on Rails 3.2 stable branch and Ruby 1.9
 
 ## Testing gems
 
-* Cucumber, Capybara, and Capybara Webkit for integration testing, including JavaScript behavior
+* Turnip, Capybara, and Capybara Webkit for integration testing, including JavaScript behavior
 * [Factory Girl](https://github.com/thoughtbot/factory_girl) for easier creation of test data
 * [RSpec](https://github.com/rspec/rspec) for awesome, readable isolation testing
 * [Shoulda Matchers](http://github.com/thoughtbot/shoulda-matchers) for frequently needed Rails and RSpec matchers
@@ -48,6 +48,7 @@ Application currently based on Rails 3.2 stable branch and Ruby 1.9
 * `script/bootstrap` - setup required gems and migrate db if needed
 * `script/quality` - runs brakeman and rails_best_practices for the app
 * `script/ci` - should be used in the CI, checkout .travis.yml for example
+* `script/ci_deploy` - should be used in [Semaphoreapp CI to deploy code to Heroku](http://tatsoft.ru/ci-semaphoreapp)
 
 ## Quick start
 
@@ -69,9 +70,8 @@ Run bootstrap script
 Make sure all test are green
 
     bundle exec rspec spec
-    bundle exec cucumber features
-    
-Run app 
+
+Run app
 
     foreman start
 
