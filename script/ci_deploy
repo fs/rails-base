@@ -1,0 +1,58 @@
+#!/usr/bin/env ruby
+
+# Deploy app to heroku with semaphoreapp
+#
+# Usage:
+#   script/ci_deploy branch heroku-app-name heroku-colloborator-private-key-encoded-with-base64
+# Options:
+#   * branch - will trigger deploy only for this brunch
+#   * heroku-app-name - name of your heroku application
+#   * code will be pushed to git from user with this private key. Key should be encoded with base64: base64 /path/to/private_key
+
+require 'fileutils'
+require 'base64'
+
+BRANCH = ARGV.shift
+HEROKU_APP = ARGV.shift
+KEY_BASE64 = ARGV.shift
+CURRENT_BRANCH = ENV['BRANCH_NAME']
+
+def prepare_ssh
+  ssh_dir = File.expand_path('~/.ssh')
+
+  FileUtils.mkdir(ssh_dir) unless File.exists?(ssh_dir)
+
+  File.open("#{ssh_dir}/id_rsa", 'w') do |file|
+    file.write(Base64.decode64(KEY_BASE64))
+  end
+
+  File.open("#{ssh_dir}/config", 'a') do |file|
+    file << <<-HOST
+    Host *heroku.com*
+      StrictHostKeyChecking no
+      UserKnownHostsFile=/dev/null
+    HOST
+  end
+
+  File.chmod(0600, "#{ssh_dir}/id_rsa")
+end
+
+def prepare_git
+  system("git remote add heroku git@heroku.com:#{HEROKU_APP}.git") || exit(1)
+end
+
+def deploy
+  system("git push --force heroku #{BRANCH}:master") || exit(1)
+end
+
+if CURRENT_BRANCH == BRANCH
+  puts "Going to deploy #{BRANCH}..."
+
+  prepare_ssh
+  prepare_git
+  deploy
+
+  puts "Deployed!"
+else
+  puts "Only #{BRANCH} allowed for depoy."
+end
