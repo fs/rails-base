@@ -6,8 +6,8 @@ SimpleNavigation::Configuration.run do |navigation|
 
     if user_signed_in?
       user.item :account, current_user.full_name_with_email, '#',
-                :class => 'dropdown',
-                :link => {:class => 'dropdown-toggle', 'data-toggle' => 'dropdown'} do |account|
+                class: 'dropdown',
+                link: { class: 'dropdown-toggle', 'data-toggle' => 'dropdown' } do |account|
 
         account.dom_class = 'dropdown-menu'
 
