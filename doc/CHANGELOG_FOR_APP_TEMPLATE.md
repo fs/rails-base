@@ -1,4 +1,4 @@
-# Unreleased
+# 0.3
 
 * Replace cucumber with turnip
 * Add script/ci_deploy
