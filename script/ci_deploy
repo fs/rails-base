@@ -38,7 +38,7 @@ def prepare_ssh
 end
 
 def prepare_git
-  system("git remote add heroku git@heroku.com:#{HEROKU_APP}.git") || exit(1)
+  system("git remote rm heroku && git remote add heroku git@heroku.com:#{HEROKU_APP}.git") || exit(1)
 end
 
 def deploy
