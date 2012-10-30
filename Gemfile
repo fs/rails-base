@@ -31,7 +31,6 @@ gem 'github-markdown' # only for dashboard controller
 group :development do
   gem 'quiet_assets'
   gem 'letter_opener'
-  gem 'heroku'
   gem 'slim-rails'
   gem 'foreman'
   gem 'bullet'
@@ -45,6 +44,7 @@ group :development, :test do
   gem 'mail_safe'
   gem 'rails_best_practices'
   gem 'brakeman'
+  gem 'heroku'
 end
 
 group :test do
