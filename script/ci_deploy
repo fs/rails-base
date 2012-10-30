@@ -15,6 +15,7 @@ require 'base64'
 BRANCH = ARGV.shift
 HEROKU_APP = ARGV.shift
 KEY_BASE64 = ARGV.shift
+API_KEY = ARGV.shift
 CURRENT_BRANCH = ENV['BRANCH_NAME']
 
 def prepare_ssh
@@ -47,7 +48,7 @@ def deploy
 end
 
 def run_migrations
-  system('bin/heroku run rake db:migrate') || exit(1)
+  system("HEROKU_API_KEY=#{API_KEY} bin/heroku run rake db:migrate") || exit(1)
 end
 
 if CURRENT_BRANCH == BRANCH
