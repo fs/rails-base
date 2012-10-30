@@ -45,12 +45,17 @@ def deploy
   system("git push --force heroku #{BRANCH}:master") || exit(1)
 end
 
+def run_migrations
+  system('bin/heroku run rake db:migrate') || exit(1)
+end
+
 if CURRENT_BRANCH == BRANCH
   puts "Going to deploy #{BRANCH}..."
 
   prepare_ssh
   prepare_git
   deploy
+  run_migrations
 
   puts "Deployed!"
 else
