@@ -140,8 +140,8 @@ GEM
       less (~> 2.2.0)
     less-rails-bootstrap (2.2.0)
       less-rails (~> 2.2.0)
-    letter_opener (0.0.2)
-      launchy
+    letter_opener (1.0.0)
+      launchy (>= 2.0.4)
     libv8 (3.3.10.4)
     libwebsocket (0.1.6.1)
       websocket
