@@ -1,6 +1,6 @@
 source :rubygems
 
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.9'
 gem 'json'
 
 # Gems used only for assets and not required
@@ -9,7 +9,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.2'
   gem 'uglifier', '>= 1.2.3'
 
-  gem 'therubyracer', :platforms => :ruby
+  gem 'therubyracer', platforms: :ruby
   gem 'less-rails-bootstrap'
 
   gem 'styleguides'
@@ -31,7 +31,6 @@ gem 'github-markdown' # only for dashboard controller
 group :development do
   gem 'quiet_assets'
   gem 'letter_opener'
-  gem 'heroku'
   gem 'slim-rails'
   gem 'foreman'
   gem 'bullet'
@@ -45,6 +44,7 @@ group :development, :test do
   gem 'mail_safe'
   gem 'rails_best_practices'
   gem 'brakeman'
+  gem 'heroku'
 end
 
 group :test do

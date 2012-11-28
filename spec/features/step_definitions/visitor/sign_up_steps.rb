@@ -1,10 +1,10 @@
 def register
   visit new_user_registration_path
 
-  fill_in "Full name", with: "Chuck Norris"
-  fill_in "Email", with: "chuck.norris@example.com"
-  fill_in "Password", with: "123456"
-  fill_in "Password confirmation", with: "123456"
+  fill_in "user_full_name", with: "Chuck Norris"
+  fill_in "user_email", with: "chuck.norris@example.com"
+  fill_in "user_password", with: "123456"
+  fill_in "user_password_confirmation", with: "123456"
 
   click_button "Sign up"
 end
@@ -30,7 +30,7 @@ step 'I submit resent confirmation instruction form' do
 
   visit new_user_confirmation_path
 
-  fill_in "Email", with: "chuck.norris@example.com"
+  fill_in "user_email", with: "chuck.norris@example.com"
   click_button "Resend confirmation instructions"
 end
 
