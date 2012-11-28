@@ -1,3 +1,7 @@
+# 0.3.1
+
+* Update Rails to 2.3.9 and other gems to latests versions. See git log.
+
 # 0.3
 
 * Replace cucumber with turnip
