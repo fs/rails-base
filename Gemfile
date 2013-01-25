@@ -44,7 +44,6 @@ group :development, :test do
   gem 'mail_safe'
   gem 'rails_best_practices'
   gem 'brakeman'
-  gem 'heroku'
 end
 
 group :test do

@@ -95,7 +95,6 @@ GEM
       mail (~> 2.2)
     erubis (2.7.0)
     eventmachine (1.0.0)
-    excon (0.16.10)
     execjs (1.4.0)
       multi_json (~> 1.0)
     factory_girl (4.1.0)
@@ -114,14 +113,6 @@ GEM
       rubinius-actor
     github-markdown (0.5.3)
     haml (3.1.7)
-    heroku (2.33.2)
-      heroku-api (~> 0.3.7)
-      launchy (>= 0.3.2)
-      netrc (~> 0.7.7)
-      rest-client (~> 1.6.1)
-      rubyzip
-    heroku-api (0.3.7)
-      excon (~> 0.16.10)
     highline (1.6.15)
     hike (1.2.1)
     i18n (0.6.1)
@@ -155,7 +146,6 @@ GEM
       actionmailer (>= 1.3.6)
     mime-types (1.19)
     multi_json (1.5.0)
-    netrc (0.7.7)
     nokogiri (1.5.5)
     orm_adapter (0.4.0)
     pg (0.14.1)
@@ -196,8 +186,6 @@ GEM
     rake (10.0.3)
     rdoc (3.12)
       json (~> 1.4)
-    rest-client (1.6.7)
-      mime-types (>= 1.16)
     rspec (2.12.0)
       rspec-core (~> 2.12.0)
       rspec-expectations (~> 2.12.0)
@@ -303,7 +291,6 @@ DEPENDENCIES
   factory_girl_rails
   foreman
   github-markdown
-  heroku
   jquery-rails
   json
   kaminari
