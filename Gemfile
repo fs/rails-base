@@ -1,6 +1,6 @@
 source :rubygems
 
-gem 'rails', '3.2.9'
+gem 'rails', '3.2.11'
 gem 'json'
 
 # Gems used only for assets and not required
@@ -44,7 +44,6 @@ group :development, :test do
   gem 'mail_safe'
   gem 'rails_best_practices'
   gem 'brakeman'
-  gem 'heroku'
 end
 
 group :test do
