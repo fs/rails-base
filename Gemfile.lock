@@ -57,7 +57,7 @@ GEM
       xpath (~> 1.0.0)
     childprocess (0.3.6)
       ffi (~> 1.0, >= 1.0.6)
-    code_analyzer (0.3.0)
+    code_analyzer (0.3.1)
       sexp_processor
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -148,7 +148,6 @@ GEM
     orm_adapter (0.4.0)
     pg (0.14.1)
     polyglot (0.3.3)
-    progressbar (0.11.0)
     quiet_assets (1.0.1)
       railties (~> 3.1)
     rack (1.4.4)
@@ -166,14 +165,14 @@ GEM
       activesupport (= 3.2.11)
       bundler (~> 1.0)
       railties (= 3.2.11)
-    rails_best_practices (1.13.0)
+    rails_best_practices (1.13.3)
       activesupport
       awesome_print
       code_analyzer
       colored
       erubis
       i18n
-      progressbar
+      ruby-progressbar
     railties (3.2.11)
       actionpack (= 3.2.11)
       activesupport (= 3.2.11)
@@ -202,6 +201,7 @@ GEM
     rubinius-actor (0.0.2)
       rubinius-core-api
     rubinius-core-api (0.0.1)
+    ruby-progressbar (1.0.2)
     ruby2ruby (2.0.2)
       ruby_parser (~> 3.1)
       sexp_processor (~> 4.0)
