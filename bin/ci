@@ -4,4 +4,4 @@ set -e
 
 bundle exec rspec spec
 
-script/quality
+bin/quality
