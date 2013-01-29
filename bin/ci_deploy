@@ -4,7 +4,7 @@
 # http://fs.github.com/dev/ci-semaphoreapp
 #
 # Usage:
-#   script/ci_deploy branch heroku-app-name heroku-colloborator-private-key-encoded-with-base64 heroku-colloborator-api-key
+#   bin/ci_deploy branch heroku-app-name heroku-colloborator-private-key-encoded-with-base64 heroku-colloborator-api-key
 # Options:
 #   * branch - will trigger deploy only for this brunch
 #   * heroku-app-name - name of your heroku application

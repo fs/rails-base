@@ -9,7 +9,11 @@ doc/**/*
 vendor/bundle
 vendor/cache
 vendor/ruby
-bin
 .sass-cache
 ._*
 .env
+bin/
+!bin/ci
+!bin/quality
+!bin/ci_deploy
+!bin/bootstrap
