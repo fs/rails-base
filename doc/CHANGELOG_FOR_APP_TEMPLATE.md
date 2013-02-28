@@ -1,5 +1,6 @@
 # Unreleased
 
+* Dropin git flow support, master will be the main branch
 * Update Rails to 3.2.12
 * Update json to 1.7.7
 
