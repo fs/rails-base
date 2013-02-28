@@ -44,6 +44,7 @@ group :development, :test do
   gem 'mail_safe'
   gem 'rails_best_practices'
   gem 'brakeman'
+  gem 'factory_girl_rails'
 end
 
 group :test do
@@ -53,7 +54,6 @@ group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'email_spec'
-  gem 'factory_girl_rails'
   gem 'launchy'
   gem 'shoulda-matchers'
   gem 'turnip'
