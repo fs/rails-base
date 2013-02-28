@@ -1,3 +1,8 @@
+# Unreleased
+
+* Update Rails to 3.2.12
+* Update json to 1.7.7
+
 # 0.3.3
 
 * Update devise to 2.2.3

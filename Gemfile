@@ -1,6 +1,6 @@
 source :rubygems
 
-gem 'rails', '3.2.11'
+gem 'rails', '3.2.12'
 gem 'json'
 
 # Gems used only for assets and not required
