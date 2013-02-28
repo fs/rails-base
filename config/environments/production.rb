@@ -52,13 +52,18 @@ Rails3Base::Application.configure do
   # config.action_mailer.raise_delivery_errors = false
 
   # Heroku specific setting for Cedar stack http://devcenter.heroku.com/articles/sendgrid#usage
+  # config.action_mailer.smtp_settings = {
+  #   address:        'smtp.sendgrid.net',
+  #   port:           '587',
+  #   authentication: :plain,
+  #   user_name:      ENV['SENDGRID_USERNAME'],
+  #   password:       ENV['SENDGRID_PASSWORD'],
+  #   domain:         'heroku.com'
+  # }
+
+  # We have no valid ssl on VPS
   config.action_mailer.smtp_settings = {
-    address:        'smtp.sendgrid.net',
-    port:           '587',
-    authentication: :plain,
-    user_name:      ENV['SENDGRID_USERNAME'],
-    password:       ENV['SENDGRID_PASSWORD'],
-    domain:         'heroku.com'
+    openssl_verify_mode: 'none'
   }
 
   # Preview email in the browser instead of sending it.

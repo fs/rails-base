@@ -23,7 +23,6 @@ gem 'simple_form'
 gem 'decent_exposure'
 gem 'kaminari'
 gem 'slim'
-gem 'thin'
 gem 'airbrake'
 
 gem 'github-markdown' # only for dashboard controller
@@ -34,6 +33,8 @@ group :development do
   gem 'slim-rails'
   gem 'foreman'
   gem 'bullet'
+  gem 'thin'
+  gem 'capistrano'
 end
 
 group :development, :test do
@@ -60,5 +61,8 @@ group :test do
 end
 
 group :staging, :production do
+  # gem 'thin'
+  gem 'unicorn'
+
   gem 'pg'
 end
