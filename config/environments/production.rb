@@ -65,6 +65,27 @@ RailsBase::Application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
+  # Heroku specific setting for Cedar stack http://devcenter.heroku.com/articles/sendgrid#usage
+  # config.action_mailer.smtp_settings = {
+  #   address:        'smtp.sendgrid.net',
+  #   port:           '587',
+  #   authentication: :plain,
+  #   user_name:      ENV['SENDGRID_USERNAME'],
+  #   password:       ENV['SENDGRID_PASSWORD'],
+  #   domain:         'heroku.com'
+  # }
+
+  # We have no valid ssl on VPS
+  config.action_mailer.smtp_settings = {
+    openssl_verify_mode: 'none'
+  }
+
+  # Preview email in the browser instead of sending it.
+  config.action_mailer.delivery_method = :smtp
+
+  # Enable threaded mode
+  # config.threadsafe!
+
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found).
   config.i18n.fallbacks = true
