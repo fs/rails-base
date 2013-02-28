@@ -1,11 +1,11 @@
 def submit_update_account_form(fields)
   visit edit_user_registration_path
 
-  fill_in "Full name", with: fields[:full_name] unless fields[:full_name].blank?
-  fill_in "Email", with: fields[:email] unless fields[:email].blank?
-  fill_in "Password", with: fields[:password] unless fields[:password].blank?
-  fill_in "Password confirmation", with: fields[:password_confirmation] unless fields[:password_confirmation].blank?
-  fill_in "Current password", with: fields[:current_password] unless fields[:current_password].blank?
+  fill_in "user_full_name", with: fields[:full_name] unless fields[:full_name].blank?
+  fill_in "user_email", with: fields[:email] unless fields[:email].blank?
+  fill_in "user_password", with: fields[:password] unless fields[:password].blank?
+  fill_in "user_password_confirmation", with: fields[:password_confirmation] unless fields[:password_confirmation].blank?
+  fill_in "user_current_password", with: fields[:current_password] unless fields[:current_password].blank?
 
   click_button "Update"
 end

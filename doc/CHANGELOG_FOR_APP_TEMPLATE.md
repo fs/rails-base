@@ -1,3 +1,26 @@
+# 0.3.3
+
+* Update devise to 2.2.3
+* Update bullet to 4.3.0
+* Update dotenv to 0.5.0.
+* Update factory_girl_rails to 4.2.0
+* Update foreman to 0.61.0
+* Update jquery-rails to 2.2.0
+* Update slim to 1.3.6, slim-rails to 1.1.0
+* Update debugger to 1.3.0
+* Update RBP config
+* Add user@example.com to seed.rb
+
+# 0.3.2
+
+* Update Rails to 2.3.11
+* Update code metrics gems
+
+
+# 0.3.1
+
+* Update Rails to 2.3.9 and other gems to latests versions. See git log.
+
 # 0.3
 
 * Replace cucumber with turnip
