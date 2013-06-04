@@ -234,6 +234,10 @@ GEM
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.6)
+    strong_parameters (0.2.0)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
+      railties (~> 3.0)
     styleguides (0.1)
     temple (0.5.5)
     terminal-table (1.4.5)
@@ -302,6 +306,7 @@ DEPENDENCIES
   slim
   slim-rails
   sqlite3
+  strong_parameters
   styleguides
   therubyracer
   thin

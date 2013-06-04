@@ -25,6 +25,7 @@ gem 'kaminari'
 gem 'slim'
 gem 'thin'
 gem 'airbrake'
+gem 'strong_parameters'
 
 gem 'github-markdown' # only for dashboard controller
 
