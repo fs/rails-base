@@ -26,7 +26,7 @@ gem 'decent_exposure'
 gem 'kaminari'
 gem 'slim'
 gem 'thin'
-gem 'airbrake'
+gem 'rollbar', '~> 0.10.3'
 
 gem 'github-markdown' # only for dashboard controller
 
