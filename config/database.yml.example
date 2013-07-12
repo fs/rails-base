@@ -1,32 +1,17 @@
-# sqlite
-#
-defaults_development: &defaults_development
-  adapter: sqlite3
-  pool: 5
-  timeout: 5000
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: postgres
+  host: localhost
 
 development:
-  database: db/development.sqlite3
-  <<: *defaults_development
+  <<: *default
+  database: rails3-base_dev
 
-test:
-  database: db/test.sqlite3
-  <<: *defaults_development
+test: &test
+  <<: *default
+  database: rails3-base_test
 
-
-# # mysql@localhost
-# #
-# defaults_development: &defaults_development
-#   adapter: mysql
-#   encoding: utf8
-#   host: localhost
-#   username: root
-#   password:
-#
-# development:
-#   database: application_dev
-#   <<: *defaults_development
-#
-# test:
-#   database: application_test
-#   <<: *defaults_development
+cucumber:
+  <<: *test
