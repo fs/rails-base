@@ -52,7 +52,7 @@ def install_gems(without = 'production staging')
 
     if version != old_version
       puts 'Gemfile changed, bundling...'
-      system("bundle install --path vendor/bundle --without production staging #{without}") || exit(1)
+      system("bundle install --path .bundle --without production staging #{without}") || exit(1)
     end
 
     version
