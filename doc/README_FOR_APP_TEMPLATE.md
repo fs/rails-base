@@ -1,10 +1,10 @@
-# Skeleton for new Rails 3 based application
+# Skeleton for new Rails 4 based application
 
-[<img src="https://secure.travis-ci.org/fs/rails3-base.png"/>](http://travis-ci.org/fs/rails3-base)
+[<img src="https://semaphoreapp.com/api/v1/projects/d5833569756e6278990b980053b11efcc010729a/7906/badge.png"/>](https://semaphoreapp.com/projects/818)
 [<img src="https://gemnasium.com/fs/rails3-base.png" alt="Dependency Status" />](https://gemnasium.com/fs/rails3-base)
 
 This simple application includes ruby/rails technology which we use in the FlatStack for new projects.
-Application currently based on Rails 3.2 stable branch and Ruby 1.9
+Application currently based on Rails 4 stable branch and Ruby 2.0.0
 
 ## Application gems:
 
@@ -45,10 +45,10 @@ Application currently based on Rails 3.2 stable branch and Ruby 1.9
 
 ## Scripts
 
-* `script/bootstrap` - setup required gems and migrate db if needed
-* `script/quality` - runs brakeman and rails_best_practices for the app
-* `script/ci` - should be used in the CI, checkout .travis.yml for example
-* `script/ci_deploy` - should be used in [Semaphoreapp CI to deploy code to Heroku](http://tatsoft.ru/ci-semaphoreapp)
+* `bin/bootstrap` - setup required gems and migrate db if needed
+* `bin/quality` - runs brakeman and rails_best_practices for the app
+* `bin/ci` - should be used in the CI or locally
+* `bin/server` - to run server locally
 
 ## Quick start
 
@@ -65,7 +65,7 @@ Make sure master branch is tracking origin repo.
 
 Run bootstrap script
 
-    script/bootstrap
+    bin/bootstrap
 
 Make sure all test are green
 
@@ -73,7 +73,7 @@ Make sure all test are green
 
 Run app
 
-    foreman start
+    bin/server
 
 ## How to update existing project with new changes from rails3-base repo
 
