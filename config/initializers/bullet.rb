@@ -4,5 +4,5 @@ Rails.application.config.after_initialize do
   Bullet.rails_logger = true
   Bullet.console = true
   Bullet.airbrake = true
-  Bullet.disable_browser_cache = true
+  # Bullet.disable_browser_cache = true
 end if defined?(Bullet)
