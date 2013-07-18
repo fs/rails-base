@@ -2,11 +2,11 @@
 
 set -e
 
-bundle exec rspec spec
+bin/rspec spec
 
 /usr/bin/env ruby <<-EORUBY
-  feature_paths = Dir["spec/**/*.feature"].join(' ')
-  system("bundle exec rspec #{feature_paths}")
+  feature_paths = Dir['spec/**/*.feature'].join(' ')
+  system("bin/rspec #{feature_paths}")
 EORUBY
 
 bin/quality
