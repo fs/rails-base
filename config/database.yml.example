@@ -1,4 +1,6 @@
-default: &default
+# postgres
+#
+defaults_development: &defaults_development
   adapter: postgresql
   encoding: unicode
   username: postgres
@@ -6,12 +8,27 @@ default: &default
   host: localhost
 
 development:
-  <<: *default
-  database: rails3-base_dev
+  database: application_dev
+  <<: *defaults_development
 
-test: &test
-  <<: *default
-  database: rails3-base_test
+test:
+  database: application_test
+  <<: *defaults_development
 
-cucumber:
-  <<: *test
+
+# # mysql@localhost
+# #
+# defaults_development: &defaults_development
+#   adapter: mysql
+#   encoding: utf8
+#   host: localhost
+#   username: root
+#   password:
+#
+# development:
+#   database: application_dev
+#   <<: *defaults_development
+#
+# test:
+#   database: application_test
+#   <<: *defaults_development
