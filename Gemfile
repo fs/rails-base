@@ -21,7 +21,7 @@ end
 
 gem 'jquery-rails'
 
-gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
+gem 'devise', '~> 3.0.0'
 gem 'simple-navigation'
 gem 'simple_form', '~> 3.0.0rc'
 gem 'decent_exposure'
@@ -38,10 +38,6 @@ group :development do
   gem 'slim-rails'
   gem 'foreman'
   gem 'bullet'
-  gem 'guard'
-  gem "spin", github: "rickyrobinson/spin", branch: "cucumber"
-  gem "guard-spin", github: "rickyrobinson/guard-spin", branch: "cucumber"
-  gem "guard-spin_rspec", github: "rickyrobinson/guard-spin_rspec"
 end
 
 group :development, :test do
