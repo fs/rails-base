@@ -265,7 +265,7 @@ DEPENDENCIES
   brakeman
   bullet
   capybara
-  coffee-rails
+  coffee-rails (~> 4.0.0)
   database_cleaner
   debugger
   decent_exposure
@@ -298,5 +298,5 @@ DEPENDENCIES
   therubyracer
   thin
   turnip
-  uglifier (>= 1.2.3)
+  uglifier (>= 1.3.0)
   webmock

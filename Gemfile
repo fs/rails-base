@@ -7,18 +7,11 @@ gem 'rails', '4.0.0'
 gem 'json'
 gem 'pg'
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'coffee-rails'
-  gem 'uglifier', '>= 1.2.3'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'uglifier', '>= 1.3.0'
 
-  gem 'therubyracer', platforms: :ruby
-  gem 'less-rails-bootstrap'
-
-  gem 'styleguides'
-end
-
+gem 'therubyracer', platforms: :ruby
+gem 'less-rails-bootstrap'
 gem 'jquery-rails'
 
 gem 'devise', '~> 3.0.0'
@@ -33,6 +26,7 @@ gem 'airbrake'
 gem 'github-markdown' # only for dashboard controller
 
 group :development do
+  gem 'styleguides'
   gem 'quiet_assets'
   gem 'letter_opener'
   gem 'slim-rails'
