@@ -36,6 +36,7 @@ group :development do
   gem 'slim-rails'
   gem 'foreman'
   gem 'bullet'
+  gem 'mail_safe'
 end
 
 group :development, :test do
@@ -43,7 +44,6 @@ group :development, :test do
   gem 'dotenv'
   gem 'sqlite3'
   gem 'rspec-rails'
-  gem 'mail_safe'
   gem 'rails_best_practices'
   gem 'brakeman'
   gem 'factory_girl_rails'
