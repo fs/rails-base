@@ -26,10 +26,6 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     addressable (2.3.5)
-    airbrake (3.1.12)
-      activesupport
-      builder
-      json
     arel (4.0.0)
     atomic (1.1.12)
     awesome_print (1.1.0)
@@ -176,6 +172,8 @@ GEM
     rake (10.1.0)
     ref (1.0.5)
     require_all (1.2.1)
+    rollbar (0.10.8)
+      multi_json (~> 1.5)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
@@ -265,7 +263,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  airbrake
   brakeman
   bullet
   capybara
@@ -291,6 +288,7 @@ DEPENDENCIES
   rails (= 4.0.0)
   rails_12factor
   rails_best_practices
+  rollbar (~> 0.10.3)
   rspec-rails
   shoulda-matchers
   simple-navigation

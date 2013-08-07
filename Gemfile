@@ -21,7 +21,7 @@ gem 'decent_exposure'
 gem 'kaminari'
 gem 'slim'
 gem 'thin'
-gem 'airbrake'
+gem 'rollbar', '~> 0.10.3'
 
 gem 'github-markdown' # only for dashboard controller
 
@@ -32,13 +32,13 @@ group :development do
   gem 'slim-rails'
   gem 'foreman'
   gem 'bullet'
+  gem 'mail_safe'
 end
 
 group :development, :test do
   gem 'debugger'
   gem 'dotenv'
   gem 'rspec-rails'
-  gem 'mail_safe'
   gem 'rails_best_practices'
   gem 'brakeman'
   gem 'factory_girl_rails'
