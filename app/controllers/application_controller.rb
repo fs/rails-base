@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
     if resource_class == User
       User::ParameterSanitizer.new(User, :user, params)
     else
-      super # Use the default one
+      super
     end
   end
 
