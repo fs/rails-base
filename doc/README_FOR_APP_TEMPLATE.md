@@ -1,7 +1,7 @@
 # Skeleton for new Rails 4 based application
 
-[<img src="https://semaphoreapp.com/api/v1/projects/d5833569756e6278990b980053b11efcc010729a/7906/badge.png"/>](https://semaphoreapp.com/projects/818)
-[<img src="https://gemnasium.com/fs/rails3-base.png" alt="Dependency Status" />](https://gemnasium.com/fs/rails3-base)
+[<img src="https://semaphoreapp.com/api/v1/projects/31b68af8b073708a56e4e005bbcba2af4802816d/76140/badge.png">](https://semaphoreapp.com/projects/2742)
+
 
 This simple application includes ruby/rails technology which we use in the FlatStack for new projects.
 Application currently based on Rails 4 stable branch and Ruby 2.0.0
@@ -52,9 +52,9 @@ Application currently based on Rails 4 stable branch and Ruby 2.0.0
 
 ## Quick start
 
-Clone application as new project with original repository named "rails3-base"
+Clone application as new project with original repository named "rails-base"
 
-    git clone git://github.com/fs/rails3-base.git --origin rails3-base [MY-NEW-PROJECT]
+    git clone git://github.com/fs/rails-base.git --origin rails-base [MY-NEW-PROJECT]
 
 
 Create your new repo on GitHub and push master into it.
@@ -75,19 +75,19 @@ Run app
 
     bin/server
 
-## How to update existing project with new changes from rails3-base repo
+## How to update existing project with new changes from rails-base repo
 
-You can fetch latest changes from rails3-base repo and merge or cherry-pick commits
+You can fetch latest changes from rails-base repo and merge or cherry-pick commits
 
-    git fetch rails3-base
-    git flow feature start rails3-base-update
-    git merge rails3-base/master
+    git fetch rails-base
+    git flow feature start rails-base-update
+    git merge rails-base/master
 
     # fix conflicts
     # commit
     # test
 
-    git flow feature finish rails3-base-update
+    git flow feature finish rails-base-update
 
 ## Note on Patches/Pull Requests
 
