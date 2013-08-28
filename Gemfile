@@ -1,27 +1,22 @@
 source 'https://rubygems.org'
 
+# Specify ruby version for Heroku
 ruby '2.0.0'
 
-gem 'rails', '3.2.12'
+gem 'rails', '4.0.0'
 gem 'json'
+gem 'pg'
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'coffee-rails', '~> 3.2.2'
-  gem 'uglifier', '>= 1.2.3'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'uglifier', '>= 1.3.0'
 
-  gem 'therubyracer', platforms: :ruby
-  gem 'less-rails-bootstrap'
-
-  gem 'styleguides'
-end
-
+gem 'therubyracer', platforms: :ruby
+gem 'less-rails-bootstrap'
 gem 'jquery-rails'
 
-gem 'devise'
+gem 'devise', '~> 3.0.0'
 gem 'simple-navigation'
-gem 'simple_form'
+gem 'simple_form', '~> 3.0.0rc'
 gem 'decent_exposure'
 gem 'kaminari'
 gem 'slim'
@@ -31,6 +26,7 @@ gem 'rollbar', '~> 0.10.3'
 gem 'github-markdown' # only for dashboard controller
 
 group :development do
+  gem 'styleguides'
   gem 'quiet_assets'
   gem 'letter_opener'
   gem 'slim-rails'
@@ -42,7 +38,6 @@ end
 group :development, :test do
   gem 'debugger'
   gem 'dotenv'
-  gem 'sqlite3'
   gem 'rspec-rails'
   gem 'rails_best_practices'
   gem 'brakeman'
@@ -52,7 +47,6 @@ end
 group :test do
   gem 'simplecov', require: false
   gem 'webmock', require: false
-
   gem 'capybara'
   gem 'database_cleaner'
   gem 'email_spec'
@@ -62,5 +56,5 @@ group :test do
 end
 
 group :staging, :production do
-  gem 'pg'
+  gem 'rails_12factor'
 end

@@ -1,6 +1,7 @@
 AddModelVirtualAttributeCheck: { }
 AlwaysAddDbIndexCheck: { }
 CheckSaveReturnValueCheck: { }
+DefaultScopeIsEvilCheck: { }
 DryBundlerInCapistranoCheck: { }
 HashSyntaxCheck: { }
 IsolateSeedDataCheck: { }
@@ -21,7 +22,9 @@ ProtectMassAssignmentCheck: { }
 RemoveEmptyHelpersCheck: { }
 RemoveTabCheck: { }
 RemoveTrailingWhitespaceCheck: { }
-RemoveUnusedMethodsInControllersCheck: { except_methods: [] }
+RemoveUnusedMethodsInControllersCheck:
+  except_methods:
+  - ApplicationController#devise_parameter_sanitizer
 RemoveUnusedMethodsInHelpersCheck: { except_methods: [] }
 RemoveUnusedMethodsInModelsCheck: { except_methods: [] }
 ReplaceComplexCreationWithFactoryMethodCheck: { attribute_assignment_count: 2 }
