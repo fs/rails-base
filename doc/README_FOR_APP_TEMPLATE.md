@@ -26,6 +26,7 @@ Application currently based on Rails 4 stable branch and Ruby 2.0.0
 * [Bullet](https://github.com/flyerhzm/bullet) gem to kill N+1 queries and unused eager loading
 * [Rails Best Practices](https://github.com/railsbp/rails_best_practices) code metric tool
 * [Brakeman](https://github.com/presidentbeef/brakeman) static analysis security vulnerability scanner
+* [Pry Rails](https://github.com/rweng/pry-rails) is an alternative to the standard IRB shell for Ruby
 
 ## Testing gems
 
