@@ -45,7 +45,6 @@ group :development, :test do
 end
 
 group :test do
-  gem 'simplecov', require: false
   gem 'webmock', require: false
   gem 'capybara'
   gem 'database_cleaner'
@@ -53,6 +52,7 @@ group :test do
   gem 'launchy'
   gem 'shoulda-matchers'
   gem 'turnip'
+  gem "codeclimate-test-reporter", require: nil
 end
 
 group :staging, :production do
