@@ -52,8 +52,6 @@ GEM
       xpath (~> 2.0)
     code_analyzer (0.3.2)
       sexp_processor
-    codeclimate-test-reporter (0.0.7)
-      simplecov (>= 0.7.1, < 1.0.0)
     coffee-rails (4.0.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0.beta, < 5.0)
@@ -268,7 +266,6 @@ DEPENDENCIES
   brakeman
   bullet
   capybara
-  codeclimate-test-reporter
   coffee-rails (~> 4.0.0)
   database_cleaner
   debugger
@@ -296,6 +293,7 @@ DEPENDENCIES
   shoulda-matchers
   simple-navigation
   simple_form (~> 3.0.0rc)
+  simplecov
   slim
   slim-rails
   styleguides
