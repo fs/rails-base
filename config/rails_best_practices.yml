@@ -40,4 +40,4 @@ UseObserverCheck: { }
 UseQueryAttributeCheck: { }
 UseSayWithTimeInMigrationsCheck: { }
 UseScopeAccessCheck: { }
-UseTurboSprocketsRails3Check: { }
+#UseTurboSprocketsRails3Check: { }
