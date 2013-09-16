@@ -33,6 +33,7 @@ group :development do
   gem 'foreman'
   gem 'bullet'
   gem 'mail_safe'
+  gem 'pry-rails'
 end
 
 group :development, :test do
