@@ -1,10 +1,10 @@
-# Skeleton for new Rails 3 based application
+# Skeleton for new Rails 4 based application
 
-[<img src="https://secure.travis-ci.org/fs/rails3-base.png"/>](http://travis-ci.org/fs/rails3-base)
-[<img src="https://gemnasium.com/fs/rails3-base.png" alt="Dependency Status" />](https://gemnasium.com/fs/rails3-base)
+[<img src="https://semaphoreapp.com/api/v1/projects/31b68af8b073708a56e4e005bbcba2af4802816d/76140/badge.png">](https://semaphoreapp.com/projects/2742)
+
 
 This simple application includes ruby/rails technology which we use in the FlatStack for new projects.
-Application currently based on Rails 3.2 stable branch and Ruby 1.9
+Application currently based on Rails 4 stable branch and Ruby 2.0.0
 
 ## Application gems:
 
@@ -45,16 +45,16 @@ Application currently based on Rails 3.2 stable branch and Ruby 1.9
 
 ## Scripts
 
-* `script/bootstrap` - setup required gems and migrate db if needed
-* `script/quality` - runs brakeman and rails_best_practices for the app
-* `script/ci` - should be used in the CI, checkout .travis.yml for example
-* `script/ci_deploy` - should be used in [Semaphoreapp CI to deploy code to Heroku](http://tatsoft.ru/ci-semaphoreapp)
+* `bin/bootstrap` - setup required gems and migrate db if needed
+* `bin/quality` - runs brakeman and rails_best_practices for the app
+* `bin/ci` - should be used in the CI or locally
+* `bin/server` - to run server locally
 
 ## Quick start
 
-Clone application as new project with original repository named "rails3-base"
+Clone application as new project with original repository named "rails-base"
 
-    git clone git://github.com/fs/rails3-base.git --origin rails3-base [MY-NEW-PROJECT]
+    git clone git://github.com/fs/rails-base.git --origin rails-base [MY-NEW-PROJECT]
 
 
 Create your new repo on GitHub and push master into it.
@@ -65,7 +65,7 @@ Make sure master branch is tracking origin repo.
 
 Run bootstrap script
 
-    script/bootstrap
+    bin/bootstrap
 
 Make sure all test are green
 
@@ -73,21 +73,21 @@ Make sure all test are green
 
 Run app
 
-    foreman start
+    bin/server
 
-## How to update existing project with new changes from rails3-base repo
+## How to update existing project with new changes from rails-base repo
 
-You can fetch latest changes from rails3-base repo and merge or cherry-pick commits
+You can fetch latest changes from rails-base repo and merge or cherry-pick commits
 
-    git fetch rails3-base
-    git flow feature start rails3-base-update
-    git merge rails3-base/master
+    git fetch rails-base
+    git flow feature start rails-base-update
+    git merge rails-base/master
 
     # fix conflicts
     # commit
     # test
 
-    git flow feature finish rails3-base-update
+    git flow feature finish rails-base-update
 
 ## Note on Patches/Pull Requests
 

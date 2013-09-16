@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+set -e
+
+bin/rspec spec
+
+/usr/bin/env ruby <<-EORUBY
+  feature_paths = Dir['spec/**/*.feature'].join(' ')
+  system("bin/rspec #{feature_paths}")
+EORUBY
+
+bin/quality
