@@ -32,7 +32,7 @@ cd repo
 Run bootstrap script
 
 ```
-script/bootstrap
+bin/bootstrap
 ```
 
 Initializers

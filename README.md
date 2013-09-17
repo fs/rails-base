@@ -76,6 +76,12 @@ Run app
 
     bin/server
 
+**Do not forget to update this file!**
+
+    mv doc/README_TEMPLATE.md README.md
+    # update README.md
+    git commit -am "Update README.md"
+
 ## How to update existing project with new changes from rails-base repo
 
 You can fetch latest changes from rails-base repo and merge or cherry-pick commits
