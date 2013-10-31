@@ -1,7 +1,7 @@
 # Skeleton for new Rails 4 based application
 
 [<img src="https://semaphoreapp.com/api/v1/projects/31b68af8b073708a56e4e005bbcba2af4802816d/76140/badge.png">](https://semaphoreapp.com/projects/2742)
-[![Code Climate](https://codeclimate.com/repos/5231d24cf3ea006d9f040bcd/badges/7106d3b1621367d0c58c/gpa.png)](https://codeclimate.com/repos/5231d24cf3ea006d9f040bcd/feed)
+[![Code Climate](https://codeclimate.com/github/fs/rails-base.png)](https://codeclimate.com/github/fs/rails-base)
 
 
 This simple application includes ruby/rails technology which we use in the FlatStack for new projects.
