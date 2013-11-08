@@ -5,8 +5,7 @@ SimpleCov.start do
   add_filter '/features/support/'
   add_filter '/config/'
   add_filter '/db/'
-  add_filter '/vendor/bundle/'
-  add_filter '/vendor/ruby/'
+  add_filter '.bundle/'
 
   add_group 'Controllers', 'app/controllers'
   add_group 'Models', 'app/models'
@@ -14,6 +13,6 @@ SimpleCov.start do
   add_group 'Helpers', 'app/helpers'
   add_group 'Libraries', 'lib'
   add_group 'Plugins', 'vendor/plugins'
-  add_group "Cucumber Steps", "/features/step_definitions/" # will help remove unused steps
+  add_group 'Cucumber Steps', '/features/step_definitions/' # will help remove unused steps
 end
 
