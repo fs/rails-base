@@ -37,6 +37,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'fuubar'
   gem 'debugger'
   gem 'dotenv'
   gem 'rspec-rails'
