@@ -14,11 +14,11 @@ Information about external dependencies (redis, mongo, postgres, etc) and how yo
 
 Information about ruby and rails versions.
 
-- PostgreSQL 9.2.4
+- PostgreSQL 9.3.1
   - `brew install postgres`
 - Ruby 2.0.0-p247
   - `rbenv install 2.0.0-p247`
-- Rails 3.2.12
+- Rails 4.0
 
 Quick Start
 -
@@ -33,7 +33,7 @@ cd repo
 Run bootstrap script
 
 ```
-script/bootstrap
+bin/bootstrap
 ```
 
 Initializers
