@@ -2,75 +2,85 @@
 
 require 'fileutils'
 
-def rails_root
-  @rails_root ||= File.expand_path('../../', __FILE__)
-end
-
-def check(key)
-  FileUtils.mkdir('tmp') unless File.exists?('tmp')
-  cache_file = "tmp/.#{key}"
-
-  if File.exists?(cache_file)
-    old_version = File.read(cache_file)
-  else
-    old_version = nil
+class Bootstrap
+  def initialize(argv)
+    @argv = argv
   end
 
-  version = yield(old_version)
-  File.open(cache_file, 'w') { |f| f.puts(version || 'cached') }
-end
-
-def setup_database_yml
-  unless File.exists?(File.join(rails_root, 'config/database.yml'))
-    puts 'Database configuration file is missing, installing...'
-    FileUtils.cp(File.join(rails_root, 'config/database.yml.example'), File.join(rails_root, 'config/database.yml'))
+  def run
+    before_install
+    install
+    after_install
   end
-end
 
-def setup_dotenv
-  unless File.exists?(File.join(rails_root, '.env'))
-    puts 'DotEnv configuration file is missing, installing...'
-    FileUtils.cp(File.join(rails_root, '.env.example'), File.join(rails_root, '.env'))
+  private
+
+  def before_install
   end
-end
 
-def install_bundler
-  check(:bundler) do |old_version|
-    break if old_version
+  def install
+    setup_database_yml
+    setup_dotenv
+    install_gems
+    migrate_db
+  end
 
-    unless system('which bundle > /dev/null')
-      puts 'Bundler missing, installing...'
-      system('gem install bundler --no-ri --no-rdoc') || exit(1)
+  def after_install
+  end
+
+  def setup_database_yml
+    check_file('config/database.yml')
+  end
+
+  def setup_dotenv
+    check_file('.env')
+  end
+
+  def install_gems
+    without = is_ci? ? 'development' : ''
+    path = is_ci? ? 'vendor/bundle' : '.bundle'
+
+    system_with_note("bundle install --path #{path} --without production staging #{without}")
+  end
+
+  def migrate_db
+    system_with_note('bundle exec rake db:setup')
+    system_with_note('bundle exec rake db:test:prepare')
+  end
+
+  def install_bundle_cache
+    system_with_note('wget https://s3.amazonaws.com/bundle-cache-builds/bundle_cache')
+    system_with_note('chmod +x ./bundle_cache')
+    system_with_note('./bundle_cache download ; echo 1')
+  end
+
+  def upload_bundle_cache
+    system_with_note('./bundle_cache upload')
+  end
+
+  def check_file(file)
+    unless File.exists?(File.join(rails_root, file))
+      puts "#{file} is missing, installing..."
+      FileUtils.cp(File.join(rails_root, "config/#{file}.example"), File.join(rails_root, file))
     end
   end
-end
 
-def install_gems(without = 'production staging')
-  check(:gemfile) do |old_version|
-    # check both Gemfile and Gemfile.lock as there might be local changes that hasn't been bundled yet
-    version = File.read('Gemfile') + File.read('Gemfile.lock')
+  def rails_root
+    @rails_root ||= File.expand_path('../../', __FILE__)
+  end
 
-    if version != old_version
-      puts 'Gemfile changed, bundling...'
-      system("bundle install --path .bundle --without production staging #{without}") || exit(1)
-    end
+  def is_ci?
+    @is_ci ||= @argv.shift == 'ci'
+  end
 
-    version
+  def system_with_note(command)
+    puts "Running #{command} ..."
+    result = system(command) || exit(1)
+    puts "\n\n"
+
+    result
   end
 end
 
-def migrate_db(ci)
-  puts 'Installing database'
-  system('bundle exec rake db:setup') || exit(1)
-  system('bundle exec rake db:test:prepare') || exit(1)
-end
 
-is_ci = ARGV.shift == 'ci'
-
-setup_database_yml
-setup_dotenv
-install_bundler
-install_gems(is_ci ? 'development' : '')
-migrate_db(is_ci ? true : false)
-
-puts 'Everything is up to date.'
+Bootstrap.new(ARGV).run
