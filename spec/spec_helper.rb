@@ -1,7 +1,8 @@
-require 'simplecov'
-
 # Do not run simplecon on CI
-SimpleCov.start 'rails' unless ENV['CI']
+unless ENV['CI']
+  require 'simplecov'
+  SimpleCov.start 'rails'
+end
 
 ENV['RAILS_ENV'] ||= 'test'
 
@@ -15,6 +16,8 @@ paths.each { |file| require file }
 
 RSpec.configure do |config|
   config.use_transactional_fixtures = true
+  config.formatter = 'Fuubar' unless ENV['CI']
+
   config.include Rails.application.routes.url_helpers
   config.include EmailSpec::Helpers
   config.include EmailSpec::Matchers
