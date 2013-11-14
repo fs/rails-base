@@ -61,7 +61,7 @@ class Bootstrap
   def check_file(file)
     unless File.exists?(File.join(rails_root, file))
       puts "#{file} is missing, installing..."
-      FileUtils.cp(File.join(rails_root, "config/#{file}.example"), File.join(rails_root, file))
+      FileUtils.cp(File.join(rails_root, "#{file}.example"), File.join(rails_root, file))
     end
   end
 
