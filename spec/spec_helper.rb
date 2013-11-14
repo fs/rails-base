@@ -1,5 +1,7 @@
 require 'simplecov'
-SimpleCov.start 'rails'
+
+# Do not run simplecon on CI
+SimpleCov.start 'rails' unless ENV['CI']
 
 ENV['RAILS_ENV'] ||= 'test'
 
