@@ -1,10 +1,10 @@
 def sign_in_with(email, password)
   visit new_user_session_path
 
-  fill_in "user_email", with: email
-  fill_in "user_password", with: password
+  fill_in 'user_email', with: email
+  fill_in 'user_password', with: password
 
-  click_button "Sign in"
+  click_button 'Sign in'
 end
 
 
@@ -13,28 +13,28 @@ step 'I exist as a user with not confirmed email' do
 end
 
 step 'I sign in with valid credentials' do
-  sign_in_with @current_user.email, "123456"
+  sign_in_with @current_user.email, '123456'
 end
 
 step 'I sign in with invalid credentials' do
-  sign_in_with "empty@email.com", "empty password"
+  sign_in_with 'empty@email.com', 'empty password'
 end
 
 step 'I sign out' do
-  within ".navbar-inner" do
-    click_link "Sign out"
+  within '.navbar-inner' do
+    click_link 'Sign out'
   end
 end
 
 step 'I request new password' do
   visit new_user_password_path
 
-  fill_in "Email", with: @current_user.email
-  click_button "Send me reset password instructions"
+  fill_in 'Email', with: @current_user.email
+  click_button 'Send me reset password instructions'
 end
 
 step 'I should see that my email is not confirmed' do
-  page.should have_content "You have to confirm your account before continuing"
+  page.should have_content 'You have to confirm your account before continuing'
 end
 
 step 'I should receive reset password instructions email' do
