@@ -1,0 +1,23 @@
+AllCops:
+  RunRailsCops: true
+  Excludes:
+    - bin/**
+    - db/**
+    - config/**
+    - lib/templates/**
+
+LineLength:
+  Description: 'Limit lines to 100 characters.'
+  Max: 100
+
+Documentation:
+  Description: 'Document classes and non-namespace modules.'
+  Enabled: false
+
+TrivialAccessors:
+  Description: 'Prefer attr_* methods to trivial readers/writers.'
+  Enabled: false
+
+SymbolArray:
+  Description: 'Use %i or %I for arrays of symbols.'
+  Enabled: true
