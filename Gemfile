@@ -41,9 +41,11 @@ group :development, :test do
   gem 'debugger'
   gem 'dotenv'
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
+
   gem 'rails_best_practices'
   gem 'brakeman'
-  gem 'factory_girl_rails'
+  gem 'rubocop'
 end
 
 group :test do

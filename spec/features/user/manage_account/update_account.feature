@@ -11,5 +11,5 @@ Feature: Update account information
     Then my account should be updated successfully
 
   Scenario: Wrong current password
-    When I submit update account form with valid data but with wrong current password
+    When I submit update account form with wrong current password
     Then my account should not be updated

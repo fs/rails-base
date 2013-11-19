@@ -1,11 +1,9 @@
 def submit_update_account_form(fields)
   visit edit_user_registration_path
 
-  fill_in 'user_full_name', with: fields[:full_name] unless fields[:full_name].blank?
-  fill_in 'user_email', with: fields[:email] unless fields[:email].blank?
-  fill_in 'user_password', with: fields[:password] unless fields[:password].blank?
-  fill_in 'user_password_confirmation', with: fields[:password_confirmation] unless fields[:password_confirmation].blank?
-  fill_in 'user_current_password', with: fields[:current_password] unless fields[:current_password].blank?
+  fields.each do |key, value|
+    fill_in("user_#{key}", with: value)
+  end
 
   click_button 'Update'
 end
@@ -15,20 +13,24 @@ step 'I cancel my account' do
   click_link 'Cancel my account'
 end
 
-step 'I submit update account form with valid data but with wrong current password' do
-  submit_update_account_form full_name: 'My new name with invalid password',
+step 'I submit update account form with wrong current password' do
+  submit_update_account_form(
+    full_name: 'My new name with invalid password',
     email: @current_user.email,
     password: '123456',
     password_confirmation: '123456',
     current_password: 'invalid password'
+  )
 end
 
 step 'I submit update account form with valid data' do
-  submit_update_account_form full_name: 'My new name',
+  submit_update_account_form(
+    full_name: 'My new name',
     email: @current_user.email,
     password: '123456',
     password_confirmation: '123456',
     current_password: '123456'
+  )
 end
 
 step 'my account should not exists' do

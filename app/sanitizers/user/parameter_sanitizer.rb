@@ -1,9 +1,9 @@
 class User::ParameterSanitizer < Devise::ParameterSanitizer
-  USER_PARAMS = [
-    :full_name,
-    :email,
-    :password,
-    :password_confirmation
+  USER_PARAMS = %i[
+    full_name
+    email
+    password
+    password_confirmation
   ]
 
   def sign_up
