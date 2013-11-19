@@ -1,10 +1,8 @@
 def submit_update_account_form(fields)
   visit edit_user_registration_path
 
-  keys = %i(full_name email password password_confirmation current_password)
-
-  keys.each do |key|
-    fill_in("user_#{key}", with: fields[key]) unless fields[key].blank?
+  fields.each do |key, value|
+    fill_in("user_#{key}", with: value)
   end
 
   click_button 'Update'
