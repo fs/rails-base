@@ -1,2 +1,3 @@
 -r turnip/rspec
 --colour
+--format <%= ENV['CI'] ? 'progress' : 'Fuubar' %>
