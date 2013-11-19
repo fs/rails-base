@@ -5,6 +5,8 @@ AllCops:
     - db/**
     - config/**
     - lib/templates/**
+    - vendor/**
+
 
 Documentation:
   Description: 'Document classes and non-namespace modules.'
