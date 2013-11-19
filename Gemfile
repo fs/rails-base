@@ -44,7 +44,7 @@ group :development, :test do
   gem 'factory_girl_rails'
 
   gem 'rails_best_practices'
-  gem 'brakeman'
+  gem 'brakeman', require: false
   gem 'rubocop'
 end
 
