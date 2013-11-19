@@ -13,7 +13,7 @@ step 'I cancel my account' do
   click_link 'Cancel my account'
 end
 
-step 'I submit update account form with valid data but with wrong current password' do
+step 'I submit update account form with wrong current password' do
   submit_update_account_form(
     full_name: 'My new name with invalid password',
     email: @current_user.email,
