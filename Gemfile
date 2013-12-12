@@ -39,7 +39,7 @@ end
 group :development, :test do
   gem 'fuubar'
   gem 'debugger'
-  gem 'dotenv'
+  gem 'dotenv-rails'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
 
