@@ -33,12 +33,14 @@ group :development do
   gem 'foreman'
   gem 'bullet'
   gem 'mail_safe'
-  gem 'pry-rails'
+  gem 'pry-remote'
+  gem 'pry-stack_explorer'
 end
 
 group :development, :test do
   gem 'fuubar'
-  gem 'debugger'
+  gem 'pry-rails'
+  gem 'pry-debugger'
   gem 'dotenv-rails'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
