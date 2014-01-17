@@ -23,7 +23,7 @@ step 'I follow registration confirmation link in the email' do
 end
 
 step 'I submit resent confirmation instruction form' do
-  FactoryGirl.create(
+  create(
     :user,
     :not_confirmed,
     email: 'chuck.norris@example.com',

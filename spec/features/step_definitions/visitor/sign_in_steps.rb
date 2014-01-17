@@ -8,7 +8,7 @@ def sign_in_with(email, password)
 end
 
 step 'I exist as a user with not confirmed email' do
-  @current_user = FactoryGirl.create :user, :not_confirmed
+  @current_user = create :user, :not_confirmed
 end
 
 step 'I sign in with valid credentials' do
