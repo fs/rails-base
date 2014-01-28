@@ -1,0 +1,60 @@
+#!/usr/bin/env ruby
+
+require 'json'
+require 'net/http'
+
+class GetScore
+  ENDPOINT = 'https://codeclimate.com/api/repos/%{repo}/branches/%{branch}'
+
+  def initialize(token, repo)
+    @token, @repo = token, repo
+  end
+
+  def score_for(branch)
+    score(parse_json(fetch(branch)))
+  end
+
+  private
+
+  def parse_json(json_string)
+    JSON.parse(json_string)
+  end
+
+  def score(json)
+    if json.include?('last_snapshot')
+      json['last_snapshot']['gpa'].to_f
+    else
+      null_score
+    end
+  end
+
+  def fetch(branch)
+    reposponse = Net::HTTP.get_response(uri(branch))
+
+    if reposponse.is_a?(Net::HTTPSuccess)
+      reposponse.body
+    else
+      null_response
+    end
+  end
+
+  def uri(branch)
+    URI(ENDPOINT % {repo: @repo, branch: branch}).tap do |uri|
+      uri.query = URI.encode_www_form({api_token: @token})
+    end
+  end
+
+  def null_response
+    {'last_snapshot' => {'gpa' => null_score}}.to_json
+  end
+
+  def null_score
+    0
+  end
+end
+
+token = ARGV.shift
+repo = ARGV.shift
+branch = ARGV.shift
+
+puts GetScore.new(token, repo).score_for(branch)
