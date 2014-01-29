@@ -3,15 +3,15 @@
 require 'json'
 require 'net/http'
 
-class GetScore
+class GetGpa
   ENDPOINT = 'https://codeclimate.com/api/repos/%{repo}/branches/%{branch}'
 
   def initialize(token, repo)
     @token, @repo = token, repo
   end
 
-  def score_for(branch)
-    score(parse_json(fetch(branch)))
+  def gpa_for(branch)
+    gpa(parse_json(fetch(branch)))
   end
 
   private
@@ -20,11 +20,11 @@ class GetScore
     JSON.parse(json_string)
   end
 
-  def score(json)
+  def gpa(json)
     if json.include?('last_snapshot')
       json['last_snapshot']['gpa'].to_f
     else
-      null_score
+      null_gpa
     end
   end
 
@@ -45,10 +45,10 @@ class GetScore
   end
 
   def null_response
-    {'last_snapshot' => {'gpa' => null_score}}.to_json
+    {'last_snapshot' => {'gpa' => null_gpa}}.to_json
   end
 
-  def null_score
+  def null_gpa
     0
   end
 end
@@ -57,4 +57,4 @@ token = ARGV.shift
 repo = ARGV.shift
 branch = ARGV.shift
 
-puts GetScore.new(token, repo).score_for(branch)
+puts GetScore.new(token, repo).gpa_for(branch)
