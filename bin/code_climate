@@ -12,6 +12,7 @@ module CodeClimate
 
   class GetGpa < Base
     ENDPOINT = 'https://codeclimate.com/api/repos/%{repo}/branches/%{branch}'
+    NULL_GPA = 0
 
     def gpa_for(branch)
       gpa(parse_json(fetch(branch)))
@@ -27,7 +28,7 @@ module CodeClimate
       if json.include?('last_snapshot')
         json['last_snapshot']['gpa'].to_f
       else
-        null_gpa
+        NULL_GPA
       end
     end
 
@@ -48,11 +49,7 @@ module CodeClimate
     end
 
     def null_response
-      {'last_snapshot' => {'gpa' => null_gpa}}.to_json
-    end
-
-    def null_gpa
-      0
+      {'last_snapshot' => {'gpa' => NULL_GPA}}.to_json
     end
   end
 
