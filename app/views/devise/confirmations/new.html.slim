@@ -1,8 +1,11 @@
 - title "Resend confirmation", false
 
 .row
-  .medium-5.medium-centered.columns
+  .columns
     h2= yield :title
+
+.row
+  .medium-6.columns
     = simple_form_for resource,
         as: resource_name,
         url: confirmation_path(resource_name),
@@ -14,4 +17,5 @@
       .form-actions
         = f.button :submit, "Resend confirmation instructions"
 
+  .medium-6.columns.end
     = render "devise/shared/links"
