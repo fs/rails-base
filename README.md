@@ -10,7 +10,7 @@ Application currently based on Rails 4 stable branch and Ruby 2.0.0
 ## Application gems:
 
 * [Sass Rails](https://github.com/rails/sass-rails) Ruby on Rails stylesheet engine for Sass
-* [Zurb Foundation for Rails](https://github.com/zurb/foundation-rails) the easiest way to use Foundation in your Rails app
+* [Zurb Foundation for Rails](https://github.com/zurb/foundation-rails) the easiest way to use Foundation in your Rails app. For more information see [how to add Foundation to your Rails app](http://foundation.zurb.com/docs/applications.html)
 * [Slim](https://github.com/stonean/slim) for views
 * [Simple Form](https://github.com/plataformatec/simple_form) for forms
 * [Decent Exposure](https://github.com/voxdolo/decent_exposure) for DRY controllers
