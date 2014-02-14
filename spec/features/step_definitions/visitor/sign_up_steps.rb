@@ -39,7 +39,7 @@ end
 step 'I should receive registration confirmation email' do
   open_email 'chuck.norris@example.com'
 
-  current_email.should have_subject /Confirmation instructions/
+  current_email.should have_subject 'Confirmation instructions'
   current_email.default_part_body.to_s.should =~ /Chuck Norris/
 end
 

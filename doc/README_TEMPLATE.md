@@ -16,7 +16,7 @@ Information about ruby and rails versions.
 
 - PostgreSQL 9.3.1
   - `brew install postgres`
-- Ruby 2.0.0-p247
+- Ruby 2.1.0
   - `rbenv install 2.0.0-p247`
 - Rails 4.0
 

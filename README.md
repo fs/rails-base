@@ -5,7 +5,7 @@
 
 
 This simple application includes ruby/rails technology which we use in the FlatStack for new projects.
-Application currently based on Rails 4 stable branch and Ruby 2.0.0
+Application currently based on Rails 4 stable branch and Ruby 2.1.0
 
 ## Application gems:
 
