@@ -1,4 +1,5 @@
 doctype html
+/ remove this if there is no need to support ie8
 /[if IE 9]
   html class="lt-ie10" lang="en"
 html class="no-js" lang="en"
@@ -16,6 +17,12 @@ html class="no-js" lang="en"
     /! Le modernizr
     = javascript_include_tag "vendor/modernizr"
 
+    / remove this if there is no need to support ie8
+    /[if lt IE 9]
+      = javascript_include_tag "http://s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"
+      = javascript_include_tag "http://html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"
+      = javascript_include_tag "http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"
+
   body
     #root
       = render "partials/navigation"
@@ -32,3 +39,7 @@ html class="no-js" lang="en"
     = render "partials/footer"
 
     = javascript_include_tag :application
+
+    / remove this if there is no need to support ie8
+    /[if IE 9]
+      = javascript_include_tag "https://github.com/chuckcarpenter/REM-unit-polyfill.js"
