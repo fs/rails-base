@@ -30,6 +30,29 @@ class Bootstrap
 
   def setup_database_yml
     setup_file_from_template('config/database.yml')
+    setup_database_settings('config/database.yml') unless is_ci?
+  end
+
+  def setup_file_from_template(file)
+    unless File.exists?(File.join(rails_root, file))
+      puts "#{file} is missing, installing..."
+      FileUtils.cp(File.join(rails_root, "#{file}.example"), File.join(rails_root, file))
+    end
+  end
+
+  def setup_database_settings(file)
+    project_name = File.basename(Dir.getwd)
+
+    puts "Please, enter database name to use with this project.\n"
+    puts "_dev and _test will be added automatically.\n"
+    puts "Or just hit ENTER to use default name: '#{project_name}'"
+
+    database_name = gets.chomp
+    database_name = project_name if database_name.empty?
+
+    database_config = IO.read(File.join(rails_root, file))
+    database_config.gsub! "application", "#{database_name}"
+    IO.write(File.join(rails_root, file), database_config)
   end
 
   def setup_dotenv
@@ -58,32 +81,6 @@ class Bootstrap
     system_with_note('./bundle_cache upload')
   end
 
-  def setup_file_from_template(file)
-    unless File.exists?(File.join(rails_root, file))
-
-      if is_ci?
-        puts "#{file} is missing, installing..."
-        FileUtils.cp(File.join(rails_root, "#{file}.example"), File.join(rails_root, file))
-      else
-
-        project_name = File.basename(Dir.getwd)
-
-        puts "Please, enter database name to use with this project.\n"
-        puts "_dev and _test will be added automatically.\n"
-        puts "Or just hit ENTER to use default name: '#{project_name}'"
-
-        database_name = gets ; database_name.chomp!
-        database_name = project_name if database_name.empty?
-
-        FileUtils.cp(File.join(rails_root, "#{file}.example"), File.join(rails_root, file))
-
-        database_config = IO.read(File.join(rails_root, file))
-        database_config.gsub! "application", "#{database_name}"
-        IO.write(File.join(rails_root, file), database_config)
-
-      end
-    end
-  end
 
   def rails_root
     @rails_root ||= File.expand_path('../../', __FILE__)
