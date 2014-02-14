@@ -1,0 +1,38 @@
+legend {
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+abbr[title="required"] {
+  color: $alert-color;
+  border: 0;
+}
+
+.boolean {
+  @include clearfix;
+  margin-bottom: 1rem;
+  input {
+    float: left;
+    margin: 0.2rem 0.5rem 0 0;
+  }
+  label {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+  }
+}
+
+.form-actions {
+  margin-top: 2rem;
+}
+
+.error {
+  input {
+    border-color: lighten($alert-color, 20%);
+  }
+  small {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    display: inline-block;
+  }
+}

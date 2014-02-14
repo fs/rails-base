@@ -1,21 +1,25 @@
-- title "Change your password"
+- title "Change your password", false
 
-= simple_form_for resource,
-    as: resource_name,
-    url: password_path(resource_name),
-    html: { method: :put } do |f|
+.row
+  .medium-5.medium-centered.columns
+    h2= yield :title
 
-  legend
-    | Enter new password
+    = simple_form_for resource,
+        as: resource_name,
+        url: password_path(resource_name),
+        html: { method: :put } do |f|
 
-  = f.input :reset_password_token, as: :hidden
-  = f.full_error :reset_password_token
+      legend
+        | Enter new password
 
-  .form-inputs
-    = f.input :password, label: "New password", required: true
-    = f.input :password_confirmation, label: "Confirm your new password", required: true
+      = f.input :reset_password_token, as: :hidden
+      = f.full_error :reset_password_token
 
-  .form-actions
-    = f.button :submit, "Change my password"
+      .form-inputs
+        = f.input :password, label: "New password", required: true
+        = f.input :password_confirmation, label: "Confirm your new password", required: true
 
-= render "devise/shared/links"
+      .form-actions
+        = f.button :submit, "Change my password"
+
+    = render "devise/shared/links"

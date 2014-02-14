@@ -1,17 +1,20 @@
-- title "Forgot your password?"
+- title "Forgot your password?", false
 
-= simple_form_for resource,
-    as: resource_name,
-    url: password_path(resource_name),
-    html: { method: :post } do |f|
+.row
+  .medium-5.medium-centered.columns
+    h2= yield :title
+    = simple_form_for resource,
+        as: resource_name,
+        url: password_path(resource_name),
+        html: { method: :post } do |f|
 
-  legend
-    | Enter your email address
+      legend
+        | Enter your email address
 
-  .form-inputs
-    = f.input :email, required: true
+      .form-inputs
+        = f.input :email, required: true
 
-  .form-actions
-    = f.button :submit, "Send me reset password instructions"
+      .form-actions
+        = f.button :submit, "Send me reset password instructions"
 
-= render "devise/shared/links"
+      = render "devise/shared/links"

@@ -1,35 +1,38 @@
-- title "Edit #{resource_name.to_s.humanize}"
+- title "Edit #{resource_name.to_s.humanize}", false
 
-= simple_form_for resource,
-    as: resource_name,
-    url: registration_path(resource_name),
-    html: { method: :put } do |f|
+.row
+  .columns
+    h2= yield :title
 
-  legend
-    | New profile information
+.row
+  .medium-6.columns
+    = simple_form_for resource,
+        as: resource_name,
+        url: registration_path(resource_name),
+        html: { method: :put } do |f|
 
-  .form-inputs
-    = f.input :full_name, required: true, autofocus: true
-    = f.input :email, required: true
-    = f.input :password,
-        autocomplete: "off",
-        hint: "leave it blank if you don't want to change it",
-        required: false
-    = f.input :password_confirmation,
-        required: false
-    = f.input :current_password,
-        hint: "we need your current password to confirm your changes",
-        required: true
+      .form-inputs
+        = f.input :full_name, required: true, autofocus: true
+        = f.input :email, required: true
+        = f.input :password,
+            autocomplete: "off",
+            hint: "leave it blank if you don't want to change it",
+            required: false
+        = f.input :password_confirmation,
+            required: false
+        = f.input :current_password,
+            hint: "we need your current password to confirm your changes",
+            required: true
 
-  .form-actions
-    = f.button :submit, "Update"
+      .form-actions
+        = f.button :submit, "Update"
 
-legend
-  | Cancel my account
-
-p
-  ' Unhappy?
-  = link_to "Cancel my account",
-      registration_path(resource_name),
-      data: { confirm: "Are you sure?" },
-      method: :delete
+  .medium-4.columns.end
+    h6
+      b Cancel my account
+    p
+      ' Unhappy?
+      = link_to "Cancel my account",
+          registration_path(resource_name),
+          data: { confirm: "Are you sure?" },
+          method: :delete

@@ -1,17 +1,17 @@
-- title "Resend confirmation instructions"
+- title "Resend confirmation", false
 
-= simple_form_for resource,
-    as: resource_name,
-    url: confirmation_path(resource_name),
-    html: { method: :post } do |f|
+.row
+  .medium-5.medium-centered.columns
+    h2= yield :title
+    = simple_form_for resource,
+        as: resource_name,
+        url: confirmation_path(resource_name),
+        html: { method: :post } do |f|
 
-  legend
-    | Enter your email address
+      .form-inputs
+        = f.input :email, required: true, label: "Enter your email address"
 
-  .form-inputs
-    = f.input :email, required: true
+      .form-actions
+        = f.button :submit, "Resend confirmation instructions"
 
-  .form-actions
-    = f.button :submit, "Resend confirmation instructions"
-
-= render "devise/shared/links"
+    = render "devise/shared/links"
