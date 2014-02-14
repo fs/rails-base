@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Specify ruby version for Heroku
-ruby '2.0.0'
+ruby '2.1.0'
 
 gem 'rails', '4.0.0'
 gem 'json'
@@ -37,14 +37,11 @@ group :development do
   gem 'foreman'
   gem 'bullet'
   gem 'mail_safe'
-  gem 'pry-remote'
-  gem 'pry-stack_explorer'
 end
 
 group :development, :test do
   gem 'fuubar'
-  gem 'pry-rails'
-  gem 'pry-debugger'
+  gem 'jazz_hands'
   gem 'dotenv-rails'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
