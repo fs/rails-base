@@ -39,6 +39,6 @@ end
 step 'I should receive reset password instructions email' do
   open_email(@current_user.email)
 
-  current_email.should have_subject /Reset password instructions/
+  current_email.should have_subject 'Reset password instructions'
   current_email.default_part_body.to_s.should =~ /#{@current_user.full_name}/
 end
