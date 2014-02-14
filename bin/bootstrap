@@ -60,8 +60,28 @@ class Bootstrap
 
   def setup_file_from_template(file)
     unless File.exists?(File.join(rails_root, file))
-      puts "#{file} is missing, installing..."
-      FileUtils.cp(File.join(rails_root, "#{file}.example"), File.join(rails_root, file))
+
+      if is_ci?
+        puts "#{file} is missing, installing..."
+        FileUtils.cp(File.join(rails_root, "#{file}.example"), File.join(rails_root, file))
+      else
+
+        project_name = File.basename(Dir.getwd)
+
+        puts "Please, enter database name to use with this project.\n"
+        puts "_dev and _test will be added automatically.\n"
+        puts "Or just hit ENTER to use default name: '#{project_name}'"
+
+        database_name = gets ; database_name.chomp!
+        database_name = project_name if database_name.empty?
+
+        FileUtils.cp(File.join(rails_root, "#{file}.example"), File.join(rails_root, file))
+
+        database_config = IO.read(File.join(rails_root, file))
+        database_config.gsub! "application", "#{database_name}"
+        IO.write(File.join(rails_root, file), database_config)
+
+      end
     end
   end
 
