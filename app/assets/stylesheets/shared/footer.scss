@@ -1,0 +1,8 @@
+@include sticky-footer(30px, "#root", "#push-footer", "#footer");
+
+#footer {
+  margin-top: 50px;
+  p {
+    margin: 0;
+  }
+}
