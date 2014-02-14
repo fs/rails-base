@@ -16,7 +16,7 @@ Application currently based on Rails 4 stable branch and Ruby 2.1.0
 * [Decent Exposure](https://github.com/voxdolo/decent_exposure) for DRY controllers
 * [Kaminari](https://github.com/amatsuda/kaminari) for pagination
 * [Devise](http://github.com/plataformatec/devise) for basic auth
-* [Airbrake](https://github.com/airbrake/airbrake) for exception notification
+* [Rollbar](https://github.com/rollbar/rollbar-gem) for exception notification
 
 ## Development gems
 
@@ -71,7 +71,7 @@ Run bootstrap script
 
 Make sure all test are green
 
-    bundle exec rspec spec
+    bin/ci
 
 Run app
 
