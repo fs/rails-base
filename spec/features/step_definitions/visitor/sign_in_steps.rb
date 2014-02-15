@@ -20,7 +20,7 @@ step 'I sign in with invalid credentials' do
 end
 
 step 'I sign out' do
-  within '.navbar-inner' do
+  within '.top-bar' do
     click_link 'Sign out'
   end
 end

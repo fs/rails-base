@@ -8,13 +8,13 @@ step 'I am signed in' do
 end
 
 step 'I should be signed in' do
-  within '.navbar-inner' do
+  within '.top-bar' do
     page.should have_content 'Sign out'
   end
 end
 
 step 'I should be signed out' do
-  within '.navbar-inner' do
+  within '.top-bar' do
     page.should_not have_content 'Sign out'
   end
 end
