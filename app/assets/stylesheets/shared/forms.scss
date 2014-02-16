@@ -30,9 +30,31 @@ abbr[title="required"] {
   input {
     border-color: lighten($alert-color, 20%);
   }
-  small {
+  label {
+    color: $body-font-color;
+  }
+  .error {
     margin-bottom: 1rem;
     line-height: 1.5;
-    display: inline-block;
+    display: block;
+    color: $alert-color;
+  }
+}
+
+.has_hint {
+  input,
+  textarea,
+  select {
+    margin-bottom: 0;
+  }
+  .hint {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    display: block;
+    font-size: 0.75rem;
+    color: lighten($body-font-color, 45%);
+  }
+  small.error {
+    margin-bottom: 0;
   }
 }

@@ -21,3 +21,42 @@
 
 en:
   hello: "Hello world"
+
+  app:
+    user:
+      sign_in:
+        title: "Sign in"
+        legend_html: "Enter your <strong>%{app_name}</strong> account"
+      sign_up:
+        title: "Sign up"
+        legend_html: "Create your <strong>%{app_name}</strong> account"
+        link: "Create a new account"
+      password:
+        forgot:
+          title: "Forgot password?"
+          legend: "Enter your email address"
+          submit: "Send me reset password instructions"
+          link: "Forgot your password?"
+        change:
+          title: "Change password"
+          legend: "Enter new password"
+          confirm: "Confirm your new password"
+        confirmation:
+          title: "Resend confirmation email"
+          legend: "Enter your email address"
+          link: "Didn't receive confirmation instructions?"
+          unlock: "Didn't receive unlock instructions?"
+      edit:
+        name: "Edit %{name}"
+        new_password:
+          hint: "Leave it blank if you don't want to change it"
+        confirm_password:
+          hint: "We need your current password to confirm your changes"
+      cancel: "Cancel my account"
+    form:
+      save: "Save"
+      send: "Send"
+      update: "Update"
+      sure: "Are you sure?"
+
+    home: 'Dashboard'

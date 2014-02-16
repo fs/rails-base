@@ -1,4 +1,4 @@
-- title "Change password", false
+- title t('app.user.password.change.title'), false
 
 .row
   .columns
@@ -11,18 +11,15 @@
         url: password_path(resource_name),
         html: { method: :put } do |f|
 
-      legend
-        | Enter new password
-
       = f.input :reset_password_token, as: :hidden
       = f.full_error :reset_password_token
 
       .form-inputs
-        = f.input :password, label: "New password", required: true
-        = f.input :password_confirmation, label: "Confirm your new password", required: true
+        = f.input :password, label: t('app.user.password.change.legend'), required: true
+        = f.input :password_confirmation, label: t('app.user.password.change.confirm'), required: true
 
       .form-actions
-        = f.button :submit, "Change my password"
+        = f.button :submit, t('app.form.update')
 
   .medium-6.columns.end
     = render "devise/shared/links"

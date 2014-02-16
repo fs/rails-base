@@ -1,4 +1,4 @@
-- title "Edit #{resource_name.to_s.humanize}", false
+- title t('app.user.edit.name', name: resource_name.to_s.humanize), false
 
 .row
   .columns
@@ -16,23 +16,23 @@
         = f.input :email, required: true
         = f.input :password,
             autocomplete: "off",
-            hint: "leave it blank if you don't want to change it",
+            hint: t('app.user.edit.new_password.hint'),
             required: false
         = f.input :password_confirmation,
             required: false
         = f.input :current_password,
-            hint: "we need your current password to confirm your changes",
+            hint: t('app.user.edit.confirm_password.hint'),
             required: true
 
       .form-actions
-        = f.button :submit, "Update"
+        = f.button :submit, t('app.form.update')
 
   .medium-6.columns.end
     h6
-      b Cancel my account
+      b= t('app.user.cancel')
     p
       ' Unhappy?
-      = link_to "Cancel my account",
+      = link_to t('app.user.cancel'),
           registration_path(resource_name),
-          data: { confirm: "Are you sure?" },
+          data: { confirm: t('app.form.sure') },
           method: :delete

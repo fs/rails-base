@@ -1,4 +1,4 @@
-- title "Forgot password?", false
+- title t('app.user.password.forgot.title'), false
 
 .row
   .columns
@@ -11,14 +11,11 @@
         url: password_path(resource_name),
         html: { method: :post } do |f|
 
-      legend
-        | Enter your email address
-
       .form-inputs
-        = f.input :email, required: true
+        = f.input :email, required: true, label: t('app.user.password.forgot.legend')
 
       .form-actions
-        = f.button :submit, "Send me reset password instructions"
+        = f.button :submit, t('app.form.send')
 
   .medium-6.columns.end
       = render "devise/shared/links"
