@@ -24,10 +24,10 @@ gem 'rollbar', '~> 0.10.3'
 
 gem 'github-markdown' # only for dashboard controller
 
-
 gem 'sass-rails', '~> 4.0.0'
 gem 'foundation-rails'
 gem 'compass-rails'
+gem 'foundation-icons-sass-rails'
 
 group :development do
   gem 'styleguides'
