@@ -28,7 +28,7 @@ end
 step 'I request new password' do
   visit new_user_password_path
 
-  fill_in 'Email', with: @current_user.email
+  fill_in 'Enter your email address', with: @current_user.email
   click_button 'Send me reset password instructions'
 end
 

@@ -42,7 +42,7 @@ en:
           legend: "Enter new password"
           confirm: "Confirm your new password"
         confirmation:
-          title: "Resend confirmation email"
+          title: "Resend confirmation instructions"
           legend: "Enter your email address"
           link: "Didn't receive confirmation instructions?"
           unlock: "Didn't receive unlock instructions?"
