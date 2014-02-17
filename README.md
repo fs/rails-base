@@ -113,12 +113,12 @@ Rails Base fixes ie8 problems with:
 
 * lack of support for rem units in CSS
 * lack of media query support
-* lack of Html5 tags support
+* lack of Html5 and Css3 support
 
 In order to get rid off ie8 support please remove the following:
 
 * vendor/assets/javascripts/ie8 folder
-* views/layouts/application lines commented with ```/[if lt IE 9]```
+* views/layouts/application lines commented with `/[if lt IE 9]`
 
     = javascript_include_tag "ie8/nwmatcher-1.2.5-min.js", "ie8/selectivizr-1.0.3b.js", "ie8/respond.min.js"
     = javascript_include_tag "ie8/rem"

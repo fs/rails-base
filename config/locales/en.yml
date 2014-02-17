@@ -54,7 +54,7 @@ en:
           hint: "We need your current password to confirm your changes"
       cancel:
         title: "Cancel my account"
-        reason: "Unhappy? "
+        reason: "Unhappy?"
       session_links: "Anything else?"
     form:
       save: "Save"
