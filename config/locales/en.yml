@@ -52,7 +52,9 @@ en:
           hint: "Leave it blank if you don't want to change it"
         confirm_password:
           hint: "We need your current password to confirm your changes"
-      cancel: "Cancel my account"
+      cancel:
+        title: "Cancel my account"
+        reason: "Unhappy? "
       session_links: "Anything else?"
     form:
       save: "Save"

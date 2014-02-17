@@ -29,10 +29,10 @@
 
   .medium-6.columns.end
     h6
-      b= t('app.user.cancel')
+      b= t('app.user.cancel.title')
     p
-      ' Unhappy?
-      = link_to t('app.user.cancel'),
+      = t('app.user.cancel.reason')
+      = link_to t('app.user.cancel.title'),
           registration_path(resource_name),
           data: { confirm: t('app.form.sure') },
           method: :delete
