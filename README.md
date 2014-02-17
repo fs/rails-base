@@ -120,7 +120,9 @@ In order to get rid off ie8 support please remove the following:
 * vendor/assets/javascripts/ie8 folder
 * views/layouts/application lines commented with `/[if lt IE 9]`
 
-    = javascript_include_tag "ie8/nwmatcher-1.2.5-min.js", "ie8/selectivizr-1.0.3b.js", "ie8/respond.min.js"
-    = javascript_include_tag "ie8/rem"
+```
+= javascript_include_tag "ie8/nwmatcher-1.2.5-min.js", "ie8/selectivizr-1.0.3b.js", "ie8/respond.min.js"
+= javascript_include_tag "ie8/rem"
+```
 
 
