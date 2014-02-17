@@ -115,7 +115,7 @@ Rails Base fixes ie8 problems with:
 * lack of media query support
 * lack of Html5 and Css3 support
 
-In order to get rid off ie8 support please remove the following:
+**In order to get rid of ie8 support please remove the following:**
 
 * vendor/assets/javascripts/ie8 folder
 * views/layouts/application lines commented with `/[if lt IE 9]`
