@@ -1,4 +1,4 @@
-h6 Anything else?
+h6= t('app.user.session_links')
 ul.links
   - if controller_name != 'sessions'
     li= link_to t('app.user.sign_in.title'), new_session_path(resource_name)

@@ -53,6 +53,7 @@ en:
         confirm_password:
           hint: "We need your current password to confirm your changes"
       cancel: "Cancel my account"
+      session_links: "Anything else?"
     form:
       save: "Save"
       send: "Send"
