@@ -20,9 +20,7 @@ html class="no-js" lang="en"
 
     / remove this if no need to support ie8
     /[if lt IE 9]
-      = javascript_include_tag "http://s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"
-      = javascript_include_tag "http://html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"
-      = javascript_include_tag "http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"
+      = javascript_include_tag "ie8/nwmatcher-1.2.5-min.js", "ie8/selectivizr-1.0.3b.js", "ie8/respond.min.js"
 
   body
     #root
@@ -42,5 +40,5 @@ html class="no-js" lang="en"
     = javascript_include_tag :application
 
     / remove this if no need to support ie8
-    /[if  lt IE 9]
-      = javascript_include_tag "rem"
+    /[if lt IE 9]
+      = javascript_include_tag "ie8/rem"
