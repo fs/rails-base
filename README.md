@@ -123,5 +123,7 @@ Rails Base fixes ie8 problems with:
         = javascript_include_tag "ie8/nwmatcher-1.2.5-min.js", "ie8/selectivizr-1.0.3b.js", "ie8/respond.min.js"
         = javascript_include_tag "ie8/rem"
 
+## Note on how to override Zurb Foundation css properties
 
+Do your overrides in the `app/assets/stylesheets/foundation_and_overrides.scss`
 
