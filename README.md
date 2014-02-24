@@ -9,8 +9,9 @@ Application currently based on Rails 4 stable branch and Ruby 2.1.0
 
 ## Application gems:
 
-* [Less Rails](https://github.com/metaskills/less-rails) dynamic stylesheet language for asset pipeline
-* [Less Rails Bootstrap](https://github.com/metaskills/less-rails-bootstrap) for styling app with Twiter Bootstrap
+* [Sass Rails](https://github.com/rails/sass-rails) Ruby on Rails stylesheet engine for Sass
+* [Zurb Foundation for Rails](https://github.com/zurb/foundation-rails) the easiest way to use Foundation in your Rails app. For more information see [how to add Foundation to your Rails app](http://foundation.zurb.com/docs/applications.html)
+* [Foundation Icon Fonts on SASS for Rails](https://github.com/zaiste/foundation-icons-sass-rails) for icons. Browse [icon set](http://zurb.com/playground/foundation-icon-fonts-3) examples
 * [Slim](https://github.com/stonean/slim) for views
 * [Simple Form](https://github.com/plataformatec/simple_form) for forms
 * [Decent Exposure](https://github.com/voxdolo/decent_exposure) for DRY controllers
@@ -105,3 +106,24 @@ You can fetch latest changes from rails-base repo and merge or cherry-pick commi
 * Commit, do not mess with rakefile, version, or history.
   (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
 * Send a pull request. Bonus points for topic branches.
+
+## Note on ie8 support
+
+Rails Base fixes ie8 problems with:
+
+* lack of support for rem units in CSS
+* lack of media query support
+* lack of Html5 and Css3 support
+
+**In order to get rid of ie8 support please remove the following:**
+
+* vendor/assets/javascripts/ie8 folder
+* views/layouts/application lines commented with `/[if lt IE 9]`
+
+        = javascript_include_tag "ie8/nwmatcher-1.2.5-min.js", "ie8/selectivizr-1.0.3b.js", "ie8/respond.min.js"
+        = javascript_include_tag "ie8/rem"
+
+## Note on how to override Zurb Foundation css properties
+
+Do your overrides in the `app/assets/stylesheets/foundation_and_overrides.scss`
+

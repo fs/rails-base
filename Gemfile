@@ -11,7 +11,6 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 
 gem 'therubyracer', platforms: :ruby
-gem 'less-rails-bootstrap'
 gem 'jquery-rails'
 
 gem 'devise', '~> 3.0.0'
@@ -24,6 +23,11 @@ gem 'thin'
 gem 'rollbar', '~> 0.10.3'
 
 gem 'github-markdown' # only for dashboard controller
+
+gem 'sass-rails', '~> 4.0.0'
+gem 'foundation-rails'
+gem 'compass-rails'
+gem 'foundation-icons-sass-rails'
 
 group :development do
   gem 'styleguides'
