@@ -34,15 +34,15 @@ step 'I submit update account form with valid data' do
 end
 
 step 'my account should not exists' do
-  User.exists?(@current_user.id).should be_false
+  expect(User.exists?(@current_user.id)).to be_false
 end
 
 step 'my account should be updated successfully' do
   @current_user.reload
-  @current_user.full_name.should eql 'My new name'
+  expect(@current_user.full_name).to eql 'My new name'
 end
 
 step 'my account should not be updated' do
   @current_user.reload
-  @current_user.full_name.should_not eql 'My new name with invalid password'
+  expect(@current_user.full_name).to_not eql 'My new name with invalid password'
 end
