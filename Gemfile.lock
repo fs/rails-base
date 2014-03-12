@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/james2m/seedbank.git
+  revision: ad4079d7381c5a5ffc58a1cf89adc969a680ebd1
+  specs:
+    seedbank (0.3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -373,6 +379,7 @@ DEPENDENCIES
   rspec-rails
   rubocop
   sass-rails (~> 4.0.0)
+  seedbank!
   shoulda-matchers
   simple-navigation
   simple_form (~> 3.0.0rc)
