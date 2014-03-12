@@ -9,12 +9,12 @@ end
 
 step 'I should be signed in' do
   within '.top-bar' do
-    page.should have_content 'Sign out'
+    expect(page).to have_content 'Sign out'
   end
 end
 
 step 'I should be signed out' do
   within '.top-bar' do
-    page.should_not have_content 'Sign out'
+    expect(page).to_not have_content 'Sign out'
   end
 end

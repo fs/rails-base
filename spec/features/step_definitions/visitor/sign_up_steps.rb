@@ -39,10 +39,10 @@ end
 step 'I should receive registration confirmation email' do
   open_email 'chuck.norris@example.com'
 
-  current_email.should have_subject 'Confirmation instructions'
-  current_email.default_part_body.to_s.should =~ /Chuck Norris/
+  expect(current_email).to have_subject 'Confirmation instructions'
+  expect(current_email.default_part_body.to_s).to match(/Chuck Norris/)
 end
 
 step 'my account should be confirmed' do
-  User.find_by_email('chuck.norris@example.com').should be_confirmed
+  expect(User.find_by_email('chuck.norris@example.com')).to be_confirmed
 end
