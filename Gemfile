@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Specify ruby version for Heroku
-ruby '2.0.0'
+ruby '2.1.0'
 
 gem 'rails', '4.0.0'
 gem 'json'
@@ -11,7 +11,6 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 
 gem 'therubyracer', platforms: :ruby
-gem 'less-rails-bootstrap'
 gem 'jquery-rails'
 
 gem 'devise', '~> 3.0.0'
@@ -25,6 +24,12 @@ gem 'rollbar', '~> 0.10.3'
 
 gem 'github-markdown' # only for dashboard controller
 
+gem 'sass-rails', '~> 4.0.0'
+gem 'foundation-rails'
+gem 'compass-rails'
+gem 'foundation-icons-sass-rails'
+gem 'seedbank', github: 'james2m/seedbank'
+
 group :development do
   gem 'styleguides'
   gem 'quiet_assets'
@@ -33,13 +38,12 @@ group :development do
   gem 'foreman'
   gem 'bullet'
   gem 'mail_safe'
-  gem 'pry-rails'
 end
 
 group :development, :test do
   gem 'fuubar'
-  gem 'debugger'
-  gem 'dotenv'
+  gem 'jazz_hands'
+  gem 'dotenv-rails'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
 

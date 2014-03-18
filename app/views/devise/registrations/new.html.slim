@@ -1,22 +1,25 @@
-- title "Sign up"
+- title t('app.user.sign_up.title')
 
-= simple_form_for resource,
-    as: resource_name,
-    url: registration_path(resource_name) do |f|
+.row
+  .columns
+    h2= yield :title
 
-  legend
-    | Create your "#{app_config.app_name}" account
+.row
+  .medium-6.columns
+    = simple_form_for resource,
+        as: resource_name,
+        url: registration_path(resource_name) do |f|
 
-  .form-inputs
-    = f.input :full_name, required: true, autofocus: true
-    = f.input :email, required: true
-    = f.input :password, required: true
-    = f.input :password_confirmation, required: true
+      legend= t('app.user.sign_up.legend_html', app_name: app_config.app_name)
 
-  .form-actions
-    = f.button :submit, "Sign up"
-    '  or
-    = link_to "Sign in", new_session_path(resource_name)
+      .form-inputs
+        = f.input :full_name, required: true, autofocus: true
+        = f.input :email, required: true
+        = f.input :password, required: true
+        = f.input :password_confirmation, required: true
 
+      .form-actions
+        = f.button :submit, t('app.user.sign_up.title')
 
-= render "devise/shared/links"
+  .medium-6.columns.end
+    = render "devise/shared/links"

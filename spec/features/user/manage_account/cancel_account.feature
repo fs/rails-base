@@ -1,5 +1,5 @@
 Feature: Cancel account
-  I order to delete my private information from the system
+  In order to delete my private information from the system
   As a registered user
   I want to be able to cancel my account
 
@@ -8,5 +8,5 @@ Feature: Cancel account
 
   Scenario: Cancel user account
     When I cancel my account
-    Then I should be signed out 
+    Then I should be signed out
     And my account should not exists

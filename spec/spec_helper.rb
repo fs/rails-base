@@ -20,6 +20,10 @@ RSpec.configure do |config|
   config.include Rails.application.routes.url_helpers
   config.include EmailSpec::Helpers
   config.include EmailSpec::Matchers
+  config.include FactoryGirl::Syntax::Methods
+  config.expect_with :rspec do |c|
+    c.syntax = :expect
+  end
 
   config.before do
     ActionMailer::Base.deliveries.clear

@@ -17,3 +17,7 @@ SymbolArray:
 
 AlignParameters:
   Enabled: false
+
+LineLength:
+  Description: 'Limit lines to 120 characters.'
+  Max: 120
