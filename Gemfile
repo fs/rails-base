@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # Specify ruby version for Heroku
 ruby '2.1.0'
 
-gem 'rails', '4.0.0'
+gem 'rails', '4.0.4'
 gem 'json'
 gem 'pg'
 
