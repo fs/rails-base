@@ -1,0 +1,19 @@
+.row
+  .medium-12.columns
+    h2
+      strong
+        = post.title
+    p
+      = post.content
+    h6
+      = link_to 'Edit', edit_post_path(post)
+    h6
+      = link_to 'Back', posts_path
+.row
+  .medium-6.columns
+    h4
+      | Comments
+    #comments
+      = render partial: 'partials/comment', collection: post.comments
+
+      = render 'partials/forms/comment'

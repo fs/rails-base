@@ -1,0 +1,9 @@
+.row
+  .medium-8.columns
+    h1
+      | Editing post
+    = render 'partials/forms/post'
+    p
+      = link_to 'Show', post
+      br
+      = link_to 'Back', posts_path

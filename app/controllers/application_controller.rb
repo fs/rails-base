@@ -11,6 +11,8 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  respond_to :html
+
   decent_configuration do
     strategy DecentExposure::StrongParametersStrategy
   end

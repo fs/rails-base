@@ -1,0 +1,15 @@
+= form_for post do |f|
+  div
+    .field
+      = f.label :title
+      br
+      = f.text_field :title
+
+  div
+    .field
+      = f.label :content
+      br
+      = f.text_area :content
+  div
+    .actions
+      = f.submit

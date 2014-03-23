@@ -1,0 +1,10 @@
+= div_for comment do
+  p
+    strong
+      | Posted #{ time_ago_in_words(comment.created_at)} ago
+    br
+    | Title: #{comment.title}
+    br
+    | Text: #{comment.text}
+    br
+    = link_to "delete", [post, comment], method: :delete
