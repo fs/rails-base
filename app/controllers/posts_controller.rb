@@ -24,7 +24,7 @@ class PostsController < ApplicationController
       respond_with post
     else
       flash_message("create")
-      render action: 'new'
+      render 'new'
     end
   end
 
@@ -33,7 +33,7 @@ class PostsController < ApplicationController
       respond_with post
     else
       flash_message("update")
-      render action: 'edit'
+      render 'edit'
     end
   end
 

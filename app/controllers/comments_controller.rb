@@ -6,9 +6,13 @@ class CommentsController < ApplicationController
   expose(:comment, attributes: :comment_params)
 
   def create
-    comment.save
-
-    redirect_to post
+    if comment.save
+      redirect_to post
+    else
+      redirect_to post,
+        alert: "Could not create the comment. "\
+        "Please, check that the fields below filled out correctly."
+    end
   end
 
   def destroy
