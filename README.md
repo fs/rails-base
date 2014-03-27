@@ -127,3 +127,11 @@ Rails Base fixes ie8 problems with:
 
 Do your overrides in the `app/assets/stylesheets/foundation_and_overrides.scss`
 
+## Credits
+
+Rails Base is maintained by [Timur Vafin](http://github.com/timurvafin).
+It was written by [Flatstack](http://www.flatstack.com) with the help of our
+[contributors](http://github.com/fs/rails-base/contributors).
+
+
+[![Flatstack](http://www.flatstack.com/assets/images/logo.png)](http://www.flatstack.com)
