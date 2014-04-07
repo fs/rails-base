@@ -29,7 +29,7 @@ gem 'foundation-rails'
 gem 'compass-rails'
 gem 'foundation-icons-sass-rails'
 
-gem 'seedbank', github: 'james2m/seedbank'
+gem 'seedbank'
 
 group :development do
   gem 'styleguides'
