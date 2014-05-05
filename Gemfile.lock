@@ -29,6 +29,8 @@ GEM
     arel (4.0.2)
     ast (1.1.0)
     atomic (1.1.16)
+    autoprefixer-rails (1.1.20140410)
+      execjs
     awesome_print (1.2.0)
     bcrypt-ruby (3.1.2)
     binding_of_caller (0.7.2)
@@ -344,6 +346,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
   brakeman
   bullet
   capybara

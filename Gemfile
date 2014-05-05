@@ -28,6 +28,7 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'foundation-rails'
 gem 'compass-rails'
 gem 'foundation-icons-sass-rails'
+gem 'autoprefixer-rails'
 
 gem 'seedbank'
 
