@@ -1,0 +1,89 @@
+#!/usr/bin/env ruby
+
+require 'json'
+require 'net/http'
+
+module CodeClimate
+  class Base
+    def initialize(token, repo)
+      @token, @repo = token, repo
+    end
+  end
+
+  class GetGpa < Base
+    ENDPOINT = 'https://codeclimate.com/api/repos/%{repo}/branches/%{branch}'
+    NULL_GPA = 0
+
+    def gpa_for(branch)
+      gpa(parse_json(fetch(branch)))
+    end
+
+    private
+
+    def parse_json(json_string)
+      JSON.parse(json_string)
+    end
+
+    def gpa(json)
+      if json.include?('last_snapshot')
+        json['last_snapshot']['gpa'].to_f
+      else
+        NULL_GPA
+      end
+    end
+
+    def fetch(branch)
+      reposponse = Net::HTTP.get_response(uri(branch))
+
+      if reposponse.is_a?(Net::HTTPSuccess)
+        reposponse.body
+      else
+        null_response
+      end
+    end
+
+    def uri(branch)
+      URI(ENDPOINT % {repo: @repo, branch: branch}).tap do |uri|
+        uri.query = URI.encode_www_form({api_token: @token})
+      end
+    end
+
+    def null_response
+      {'last_snapshot' => {'gpa' => NULL_GPA}}.to_json
+    end
+  end
+
+  class CompareGpa < Base
+    def diff(branch)
+      branch_gpa(branch) - master_gpa
+    end
+
+    def worse?(branch)
+      diff(branch) < 0
+    end
+
+    private
+
+    def master_gpa
+      gpa_for('master')
+    end
+
+    def branch_gpa(branch)
+      gpa_for(branch)
+    end
+
+    def gpa_for(branch)
+      gpa.gpa_for(branch)
+    end
+
+    def gpa
+      @gpa ||= GetGpa.new(@token, @repo)
+    end
+  end
+end
+
+token = ARGV.shift
+repo = ARGV.shift
+branch = ARGV.shift
+
+exit(1) if CodeClimate::CompareGpa.new(token, repo).worse?(branch)
