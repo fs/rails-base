@@ -1,7 +1,7 @@
-# Do not run simplecov on CI
-unless ENV['CI']
-  require 'simplecov'
-  SimpleCov.start 'rails'
+# Run codeclimate-test-reporter only in CI
+if ENV['CI']
+  require 'codeclimate-test-reporter'
+  CodeClimate::TestReporter.start
 end
 
 ENV['RAILS_ENV'] ||= 'test'
