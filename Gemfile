@@ -61,7 +61,7 @@ group :test do
   gem 'launchy'
   gem 'shoulda-matchers'
   gem 'turnip'
-  gem 'codeclimate-test-reporter', require: nil
+  gem 'codeclimate-test-reporter', require: false
 end
 
 group :staging, :production do
