@@ -9,7 +9,7 @@ ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
 require 'turnip/capybara'
-
+binding.pry
 paths = Dir[Rails.root.join('spec/**/{support,step_definitions}/**/*.rb')]
 paths.each { |file| require file }
 

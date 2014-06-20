@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 def submit_update_account_form(fields)
   visit edit_user_registration_path
 

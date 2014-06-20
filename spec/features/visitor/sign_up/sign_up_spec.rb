@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 def register
   visit new_user_registration_path
 
