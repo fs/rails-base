@@ -34,7 +34,7 @@ step 'I submit update account form with valid data' do
 end
 
 step 'my account should not exists' do
-  expect(User.exists?(@current_user.id)).to be_false
+  expect(User.exists?(@current_user.id)).to be false
 end
 
 step 'my account should be updated successfully' do
