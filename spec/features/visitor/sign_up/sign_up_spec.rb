@@ -1,50 +1,31 @@
 require 'spec_helper'
+require 'support/sessions_helper'
 
-def register
-  visit new_user_registration_path
+feature 'Sign up' do
 
-  fill_in 'user_full_name', with: 'Chuck Norris'
-  fill_in 'user_email', with: 'chuck.norris@example.com'
-  fill_in 'user_password', with: '123456'
-  fill_in 'user_password_confirmation', with: '123456'
+  before do
+    register
+  end
 
-  click_button 'Sign up'
-end
+  scenario 'I submit registration form and follow registration confirmation link in the email' do
+    open_email 'chuck.norris@example.com'
+    visit_in_email 'Confirm my account'
+    expect(User.find_by_email('chuck.norris@example.com')).to be_confirmed
+  end
 
-step 'I have email with confirmation link' do
-  register
-end
+  scenario 'I submit resent confirmation instruction form' do
 
-step 'I submit registration form with required fields' do
-  register
-end
+    visit new_user_confirmation_path
 
-step 'I follow registration confirmation link in the email' do
-  open_email 'chuck.norris@example.com'
-  visit_in_email 'Confirm my account'
-end
+    fill_in 'user_email', with: 'chuck.norris@example.com'
+    click_button 'Resend confirmation instructions'
+  end
 
-step 'I submit resent confirmation instruction form' do
-  create(
-    :user,
-    :not_confirmed,
-    email: 'chuck.norris@example.com',
-    full_name: 'Chuck Norris'
-  )
+  scenario 'I should receive registration confirmation email' do
+    open_email 'chuck.norris@example.com'
 
-  visit new_user_confirmation_path
+    expect(current_email).to have_subject 'Confirmation instructions'
+    expect(current_email.default_part_body.to_s).to match(/Chuck Norris/)
+  end
 
-  fill_in 'user_email', with: 'chuck.norris@example.com'
-  click_button 'Resend confirmation instructions'
-end
-
-step 'I should receive registration confirmation email' do
-  open_email 'chuck.norris@example.com'
-
-  expect(current_email).to have_subject 'Confirmation instructions'
-  expect(current_email.default_part_body.to_s).to match(/Chuck Norris/)
-end
-
-step 'my account should be confirmed' do
-  expect(User.find_by_email('chuck.norris@example.com')).to be_confirmed
 end

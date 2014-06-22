@@ -1,20 +1,19 @@
 require 'spec_helper'
+require 'support/sessions_helper'
 
-def sign_in_with(email, password)
-  visit new_user_session_path
-
-  fill_in 'user_email', with: email
-  fill_in 'user_password', with: password
-
-  click_button 'Sign in'
-end
-
-step 'I sign out' do
-  within '.top-bar' do
-    click_link 'Sign out'
+feature 'Sign out' do
+   before do
+    @current_user = create :user, :confirmed
+    sign_in_with @current_user.email, '123456'
   end
-end
 
-step 'I should see that I logged out' do
-  expect(page).to have_content 'You need to sign in or sign up before continuing.'
+  scenario 'I signed in' do
+    expect(page).to have_content @current_user.full_name+' ('+@current_user.email+')'
+  end
+
+  scenario 'I sign out' do
+    click_link 'Sign out'
+    expect(page).to have_content 'Sign in'
+  end
+
 end

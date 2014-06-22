@@ -60,7 +60,6 @@ group :test do
   gem 'email_spec'
   gem 'launchy'
   gem 'shoulda-matchers'
-  gem 'turnip'
   gem 'codeclimate-test-reporter', require: false
 end
 
