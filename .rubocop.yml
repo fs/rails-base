@@ -1,11 +1,11 @@
 AllCops:
   RunRailsCops: true
-  Excludes:
-    - bin/**
-    - db/**
-    - config/**
-    - lib/templates/**
-    - vendor/**
+  Exclude:
+    - bin/**/*
+    - db/**/*
+    - config/**/*
+    - lib/templates/**/*
+    - vendor/**/*
 
 Documentation:
   Description: 'Document classes and non-namespace modules.'
