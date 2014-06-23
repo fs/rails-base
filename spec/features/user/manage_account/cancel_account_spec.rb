@@ -14,4 +14,3 @@ feature 'Cancel account' do
     expect(User.exists?(user.id)).to be_falsey
   end
 end
-

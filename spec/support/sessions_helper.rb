@@ -11,9 +11,9 @@ module SessionsHelper
   def submit_update_account_form(fields)
     visit edit_user_registration_path
 
-      fields.each do |key, value|
-        fill_in("user_#{key}", with: value)
-      end
+    fields.each do |key, value|
+      fill_in("user_#{key}", with: value)
+    end
 
     click_button 'Update'
   end
