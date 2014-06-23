@@ -16,7 +16,7 @@ feature 'Update account with valid data' do
       password_confirmation: '123456',
       current_password: '123456'
     )
-    expect(@new_user.full_name).to eql 'New Name'
+    expect(@new_user.reload.full_name).to eql 'New Name'
   end
 
 end
