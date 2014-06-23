@@ -46,8 +46,9 @@ group :development, :test do
   gem 'fuubar', '~> 2.0.0.rc1'
   gem 'jazz_hands'
   gem 'dotenv-rails'
-  gem 'rspec-rails', '~> 3.0.1'
+  gem 'rspec-rails', '~> 3.0'
   gem 'factory_girl_rails'
+
   gem 'rails_best_practices'
   gem 'brakeman', require: false
   gem 'rubocop'

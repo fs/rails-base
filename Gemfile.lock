@@ -382,7 +382,7 @@ DEPENDENCIES
   rails_12factor
   rails_best_practices
   rollbar (~> 0.10.3)
-  rspec-rails (~> 3.0.1)
+  rspec-rails (~> 3.0)
   rubocop
   sass-rails (~> 4.0.0)
   seedbank
