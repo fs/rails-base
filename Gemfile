@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # Specify ruby version for Heroku
 ruby '2.1.0'
 
-gem 'rails', '4.0.4'
+gem 'rails', '4.1.1'
 gem 'json'
 gem 'pg'
 
@@ -24,7 +24,7 @@ gem 'rollbar', '~> 0.10.3'
 
 gem 'github-markdown' # only for dashboard controller
 
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 4.0.3'
 gem 'foundation-rails'
 gem 'compass-rails'
 gem 'foundation-icons-sass-rails'
