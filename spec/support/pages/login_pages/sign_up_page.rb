@@ -1,6 +1,11 @@
 class SignUpPage
   include Capybara::DSL
 
+  def visit_page
+    visit('users/sign_up')
+    self
+  end
+
   def register(fields)
     fill_in 'user_full_name', with: fields[:full_name]
     fill_in 'user_email', with: fields[:email]

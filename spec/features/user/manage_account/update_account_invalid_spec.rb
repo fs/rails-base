@@ -2,13 +2,15 @@ require 'spec_helper'
 
 feature 'Update account with invalid data' do
   let(:user) { create :user, :confirmed }
+  let(:login_page) { LoginPage.new }
+  let(:edit_user_page) { EditUserPage.new }
 
   before do
-    sign_in_with user.email, '123456'
+    login_page.visit_page.sign_in(user.email, '123456')
   end
 
   scenario 'I submit update account form with wrong current password' do
-    submit_update_account_form(
+    edit_user_page.visit_page.update_account_form(
       full_name: 'My new name with invalid password',
       email: user.email,
       password: '123456',

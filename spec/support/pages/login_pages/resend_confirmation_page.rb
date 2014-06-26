@@ -1,9 +1,14 @@
-class RecendConfirmation
+class ResendConfirmationPage
   include Capybara::DSL
 
-  def resend_confirmation_mail(email)
+  def submit_form(email)
     fill_in 'user_email', with: email
 
-    click_button 'Send me reset password instructions'
+    click_button 'Resend confirmation instructions'
+  end
+
+  def visit_page
+    visit('users/confirmation/new')
+    self
   end
 end

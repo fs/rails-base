@@ -2,14 +2,18 @@ require 'spec_helper'
 
 feature 'Sign out' do
   let(:user) { create :user, :confirmed }
+  let(:login_page) { LoginPage.new }
+  let(:index_page) { IndexPage.new }
 
   before do
-    sign_in_with user.email, '123456'
+    login_page.visit_page.sign_in(user.email, '123456')
   end
 
   scenario 'Logged in user signs out' do
-    click_link 'Sign out'
+    index_page.visit_page.sign_out
 
-    expect(page).to have_content 'Sign in'
+    within '.top-bar' do
+      expect(page).to have_content 'Sign in'
+    end
   end
 end
