@@ -1,10 +1,8 @@
 source 'https://rubygems.org'
 
-# Specify ruby version for Heroku
 ruby '2.1.0'
 
-gem 'rails', '4.0.4'
-gem 'json'
+gem 'rails', '4.1.2'
 gem 'pg'
 
 gem 'coffee-rails', '~> 4.0.0'
@@ -15,7 +13,7 @@ gem 'jquery-rails'
 
 gem 'devise', '~> 3.0.0'
 gem 'simple-navigation'
-gem 'simple_form', '~> 3.0.0rc'
+gem 'simple_form', '~> 3.0.2'
 gem 'decent_exposure'
 gem 'kaminari'
 gem 'slim'
