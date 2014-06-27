@@ -375,6 +375,7 @@ DEPENDENCIES
   launchy
   letter_opener
   mail_safe
+  minitest
   pg
   quiet_assets
   rails (= 4.1.2)
