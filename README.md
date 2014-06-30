@@ -25,7 +25,6 @@ Application currently based on Rails 4 stable branch and Ruby 2.1.0
 * [Thin](https://github.com/macournoyer/thin) as rails web server
 * [Foreman](https://github.com/ddollar/foreman) for managing development stack with Procfile
 * [Letter Opener](https://github.com/ryanb/letter_opener) for preview mail in the browser instead of sending
-* [Mail Safe](https://github.com/myronmarston/mail_safe) keep ActionMailer emails from escaping into the wild during development
 * [Bullet](https://github.com/flyerhzm/bullet) gem to kill N+1 queries and unused eager loading
 * [Rails Best Practices](https://github.com/railsbp/rails_best_practices) code metric tool
 * [Brakeman](https://github.com/presidentbeef/brakeman) static analysis security vulnerability scanner
