@@ -30,7 +30,6 @@ gem 'compass-rails'
 gem 'foundation-icons-sass-rails'
 gem 'autoprefixer-rails'
 gem 'seedbank'
-gem 'bundler-audit'
 
 group :development do
   gem 'styleguides'
@@ -52,6 +51,7 @@ group :development, :test do
   gem 'rails_best_practices'
   gem 'brakeman', require: false
   gem 'rubocop'
+  gem 'bundler-audit'
 end
 
 group :test do
