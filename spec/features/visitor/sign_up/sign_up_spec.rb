@@ -8,7 +8,7 @@ feature 'Sign up' do
 
   before do
     sign_up_page.visit_page.register(
-    full_name: 'Chuck Norris',
+    full_name: 'username',
     email: email,
     password: '123456'
     )
@@ -18,7 +18,7 @@ feature 'Sign up' do
     open_email email
 
     expect(current_email).to have_subject 'Confirmation instructions'
-    expect(current_email.default_part_body.to_s).to match(/Chuck Norris/)
+    expect(current_email.default_part_body.to_s).to match(/username/)
   end
 
   scenario 'User reconfirms account' do
