@@ -13,7 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
 
-gem 'devise', '~> 3.0.0'
+gem 'devise'
 gem 'simple-navigation'
 gem 'simple_form', '~> 3.0.0rc'
 gem 'decent_exposure'
