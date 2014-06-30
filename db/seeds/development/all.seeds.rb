@@ -1,1 +1,1 @@
-Examples.setup!
+FactoryGirl.create(:user, :confirmed)

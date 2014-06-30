@@ -1,10 +1,8 @@
 source 'https://rubygems.org'
 
-# Specify ruby version for Heroku
 ruby '2.1.0'
 
-gem 'rails', '4.0.4'
-gem 'json'
+gem 'rails', '4.1.2'
 gem 'pg'
 
 gem 'coffee-rails', '~> 4.0.0'
@@ -13,9 +11,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
 
-gem 'devise', '~> 3.0.0'
+gem 'devise'
 gem 'simple-navigation'
-gem 'simple_form', '~> 3.0.0rc'
+gem 'simple_form', '~> 3.0.2'
 gem 'decent_exposure'
 gem 'kaminari'
 gem 'slim'
@@ -29,7 +27,6 @@ gem 'foundation-rails'
 gem 'compass-rails'
 gem 'foundation-icons-sass-rails'
 gem 'autoprefixer-rails'
-
 gem 'seedbank'
 
 group :development do
@@ -42,6 +39,12 @@ group :development do
 end
 
 group :development, :test do
+  # FIXME: Required for fixing warning
+  # https://github.com/rspec/rspec-rails/pull/772.
+  # Going to be fixed in rspec > 2.99
+  #
+  gem 'minitest'
+
   gem 'fuubar'
   gem 'jazz_hands'
   gem 'dotenv-rails'
@@ -51,6 +54,7 @@ group :development, :test do
   gem 'rails_best_practices'
   gem 'brakeman', require: false
   gem 'rubocop'
+  gem 'bundler-audit'
 end
 
 group :test do
