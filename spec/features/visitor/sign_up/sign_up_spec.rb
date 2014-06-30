@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 feature 'Sign up' do
-  let(:email) { 'chuck.norris@example.com' }
+  let(:email) { 'username@example.com' }
   let(:login_page) { LoginPage.new }
   let(:sign_up_page) { SignUpPage.new }
   let(:resend_confirmation_page) { ResendConfirmationPage.new }
