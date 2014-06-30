@@ -37,10 +37,7 @@ class Bootstrap
   end
 
   def install_gems
-    without = is_ci? ? 'development' : ''
-    path = is_ci? ? 'vendor/bundle' : '.bundle'
-
-    system_with_note("bundle install --path #{path} --without production staging #{without}")
+    system_with_note("bundle install --path .bundle --without production staging")
   end
 
   def migrate_db
@@ -54,10 +51,6 @@ class Bootstrap
     system_with_note('./bundle_cache download ; echo 1')
   end
 
-  def upload_bundle_cache
-    system_with_note('./bundle_cache upload')
-  end
-
   def setup_file_from_template(file)
     unless File.exists?(File.join(rails_root, file))
       puts "#{file} is missing, installing..."
@@ -69,10 +62,6 @@ class Bootstrap
     @rails_root ||= File.expand_path('../../', __FILE__)
   end
 
-  def is_ci?
-    @is_ci ||= @argv.shift == 'ci'
-  end
-
   def system_with_note(command)
     puts "Running #{command} ..."
     result = system(command) || exit(1)
@@ -81,6 +70,5 @@ class Bootstrap
     result
   end
 end
-
 
 Bootstrap.new(ARGV).run

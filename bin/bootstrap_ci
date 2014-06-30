@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require 'fileutils'
+load 'bin/bootstrap'
+
+class BootstrapCi < Bootstrap
+  private
+
+  def install_gems
+    system_with_note("bundle install --path vendor/bundle --without production staging development")
+  end
+end
+
+BootstrapCi.new(ARGV).run
