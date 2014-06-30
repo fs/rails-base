@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # Specify ruby version for Heroku
 ruby '2.1.0'
 
-gem 'rails', '4.0.4'
+gem 'rails', '4.0.5'
 gem 'json'
 gem 'pg'
 
@@ -29,7 +29,6 @@ gem 'foundation-rails'
 gem 'compass-rails'
 gem 'foundation-icons-sass-rails'
 gem 'autoprefixer-rails'
-
 gem 'seedbank'
 
 group :development do
@@ -52,6 +51,7 @@ group :development, :test do
   gem 'rails_best_practices'
   gem 'brakeman', require: false
   gem 'rubocop'
+  gem 'bundler-audit'
 end
 
 group :test do
