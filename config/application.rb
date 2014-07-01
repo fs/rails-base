@@ -2,6 +2,11 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
+# Load core extensions
+Dir[File.expand_path('../../lib/core_ext/*.rb', __FILE__)].each do |file|
+  require file
+end
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
