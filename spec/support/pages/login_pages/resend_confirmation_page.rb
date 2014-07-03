@@ -1,5 +1,4 @@
-class ResendConfirmationPage
-  include Capybara::DSL
+class ResendConfirmationPage < PageObjects
 
   def submit_form(email)
     fill_in 'user_email', with: email

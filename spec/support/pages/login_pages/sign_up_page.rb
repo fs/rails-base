@@ -1,5 +1,4 @@
-class SignUpPage
-  include Capybara::DSL
+class SignUpPage < PageObjects
 
   def visit_page
     visit('users/sign_up')
