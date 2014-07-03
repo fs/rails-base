@@ -4,6 +4,7 @@ AllCops:
     - bin/**/*
     - db/**/*
     - lib/templates/**/*
+    - vendor/**/*
 
 Style/Documentation:
   Description: 'Document classes and non-namespace modules.'
