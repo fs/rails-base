@@ -6,11 +6,12 @@ feature 'Cancel account' do
   let(:edit_user_page) { EditUserPage.new }
 
   before do
-    login_page.visit_page.sign_in(user.email, '123456')
+    edit_user_page.load
+    edit_user_page.top_bar.sign_in(user.email, '123456')
   end
 
   scenario 'I cancel my account' do
-    edit_user_page.visit_page.cancel_account
+    edit_user_page.cancel_account_link.click
 
     expect(User.exists?(user.id)).to be_falsey
   end

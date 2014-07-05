@@ -1,9 +1,5 @@
-class SignUpPage < PageObjects
-
-  def visit_page
-    visit('users/sign_up')
-    self
-  end
+class SignUpPage < SitePrism::Page
+  set_url 'users/sign_up'
 
   def register(fields)
     fill_in 'user_full_name', with: fields[:full_name]

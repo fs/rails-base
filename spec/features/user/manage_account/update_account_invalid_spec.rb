@@ -6,11 +6,12 @@ feature 'Update account with invalid data' do
   let(:edit_user_page) { EditUserPage.new }
 
   before do
-    login_page.visit_page.sign_in(user.email, '123456')
+    edit_user_page.load
+    edit_user_page.top_bar.sign_in(user.email, '123456')
   end
 
   scenario 'I submit update account form with wrong current password' do
-    edit_user_page.visit_page.update_account_form(
+    edit_user_page.update_account_form(
       full_name: 'My new name with invalid password',
       email: user.email,
       password: '123456',
