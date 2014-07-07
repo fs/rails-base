@@ -16,25 +16,26 @@ feature 'Sign up' do
   end
 
   scenario 'User signs up successfully' do
-    open_email email
+    open_email(email)
 
     expect(current_email).to have_subject 'Confirmation instructions'
     expect(current_email.default_part_body.to_s).to match(/username/)
   end
 
-  scenario 'User reconfirms account' do
-    login_page.load
-
-    click_link "Didn't receive confirmation instructions?"
-    resend_confirmation_page.submit_form(email)
-
-    open_email email
+  scenario 'User confirms account' do
+    open_email(email)
     visit_in_email 'Confirm my account'
 
     expect(User.find_by_email(email)).to be_confirmed
+  end
 
-    within '.top-bar' do
-      expect(page).to have_content 'Sign out'
-    end
+  scenario 'User resents email confirmation instructions' do
+    resend_confirmation_page.load
+    resend_confirmation_page.submit_form(email)
+
+    open_email(email)
+
+    expect(current_email).to have_subject 'Confirmation instructions'
+    expect(current_email.default_part_body.to_s).to match(/username/)
   end
 end
