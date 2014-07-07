@@ -22,6 +22,22 @@
 en:
   hello: "Hello world"
 
+  titles:
+    dashboard:
+      index: Dashboard
+    devise:
+      registrations:
+        new: Sign up
+        cancel: Cancel my account
+        edit: 'Edit profile'
+      sessions:
+        new: Sign in
+      passwords:
+        new: Forgot your password?
+        edit: Change password
+      confirmations:
+        new: Didn't receive confirmation instructions?
+
   app:
     user:
       sign_in:

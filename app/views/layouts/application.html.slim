@@ -8,7 +8,7 @@ html class="no-js" lang="en"
     meta charset="utf-8"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
 
-    title= "#{app_config.app_name} - #{yield(:title) || 'Home'}"
+    title= "#{app_config.app_name} - #{title || yield(:title) || 'Home'}"
 
     = csrf_meta_tags
 

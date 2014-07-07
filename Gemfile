@@ -19,6 +19,7 @@ gem 'kaminari'
 gem 'slim'
 gem 'thin'
 gem 'rollbar', '~> 0.10.3'
+gem 'title'
 
 gem 'github-markdown' # only for dashboard controller
 
