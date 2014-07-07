@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature 'Sign in' do
   let(:user) { create :user, :confirmed }
-  let(:not_confirmed_user) { create :user, :not_confirmed}
+  let(:not_confirmed_user) { create :user, :not_confirmed }
   let(:password) { '123456' }
 
   let(:login_page) { LoginPage.new }

@@ -376,7 +376,6 @@ DEPENDENCIES
   github-markdown
   jazz_hands
   jquery-rails
-  json
   kaminari
   launchy
   letter_opener
@@ -389,7 +388,7 @@ DEPENDENCIES
   rollbar (~> 0.10.3)
   rspec-rails (~> 3.0)
   rubocop
-  sass-rails (~> 4.0.3)
+  sass-rails (~> 4.0.0)
   seedbank
   shoulda-matchers
   simple-navigation

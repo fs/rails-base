@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 ruby '2.1.0'
 
-gem 'json'
 gem 'rails', '4.1.4'
 gem 'pg'
 
@@ -23,7 +22,7 @@ gem 'rollbar', '~> 0.10.3'
 
 gem 'github-markdown' # only for dashboard controller
 
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails', '~> 4.0.0'
 gem 'foundation-rails'
 gem 'compass-rails'
 gem 'foundation-icons-sass-rails'
