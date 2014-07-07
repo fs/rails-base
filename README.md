@@ -25,11 +25,11 @@ Application currently based on Rails 4 stable branch and Ruby 2.1.0
 * [Thin](https://github.com/macournoyer/thin) as rails web server
 * [Foreman](https://github.com/ddollar/foreman) for managing development stack with Procfile
 * [Letter Opener](https://github.com/ryanb/letter_opener) for preview mail in the browser instead of sending
-* [Mail Safe](https://github.com/myronmarston/mail_safe) keep ActionMailer emails from escaping into the wild during development
 * [Bullet](https://github.com/flyerhzm/bullet) gem to kill N+1 queries and unused eager loading
 * [Rails Best Practices](https://github.com/railsbp/rails_best_practices) code metric tool
 * [Brakeman](https://github.com/presidentbeef/brakeman) static analysis security vulnerability scanner
 * [Pry Rails](https://github.com/rweng/pry-rails) is an alternative to the standard IRB shell for Ruby
+* [Bundler Audit](https://github.com/rubysec/bundler-audit) Patch-level verification for Gems
 
 ## Testing gems
 
@@ -38,7 +38,6 @@ Application currently based on Rails 4 stable branch and Ruby 2.1.0
 * [RSpec](https://github.com/rspec/rspec) for awesome, readable isolation testing
 * [Shoulda Matchers](http://github.com/thoughtbot/shoulda-matchers) for frequently needed Rails and RSpec matchers
 * [Email Spec](https://github.com/bmabey/email-spec) Collection of rspec matchers and cucumber steps for testing emails
-
 
 ## Initializes
 
@@ -50,7 +49,7 @@ Application currently based on Rails 4 stable branch and Ruby 2.1.0
 ## Scripts
 
 * `bin/bootstrap` - setup required gems and migrate db if needed
-* `bin/quality` - runs brakeman and rails_best_practices for the app
+* `bin/quality` - runs rubocop, brakeman, rails_best_practices and bundle-audit for the app
 * `bin/ci` - should be used in the CI or locally
 * `bin/server` - to run server locally
 
