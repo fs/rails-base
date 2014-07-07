@@ -2,40 +2,41 @@ require 'spec_helper'
 
 feature 'Sign in' do
   let(:user) { create :user, :confirmed }
+  let(:not_confirmed_user) { create :user, :not_confirmed}
+  let(:password) { '123456' }
+
+  let(:login_page) { LoginPage.new }
+  let(:forgot_password_page) { ForgotPasswordPage.new }
+
+  before do
+    login_page.load
+  end
 
   scenario 'User signs in successfully' do
-    sign_in_with user.email, '123456'
+    login_page.top_bar.sign_in(user.email, password)
 
-    within '.top-bar' do
-      expect(page).to have_content 'Sign out'
-    end
+    expect(login_page.top_bar).to have_sign_out_link
   end
 
   scenario 'User signs in with invalid credentials' do
-    sign_in_with 'empty@email.com', 'empty password'
+    login_page.top_bar.sign_in(user.email, 'wrong password')
 
-    within '.top-bar' do
-      expect(page).to have_content 'Sign in'
-    end
+    expect(login_page.top_bar).to have_sign_in_link
   end
 
   scenario 'User has not confirmed email address' do
-    user.update(confirmed_at: nil)
+    login_page.top_bar.sign_in(not_confirmed_user.email, password)
 
-    sign_in_with user.email, '123456'
-
-    expect(page).to have_content 'You have to confirm your account before continuing'
+    expect(login_page).to have_confirm_account_alert
   end
 
   scenario 'User forgets his password' do
-    visit new_user_password_path
-
-    fill_in 'Enter your email address', with: user.email
-    click_button 'Send me reset password instructions'
+    forgot_password_page.load
+    forgot_password_page.recover_password(user.email)
 
     open_email(user.email)
 
     expect(current_email).to have_subject 'Reset password instructions'
-    expect(current_email.default_part_body.to_s).to match(/#{user.full_name}/)
+    expect(current_email).to have_body_text(user.full_name)
   end
 end

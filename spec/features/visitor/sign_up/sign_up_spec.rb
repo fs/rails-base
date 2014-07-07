@@ -1,11 +1,15 @@
 require 'spec_helper'
 
 feature 'Sign up' do
-  let(:email) { 'chuck.norris@example.com' }
+  let(:email) { 'username@example.com' }
+  let(:login_page) { LoginPage.new }
+  let(:sign_up_page) { SignUpPage.new }
+  let(:resend_confirmation_page) { ResendConfirmationPage.new }
 
   before do
-    register(
-      full_name: 'Chuck Norris',
+    sign_up_page.load
+    sign_up_page.register(
+      full_name: 'username',
       email: email,
       password: '123456'
     )
@@ -15,14 +19,14 @@ feature 'Sign up' do
     open_email email
 
     expect(current_email).to have_subject 'Confirmation instructions'
-    expect(current_email.default_part_body.to_s).to match(/Chuck Norris/)
+    expect(current_email.default_part_body.to_s).to match(/username/)
   end
 
-  scenario 'User confirms account' do
-    visit new_user_confirmation_path
+  scenario 'User reconfirms account' do
+    login_page.load
 
-    fill_in 'user_email', with: email
-    click_button 'Resend confirmation instructions'
+    click_link "Didn't receive confirmation instructions?"
+    resend_confirmation_page.submit_form(email)
 
     open_email email
     visit_in_email 'Confirm my account'
