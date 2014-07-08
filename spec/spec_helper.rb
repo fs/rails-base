@@ -8,19 +8,19 @@ ENV['RAILS_ENV'] ||= 'test'
 
 require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
-require 'rspec/autorun'
-require 'turnip/capybara'
 
-paths = Dir[Rails.root.join('spec/**/{support,step_definitions}/**/*.rb')]
-paths.each { |file| require file }
+Dir[Rails.root.join('spec/support/sections/*.rb')].each { |f| require f }
+Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 RSpec.configure do |config|
   config.use_transactional_fixtures = true
+  config.infer_spec_type_from_file_location!
 
   config.include Rails.application.routes.url_helpers
   config.include EmailSpec::Helpers
   config.include EmailSpec::Matchers
   config.include FactoryGirl::Syntax::Methods
+  config.include Formulaic::Dsl
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
