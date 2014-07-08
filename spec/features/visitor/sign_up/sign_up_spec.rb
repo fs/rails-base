@@ -1,12 +1,13 @@
 require 'spec_helper'
 
 feature 'Sign up' do
-  let(:email) { 'username@example.com' }
   let(:login_page) { LoginPage.new }
   let(:sign_up_page) { SignUpPage.new }
+
+  let(:email) { 'username@example.com' }
   let(:resend_confirmation_page) { ResendConfirmationPage.new }
 
-  before do
+  before(:each) do
     sign_up_page.load
     sign_up_page.register(
       full_name: 'username',

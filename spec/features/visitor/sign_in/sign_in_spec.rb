@@ -8,24 +8,24 @@ feature 'Sign in' do
   let(:login_page) { LoginPage.new }
   let(:forgot_password_page) { ForgotPasswordPage.new }
 
-  before do
+  before(:each) do
     login_page.load
   end
 
   scenario 'User signs in successfully' do
-    login_page.top_bar.sign_in(user.email, password)
+    login_page.sign_in(user.email, password)
 
     expect(login_page.top_bar).to have_sign_out_link
   end
 
   scenario 'User signs in with invalid credentials' do
-    login_page.top_bar.sign_in(user.email, 'wrong password')
+    login_page.sign_in(user.email, 'wrong password')
 
     expect(login_page.top_bar).to have_sign_in_link
   end
 
   scenario 'User has not confirmed email address' do
-    login_page.top_bar.sign_in(not_confirmed_user.email, password)
+    login_page.sign_in(not_confirmed_user.email, password)
 
     expect(login_page).to have_confirm_account_alert
   end
