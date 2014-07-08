@@ -29,7 +29,7 @@ en:
       registrations:
         new: Sign up
         cancel: Cancel my account
-        edit: 'Edit profile'
+        edit: 'Edit %{user}'
       sessions:
         new: Sign in
       passwords:
