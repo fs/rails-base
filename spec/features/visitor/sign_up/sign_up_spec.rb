@@ -9,11 +9,7 @@ feature 'Sign up' do
 
   before(:each) do
     sign_up_page.load
-    sign_up_page.register(
-      full_name: 'username',
-      email: email,
-      password: '123456'
-    )
+    sign_up_page.register(email)
   end
 
   scenario 'User signs up successfully' do

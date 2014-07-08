@@ -121,6 +121,10 @@ GEM
     foreman (0.63.0)
       dotenv (>= 0.7)
       thor (>= 0.13.6)
+    formulaic (0.0.6)
+      activesupport
+      capybara
+      i18n
     foundation-icons-sass-rails (3.0.0)
       railties (>= 3.1.1)
       sass-rails (>= 3.1.1)
@@ -370,6 +374,7 @@ DEPENDENCIES
   email_spec
   factory_girl_rails
   foreman
+  formulaic
   foundation-icons-sass-rails
   foundation-rails
   fuubar (~> 2.0.0.rc1)

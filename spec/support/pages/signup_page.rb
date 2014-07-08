@@ -1,12 +1,18 @@
 class SignUpPage < SitePrism::Page
-  set_url 'users/sign_up'
+  include Formulaic::Dsl
 
-  def register(fields)
-    fill_in 'user_full_name', with: fields[:full_name]
-    fill_in 'user_email', with: fields[:email]
-    fill_in 'user_password', with: fields[:password]
-    fill_in 'user_password_confirmation', with: fields[:password]
+  set_url '/users/sign_up'
 
-    click_button 'Sign up'
+  element :sign_up_button, 'input[value="Sign up"]'
+
+  def register(email)
+    fill_form(:user, {
+      full_name: 'username',
+      email: email,
+      password: '123456',
+      password_confirmation: '123456'
+    })
+
+    sign_up_button.click
   end
 end

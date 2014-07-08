@@ -13,13 +13,7 @@ feature 'Update account with invalid data' do
 
   scenario 'I submit update account form with wrong current password' do
     edit_user_page.load
-    edit_user_page.update_account_form(
-      full_name: 'My new name with invalid password',
-      email: user.email,
-      password: '123456',
-      password_confirmation: '123456',
-      current_password: 'invalid password'
-    )
+    edit_user_page.fill_user_form_with_invalid_data(user)
 
     expect(user.reload.full_name).to_not eql 'My new name with invalid password'
   end

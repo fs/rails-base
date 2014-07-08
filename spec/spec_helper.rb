@@ -22,6 +22,7 @@ RSpec.configure do |config|
   config.include EmailSpec::Helpers
   config.include EmailSpec::Matchers
   config.include FactoryGirl::Syntax::Methods
+  config.include Formulaic::Dsl
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end

@@ -61,6 +61,7 @@ group :test do
   gem 'webmock', require: false
   gem 'capybara'
   gem 'site_prism'
+  gem 'formulaic'
   gem 'database_cleaner'
   gem 'email_spec'
   gem 'launchy'
