@@ -23,6 +23,7 @@ en:
   hello: "Hello world"
 
   titles:
+    application: Rails Base example site
     dashboard:
       index: Dashboard
     devise:

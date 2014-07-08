@@ -8,7 +8,7 @@
         as: resource_name,
         url: session_path(resource_name) do |f|
 
-      legend= t('app.user.sign_in.legend_html', app_name: app_config.app_name)
+      legend= t('app.user.sign_in.legend_html', app_name: t('titles.application'))
 
       .form-inputs
         = f.input :email, required: false, autofocus: true
