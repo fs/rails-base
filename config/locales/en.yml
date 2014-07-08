@@ -29,7 +29,6 @@ en:
     devise:
       registrations:
         new: Sign up
-        cancel: Cancel my account
         edit: 'Edit %{user}'
       sessions:
         new: Sign in
