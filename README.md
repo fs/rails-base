@@ -33,7 +33,7 @@ Application currently based on Rails 4 stable branch and Ruby 2.1.0
 
 ## Testing gems
 
-* Turnip, Capybara, and Capybara Webkit for integration testing, including JavaScript behavior
+* Capybara, and Capybara Webkit for integration testing, including JavaScript behavior
 * [Factory Girl](https://github.com/thoughtbot/factory_girl) for easier creation of test data
 * [RSpec](https://github.com/rspec/rspec) for awesome, readable isolation testing
 * [Shoulda Matchers](http://github.com/thoughtbot/shoulda-matchers) for frequently needed Rails and RSpec matchers
