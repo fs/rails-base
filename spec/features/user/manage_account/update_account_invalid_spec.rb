@@ -12,6 +12,7 @@ feature 'Update account with invalid data' do
   end
 
   scenario 'I submit update account form with wrong current password' do
+    edit_user_page.load
     edit_user_page.update_account_form(
       full_name: 'My new name with invalid password',
       email: user.email,
