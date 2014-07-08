@@ -13,10 +13,9 @@ class LoginPage < SitePrism::Page
   def sign_in(email, password)
     top_bar.sign_in_link.click
 
-    fill_form(:user, {
-      email: email,
-      password: password
-    })
+    fill_form(:user,
+                email: email,
+                password: password)
 
     sign_in_button.click
   end
