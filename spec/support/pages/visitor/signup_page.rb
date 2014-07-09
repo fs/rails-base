@@ -1,7 +1,5 @@
-class SignUpPage < SitePrism::Page
-  include Formulaic::Dsl
-
-  set_url '/users/sign_up'
+class SignUpPage < PageObject
+  set_url new_user_registration_path
 
   element :sign_up_button, 'input[value="Sign up"]'
 

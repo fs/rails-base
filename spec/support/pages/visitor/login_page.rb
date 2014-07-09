@@ -1,7 +1,5 @@
-class LoginPage < SitePrism::Page
-  include Formulaic::Dsl
-
-  set_url '/users/sign_in'
+class LoginPage < PageObject
+  set_url new_user_session_path
 
   section :top_bar, TopBar, '.top-bar'
 
