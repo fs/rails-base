@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 feature 'Sign in' do
   let(:user) { create :user, :confirmed }
