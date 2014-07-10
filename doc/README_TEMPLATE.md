@@ -41,7 +41,6 @@ Initializers
 
 * `01_config.rb` - shortcut for getting application config with `app_config`
 * `mailer.rb` - setup default hosts for mailer from configuration
-* `time_formats.rb` - setup default time formats, so you can use them like object.create_at.to_s(:us_time)
 * `requires.rb` - automatically requires everything in lib/ & lib/extensions
 
 Scripts
