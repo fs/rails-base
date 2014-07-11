@@ -21,9 +21,6 @@ module RailsBase
     # config.i18n.default_locale = :de
 
     # Application specific options
-    #
-    # Name used in the html titles and mailers
-    config.app_name = 'Rails Base example site'
 
     # Slim engine default option, initializers/slim.rb
     config.slim_options = {}
