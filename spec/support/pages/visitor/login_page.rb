@@ -1,5 +1,5 @@
 class LoginPage < PageObject
-  set_url new_user_session_path
+  set_url '/users/sign_in'
 
   section :top_bar, TopBar, '.top-bar'
 

@@ -1,5 +1,5 @@
 class ForgotPasswordPage < PageObject
-  set_url new_user_password_path
+  set_url '/users/password/new'
 
   def recover_password(email)
     fill_in 'user_email', with: email

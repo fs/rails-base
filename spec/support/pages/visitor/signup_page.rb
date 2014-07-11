@@ -1,5 +1,5 @@
 class SignUpPage < PageObject
-  set_url new_user_registration_path
+  set_url '/users/sign_up'
 
   element :sign_up_button, 'input[value="Sign up"]'
 

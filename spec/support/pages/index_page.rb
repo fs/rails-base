@@ -1,5 +1,5 @@
 class IndexPage < PageObject
-  set_url root_path
+  set_url '/'
 
   section :top_bar, TopBar, '.top-bar'
 end

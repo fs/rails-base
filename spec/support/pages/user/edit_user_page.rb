@@ -1,5 +1,5 @@
 class EditUserPage < PageObject
-  set_url edit_user_registration_path
+  set_url '/users/edit'
 
   section :top_bar, TopBar, '.top-bar'
 
