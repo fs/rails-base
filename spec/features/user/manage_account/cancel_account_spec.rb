@@ -13,7 +13,7 @@ feature 'Cancel account' do
 
   scenario 'I cancel my account' do
     edit_user_page.load
-    edit_user_page.cancel_account_link.click
+    edit_user_page.cancel_account
 
     expect(edit_user_page.top_bar).to have_sign_in_link
     expect(User.exists?(user.id)).to be_falsey

@@ -16,7 +16,7 @@ feature 'Sign up' do
     open_email(email)
 
     expect(current_email).to have_subject 'Confirmation instructions'
-    expect(current_email.default_part_body.to_s).to match(/username/)
+    expect(current_email).to have_body_text('username')
   end
 
   scenario 'User confirms account' do
@@ -33,6 +33,6 @@ feature 'Sign up' do
     open_email(email)
 
     expect(current_email).to have_subject 'Confirmation instructions'
-    expect(current_email.default_part_body.to_s).to match(/username/)
+    expect(current_email).to have_body_text('username')
   end
 end
