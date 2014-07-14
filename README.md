@@ -41,9 +41,13 @@ Application currently based on Rails 4 stable branch and Ruby 2.1.0
 
 ## Initializes
 
-* `01_config.rb` - shortcut for getting application config with `app_config`
 * `mailer.rb` - setup default hosts for mailer from configuration
 * `requires.rb` - automatically requires everything in lib/ & lib/extensions
+
+## Core extensions
+
+* `lib/core_ext/kernel.rb` - shortcuts for getting application config with `app_config`
+   and application secrets with `app_secrets`
 
 ## Scripts
 
