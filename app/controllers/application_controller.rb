@@ -10,8 +10,4 @@ class ApplicationController < ActionController::Base
       super
     end
   end
-
-  decent_configuration do
-    strategy DecentExposure::StrongParametersStrategy
-  end
 end

@@ -15,7 +15,7 @@ Application currently based on Rails 4 stable branch and Ruby 2.1.0
 * [Autoprefixer](https://github.com/ai/autoprefixer-rails) for writing CSS without vendor prefixes
 * [Slim](https://github.com/stonean/slim) for views
 * [Simple Form](https://github.com/plataformatec/simple_form) for forms
-* [Decent Exposure](https://github.com/voxdolo/decent_exposure) for DRY controllers
+* [Inherited Resources](https://github.com/josevalim/inherited_resources) for DRY controllers and scaffold
 * [Kaminari](https://github.com/amatsuda/kaminari) for pagination
 * [Devise](http://github.com/plataformatec/devise) for basic auth
 * [Rollbar](https://github.com/rollbar/rollbar-gem) for exception notification
