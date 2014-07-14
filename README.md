@@ -19,6 +19,7 @@ Application currently based on Rails 4 stable branch and Ruby 2.1.0
 * [Kaminari](https://github.com/amatsuda/kaminari) for pagination
 * [Devise](http://github.com/plataformatec/devise) for basic auth
 * [Rollbar](https://github.com/rollbar/rollbar-gem) for exception notification
+* [Draper](https://github.com/drapergem/draper) for model decorating
 
 ## Development gems
 
