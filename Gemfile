@@ -40,12 +40,6 @@ group :development do
 end
 
 group :development, :test do
-  # FIXME: Required for fixing warning
-  # https://github.com/rspec/rspec-rails/pull/772.
-  # Going to be fixed in rspec > 2.99
-  #
-  gem 'minitest'
-
   gem 'fuubar', '~> 2.0.0.rc1'
   gem 'jazz_hands'
   gem 'dotenv-rails'

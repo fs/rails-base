@@ -145,7 +145,7 @@ GEM
     highline (1.6.21)
     hike (1.2.3)
     hirb (0.7.1)
-    i18n (0.6.9)
+    i18n (0.6.11)
     jazz_hands (0.5.2)
       awesome_print (~> 1.2)
       coolline (>= 0.4.2)
@@ -291,7 +291,7 @@ GEM
       sprockets-rails (~> 2.0)
     seedbank (0.3.0)
     sexp_processor (4.4.2)
-    shoulda-matchers (2.5.0)
+    shoulda-matchers (2.6.1)
       activesupport (>= 3.0.0)
     simple-navigation (3.11.0)
       activesupport (>= 2.3.2)
@@ -387,7 +387,6 @@ DEPENDENCIES
   kaminari
   launchy
   letter_opener
-  minitest
   pg
   quiet_assets
   rails (= 4.1.4)
