@@ -69,6 +69,10 @@ group :test do
   gem 'codeclimate-test-reporter', require: false
 end
 
+group :staging do
+  gem 'mail_safe'
+end
+
 group :staging, :production do
   gem 'rails_12factor'
 end
