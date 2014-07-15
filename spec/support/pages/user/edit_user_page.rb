@@ -25,6 +25,6 @@ class EditUserPage < SitePrism::Page
   end
 
   def edit_user_attributes
-    [:full_name, :email, :password, :password_confirmation]
+    %i(full_name email password password_confirmation)
   end
 end

@@ -18,6 +18,6 @@ class SignUpPage < SitePrism::Page
   private
 
   def signup_attributes
-    [:full_name, :email, :password, :password_confirmation]
+    %i(full_name email password password_confirmation)
   end
 end
