@@ -1,4 +1,5 @@
 class EditUserPage < SitePrism::Page
+  include FactoryGirl::Syntax::Methods
   include Formulaic::Dsl
 
   set_url '/users/edit'
@@ -12,29 +13,18 @@ class EditUserPage < SitePrism::Page
     cancel_account_link.click
   end
 
-  def submit_user_form_with_valid_data(email)
+  def submit_user_form(options)
     fill_form(
       :user,
-      full_name: 'New Name',
-      email: email,
-      password: '123456',
-      password_confirmation: '123456',
-      current_password: '123456'
+      attributes_for(:user)
+        .slice(*edit_user_attributes)
+        .merge(options)
     )
 
     update_button.click
   end
 
-  def submit_user_form_with_invalid_data(email)
-    fill_form(
-      :user,
-      full_name: 'My new name with invalid password',
-      email: email,
-      password: '123456',
-      password_confirmation: '123456',
-      current_password: 'invalid password'
-    )
-
-    update_button.click
+  def edit_user_attributes
+    [:full_name, :email, :password, :password_confirmation]
   end
 end

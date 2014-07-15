@@ -13,14 +13,14 @@ feature 'Update account with valid data' do
 
   scenario 'I submit update account form with valid data' do
     edit_user_page.load
-    edit_user_page.submit_user_form_with_valid_data(user.email)
+    edit_user_page.submit_user_form(full_name: 'New Name', current_password: '123456')
 
     expect(user.reload.full_name).to eql 'New Name'
   end
 
   scenario 'Wrong current password' do
     edit_user_page.load
-    edit_user_page.submit_user_form_with_invalid_data(user.email)
+    edit_user_page.submit_user_form(full_name: 'New Name', current_password: 'wrong')
 
     expect(user.reload.full_name).to_not eql 'My new name with invalid password'
   end

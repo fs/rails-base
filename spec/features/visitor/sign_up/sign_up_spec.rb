@@ -4,35 +4,35 @@ feature 'Sign up' do
   let(:login_page) { LoginPage.new }
   let(:sign_up_page) { SignUpPage.new }
 
-  let(:email) { 'username@example.com' }
+  let(:user) { User.first }
   let(:resend_confirmation_page) { ResendConfirmationPage.new }
 
   before(:each) do
     sign_up_page.load
-    sign_up_page.register(email)
+    sign_up_page.register
   end
 
   scenario 'User signs up successfully' do
-    open_email(email)
+    open_email(user.email)
 
     expect(current_email).to have_subject 'Confirmation instructions'
-    expect(current_email).to have_body_text('username')
+    expect(current_email).to have_body_text(user.full_name)
   end
 
   scenario 'User confirms account' do
-    open_email(email)
+    open_email(user.email)
     visit_in_email 'Confirm my account'
 
-    expect(User.find_by_email(email)).to be_confirmed
+    expect(user.reload).to be_confirmed
   end
 
   scenario 'User resents email confirmation instructions' do
     resend_confirmation_page.load
-    resend_confirmation_page.submit_form(email)
+    resend_confirmation_page.submit_form(user.email)
 
-    open_email(email)
+    open_email(user.email)
 
     expect(current_email).to have_subject 'Confirmation instructions'
-    expect(current_email).to have_body_text('username')
+    expect(current_email).to have_body_text(user.full_name)
   end
 end
