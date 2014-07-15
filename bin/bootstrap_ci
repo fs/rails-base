@@ -2,30 +2,22 @@
 
 require 'fileutils'
 
-class Bootstrap
+class BootstrapCi
   def initialize(argv)
     @argv = argv
   end
 
   def run
-    before_install
     install
-    after_install
   end
 
   private
-
-  def before_install
-  end
 
   def install
     setup_database_yml
     setup_dotenv
     install_gems
     migrate_db
-  end
-
-  def after_install
   end
 
   def setup_database_yml
@@ -37,7 +29,7 @@ class Bootstrap
   end
 
   def install_gems
-    system_with_note("bundle install --path .bundle --without production staging")
+    system_with_note("bundle install --path vendor/bundle --without production staging development")
   end
 
   def migrate_db
@@ -45,15 +37,6 @@ class Bootstrap
     system_with_note('bundle exec rake db:test:prepare')
   end
 
-  def install_bundle_cache
-    system_with_note('wget https://s3.amazonaws.com/bundle-cache-builds/bundle_cache')
-    system_with_note('chmod +x ./bundle_cache')
-    system_with_note('./bundle_cache download ; echo 1')
-  end
-
-  def upload_bundle_cache
-    system_with_note('./bundle_cache upload')
-  end
 
   def setup_file_from_template(file)
     unless File.exists?(File.join(rails_root, file))
@@ -76,4 +59,4 @@ class Bootstrap
 end
 
 
-Bootstrap.new(ARGV).run
+BootstrapCi.new(ARGV).run
