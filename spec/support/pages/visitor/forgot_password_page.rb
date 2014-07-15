@@ -1,4 +1,4 @@
-class ForgotPasswordPage < PageObject
+class ForgotPasswordPage < SitePrism::Page
   set_url '/users/password/new'
 
   def recover_password(email)

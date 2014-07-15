@@ -1,4 +1,4 @@
-class ResendConfirmationPage < PageObject
+class ResendConfirmationPage < SitePrism::Page
   set_url '/users/confirmation/new'
 
   def submit_form(email)

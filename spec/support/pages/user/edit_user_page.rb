@@ -1,4 +1,6 @@
-class EditUserPage < PageObject
+class EditUserPage < SitePrism::Page
+  include Formulaic::Dsl
+
   set_url '/users/edit'
 
   section :top_bar, TopBar, '.top-bar'

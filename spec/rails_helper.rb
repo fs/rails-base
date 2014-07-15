@@ -9,7 +9,6 @@ if ENV['CI']
   CodeClimate::TestReporter.start
 end
 
-require 'support/pages/page_object.rb'
 Dir[Rails.root.join('spec/support/{sections,**}/**/*.rb')].each { |f| require f }
 
 RSpec.configure do |config|
