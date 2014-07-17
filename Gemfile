@@ -40,16 +40,10 @@ group :development do
 end
 
 group :development, :test do
-  # FIXME: Required for fixing warning
-  # https://github.com/rspec/rspec-rails/pull/772.
-  # Going to be fixed in rspec > 2.99
-  #
-  gem 'minitest'
-
-  gem 'fuubar'
+  gem 'fuubar', '~> 2.0.0.rc1'
   gem 'jazz_hands'
   gem 'dotenv-rails'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.0'
   gem 'factory_girl_rails'
 
   gem 'rails_best_practices'
@@ -61,11 +55,12 @@ end
 group :test do
   gem 'webmock', require: false
   gem 'capybara'
+  gem 'site_prism'
+  gem 'formulaic'
   gem 'database_cleaner'
   gem 'email_spec'
   gem 'launchy'
   gem 'shoulda-matchers'
-  gem 'turnip'
   gem 'codeclimate-test-reporter', require: false
 end
 
