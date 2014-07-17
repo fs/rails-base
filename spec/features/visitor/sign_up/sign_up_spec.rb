@@ -3,7 +3,6 @@ require 'rails_helper'
 feature 'Sign up' do
   let(:user) { User.first }
 
-  let(:login_page) { Devise::Sessions::New.new }
   let(:sign_up_page) { Devise::Registrations::New.new }
   let(:resend_confirmation_page) { Devise::Confirmations::New.new }
 
