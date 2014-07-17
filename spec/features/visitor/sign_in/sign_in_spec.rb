@@ -5,8 +5,8 @@ feature 'Sign in' do
   let(:not_confirmed_user) { create :user, :not_confirmed }
   let(:password) { '123456' }
 
-  let(:login_page) { LoginPage.new }
-  let(:forgot_password_page) { ForgotPasswordPage.new }
+  let(:login_page) { Devise::Sessions::New.new }
+  let(:forgot_password_page) { Devise::Passwords::New.new }
 
   before(:each) do
     login_page.load

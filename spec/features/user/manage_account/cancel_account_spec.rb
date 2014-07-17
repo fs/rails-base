@@ -3,8 +3,8 @@ require 'rails_helper'
 feature 'Cancel account' do
   let(:user) { create :user, :confirmed }
 
-  let(:login_page) { LoginPage.new }
-  let(:edit_user_page) { EditUserPage.new }
+  let(:login_page) { Devise::Sessions::New.new }
+  let(:edit_user_page) { Devise::Registrations::Edit.new }
 
   before(:each) do
     login_page.load

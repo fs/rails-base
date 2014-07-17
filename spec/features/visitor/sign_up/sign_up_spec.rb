@@ -1,11 +1,11 @@
 require 'rails_helper'
 
 feature 'Sign up' do
-  let(:login_page) { LoginPage.new }
-  let(:sign_up_page) { SignUpPage.new }
-
   let(:user) { User.first }
-  let(:resend_confirmation_page) { ResendConfirmationPage.new }
+
+  let(:login_page) { Devise::Sessions::New.new }
+  let(:sign_up_page) { Devise::Registrations::New.new }
+  let(:resend_confirmation_page) { Devise::Confirmations::New.new }
 
   before(:each) do
     sign_up_page.load
