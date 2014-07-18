@@ -41,7 +41,8 @@ end
 
 group :development, :test do
   gem 'fuubar', '~> 2.0.0.rc1'
-  gem 'jazz_hands'
+  gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger'
+  gem 'byebug'
   gem 'dotenv-rails'
   gem 'rspec-rails', '~> 3.0'
   gem 'factory_girl_rails'
