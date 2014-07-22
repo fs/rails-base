@@ -2,52 +2,28 @@ source 'https://rubygems.org'
 
 ruby '2.1.2'
 
-gem 'rails', '4.1.4'
-
-# Database
-gem 'pg'
-
-# CoffeeScript support
+gem 'autoprefixer-rails'
 gem 'coffee-rails', '~> 4.0.0'
-
-# Javascript
-gem 'therubyracer', platforms: :ruby
-
-# Authentication
-gem 'devise'
-
-# Helpers
+gem 'compass-rails'
 gem 'decent_exposure'
-gem 'simple_form', '~> 3.0.2'
-gem 'simple-navigation'
-
-# Paginator
-gem 'kaminari'
-
-# Appserver
-gem 'thin'
-
-# Error tracking
-gem 'rollbar', '~> 0.10.3'
-
-# Title translations
-gem 'title'
-
-# Views
+gem 'devise'
+gem 'foundation-icons-sass-rails'
 gem 'foundation-rails'
 gem 'github-markdown' # only for dashboard controller
-gem 'slim'
-
-# Assets
 gem 'jquery-rails'
-gem 'autoprefixer-rails'
-gem 'compass-rails'
-gem 'foundation-icons-sass-rails'
+gem 'kaminari'
+gem 'pg'
+gem 'rails', '4.1.4'
+gem 'rollbar', '~> 0.10.3'
 gem 'sass-rails', '~> 4.0.0'
-gem 'uglifier', '>= 1.3.0'
-
-# Structure seed data
 gem 'seedbank'
+gem 'simple_form', '~> 3.0.2'
+gem 'simple-navigation'
+gem 'slim'
+gem 'therubyracer', platforms: :ruby
+gem 'thin'
+gem 'title'
+gem 'uglifier', '>= 1.3.0'
 
 group :staging, :production do
   gem 'rails_12factor'
@@ -66,26 +42,22 @@ group :test do
 end
 
 group :development, :test do
-  gem 'bundler-audit'
-  gem 'dotenv-rails' # Load environment variables from .env into ENV
-  gem 'factory_girl_rails'
-  gem 'jazz_hands'
-
-  # Code analyzers
   gem 'brakeman', require: false
-  gem 'rails_best_practices'
-  gem 'rubocop'
-
-  # RSpec
-  gem 'rspec-rails', '~> 3.0'
+  gem 'bundler-audit'
+  gem 'dotenv-rails'
+  gem 'factory_girl_rails'
   gem 'fuubar', '~> 2.0.0.rc1'
+  gem 'jazz_hands'
+  gem 'rails_best_practices'
+  gem 'rspec-rails', '~> 3.0'
+  gem 'rubocop'
 end
 
 group :development do
-  gem 'bullet' # Kill N+1 queries and unused eager loading
-  gem 'foreman' # Development server
-  gem 'quiet_assets' # Turn off the Rails asset pipeline log
-  gem 'letter_opener' # Email preview in the browser
-  gem 'slim-rails' # Views generator
+  gem 'bullet'
+  gem 'foreman'
+  gem 'quiet_assets'
+  gem 'letter_opener'
+  gem 'slim-rails'
   gem 'styleguides'
 end
