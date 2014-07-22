@@ -41,7 +41,9 @@ end
 
 group :development, :test do
   gem 'fuubar', '~> 2.0.0.rc1'
-  gem 'jazz_hands'
+  gem "awesome_print"
+  gem "byebug"
+  gem "pry-rails"
   gem 'dotenv-rails'
   gem 'rspec-rails', '~> 3.0'
   gem 'factory_girl_rails'
