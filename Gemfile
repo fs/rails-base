@@ -10,19 +10,17 @@ gem 'pg'
 # CoffeeScript support
 gem 'coffee-rails', '~> 4.0.0'
 
-# Compression
-gem 'uglifier', '>= 1.3.0'
-
 # Javascript
+gem 'jquery-rails'
 gem 'therubyracer', platforms: :ruby
 
 # Authentication
 gem 'devise'
 
 # Helpers
-gem 'simple-navigation'
-gem 'simple_form', '~> 3.0.2'
 gem 'decent_exposure'
+gem 'simple_form', '~> 3.0.2'
+gem 'simple-navigation'
 
 # Paginator
 gem 'kaminari'
@@ -37,81 +35,58 @@ gem 'rollbar', '~> 0.10.3'
 gem 'title'
 
 # Views
-gem 'jquery-rails'
-gem 'slim'
-gem 'sass-rails', '~> 4.0.0'
 gem 'foundation-rails'
-gem 'compass-rails'
-gem 'foundation-icons-sass-rails'
-gem 'autoprefixer-rails'
 gem 'github-markdown' # only for dashboard controller
+gem 'slim'
 
 # Structure seed data
 gem 'seedbank'
 
-group :development do
-  # Styleguides for designers
-  gem 'styleguides'
-
-  # Turn off the Rails asset pipeline log
-  gem 'quiet_assets'
-
-  # Email preview in the browser
-  gem 'letter_opener'
-
-  # Views generator
-  gem 'slim-rails'
-
-  # Development server
-  gem 'foreman'
-
-  # Help to kill N+1 queries and unused eager loading
-  gem 'bullet'
+group :staging, :production do
+  gem 'rails_12factor'
 end
 
-group :development, :test do
-  # RSpec (unit tests, integration tests)
-  gem 'rspec-rails', '~> 3.0'
-  gem 'fuubar', '~> 2.0.0.rc1'
-
-  # Console-related gems
-  gem 'jazz_hands'
-
-  # Shim to load environment variables from .env into ENV in development.
-  gem 'dotenv-rails'
-
-  # Set up objects as a test data
-  gem 'factory_girl_rails'
-
-  # Code analyzers
-  gem 'rails_best_practices'
-  gem 'brakeman', require: false
-  gem 'rubocop'
-
-  # Patch-level verification for Bundler
-  gem 'bundler-audit'
+group :assets do
+  gem 'autoprefixer-rails'
+  gem 'compass-rails'
+  gem 'foundation-icons-sass-rails'
+  gem 'sass-rails', '~> 4.0.0'
+  gem 'uglifier', '>= 1.3.0'
 end
 
 group :test do
-  # Stub and set expectations on HTTP requests
-  gem 'webmock', require: false
-
-  # Integration tests
   gem 'capybara'
-  gem 'site_prism'
-  gem 'formulaic'
+  gem 'codeclimate-test-reporter', require: false
   gem 'database_cleaner'
   gem 'email_spec'
+  gem 'formulaic'
   gem 'launchy'
-
-  # Collection of testing matchers
   gem 'shoulda-matchers'
-
-  # Test coverage
-  gem 'codeclimate-test-reporter', require: false
+  gem 'site_prism'
+  gem 'webmock', require: false
 end
 
-group :staging, :production do
-  # Better logging and serving static assets
-  gem 'rails_12factor'
+group :development, :test do
+  gem 'bundler-audit'
+  gem 'dotenv-rails' # Load environment variables from .env into ENV
+  gem 'factory_girl_rails'
+  gem 'jazz_hands'
+
+  # Code analyzers
+  gem 'brakeman', require: false
+  gem 'rails_best_practices'
+  gem 'rubocop'
+
+  # RSpec
+  gem 'rspec-rails', '~> 3.0'
+  gem 'fuubar', '~> 2.0.0.rc1'
+end
+
+group :development do
+  gem 'bullet' # Kill N+1 queries and unused eager loading
+  gem 'foreman' # Development server
+  gem 'quiet_assets' # Turn off the Rails asset pipeline log
+  gem 'letter_opener' # Email preview in the browser
+  gem 'slim-rails' # Views generator
+  gem 'styleguides'
 end
