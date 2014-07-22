@@ -11,7 +11,6 @@ gem 'pg'
 gem 'coffee-rails', '~> 4.0.0'
 
 # Javascript
-gem 'jquery-rails'
 gem 'therubyracer', platforms: :ruby
 
 # Authentication
@@ -39,19 +38,19 @@ gem 'foundation-rails'
 gem 'github-markdown' # only for dashboard controller
 gem 'slim'
 
+# Assets
+gem 'jquery-rails'
+gem 'autoprefixer-rails'
+gem 'compass-rails'
+gem 'foundation-icons-sass-rails'
+gem 'sass-rails', '~> 4.0.0'
+gem 'uglifier', '>= 1.3.0'
+
 # Structure seed data
 gem 'seedbank'
 
 group :staging, :production do
   gem 'rails_12factor'
-end
-
-group :assets do
-  gem 'autoprefixer-rails'
-  gem 'compass-rails'
-  gem 'foundation-icons-sass-rails'
-  gem 'sass-rails', '~> 4.0.0'
-  gem 'uglifier', '>= 1.3.0'
 end
 
 group :test do
