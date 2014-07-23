@@ -14,6 +14,8 @@ GEM
       activesupport (= 4.1.4)
       builder (~> 3.1)
       erubis (~> 2.7.0)
+    active_link_to (1.0.2)
+      actionpack
     activemodel (4.1.4)
       activesupport (= 4.1.4)
       builder (~> 3.1)
@@ -293,8 +295,6 @@ GEM
     sexp_processor (4.4.2)
     shoulda-matchers (2.6.1)
       activesupport (>= 3.0.0)
-    simple-navigation (3.11.0)
-      activesupport (>= 2.3.2)
     simple_form (3.0.2)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
@@ -362,6 +362,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_link_to
   autoprefixer-rails
   brakeman
   bullet
@@ -398,7 +399,6 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   seedbank
   shoulda-matchers
-  simple-navigation
   simple_form (~> 3.0.2)
   site_prism
   slim

@@ -8,5 +8,5 @@ nav.top-bar( data-topbar )
         i.fi-list
 
   section.top-bar-section
-    = render_navigation(context: :main)
-    = render_navigation(context: :user, expand_all: true)
+    = render 'partials/navigation_main'
+    = render 'partials/navigation_user'

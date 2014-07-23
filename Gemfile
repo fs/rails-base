@@ -12,7 +12,7 @@ gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
 
 gem 'devise'
-gem 'simple-navigation'
+gem 'active_link_to'
 gem 'simple_form', '~> 3.0.2'
 gem 'decent_exposure'
 gem 'kaminari'
