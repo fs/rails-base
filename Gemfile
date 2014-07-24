@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 ruby '2.1.2'
 
+gem 'github-markdown' # only for dashboard controller
+
 gem 'autoprefixer-rails'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'compass-rails'
@@ -9,7 +11,6 @@ gem 'decent_exposure'
 gem 'devise'
 gem 'foundation-icons-sass-rails'
 gem 'foundation-rails'
-gem 'github-markdown' # only for dashboard controller
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'pg'
