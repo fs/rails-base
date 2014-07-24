@@ -15,7 +15,7 @@ module Devise
         cancel_account_link.click
       end
 
-      def submit_user_form(options)
+      def user_information(options)
         fill_form(
           :user,
           attributes_for(:user)

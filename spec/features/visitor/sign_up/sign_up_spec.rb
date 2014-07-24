@@ -8,7 +8,7 @@ feature 'Sign up' do
 
   before(:each) do
     sign_up_page.load
-    sign_up_page.register
+    sign_up_page.user_registration
   end
 
   scenario 'User signs up successfully' do
@@ -27,7 +27,7 @@ feature 'Sign up' do
 
   scenario 'User resents email confirmation instructions' do
     resend_confirmation_page.load
-    resend_confirmation_page.submit_form(user.email)
+    resend_confirmation_page.confirmation_instruction(user.email)
 
     open_email(user.email)
 

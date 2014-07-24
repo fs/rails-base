@@ -8,7 +8,7 @@ feature 'Cancel account' do
 
   before(:each) do
     login_page.load
-    login_page.sign_in(user.email, '123456')
+    login_page.user_authentication(user.email, '123456')
   end
 
   scenario 'I cancel my account' do

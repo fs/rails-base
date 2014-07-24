@@ -12,7 +12,7 @@ module Devise
               '.alert',
               text: 'You have to confirm your account before continuing.'
 
-      def sign_in(email, password)
+      def user_authentication(email, password)
         top_bar.sign_in_link.click
 
         fill_form(
