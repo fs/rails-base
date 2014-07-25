@@ -43,12 +43,14 @@ group :test do
 end
 
 group :development, :test do
+  gem 'awesome_print'
   gem 'brakeman', require: false
   gem 'bundler-audit'
+  gem 'byebug'
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'fuubar', '~> 2.0.0.rc1'
-  gem 'jazz_hands'
+  gem 'pry-rails'
   gem 'rails_best_practices'
   gem 'rspec-rails', '~> 3.0'
   gem 'rubocop'
