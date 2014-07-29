@@ -38,6 +38,7 @@ Application currently based on Rails 4 stable branch and Ruby 2.1.0
 * [RSpec](https://github.com/rspec/rspec) for awesome, readable isolation testing
 * [Shoulda Matchers](http://github.com/thoughtbot/shoulda-matchers) for frequently needed Rails and RSpec matchers
 * [Email Spec](https://github.com/bmabey/email-spec) Collection of rspec matchers and cucumber steps for testing emails
+* [Site Prism](https://github.com/natritmeyer/site_prism) for using Page Object in acceptance testing
 
 ## Initializes
 
