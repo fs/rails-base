@@ -27,7 +27,7 @@ feature 'Sign up' do
 
   scenario 'User resents email confirmation instructions' do
     resend_confirmation_page.load
-    resend_confirmation_page.submit_form(user.email)
+    resend_confirmation_page.resend_confirmation_instructions(user.email)
 
     open_email(user.email)
 
