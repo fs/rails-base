@@ -8,7 +8,7 @@ module Devise
 
       element :sign_up_button, 'input[value="Sign up"]'
 
-      def user_registration
+      def register
         fill_form(
           :user,
           attributes_for(:user).slice(*signup_attributes)

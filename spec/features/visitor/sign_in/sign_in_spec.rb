@@ -13,26 +13,26 @@ feature 'Sign in' do
   end
 
   scenario 'User signs in successfully' do
-    login_page.user_authentication(user.email, password)
+    login_page.sign_in(user.email, password)
 
     expect(login_page.top_bar).to have_sign_out_link
   end
 
   scenario 'User signs in with invalid credentials' do
-    login_page.user_authentication(user.email, 'wrong password')
+    login_page.sign_in(user.email, 'wrong password')
 
     expect(login_page.top_bar).to have_sign_in_link
   end
 
   scenario 'User has not confirmed email address' do
-    login_page.user_authentication(not_confirmed_user.email, password)
+    login_page.sign_in(not_confirmed_user.email, password)
 
     expect(login_page).to have_confirm_account_alert
   end
 
   scenario 'User forgets his password' do
     forgot_password_page.load
-    forgot_password_page.password_recovery(user.email)
+    forgot_password_page.recover_password(user.email)
 
     open_email(user.email)
 

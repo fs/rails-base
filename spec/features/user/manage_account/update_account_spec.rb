@@ -8,19 +8,19 @@ feature 'Update account with valid data' do
 
   before(:each) do
     login_page.load
-    login_page.user_authentication(user.email, '123456')
+    login_page.sign_in(user.email, '123456')
   end
 
   scenario 'I submit update account form with valid data' do
     edit_user_page.load
-    edit_user_page.user_information(full_name: 'New Name', current_password: '123456')
+    edit_user_page.submit_user_form(full_name: 'New Name', current_password: '123456')
 
     expect(user.reload.full_name).to eql 'New Name'
   end
 
   scenario 'Wrong current password' do
     edit_user_page.load
-    edit_user_page.user_information(full_name: 'New Name', current_password: 'wrong')
+    edit_user_page.submit_user_form(full_name: 'New Name', current_password: 'wrong')
 
     expect(user.reload.full_name).to_not eql 'My new name with invalid password'
   end
