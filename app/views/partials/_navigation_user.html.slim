@@ -6,10 +6,10 @@ ul.right
         new_user_registration_path
         li
           a href=edit_user_registration_path
-            | Edit profile
+            = t('app.navigation.user.edit_profile')
         li
           a href=destroy_user_session_path
-            | Sign out
+            = t('app.navigation.user.sign_out')
   - else
-    = active_link_to 'Sign in', new_user_session_path, active: :exclusive, wrap_tag: :li
-    = active_link_to 'Sign up', new_user_registration_path, active: :exclusive, wrap_tag: :li
+    = active_link_to t('app.navigation.user.sign_in'), new_user_session_path, active: :exclusive, wrap_tag: :li
+    = active_link_to t('app.navigation.user.sign_up'), new_user_registration_path, active: :exclusive, wrap_tag: :li
