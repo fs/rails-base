@@ -8,9 +8,11 @@ module Devise
       section :top_bar, TopBar, '.top-bar'
 
       element :sign_in_button, 'input[value="Sign in"]'
-      element :confirm_account_alert,
-              '.alert',
+      element :confirm_account_alert, '.alert',
               text: 'You have to confirm your account before continuing.'
+
+      element :invalid_credentials_alert, '.alert-box',
+              text: 'Invalid email or password.'
 
       def sign_in(email, password)
         top_bar.sign_in_link.click

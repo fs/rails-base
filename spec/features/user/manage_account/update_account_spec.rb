@@ -22,6 +22,6 @@ feature 'Update account with valid data' do
     edit_user_page.load
     edit_user_page.submit_user_form(full_name: 'New Name', current_password: 'wrong')
 
-    expect(edit_user_page).to have_validation_error
+    expect(edit_user_page).to have_validation_error_alert
   end
 end
