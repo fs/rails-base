@@ -10,6 +10,9 @@ module Devise
 
       element :cancel_account_link, 'a', text: 'Cancel my account'
       element :update_button, 'input[value="Update"]'
+      element :validation_error, '.error', text: 'is invalid'
+      element :alert_box, '.alert-box',
+              text: 'Bye! Your account was successfully cancelled. We hope to see you again soon.'
 
       def cancel_account
         cancel_account_link.click
