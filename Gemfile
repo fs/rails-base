@@ -2,29 +2,35 @@ source 'https://rubygems.org'
 
 ruby '2.1.2'
 
-gem 'github-markdown' # only for dashboard controller
-
-gem 'autoprefixer-rails'
-gem 'coffee-rails', '~> 4.0.0'
-gem 'compass-rails'
-gem 'decent_exposure'
-gem 'devise'
-gem 'foundation-icons-sass-rails'
-gem 'foundation-rails'
-gem 'jquery-rails'
-gem 'kaminari'
-gem 'pg'
+# the most important stuff
 gem 'rails', '4.1.4'
-gem 'rollbar', '~> 0.10.3'
+gem 'pg'
+
+# frontend stack: preprocessors, libraries, minifiers, assets
+# plus view stack: helpers, builders, etc.
 gem 'sass-rails', '~> 4.0.0'
-gem 'seedbank'
+gem 'slim'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'foundation-rails'
+gem 'foundation-icons-sass-rails'
+gem 'compass-rails'
+gem 'jquery-rails'
+gem 'autoprefixer-rails'
+gem 'therubyracer', platforms: :ruby
+gem 'uglifier', '>= 1.3.0'
+
 gem 'simple_form', '~> 3.0.2'
 gem 'simple-navigation'
-gem 'slim'
-gem 'therubyracer', platforms: :ruby
-gem 'thin'
 gem 'title'
-gem 'uglifier', '>= 1.3.0'
+gem 'github-markdown' # only for dashboard controller
+
+# all other gems
+gem 'devise'
+gem 'decent_exposure'
+gem 'kaminari'
+gem 'rollbar', '~> 0.10.3'
+gem 'seedbank'
+gem 'thin'
 
 group :staging, :production do
   gem 'rails_12factor'
