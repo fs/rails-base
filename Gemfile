@@ -6,14 +6,14 @@ ruby '2.1.2'
 gem 'rails', '4.1.4'
 gem 'pg'
 
-#views
+# views
 gem 'slim'
 gem 'foundation-rails'
 gem 'foundation-icons-sass-rails'
 gem 'simple_form', '~> 3.0.2'
 gem 'github-markdown' # only for dashboard controller
 
-#css/js
+# css/js
 gem 'sass-rails', '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'compass-rails'
@@ -23,7 +23,7 @@ gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
 gem 'uglifier', '>= 1.3.0'
 
-#etc
+# etc
 gem 'simple-navigation'
 gem 'devise'
 gem 'decent_exposure'
