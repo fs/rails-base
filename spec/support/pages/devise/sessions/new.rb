@@ -12,6 +12,10 @@ module Devise
               '.alert',
               text: 'You have to confirm your account before continuing.'
 
+      element :invalid_credentials_alert,
+              '.alert-box',
+              text: 'Invalid email or password.'
+
       def sign_in(email, password)
         top_bar.sign_in_link.click
 
