@@ -2,29 +2,36 @@ source 'https://rubygems.org'
 
 ruby '2.1.2'
 
+# rails stuff
+gem 'rails', '4.1.4'
+gem 'pg'
+
+#views
+gem 'slim'
+gem 'foundation-rails'
+gem 'foundation-icons-sass-rails'
+gem 'simple_form', '~> 3.0.2'
 gem 'github-markdown' # only for dashboard controller
 
-gem 'autoprefixer-rails'
+#css/js
+gem 'sass-rails', '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'compass-rails'
-gem 'decent_exposure'
-gem 'devise'
-gem 'foundation-icons-sass-rails'
-gem 'foundation-rails'
-gem 'jquery-rails'
-gem 'kaminari'
-gem 'pg'
-gem 'rails', '4.1.4'
-gem 'rollbar', '~> 0.10.3'
-gem 'sass-rails', '~> 4.0.0'
-gem 'seedbank'
-gem 'simple_form', '~> 3.0.2'
-gem 'simple-navigation'
-gem 'slim'
+gem 'autoprefixer-rails'
+
 gem 'therubyracer', platforms: :ruby
-gem 'thin'
-gem 'title'
+gem 'jquery-rails'
 gem 'uglifier', '>= 1.3.0'
+
+#etc
+gem 'simple-navigation'
+gem 'devise'
+gem 'decent_exposure'
+gem 'kaminari'
+gem 'title'
+gem 'rollbar', '~> 0.10.3'
+gem 'seedbank'
+gem 'thin'
 
 group :staging, :production do
   gem 'rails_12factor'
