@@ -6,7 +6,7 @@ ruby '2.1.2'
 gem 'rails', '4.1.4'
 gem 'pg'
 
-# frontend stack: preprocessor, libraries, minifiers, assets
+# frontend stack: preprocessors, libraries, minifiers, assets
 # plus view stack: helpers, builders, etc.
 gem 'sass-rails', '~> 4.0.0'
 gem 'slim'
