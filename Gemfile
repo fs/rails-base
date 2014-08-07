@@ -19,7 +19,7 @@ gem 'rollbar', '~> 0.10.3'
 gem 'sass-rails', '~> 4.0.0'
 gem 'seedbank'
 gem 'simple_form', '~> 3.0.2'
-gem 'simple-navigation'
+gem 'active_link_to'
 gem 'slim'
 gem 'therubyracer', platforms: :ruby
 gem 'thin'
