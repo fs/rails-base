@@ -20,7 +20,7 @@ gem 'therubyracer', platforms: :ruby
 gem 'uglifier', '>= 1.3.0'
 
 gem 'simple_form', '~> 3.0.2'
-gem 'simple-navigation'
+gem 'active_link_to'
 gem 'title'
 gem 'github-markdown' # only for dashboard controller
 

@@ -80,6 +80,15 @@ en:
 
     home: 'Dashboard'
 
+    navigation:
+      main:
+        dashboard: 'Dashboard'
+      user:
+        sign_in: 'Sign in'
+        sign_out: 'Sign out'
+        sign_up: 'Sign up'
+        edit_profile: 'Edit profile'
+
   time:
     formats:
       short_date: "%x"
@@ -87,3 +96,4 @@ en:
       us: "%m/%d/%Y %I:%M %p"
       us_date: "%m/%d/%Y"
       us_time: "%I:%M %p"
+
