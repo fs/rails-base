@@ -45,7 +45,6 @@ class Bootstrap
 
   def migrate_db
     system_with_note('bundle exec rake db:setup')
-    system_with_note('bundle exec rake db:test:prepare')
   end
 
   def install_bundle_cache
