@@ -16,6 +16,9 @@ feature 'Cancel account' do
     edit_user_page.cancel_account
 
     expect(edit_user_page.top_bar).to have_sign_in_link
-    expect(User.exists?(user.id)).to be_falsey
+    expect(edit_user_page).to have_cancel_account_notice
+
+    login_page.sign_in(user.email, '123456')
+    expect(login_page).to have_invalid_credentials_alert
   end
 end

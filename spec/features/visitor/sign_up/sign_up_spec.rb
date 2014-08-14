@@ -5,6 +5,7 @@ feature 'Sign up' do
 
   let(:sign_up_page) { Devise::Registrations::New.new }
   let(:resend_confirmation_page) { Devise::Confirmations::New.new }
+  let(:index_page) { Dashboard::Index.new }
 
   before(:each) do
     sign_up_page.load
@@ -22,12 +23,12 @@ feature 'Sign up' do
     open_email(user.email)
     visit_in_email 'Confirm my account'
 
-    expect(user.reload).to be_confirmed
+    expect(index_page.top_bar).to have_text(user.email)
   end
 
   scenario 'User resents email confirmation instructions' do
     resend_confirmation_page.load
-    resend_confirmation_page.submit_form(user.email)
+    resend_confirmation_page.resend_confirmation_instructions(user.email)
 
     open_email(user.email)
 
