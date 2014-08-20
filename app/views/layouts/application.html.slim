@@ -22,14 +22,14 @@ html class="no-js" lang="en"
 
   body
     #root
-      = render "application/navigation"
-      = render "application/messages"
+      = render "navigation"
+      = render "messages"
 
       = yield
 
       #push-footer
 
-    = render "application/footer"
+    = render "footer"
 
     = javascript_include_tag :application
 
