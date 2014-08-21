@@ -9,7 +9,7 @@ if ENV['CI']
   CodeClimate::TestReporter.start
 end
 
-Dir[Rails.root.join('spec/support/{sections,**}/**/*.rb')].each { |f| require f }
+Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 RSpec.configure do |config|
   config.use_transactional_fixtures = true
