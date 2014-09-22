@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+set -e
+
+FETCHED_BRANCH_NAME=$( $BRANCH_NAME | git rev-parse --abbrev-ref HEAD)
+CODECLIMATE_API_TOKEN=your_code_climate_api_token_should_be_here
+REPO_ID=your_repo_id_should_be_here
+
+bundle exec codeclimate_ci --codeclimate_api_token $CODECLIMATE_API_TOKEN --repo-id $REPO_ID --branch_name $FETCHED_BRANCH_NAME

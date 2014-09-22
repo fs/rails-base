@@ -4,3 +4,4 @@ set -e
 
 bin/rspec spec
 bin/quality
+#bin/codeclimate_ci
