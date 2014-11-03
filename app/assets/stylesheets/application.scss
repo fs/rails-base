@@ -1,17 +1,18 @@
 @import "compass";
-@import "foundation_and_overrides";
 @import "foundation-icons";
 @import "compass/layout/sticky-footer";
 
-@import "globals/vars";
-@import "globals/icons";
+@import "core/all";
 
 @import "partials/messages";
 @import "partials/navigation";
 @import "partials/footer";
 
-@import "shared/base";
 @import "shared/header";
 @import "shared/forms";
 
 @import "views/dashboard";
+
+// Inbox
+// The inbox allows developers, and those not actively working on the CSS,
+// to quickly add styles that are easily seen by the maintainer of the file.
