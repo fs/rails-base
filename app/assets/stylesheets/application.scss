@@ -3,15 +3,7 @@
 @import "compass/layout/sticky-footer";
 
 @import "core/all";
-
-@import "partials/messages";
-@import "partials/navigation";
-@import "partials/footer";
-
-@import "shared/header";
-@import "shared/forms";
-
-@import "views/dashboard";
+@import "modules/all";
 
 // Inbox
 // The inbox allows developers, and those not actively working on the CSS,
