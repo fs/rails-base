@@ -1,6 +1,7 @@
-@include sticky-footer(40px, "#root", "#push-footer", "#footer");
-
 #footer {
+  clear: both;
+  min-height: 40px;
+
   p {
     margin: 0;
   }
