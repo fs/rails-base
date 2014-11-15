@@ -15,7 +15,7 @@ Application currently based on Rails 4 stable branch and Ruby 2.1.0
 * [Zurb Foundation for Rails](https://github.com/zurb/foundation-rails) the easiest way to use Foundation in your Rails app. For more information see [how to add Foundation to your Rails app](http://foundation.zurb.com/docs/applications.html)
 * [Foundation Icon Fonts on SASS for Rails](https://github.com/zaiste/foundation-icons-sass-rails) for icons. Browse [icon set](http://zurb.com/playground/foundation-icon-fonts-3) examples
 * [Autoprefixer](https://github.com/ai/autoprefixer-rails) for writing CSS without vendor prefixes
-* [Slim](https://github.com/stonean/slim) for views
+* [Slim](https://github.com/slim-template/slim) for views
 * [Simple Form](https://github.com/plataformatec/simple_form) for forms
 * [Decent Exposure](https://github.com/voxdolo/decent_exposure) for DRY controllers
 * [Kaminari](https://github.com/amatsuda/kaminari) for pagination
