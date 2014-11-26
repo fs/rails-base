@@ -1,0 +1,34 @@
+- title 'View post'
+.show-item
+  .well.post.form-horizontal
+
+    .control-group
+      label.control-label
+        | Title
+      .controls
+        .input-xlarge.uneditable-input.string.span7
+          = post.title
+    .control-group
+      label.control-label
+        | Text
+      .controls
+        .input-xlarge.uneditable-input.text.span7
+          = post.text
+    .control-group
+      label.control-label
+        | Picture
+      .controls
+        .input-xlarge.uneditable-input.string.span7
+          = post.picture
+    .control-group
+      label.control-label
+        | Privacy
+      .controls
+        .input-xlarge.uneditable-input.boolean.span7
+          = post.privacy
+  .form-actions
+    = link_to(edit_post_path(post), class: 'btn btn-primary') do
+      i.icon-pencil.icon-white
+      | Edit
+    '  or
+    = link_to 'Back', :back

@@ -1,0 +1,37 @@
+- title 'Listing posts'
+
+table.table.table-striped
+  thead
+    tr
+        th Title
+        th Text
+        th Picture
+        th Privacy
+        th Actions
+
+  - posts.each do |post|
+    tr
+      td= post.title
+      td= post.text
+      td= post.picture
+      td= post.privacy
+      td.actions
+        = link_to(post, class: 'btn') do
+          i.icon-eye-open
+          |  Show
+        = link_to(edit_post_path(post), class: 'btn') do
+          i.icon-edit
+          |  Edit
+        = link_to(post, confirm: 'Are you sure?', method: :delete, class: 'btn btn-danger') do
+          i.icon-trash.icon-white
+          |  Delete
+
+.paginator
+  = paginate(posts)
+
+br
+= link_to new_post_path, class: 'btn btn-primary' do
+  i.icon-plus.icon-white
+  |  New Post
+
+
