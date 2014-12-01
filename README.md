@@ -88,6 +88,12 @@ Run app
 
 **Note: do not forget to clean history when starting new project from this repository**
 
+    git checkout --orphan temp $1
+    git commit -m "Truncated history"
+    git checkout master
+    git rebase --onto temp $1 master
+    git branch -D temp
+
 ## How to update existing project with new changes from rails-base repo
 
 You can fetch latest changes from rails-base repo and merge or cherry-pick commits
