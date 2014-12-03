@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.1.2'
 
 # the most important stuff
-gem 'rails', '4.1.7'
+gem 'rails', '4.1.8'
 gem 'pg'
 
 # frontend stack: preprocessors, libraries, minifiers, assets

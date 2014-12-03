@@ -59,8 +59,9 @@ Application currently based on Rails 4 stable branch and Ruby 2.1.0
 
 Clone application as new project with original repository named "rails-base"
 
-    git clone git://github.com/fs/rails-base.git --origin rails-base [MY-NEW-PROJECT]
+    git clone --depth 1 git://github.com/fs/rails-base.git --origin rails-base [MY-NEW-PROJECT]
 
+**Note: we use depth parameter here in order not to copy the history of changes in base project**
 
 Create your new repo on GitHub and push master into it.
 Make sure master branch is tracking origin repo.
