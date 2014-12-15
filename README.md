@@ -1,15 +1,15 @@
-# Skeleton for new Rails 4 based application
+# Rails Base
 
 [![Build Status](https://semaphoreapp.com/api/v1/projects/31b68af8b073708a56e4e005bbcba2af4802816d/76140/shields_badge.png)](https://semaphoreapp.com/fs/rails-base)
 [![Test Coverage](https://codeclimate.com/github/fs/rails-base/badges/coverage.svg)](https://codeclimate.com/github/fs/rails-base)
 [![Code Climate](https://codeclimate.com/github/fs/rails-base.png)](https://codeclimate.com/github/fs/rails-base)
 
 
+Rails Base is the base Rails application template used at Flatstack.
+It's based on Rails 4 and Ruby 2.1.2.
 
-This simple application includes ruby/rails technology which we use in the FlatStack for new projects.
-Application currently based on Rails 4 stable branch and Ruby 2.1.0
 
-## Application gems:
+## Application Gems
 
 * [Sass Rails](https://github.com/rails/sass-rails) Ruby on Rails stylesheet engine for Sass
 * [Zurb Foundation for Rails](https://github.com/zurb/foundation-rails) the easiest way to use Foundation in your Rails app. For more information see [how to add Foundation to your Rails app](http://foundation.zurb.com/docs/applications.html)
@@ -22,7 +22,7 @@ Application currently based on Rails 4 stable branch and Ruby 2.1.0
 * [Devise](http://github.com/plataformatec/devise) for basic auth
 * [Rollbar](https://github.com/rollbar/rollbar-gem) for exception notification
 
-## Development gems
+## Development Gems
 
 * [Thin](https://github.com/macournoyer/thin) as rails web server
 * [Foreman](https://github.com/ddollar/foreman) for managing development stack with Procfile
@@ -33,7 +33,7 @@ Application currently based on Rails 4 stable branch and Ruby 2.1.0
 * [Pry Rails](https://github.com/rweng/pry-rails) is an alternative to the standard IRB shell for Ruby
 * [Bundler Audit](https://github.com/rubysec/bundler-audit) Patch-level verification for Gems
 
-## Testing gems
+## Testing Gems
 
 * Capybara, and Capybara Webkit for integration testing, including JavaScript behavior
 * [Factory Girl](https://github.com/thoughtbot/factory_girl) for easier creation of test data
@@ -42,7 +42,7 @@ Application currently based on Rails 4 stable branch and Ruby 2.1.0
 * [Email Spec](https://github.com/bmabey/email-spec) Collection of rspec matchers and cucumber steps for testing emails
 * [Site Prism](https://github.com/natritmeyer/site_prism) for using Page Object in acceptance testing
 
-## Initializes
+## Initializers
 
 * `01_config.rb` - shortcut for getting application config with `app_config`
 * `mailer.rb` - setup default hosts for mailer from configuration
@@ -55,7 +55,7 @@ Application currently based on Rails 4 stable branch and Ruby 2.1.0
 * `bin/ci` - should be used in the CI or locally
 * `bin/server` - to run server locally
 
-## Quick start
+## Getting Started
 
 Clone application as new project with original repository named "rails-base"
 
@@ -87,7 +87,7 @@ Run app
     # update README.md
     git commit -am "Update README.md"
 
-## How to update existing project with new changes from rails-base repo
+## Updating Existing Projects With New Changes From Rails Base
 
 You can fetch latest changes from rails-base repo and merge or cherry-pick commits
 
@@ -101,7 +101,7 @@ You can fetch latest changes from rails-base repo and merge or cherry-pick commi
 
     git flow feature finish rails-base-update
 
-## Note on Patches/Pull Requests
+## Contributing
 
 * Fork the project.
 * Make your feature addition or bug fix.
@@ -110,15 +110,15 @@ You can fetch latest changes from rails-base repo and merge or cherry-pick commi
   (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
 * Send a pull request. Bonus points for topic branches.
 
-## Note on ie8 support
+## IE8 Support
 
-Rails Base fixes ie8 problems with:
+Rails Base fixes IE8 problems with:
 
 * lack of support for rem units in CSS
 * lack of media query support
-* lack of Html5 and Css3 support
+* lack of HTML5 and CSS3 support
 
-**In order to get rid of ie8 support please remove the following:**
+**In order to get rid of IE8 support please remove the following:**
 
 * vendor/assets/javascripts/ie8 folder
 * views/layouts/application lines commented with `/[if lt IE 9]`
@@ -126,9 +126,9 @@ Rails Base fixes ie8 problems with:
         = javascript_include_tag "ie8/nwmatcher-1.2.5-min.js", "ie8/selectivizr-1.0.3b.js", "ie8/respond.min.js"
         = javascript_include_tag "ie8/rem"
 
-## Note on how to override Zurb Foundation css properties
+## Overriding Foundation Settings
 
-Do your overrides in the `app/assets/stylesheets/foundation_and_overrides.scss`
+Do your overrides in the `app/assets/stylesheets/core/_foundation_and_overrides.scss`
 
 ## Credits
 
