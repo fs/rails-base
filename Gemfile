@@ -13,7 +13,6 @@ gem 'slim'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'foundation-rails'
 gem 'foundation-icons-sass-rails'
-gem 'compass-rails'
 gem 'jquery-rails'
 gem 'autoprefixer-rails'
 gem 'therubyracer', platforms: :ruby
