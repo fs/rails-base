@@ -36,7 +36,7 @@ group :staging, :production do
 end
 
 group :test do
-  gem 'capybara'
+  gem 'capybara', '~> 2.4.4'
   gem 'codeclimate-test-reporter', require: false
   gem 'database_cleaner'
   gem 'email_spec'
