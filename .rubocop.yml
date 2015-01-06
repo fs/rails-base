@@ -18,14 +18,14 @@ Style/LineLength:
   Description: 'Limit lines to 120 characters.'
   Max: 120
 
-# Align ends correctly.
 Lint/EndAlignment:
-  # The value `keyword` means that `end` should be aligned with the matching
-  # keyword (if, while, etc.).
-  # The value `variable` means that in assignments, `end` should be aligned
-  # with the start of the variable on the left hand side of `=`. In all other
-  # situations, `end` should still be aligned with the keyword.
   AlignWith: variable
   SupportedStyles:
     - keyword
     - variable
+
+Style/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+  SupportedStyles:
+    - with_first_parameter
+    - with_fixed_indentation
