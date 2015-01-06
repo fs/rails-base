@@ -11,35 +11,38 @@ It's based on Rails 4 and Ruby 2.1.2.
 
 ## Application Gems
 
-* [Sass Rails](https://github.com/rails/sass-rails) Ruby on Rails stylesheet engine for Sass
-* [Zurb Foundation for Rails](https://github.com/zurb/foundation-rails) the easiest way to use Foundation in your Rails app. For more information see [how to add Foundation to your Rails app](http://foundation.zurb.com/docs/applications.html)
-* [Foundation Icon Fonts on SASS for Rails](https://github.com/zaiste/foundation-icons-sass-rails) for icons. Browse [icon set](http://zurb.com/playground/foundation-icon-fonts-3) examples
+* [Sass](https://github.com/rails/sass-rails) for Sass/Scss stylesheets
+* [Zurb Foundation](https://github.com/zurb/foundation-rails) as CSS framework.
+  For more information see [documentation on using Foundation in Rails apps](http://foundation.zurb.com/docs/applications.html)
+* [Foundation Icon Font](https://github.com/zaiste/foundation-icons-sass-rails) for icons. Browse [icon set](http://zurb.com/playground/foundation-icon-fonts-3) examples
 * [Autoprefixer](https://github.com/ai/autoprefixer-rails) for writing CSS without vendor prefixes
 * [Slim](https://github.com/slim-template/slim) for views
 * [Simple Form](https://github.com/plataformatec/simple_form) for forms
-* [Decent Exposure](https://github.com/voxdolo/decent_exposure) for DRY controllers
+* [Decent Exposure](https://github.com/voxdolo/decent_exposure) to DRY controllers
 * [Kaminari](https://github.com/amatsuda/kaminari) for pagination
 * [Devise](http://github.com/plataformatec/devise) for basic auth
 * [Rollbar](https://github.com/rollbar/rollbar-gem) for exception notification
 
 ## Development Gems
 
-* [Thin](https://github.com/macournoyer/thin) as rails web server
+* [Thin](https://github.com/macournoyer/thin) as Rails web server
 * [Foreman](https://github.com/ddollar/foreman) for managing development stack with Procfile
-* [Letter Opener](https://github.com/ryanb/letter_opener) for preview mail in the browser instead of sending
-* [Bullet](https://github.com/flyerhzm/bullet) gem to kill N+1 queries and unused eager loading
-* [Rails Best Practices](https://github.com/railsbp/rails_best_practices) code metric tool
-* [Brakeman](https://github.com/presidentbeef/brakeman) static analysis security vulnerability scanner
-* [Pry Rails](https://github.com/rweng/pry-rails) is an alternative to the standard IRB shell for Ruby
-* [Bundler Audit](https://github.com/rubysec/bundler-audit) Patch-level verification for Gems
+* [Letter Opener](https://github.com/ryanb/letter_opener) for opening mail in the browser instead of sending it
+* [Bullet](https://github.com/flyerhzm/bullet) for detecting N+1 queries and unused eager loading
+* [Rails Best Practices](https://github.com/railsbp/rails_best_practices) for checking the code quality
+* [Brakeman](https://github.com/presidentbeef/brakeman) for checking application for common security vulnerabilities
+* [Pry Rails](https://github.com/rweng/pry-rails) for interactively exploring objects
+* [Bundler Audit](https://github.com/rubysec/bundler-audit) for scanning the Gemfile for
+  insecure dependencies based on published CVEs
 
 ## Testing Gems
 
-* Capybara, and Capybara Webkit for integration testing, including JavaScript behavior
-* [Factory Girl](https://github.com/thoughtbot/factory_girl) for easier creation of test data
-* [RSpec](https://github.com/rspec/rspec) for awesome, readable isolation testing
-* [Shoulda Matchers](http://github.com/thoughtbot/shoulda-matchers) for frequently needed Rails and RSpec matchers
-* [Email Spec](https://github.com/bmabey/email-spec) Collection of rspec matchers and cucumber steps for testing emails
+* [Capybara](https://github.com/jnicklas/capybara) and [Capybara Webkit](https://github.com/thoughtbot/capybara-webkit)
+  for integration testing, including JavaScript behavior
+* [Factory Girl](https://github.com/thoughtbot/factory_girl) for test data
+* [RSpec](https://github.com/rspec/rspec) for unit testing
+* [Shoulda Matchers](http://github.com/thoughtbot/shoulda-matchers) for common RSpec matchers
+* [Email Spec](https://github.com/bmabey/email-spec) for common matchers for testing emails
 * [Site Prism](https://github.com/natritmeyer/site_prism) for using Page Object in acceptance testing
 
 ## Initializers
