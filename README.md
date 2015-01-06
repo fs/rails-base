@@ -6,7 +6,7 @@
 
 
 Rails Base is the base Rails application template used at Flatstack.
-It's based on Rails 4 and Ruby 2.1.2.
+It's based on Rails 4 and Ruby 2.1.5.
 
 
 ## Application Gems
