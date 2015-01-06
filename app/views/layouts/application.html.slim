@@ -16,10 +16,6 @@ html class="no-js" lang="en"
     /! Le modernizr
     = javascript_include_tag "vendor/modernizr"
 
-    / remove this if no need to support ie8
-    /[if lt IE 9]
-      = javascript_include_tag "ie8/nwmatcher-1.2.5-min.js", "ie8/selectivizr-1.0.3b.js", "ie8/respond.min.js"
-
   body
     #root
       = render "navigation"
@@ -27,12 +23,6 @@ html class="no-js" lang="en"
 
       = yield
 
-      #push-footer
-
     = render "footer"
 
     = javascript_include_tag :application
-
-    / remove this if no need to support ie8
-    /[if lt IE 9]
-      = javascript_include_tag "ie8/rem"
