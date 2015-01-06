@@ -32,7 +32,7 @@ GEM
     addressable (2.3.6)
     arel (5.0.1.20140414130214)
     ast (2.0.0)
-    autoprefixer-rails (1.1.20140410)
+    autoprefixer-rails (4.0.2.2)
       execjs
     awesome_print (1.2.0)
     bcrypt (3.1.7)
@@ -102,7 +102,7 @@ GEM
       mail (~> 2.2)
     erubis (2.7.0)
     eventmachine (1.0.3)
-    execjs (2.0.2)
+    execjs (2.2.2)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.4.0)
