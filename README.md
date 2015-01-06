@@ -101,6 +101,10 @@ You can fetch latest changes from rails-base repo and merge or cherry-pick commi
 
     git flow feature finish rails-base-update
 
+## Overriding Foundation Settings
+
+Do your overrides in the `app/assets/stylesheets/core/_foundation_and_overrides.scss`
+
 ## Contributing
 
 * Fork the project.
@@ -109,26 +113,6 @@ You can fetch latest changes from rails-base repo and merge or cherry-pick commi
 * Commit, do not mess with rakefile, version, or history.
   (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
 * Send a pull request. Bonus points for topic branches.
-
-## IE8 Support
-
-Rails Base fixes IE8 problems with:
-
-* lack of support for rem units in CSS
-* lack of media query support
-* lack of HTML5 and CSS3 support
-
-**In order to get rid of IE8 support please remove the following:**
-
-* vendor/assets/javascripts/ie8 folder
-* views/layouts/application lines commented with `/[if lt IE 9]`
-
-        = javascript_include_tag "ie8/nwmatcher-1.2.5-min.js", "ie8/selectivizr-1.0.3b.js", "ie8/respond.min.js"
-        = javascript_include_tag "ie8/rem"
-
-## Overriding Foundation Settings
-
-Do your overrides in the `app/assets/stylesheets/core/_foundation_and_overrides.scss`
 
 ## Credits
 
