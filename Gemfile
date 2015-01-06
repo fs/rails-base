@@ -68,5 +68,4 @@ group :development do
   gem 'quiet_assets'
   gem 'letter_opener'
   gem 'slim-rails'
-  gem 'styleguides'
 end

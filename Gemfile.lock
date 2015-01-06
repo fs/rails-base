@@ -276,7 +276,6 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
-    styleguides (0.1)
     temple (0.6.7)
     terminal-table (1.4.5)
     therubyracer (0.12.1)
@@ -353,7 +352,6 @@ DEPENDENCIES
   site_prism
   slim
   slim-rails
-  styleguides
   therubyracer
   thin
   title
