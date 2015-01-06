@@ -109,15 +109,6 @@ You can fetch latest changes from rails-base repo and merge or cherry-pick commi
 
 Do your overrides in the `app/assets/stylesheets/core/_foundation_and_overrides.scss`
 
-## Contributing
-
-* Fork the project.
-* Make your feature addition or bug fix.
-* Add tests for it. This is important so I don't break it in a future version unintentionally.
-* Commit, do not mess with rakefile, version, or history.
-  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
-* Send a pull request. Bonus points for topic branches.
-
 ## Credits
 
 Rails Base is maintained by [Timur Vafin](http://github.com/timurvafin).
