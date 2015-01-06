@@ -2,14 +2,14 @@ require 'rails_helper'
 
 feature 'Sign up' do
   let(:user) { User.first }
-
-  let(:sign_up_page) { Devise::Registrations::New.new }
-  let(:resend_confirmation_page) { Devise::Confirmations::New.new }
-  let(:index_page) { Dashboard::Index.new }
+  let(:user_attributes) { attributes_for(:user).slice(:full_name, :email, :password, :password_confirmation) }
 
   before(:each) do
-    sign_up_page.load
-    sign_up_page.register
+    visit new_user_registration_path
+
+    fill_form(:user, user_attributes)
+
+    click_button 'Sign up'
   end
 
   scenario 'User signs up successfully' do
@@ -23,12 +23,14 @@ feature 'Sign up' do
     open_email(user.email)
     visit_in_email 'Confirm my account'
 
-    expect(index_page.top_bar).to have_text(user.email)
+    expect(page).to have_text(user.email)
   end
 
   scenario 'User resents email confirmation instructions' do
-    resend_confirmation_page.load
-    resend_confirmation_page.resend_confirmation_instructions(user.email)
+    visit new_user_confirmation_path
+
+    fill_in 'user_email', with: user.email
+    click_button 'Resend confirmation instructions'
 
     open_email(user.email)
 
