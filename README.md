@@ -44,7 +44,6 @@ It's based on Rails 4 and Ruby 2.1.5.
 * [RSpec](https://github.com/rspec/rspec) for unit testing
 * [Shoulda Matchers](http://github.com/thoughtbot/shoulda-matchers) for common RSpec matchers
 * [Email Spec](https://github.com/bmabey/email-spec) for common matchers for testing emails
-* [Site Prism](https://github.com/natritmeyer/site_prism) for using Page Object in acceptance testing
 
 ## Initializers
 
