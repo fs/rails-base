@@ -50,16 +50,17 @@ end
 
 group :development, :test do
   gem 'awesome_print'
-  gem 'brakeman', require: false
   gem 'bundler-audit'
   gem 'byebug'
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'fuubar', '~> 2.0.0.rc1'
   gem 'pry-rails'
-  gem 'rails_best_practices'
   gem 'rspec-rails', '~> 3.0'
-  gem 'rubocop'
+  gem 'pronto'
+  gem 'pronto-rubocop', require: false
+  gem 'pronto-rails_best_practices', require: false
+  gem 'pronto-brakeman', require: false
 end
 
 group :development do
