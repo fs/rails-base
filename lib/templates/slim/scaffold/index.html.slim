@@ -1,5 +1,3 @@
-- title 'Listing <%= plural_table_name %>'
-
 table.table.table-striped
   thead
     tr
@@ -15,13 +13,13 @@ table.table.table-striped
 <% end -%>
       td.actions
         = link_to(<%= singular_table_name %>, class: 'btn') do
-          i.icon-eye-open
+          i.fi-eye
           |  Show
         = link_to(edit_<%= singular_table_name %>_path(<%= singular_table_name %>), class: 'btn') do
-          i.icon-edit
+          i.fi-pencil
           |  Edit
         = link_to(<%= singular_table_name %>, confirm: 'Are you sure?', method: :delete, class: 'btn btn-danger') do
-          i.icon-trash.icon-white
+          i.fi-trash
           |  Delete
 
 .paginator
@@ -29,7 +27,7 @@ table.table.table-striped
 
 br
 = link_to new_<%= singular_table_name %>_path, class: 'btn btn-primary' do
-  i.icon-plus.icon-white
+  i.fi-plus
   |  New <%= human_name %>
 
 

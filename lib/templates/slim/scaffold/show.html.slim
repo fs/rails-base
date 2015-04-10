@@ -1,4 +1,3 @@
-- title 'View <%= singular_table_name %>'
 .show-item
   .well.<%= singular_table_name %>.form-horizontal
 
@@ -12,7 +11,7 @@
 <% end -%>
   .form-actions
     = link_to(edit_<%= singular_table_name %>_path(<%= singular_table_name %>), class: 'btn btn-primary') do
-      i.icon-pencil.icon-white
+      i.fi-pencil
       | Edit
     '  or
     = link_to 'Back', :back
