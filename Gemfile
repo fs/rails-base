@@ -44,7 +44,6 @@ group :test do
   gem 'formulaic'
   gem 'launchy'
   gem 'shoulda-matchers'
-  gem 'site_prism'
   gem 'webmock', require: false
 end
 

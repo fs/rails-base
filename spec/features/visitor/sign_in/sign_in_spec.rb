@@ -3,36 +3,30 @@ require 'rails_helper'
 feature 'Sign in' do
   let(:user) { create :user, :confirmed }
   let(:not_confirmed_user) { create :user, :not_confirmed }
-  let(:password) { '123456' }
-
-  let(:login_page) { Devise::Sessions::New.new }
-  let(:forgot_password_page) { Devise::Passwords::New.new }
-
-  before(:each) do
-    login_page.load
-  end
 
   scenario 'User signs in successfully' do
-    login_page.sign_in(user.email, password)
+    sign_in(user.email, '123456')
 
-    expect(login_page.top_bar).to have_sign_out_link
+    expect(page).to have_content('Sign out')
   end
 
   scenario 'User signs in with invalid credentials' do
-    login_page.sign_in(user.email, 'wrong password')
+    sign_in(user.email, 'wrong password')
 
-    expect(login_page.top_bar).to have_sign_in_link
+    expect(page).to have_content('Sign in')
   end
 
   scenario 'User has not confirmed email address' do
-    login_page.sign_in(not_confirmed_user.email, password)
+    sign_in(not_confirmed_user.email, '123456')
 
-    expect(login_page).to have_confirm_account_alert
+    expect(page).to have_content('You have to confirm your account before continuing.')
   end
 
   scenario 'User forgets his password' do
-    forgot_password_page.load
-    forgot_password_page.recover_password(user.email)
+    visit new_user_password_path
+
+    fill_in 'user_email', with: user.email
+    click_button 'Send me reset password instructions'
 
     open_email(user.email)
 
