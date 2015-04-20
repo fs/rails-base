@@ -1,14 +1,12 @@
 doctype html
 
-/[if IE 9]
-  html class="lt-ie10" lang="en"
 html class="no-js" lang="en"
 
   head
     meta charset="utf-8"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
 
-    title= "#{app_config.app_name} - #{yield(:title) || 'Home'}"
+    title= title
 
     = csrf_meta_tags
 
@@ -18,27 +16,13 @@ html class="no-js" lang="en"
     /! Le modernizr
     = javascript_include_tag "vendor/modernizr"
 
-    / remove this if no need to support ie8
-    /[if lt IE 9]
-      = javascript_include_tag "ie8/nwmatcher-1.2.5-min.js", "ie8/selectivizr-1.0.3b.js", "ie8/respond.min.js"
-
   body
     #root
-      = render "partials/navigation"
-      = render "partials/messages"
-
-      .row
-        - if show_title?
-          h1= yield(:title)
+      = render "navigation"
+      = render "messages"
 
       = yield
 
-      #push-footer
-
-    = render "partials/footer"
+    = render "footer"
 
     = javascript_include_tag :application
-
-    / remove this if no need to support ie8
-    /[if lt IE 9]
-      = javascript_include_tag "ie8/rem"

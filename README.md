@@ -1,65 +1,71 @@
-# Skeleton for new Rails 4 based application
+# Rails Base
 
-[<img src="https://semaphoreapp.com/api/v1/projects/31b68af8b073708a56e4e005bbcba2af4802816d/76140/badge.png">](https://semaphoreapp.com/projects/2742)
+[![Build Status](https://semaphoreapp.com/api/v1/projects/31b68af8b073708a56e4e005bbcba2af4802816d/76140/shields_badge.png)](https://semaphoreapp.com/fs/rails-base)
+[![Test Coverage](https://codeclimate.com/github/fs/rails-base/badges/coverage.svg)](https://codeclimate.com/github/fs/rails-base)
 [![Code Climate](https://codeclimate.com/github/fs/rails-base.png)](https://codeclimate.com/github/fs/rails-base)
 
 
-This simple application includes ruby/rails technology which we use in the FlatStack for new projects.
-Application currently based on Rails 4 stable branch and Ruby 2.1.0
+Rails Base is the base Rails application template used at Flatstack.
+It's based on Rails 4 and Ruby 2.1.5.
 
-## Application gems:
 
-* [Sass Rails](https://github.com/rails/sass-rails) Ruby on Rails stylesheet engine for Sass
-* [Zurb Foundation for Rails](https://github.com/zurb/foundation-rails) the easiest way to use Foundation in your Rails app. For more information see [how to add Foundation to your Rails app](http://foundation.zurb.com/docs/applications.html)
-* [Foundation Icon Fonts on SASS for Rails](https://github.com/zaiste/foundation-icons-sass-rails) for icons. Browse [icon set](http://zurb.com/playground/foundation-icon-fonts-3) examples
+## Application Gems
+
+* [Sass](https://github.com/rails/sass-rails) for Sass/Scss stylesheets
+* [Zurb Foundation](https://github.com/zurb/foundation-rails) as CSS framework.
+  For more information see [documentation on using Foundation in Rails apps](http://foundation.zurb.com/docs/applications.html)
+* [Foundation Icon Font](https://github.com/zaiste/foundation-icons-sass-rails) for icons. Browse [icon set](http://zurb.com/playground/foundation-icon-fonts-3) examples
 * [Autoprefixer](https://github.com/ai/autoprefixer-rails) for writing CSS without vendor prefixes
-* [Slim](https://github.com/stonean/slim) for views
+* [Slim](https://github.com/slim-template/slim) for views
 * [Simple Form](https://github.com/plataformatec/simple_form) for forms
-* [Decent Exposure](https://github.com/voxdolo/decent_exposure) for DRY controllers
+* [Decent Exposure](https://github.com/voxdolo/decent_exposure) to DRY controllers
+* [Interactors](https://github.com/collectiveidea/interactor) encapsulates application's business logic
 * [Kaminari](https://github.com/amatsuda/kaminari) for pagination
 * [Devise](http://github.com/plataformatec/devise) for basic auth
 * [Rollbar](https://github.com/rollbar/rollbar-gem) for exception notification
 
-## Development gems
+## Development Gems
 
-* [Thin](https://github.com/macournoyer/thin) as rails web server
+* [Thin](https://github.com/macournoyer/thin) as Rails web server
 * [Foreman](https://github.com/ddollar/foreman) for managing development stack with Procfile
-* [Letter Opener](https://github.com/ryanb/letter_opener) for preview mail in the browser instead of sending
-* [Mail Safe](https://github.com/myronmarston/mail_safe) keep ActionMailer emails from escaping into the wild during development
-* [Bullet](https://github.com/flyerhzm/bullet) gem to kill N+1 queries and unused eager loading
-* [Rails Best Practices](https://github.com/railsbp/rails_best_practices) code metric tool
-* [Brakeman](https://github.com/presidentbeef/brakeman) static analysis security vulnerability scanner
-* [Pry Rails](https://github.com/rweng/pry-rails) is an alternative to the standard IRB shell for Ruby
+* [Letter Opener](https://github.com/ryanb/letter_opener) for opening mail in the browser instead of sending it
+* [Bullet](https://github.com/flyerhzm/bullet) for detecting N+1 queries and unused eager loading
+* [Rubocop](https://github.com/bbatsov/rubocop) for reporting violations of the Ruby style guide
+* [Rails Best Practices](https://github.com/railsbp/rails_best_practices) for checking the code quality
+* [Brakeman](https://github.com/presidentbeef/brakeman) for checking application for common security vulnerabilities
+* [Pry Rails](https://github.com/rweng/pry-rails) for interactively exploring objects
+* [Bundler Audit](https://github.com/rubysec/bundler-audit) for scanning the Gemfile for
+  insecure dependencies based on published CVEs
 
-## Testing gems
+## Testing Gems
 
-* Turnip, Capybara, and Capybara Webkit for integration testing, including JavaScript behavior
-* [Factory Girl](https://github.com/thoughtbot/factory_girl) for easier creation of test data
-* [RSpec](https://github.com/rspec/rspec) for awesome, readable isolation testing
-* [Shoulda Matchers](http://github.com/thoughtbot/shoulda-matchers) for frequently needed Rails and RSpec matchers
-* [Email Spec](https://github.com/bmabey/email-spec) Collection of rspec matchers and cucumber steps for testing emails
+* [Capybara](https://github.com/jnicklas/capybara) and [Capybara Webkit](https://github.com/thoughtbot/capybara-webkit)
+  for integration testing, including JavaScript behavior
+* [Factory Girl](https://github.com/thoughtbot/factory_girl) for test data
+* [RSpec](https://github.com/rspec/rspec) for unit testing
+* [Shoulda Matchers](http://github.com/thoughtbot/shoulda-matchers) for common RSpec matchers
+* [Email Spec](https://github.com/bmabey/email-spec) for common matchers for testing emails
 
-
-## Initializes
+## Initializers
 
 * `01_config.rb` - shortcut for getting application config with `app_config`
 * `mailer.rb` - setup default hosts for mailer from configuration
-* `time_formats.rb` - setup default time formats, so you can use them like object.create_at.to_s(:us_time)
 * `requires.rb` - automatically requires everything in lib/ & lib/extensions
 
 ## Scripts
 
 * `bin/bootstrap` - setup required gems and migrate db if needed
-* `bin/quality` - runs brakeman and rails_best_practices for the app
+* `bin/quality` - runs rubocop, brakeman, rails_best_practices and bundle-audit for the app
 * `bin/ci` - should be used in the CI or locally
 * `bin/server` - to run server locally
 
-## Quick start
+## Getting Started
 
 Clone application as new project with original repository named "rails-base"
 
-    git clone git://github.com/fs/rails-base.git --origin rails-base [MY-NEW-PROJECT]
+    git clone --depth 1 git://github.com/fs/rails-base.git --origin rails-base [MY-NEW-PROJECT]
 
+**Note: we use depth parameter here in order not to copy the history of changes in base project**
 
 Create your new repo on GitHub and push master into it.
 Make sure master branch is tracking origin repo.
@@ -85,7 +91,7 @@ Run app
     # update README.md
     git commit -am "Update README.md"
 
-## How to update existing project with new changes from rails-base repo
+## Updating Existing Projects With New Changes From Rails Base
 
 You can fetch latest changes from rails-base repo and merge or cherry-pick commits
 
@@ -99,34 +105,9 @@ You can fetch latest changes from rails-base repo and merge or cherry-pick commi
 
     git flow feature finish rails-base-update
 
-## Note on Patches/Pull Requests
+## Overriding Foundation Settings
 
-* Fork the project.
-* Make your feature addition or bug fix.
-* Add tests for it. This is important so I don't break it in a future version unintentionally.
-* Commit, do not mess with rakefile, version, or history.
-  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
-* Send a pull request. Bonus points for topic branches.
-
-## Note on ie8 support
-
-Rails Base fixes ie8 problems with:
-
-* lack of support for rem units in CSS
-* lack of media query support
-* lack of Html5 and Css3 support
-
-**In order to get rid of ie8 support please remove the following:**
-
-* vendor/assets/javascripts/ie8 folder
-* views/layouts/application lines commented with `/[if lt IE 9]`
-
-        = javascript_include_tag "ie8/nwmatcher-1.2.5-min.js", "ie8/selectivizr-1.0.3b.js", "ie8/respond.min.js"
-        = javascript_include_tag "ie8/rem"
-
-## Note on how to override Zurb Foundation css properties
-
-Do your overrides in the `app/assets/stylesheets/foundation_and_overrides.scss`
+Do your overrides in the `app/assets/stylesheets/core/_foundation_and_overrides.scss`
 
 ## Credits
 
@@ -135,4 +116,4 @@ It was written by [Flatstack](http://www.flatstack.com) with the help of our
 [contributors](http://github.com/fs/rails-base/contributors).
 
 
-[![Flatstack](http://www.flatstack.com/assets/images/logo.png)](http://www.flatstack.com)
+[![Flatstack](https://avatars0.githubusercontent.com/u/15136?v=2&s=200)](http://www.flatstack.com)

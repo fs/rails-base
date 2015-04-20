@@ -4,7 +4,7 @@ require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
-Bundler.require(*Rails.groups)
+Bundler.require(:default, Rails.env)
 
 module RailsBase
   class Application < Rails::Application
@@ -21,15 +21,12 @@ module RailsBase
     # config.i18n.default_locale = :de
 
     # Application specific options
-    #
-    # Name used in the html titles and mailers
-    config.app_name = 'Rails Base example site'
 
     # Slim engine default option, initializers/slim.rb
     config.slim_options = {}
 
     # Default e-mail address which will be shown in the "from" devise emails, initializers/devise.rb,
-    config.noreply = 'noreply@fs-rails-base.heroku.com'
+    config.noreply = 'noreply@fs-rails-base.herokuapp.com'
 
     # Default host for action mailer, initializers/mailer.rb
     config.host = 'localhost:5000'

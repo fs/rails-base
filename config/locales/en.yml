@@ -22,6 +22,22 @@
 en:
   hello: "Hello world"
 
+  titles:
+    application: Rails Base example site
+    dashboard:
+      index: Dashboard
+    devise:
+      registrations:
+        new: Sign up
+        edit: 'Edit %{user}'
+      sessions:
+        new: Sign in
+      passwords:
+        new: Forgot your password?
+        edit: Change password
+      confirmations:
+        new: Didn't receive confirmation instructions?
+
   app:
     user:
       sign_in:
@@ -63,3 +79,21 @@ en:
       sure: "Are you sure?"
 
     home: 'Dashboard'
+
+    navigation:
+      main:
+        dashboard: 'Dashboard'
+      user:
+        sign_in: 'Sign in'
+        sign_out: 'Sign out'
+        sign_up: 'Sign up'
+        edit_profile: 'Edit profile'
+
+  time:
+    formats:
+      short_date: "%x"
+      long_date: "%a, %b %d, %Y"
+      us: "%m/%d/%Y %I:%M %p"
+      us_date: "%m/%d/%Y"
+      us_time: "%I:%M %p"
+

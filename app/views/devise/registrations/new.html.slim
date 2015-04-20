@@ -1,8 +1,6 @@
-- title t('app.user.sign_up.title')
-
 .row
   .columns
-    h2= yield :title
+    h2= title
 
 .row
   .medium-6.columns
@@ -10,7 +8,7 @@
         as: resource_name,
         url: registration_path(resource_name) do |f|
 
-      legend= t('app.user.sign_up.legend_html', app_name: app_config.app_name)
+      legend= t('app.user.sign_up.legend_html', app_name: t('titles.application'))
 
       .form-inputs
         = f.input :full_name, required: true, autofocus: true

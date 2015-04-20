@@ -1,23 +1,31 @@
 AllCops:
   RunRailsCops: true
-  Excludes:
-    - bin/**
-    - db/**
-    - config/**
-    - lib/templates/**
-    - vendor/**
+  Exclude:
+    - bin/**/*
+    - db/**/*
+    - lib/templates/**/*
+    - vendor/**/*
 
-Documentation:
+Style/Documentation:
   Description: 'Document classes and non-namespace modules.'
   Enabled: false
 
-SymbolArray:
+Style/SymbolArray:
   Description: 'Use %i or %I for arrays of symbols.'
   Enabled: true
 
-AlignParameters:
-  Enabled: false
-
-LineLength:
+Style/LineLength:
   Description: 'Limit lines to 120 characters.'
   Max: 120
+
+Lint/EndAlignment:
+  AlignWith: variable
+  SupportedStyles:
+    - keyword
+    - variable
+
+Style/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+  SupportedStyles:
+    - with_first_parameter
+    - with_fixed_indentation

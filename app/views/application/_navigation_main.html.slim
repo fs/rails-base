@@ -1,0 +1,3 @@
+ul.left
+  - if user_signed_in?
+    = active_link_to t('app.navigation.main.dashboard'), root_path, active: :exclusive, wrap_tag: :li

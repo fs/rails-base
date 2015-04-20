@@ -2,10 +2,13 @@ Project name
 -
 
 Third-party service badges (if available)
+
+[![Build Status](https://semaphoreapp.com/api/v1/projects/31b68af8b073708a56e4e005bbcba2af4802816d/76140/shields_badge.png)](https://semaphoreapp.com/fs/rails-base)
+[![Test Coverage](https://codeclimate.com/github/fs/rails-base/badges/coverage.svg)](https://codeclimate.com/github/fs/rails-base)
 [![Code Climate](https://codeclimate.com/github/fs/rails-base.png)](https://codeclimate.com/github/fs/rails-base)
 
-[![Semaphore](https://semaphoreapp.com/api/v1/projects/31b68af8b073708a56e4e005bbcba2af4802816d/76140/badge.png)](https://semaphoreapp.com/projects/2742)
 Project description.
+-
 
 Dependencies
 -
@@ -41,7 +44,6 @@ Initializers
 
 * `01_config.rb` - shortcut for getting application config with `app_config`
 * `mailer.rb` - setup default hosts for mailer from configuration
-* `time_formats.rb` - setup default time formats, so you can use them like object.create_at.to_s(:us_time)
 * `requires.rb` - automatically requires everything in lib/ & lib/extensions
 
 Scripts

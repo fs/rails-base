@@ -1,0 +1,15 @@
+ul.right
+  - if user_signed_in?
+    li.has-dropdown
+      a.user-dropdown href="#" = current_user.full_name_with_email
+      ul.dropdown
+        new_user_registration_path
+        li
+          a href=edit_user_registration_path
+            = t('app.navigation.user.edit_profile')
+        li
+          a href=destroy_user_session_path
+            = t('app.navigation.user.sign_out')
+  - else
+    = active_link_to t('app.navigation.user.sign_in'), new_user_session_path, active: :exclusive, wrap_tag: :li
+    = active_link_to t('app.navigation.user.sign_up'), new_user_registration_path, active: :exclusive, wrap_tag: :li
