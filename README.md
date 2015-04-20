@@ -54,7 +54,7 @@ It's based on Rails 4 and Ruby 2.1.5.
 
 ## Scripts
 
-* `bin/bootstrap` - setup required gems and migrate db if needed
+* `bin/setup` - setup required gems and migrate db if needed
 * `bin/quality` - runs rubocop, brakeman, rails_best_practices and bundle-audit for the app
 * `bin/ci` - should be used in the CI or locally
 * `bin/server` - to run server locally
@@ -73,9 +73,9 @@ Make sure master branch is tracking origin repo.
     git remote add origin git@github.com:[MY-GITHUB-ACCOUNT]/[MY-NEW-PROJECT].git
     git push -u origin master
 
-Run bootstrap script
+Run setup script
 
-    bin/bootstrap
+    bin/setup
 
 Make sure all test are green
 
