@@ -26,7 +26,7 @@ gem 'github-markdown' # only for dashboard controller
 # all other gems
 gem 'devise'
 gem 'decent_exposure'
-gem 'interactor-rails'
+gem 'interactor'
 gem 'kaminari'
 gem 'rollbar', '~> 0.10.3'
 gem 'seedbank'
