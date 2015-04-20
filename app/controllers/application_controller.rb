@@ -5,6 +5,16 @@ class ApplicationController < ActionController::Base
   responders :flash
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
+  helper do
+    def current_user
+      UserPresenter.new(warden.authenticate(scope: :user))
+    end
+  end
+
+  decent_configuration do
+    strategy DecentExposure::StrongParametersStrategy
+  end
+
   protected
 
   def user_not_authorized
@@ -17,9 +27,5 @@ class ApplicationController < ActionController::Base
     else
       super
     end
-  end
-
-  decent_configuration do
-    strategy DecentExposure::StrongParametersStrategy
   end
 end
