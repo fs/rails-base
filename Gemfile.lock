@@ -131,6 +131,7 @@ GEM
     highline (1.6.21)
     hike (1.2.3)
     i18n (0.7.0)
+    interactor (3.1.0)
     jquery-rails (3.1.2)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
@@ -329,6 +330,7 @@ DEPENDENCIES
   foundation-rails
   fuubar (~> 2.0.0.rc1)
   github-markdown
+  interactor
   jquery-rails
   kaminari
   launchy
