@@ -10,6 +10,7 @@ gem 'pg'
 # plus view stack: helpers, builders, etc.
 gem 'sass-rails', '~> 4.0.0'
 gem 'slim'
+gem 'skim'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'foundation-rails'
 gem 'foundation-icons-sass-rails'
