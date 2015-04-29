@@ -41,6 +41,9 @@ It's based on Rails 4 and Ruby 2.1.5.
 
 * [Capybara](https://github.com/jnicklas/capybara) and [Capybara Webkit](https://github.com/thoughtbot/capybara-webkit)
   for integration testing, including JavaScript behavior
+* [Jasmine](http://jasmine.github.io/) for unit testing JavaScript code
+* [Jasmine jQuery](https://github.com/velesin/jasmine-jquery) for jQuery matchers and
+  fixtures in Jasmine
 * [Factory Girl](https://github.com/thoughtbot/factory_girl) for test data
 * [RSpec](https://github.com/rspec/rspec) for unit testing
 * [Shoulda Matchers](http://github.com/thoughtbot/shoulda-matchers) for common RSpec matchers
