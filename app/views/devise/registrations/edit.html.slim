@@ -1,6 +1,6 @@
 .row
   .columns
-    h2= title
+    h2 = title
 
 .row
   .medium-6.columns
@@ -14,24 +14,22 @@
         = f.input :email, required: true
         = f.input :password,
             autocomplete: "off",
-            hint: t('app.user.edit.new_password.hint'),
             required: false
         = f.input :password_confirmation,
             required: false
         = f.input :current_password,
-            hint: t('app.user.edit.confirm_password.hint'),
             required: true
 
       .form-actions
-        = f.button :submit, t('app.form.update')
+        = f.button :submit, 'Update'
 
   .medium-6.columns.end
     h6
-      b= t('app.user.cancel.title')
+      b Cancel my account
     p
-      = t('app.user.cancel.reason')
+      | Unhappy?
       '
-      = link_to t('app.user.cancel.title'),
+      = link_to 'Cancel my account.',
           registration_path(resource_name),
-          data: { confirm: t('app.form.sure') },
+          data: { confirm: 'Are you sure?' },
           method: :delete
