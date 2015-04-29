@@ -138,6 +138,7 @@ GEM
       rack (>= 1.2.1)
       rake
     jasmine-core (2.3.0)
+    jasmine-jquery-rails (2.0.3)
     jquery-rails (3.1.2)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
@@ -339,6 +340,7 @@ DEPENDENCIES
   github-markdown
   interactor
   jasmine (> 2.0)
+  jasmine-jquery-rails
   jquery-rails
   kaminari
   launchy
