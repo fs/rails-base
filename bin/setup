@@ -11,6 +11,8 @@ fi
 gem install bundler --conservative
 
 # Set up Ruby dependencies via Bundler into .bundle folder
+rm -f .bundle/config
+
 bundle check --path .bundle > /dev/null 2>&1 ||
   bundle install --path=.bundle $BUNDLER_ARGS
 
