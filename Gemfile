@@ -56,6 +56,7 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'fuubar', '~> 2.0.0.rc1'
+  gem 'jasmine', '> 2.0'
   gem 'pry-rails'
   gem 'rails_best_practices'
   gem 'rspec-rails', '~> 3.0'
