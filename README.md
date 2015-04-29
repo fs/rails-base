@@ -17,6 +17,7 @@ It's based on Rails 4 and Ruby 2.1.5.
 * [Foundation Icon Font](https://github.com/zaiste/foundation-icons-sass-rails) for icons. Browse [icon set](http://zurb.com/playground/foundation-icon-fonts-3) examples
 * [Autoprefixer](https://github.com/ai/autoprefixer-rails) for writing CSS without vendor prefixes
 * [Slim](https://github.com/slim-template/slim) for views
+* [Skim](https://github.com/jfirebaugh/skim) for client-side templates (Slim with embedded Coffeescript)
 * [Simple Form](https://github.com/plataformatec/simple_form) for forms
 * [Decent Exposure](https://github.com/voxdolo/decent_exposure) to DRY controllers
 * [Interactors](https://github.com/collectiveidea/interactor) encapsulates application's business logic
