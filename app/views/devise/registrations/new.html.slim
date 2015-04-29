@@ -1,6 +1,6 @@
 .row
   .columns
-    h2= title
+    h2 = title
 
 .row
   .medium-6.columns
@@ -8,7 +8,12 @@
         as: resource_name,
         url: registration_path(resource_name) do |f|
 
-      legend= t('app.user.sign_up.legend_html', app_name: t('titles.application'))
+      legend
+        | Create your
+        '
+        strong = t('titles.application')
+        '
+        | account
 
       .form-inputs
         = f.input :full_name, required: true, autofocus: true
@@ -17,7 +22,7 @@
         = f.input :password_confirmation, required: true
 
       .form-actions
-        = f.button :submit, t('app.user.sign_up.title')
+        = f.button :submit, 'Sign up'
 
   .medium-6.columns.end
-    = render "devise/shared/links"
+    = render 'devise/shared/links'

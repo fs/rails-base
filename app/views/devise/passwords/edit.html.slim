@@ -1,6 +1,6 @@
 .row
   .columns
-    h2= title
+    h2 = title
 
 .row
   .medium-6.columns
@@ -13,11 +13,11 @@
       = f.full_error :reset_password_token
 
       .form-inputs
-        = f.input :password, label: t('app.user.password.change.legend'), required: true
-        = f.input :password_confirmation, label: t('app.user.password.change.confirm'), required: true
+        = f.input :password, required: true
+        = f.input :password_confirmation, required: true
 
       .form-actions
-        = f.button :submit, t('app.form.update')
+        = f.button :submit, 'Update'
 
   .medium-6.columns.end
-    = render "devise/shared/links"
+    = render 'devise/shared/links'

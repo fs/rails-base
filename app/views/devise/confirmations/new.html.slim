@@ -1,6 +1,6 @@
 .row
   .columns
-    h2= title
+    h2 = title
 
 .row
   .medium-6.columns
@@ -10,10 +10,10 @@
         html: { method: :post } do |f|
 
       .form-inputs
-        = f.input :email, required: true, label: t('app.user.password.confirmation.legend')
+        = f.input :email, required: true
 
       .form-actions
-        = f.button :submit, t('app.user.password.confirmation.title')
+        = f.button :submit, 'Resend confirmation instructions'
 
   .medium-6.columns.end
-    = render "devise/shared/links"
+    = render 'devise/shared/links'

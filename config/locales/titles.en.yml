@@ -1,0 +1,16 @@
+en:
+  titles:
+    application: Rails Base example site
+    dashboard:
+      index: Dashboard
+    devise:
+      registrations:
+        new: Sign up
+        edit: Edit %{user}
+      sessions:
+        new: Sign in
+      passwords:
+        new: 'Forgot your password?'
+        edit: Change password
+      confirmations:
+        new: "Didn't receive confirmation instructions?"
