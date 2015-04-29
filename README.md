@@ -18,6 +18,7 @@ It's based on Rails 4 and Ruby 2.1.5.
 * [Autoprefixer](https://github.com/ai/autoprefixer-rails) for writing CSS without vendor prefixes
 * [Slim](https://github.com/slim-template/slim) for views
 * [Simple Form](https://github.com/plataformatec/simple_form) for forms
+* [Responders](https://github.com/plataformatec/responders) to DRY controllers
 * [Decent Exposure](https://github.com/voxdolo/decent_exposure) to DRY controllers
 * [Interactors](https://github.com/collectiveidea/interactor) encapsulates application's business logic
 * [Kaminari](https://github.com/amatsuda/kaminari) for pagination
