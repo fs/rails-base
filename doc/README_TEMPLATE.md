@@ -33,10 +33,10 @@ git clone git@github.com:account/repo.git
 cd repo
 ```
 
-Run bootstrap script
+Run setup script
 
 ```
-bin/bootstrap
+bin/setup
 ```
 
 Initializers
@@ -49,7 +49,7 @@ Initializers
 Scripts
 -
 
-* `bin/bootstrap` - setup required gems and migrate db if needed
+* `bin/setup` - setup required gems and migrate db if needed
 * `bin/quality` - run brakeman and rails_best_practices for the app
 * `bin/ci` - should be used in the CI to run specs
 
