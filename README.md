@@ -81,6 +81,10 @@ Run setup script
 
     bin/setup
 
+Install phantomjs 1.9.8 to run Javascript unit tests:
+
+    brew install phantomjs198
+
 Make sure all test are green
 
     bin/ci
