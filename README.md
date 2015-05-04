@@ -17,6 +17,7 @@ It's based on Rails 4 and Ruby 2.1.5.
 * [Foundation Icon Font](https://github.com/zaiste/foundation-icons-sass-rails) for icons. Browse [icon set](http://zurb.com/playground/foundation-icon-fonts-3) examples
 * [Autoprefixer](https://github.com/ai/autoprefixer-rails) for writing CSS without vendor prefixes
 * [Slim](https://github.com/slim-template/slim) for views
+* [Skim](https://github.com/jfirebaugh/skim) for client-side templates (Slim with embedded Coffeescript)
 * [Simple Form](https://github.com/plataformatec/simple_form) for forms
 * [Decent Exposure](https://github.com/voxdolo/decent_exposure) to DRY controllers
 * [Interactors](https://github.com/collectiveidea/interactor) encapsulates application's business logic
@@ -41,6 +42,9 @@ It's based on Rails 4 and Ruby 2.1.5.
 
 * [Capybara](https://github.com/jnicklas/capybara) and [Capybara Webkit](https://github.com/thoughtbot/capybara-webkit)
   for integration testing, including JavaScript behavior
+* [Jasmine](http://jasmine.github.io/) for unit testing JavaScript code
+* [Jasmine jQuery](https://github.com/velesin/jasmine-jquery) for jQuery matchers and
+  fixtures in Jasmine
 * [Factory Girl](https://github.com/thoughtbot/factory_girl) for test data
 * [RSpec](https://github.com/rspec/rspec) for unit testing
 * [Shoulda Matchers](http://github.com/thoughtbot/shoulda-matchers) for common RSpec matchers
@@ -76,6 +80,10 @@ Make sure master branch is tracking origin repo.
 Run setup script
 
     bin/setup
+
+Install phantomjs 1.9.8 to run Javascript unit tests:
+
+    brew install phantomjs198
 
 Make sure all test are green
 

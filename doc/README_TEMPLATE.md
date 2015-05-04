@@ -20,8 +20,10 @@ Information about ruby and rails versions.
 - PostgreSQL 9.3
   - `brew install postgres`
 - Ruby 2.1.0
-  - `rbenv install 2.1.0`
-- Rails 4.0
+  - `rbenv install 2.1.5`
+- PhantomJS
+  - `brew install phantomjs198`
+- Rails 4
 
 Quick Start
 -
