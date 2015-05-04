@@ -20,8 +20,10 @@ Information about ruby and rails versions.
 - PostgreSQL 9.3
   - `brew install postgres`
 - Ruby 2.1.0
-  - `rbenv install 2.1.0`
-- Rails 4.0
+  - `rbenv install 2.1.5`
+- PhantomJS
+  - `brew install phantomjs198`
+- Rails 4
 
 Quick Start
 -
@@ -33,10 +35,10 @@ git clone git@github.com:account/repo.git
 cd repo
 ```
 
-Run bootstrap script
+Run setup script
 
 ```
-bin/bootstrap
+bin/setup
 ```
 
 Initializers
@@ -49,7 +51,7 @@ Initializers
 Scripts
 -
 
-* `bin/bootstrap` - setup required gems and migrate db if needed
+* `bin/setup` - setup required gems and migrate db if needed
 * `bin/quality` - run brakeman and rails_best_practices for the app
 * `bin/ci` - should be used in the CI to run specs
 
