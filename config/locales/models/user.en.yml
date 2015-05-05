@@ -5,9 +5,3 @@ en:
     attributes:
       user:
         full_name:
-
-  helpers:
-    submit:
-      user:
-        create: 'Sign up'
-        update: 'Update'
