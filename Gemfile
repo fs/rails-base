@@ -2,33 +2,33 @@ source 'https://rubygems.org'
 
 ruby '2.1.5'
 
-# the most important stuff
 gem 'rails', '4.1.8'
 gem 'pg'
 
-# frontend stack: preprocessors, libraries, minifiers, assets
-# plus view stack: helpers, builders, etc.
-gem 'sass-rails', '~> 4.0.0'
-gem 'slim'
-gem 'skim'
-gem 'coffee-rails', '~> 4.0.0'
-gem 'foundation-rails'
-gem 'foundation-icons-sass-rails'
-gem 'jquery-rails'
+# assets
 gem 'autoprefixer-rails'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'foundation-icons-sass-rails'
+gem 'foundation-rails'
+gem 'jquery-rails'
+gem 'sass-rails', '~> 4.0.0'
+gem 'skim'
 gem 'therubyracer', platforms: :ruby
 gem 'uglifier', '>= 1.3.0'
 
-gem 'simple_form', '~> 3.0.2'
+# views
 gem 'active_link_to'
-gem 'title'
 gem 'responders'
+gem 'simple_form', '~> 3.0.2'
+gem 'slim'
+gem 'title'
 
 # all other gems
-gem 'devise'
 gem 'decent_exposure'
+gem 'devise'
 gem 'interactor'
 gem 'kaminari'
+gem 'responders'
 gem 'rollbar', '~> 0.10.3'
 gem 'seedbank'
 gem 'thin'
@@ -69,7 +69,7 @@ end
 group :development do
   gem 'bullet'
   gem 'foreman'
-  gem 'quiet_assets'
   gem 'letter_opener'
+  gem 'quiet_assets'
   gem 'slim-rails'
 end
