@@ -19,6 +19,7 @@ It's based on Rails 4 and Ruby 2.1.5.
 * [Slim](https://github.com/slim-template/slim) for views
 * [Skim](https://github.com/jfirebaugh/skim) for client-side templates (Slim with embedded Coffeescript)
 * [Simple Form](https://github.com/plataformatec/simple_form) for forms
+* [Responders](https://github.com/plataformatec/responders) to DRY controllers
 * [Decent Exposure](https://github.com/voxdolo/decent_exposure) to DRY controllers
 * [Interactors](https://github.com/collectiveidea/interactor) encapsulates application's business logic
 * [Kaminari](https://github.com/amatsuda/kaminari) for pagination
