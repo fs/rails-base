@@ -1,8 +1,8 @@
 en:
   titles:
     application: Rails Base example site
-    dashboard:
-      index: Dashboard
+    pages:
+      home: Home
     devise:
       registrations:
         new: Sign up
