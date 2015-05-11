@@ -281,6 +281,9 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (~> 1.1)
+    scss_lint (0.38.0)
+      rainbow (~> 2.0)
+      sass (~> 3.4.1)
     seedbank (0.3.0)
     sexp_processor (4.5.1)
     shoulda-matchers (2.8.0)
@@ -392,6 +395,7 @@ DEPENDENCIES
   rspec-rails (~> 3.0)
   rubocop
   sass-rails (~> 5.0.0)
+  scss_lint
   seedbank
   shoulda-matchers
   simple_form
