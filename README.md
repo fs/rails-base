@@ -64,6 +64,7 @@ It's based on Rails 4 and Ruby 2.1.5.
 * `bin/quality` - runs rubocop, brakeman, rails_best_practices and bundle-audit for the app
 * `bin/ci` - should be used in the CI or locally
 * `bin/server` - to run server locally
+* `scss-lint <folder name>` - runs SCSS-Lint
 
 ## Getting Started
 
@@ -115,9 +116,14 @@ You can fetch latest changes from rails-base repo and merge or cherry-pick commi
 
     git flow feature finish rails-base-update
 
-## Overriding Foundation Settings
+## Updating SCSS Files
 
+**How to keep your SCSS files clean and readable**
+Run [scss-lint](https://github.com/brigade/scss-lint) from the command-line by passing in a directory (or multiple directories) to recursively scan:  `scss-lint app/assets/stylesheets/`
+
+**How to override Foundation Settings**
 Do your overrides in the `app/assets/stylesheets/core/_foundation_and_overrides.scss`
+
 
 ## Credits
 
