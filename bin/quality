@@ -8,3 +8,5 @@ bin/rails_best_practices --silent --spec --features -x lib/templates, config
 
 bin/bundle-audit update
 bin/bundle-audit
+
+scss-lint app/assets/stylesheets/
