@@ -13,6 +13,7 @@ gem 'foundation-rails'
 gem 'jquery-rails'
 gem 'sass-rails', '~> 4.0.0'
 gem 'skim'
+gem 'scss-lint'
 gem 'therubyracer', platforms: :ruby
 gem 'uglifier', '>= 1.3.0'
 

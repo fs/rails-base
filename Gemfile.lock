@@ -79,6 +79,7 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     colored (1.2)
+    colorize (0.7.7)
     columnize (0.8.9)
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
@@ -255,6 +256,9 @@ GEM
       sass (~> 3.2.2)
       sprockets (~> 2.8, < 2.12)
       sprockets-rails (~> 2.0)
+    scss-lint (0.7.0)
+      colorize
+      sass
     seedbank (0.3.0)
     sexp_processor (4.4.2)
     shoulda-matchers (2.6.1)
@@ -364,6 +368,7 @@ DEPENDENCIES
   rspec-rails (~> 3.0)
   rubocop
   sass-rails (~> 4.0.0)
+  scss-lint
   seedbank
   shoulda-matchers
   simple_form (~> 3.0.2)
