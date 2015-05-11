@@ -18,7 +18,6 @@ gem 'uglifier', '>= 1.3.0'
 
 # views
 gem 'active_link_to'
-gem 'responders'
 gem 'simple_form', '~> 3.0.2'
 gem 'slim'
 gem 'title'
