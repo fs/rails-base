@@ -1,4 +1,4 @@
-class UserPresenter < ApplicationPresenter
+class UserPresenter < BasePresenter
   # Devise compability
   delegate :is_a?, to: :record
   delegate :email, :full_name, to: :record
