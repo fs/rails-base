@@ -66,10 +66,10 @@ It's based on Rails 4 and Ruby 2.1.5.
 
 ### Prepare dependencies
 
-Application based on Ruby 2.1.5 and PostgreSQL, some gems have native extensions.
-You should have GCC installed on you development machine.
+Some gems have native extensions.
+You should have GCC installed on your development machine.
 
-* `brew install qt` - to run spec with [Capybara Webkit](https://github.com/thoughtbot/capybara-webkit)
+* `brew install qt` - to run specs with [Capybara Webkit](https://github.com/thoughtbot/capybara-webkit)
 * `brew install phantomjs198` - to run Javascript unit tests
 
 ### Bootstrap application
@@ -93,7 +93,7 @@ You should have GCC installed on you development machine.
   bin/setup
   ```
 
-4. Make sure all test are green
+4. Run test and quality suits to make sure all dependencies are satisfied and applications works correctly before making changes.
 
   ```bash
   bin/ci
@@ -107,8 +107,8 @@ You should have GCC installed on you development machine.
 
 6. Update README
 
-  Do not forget to update application README.md file with detailed information baed on the
-  existing tempalte.
+  Do not forget to update application `README.md` file with detailed information based on the
+  existing template.
 
   ```bash
   mv doc/README_TEMPLATE.md README.md
