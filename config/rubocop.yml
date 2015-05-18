@@ -1,5 +1,6 @@
 AllCops:
   RunRailsCops: true
+  DisplayCopNames: true
   Exclude:
     - bin/**/*
     - db/**/*
@@ -14,7 +15,7 @@ Style/SymbolArray:
   Description: 'Use %i or %I for arrays of symbols.'
   Enabled: true
 
-Style/LineLength:
+Metrics/LineLength:
   Description: 'Limit lines to 120 characters.'
   Max: 120
 
