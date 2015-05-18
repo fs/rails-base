@@ -1,24 +1,24 @@
 source 'https://rubygems.org'
 
-ruby '2.1.5'
+ruby '2.2.2'
 
-gem 'rails', '4.1.8'
+gem 'rails', '4.2.1'
 gem 'pg'
 
 # assets
 gem 'autoprefixer-rails'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails'
 gem 'foundation-icons-sass-rails'
 gem 'foundation-rails'
 gem 'jquery-rails'
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 5.0.0'
 gem 'skim'
 gem 'therubyracer', platforms: :ruby
 gem 'uglifier', '>= 1.3.0'
 
 # views
 gem 'active_link_to'
-gem 'simple_form', '~> 3.0.2'
+gem 'simple_form'
 gem 'slim'
 gem 'title'
 
@@ -71,4 +71,5 @@ group :development do
   gem 'letter_opener'
   gem 'quiet_assets'
   gem 'slim-rails'
+  gem 'web-console', '~> 2.0'
 end
