@@ -19,7 +19,7 @@ feature 'Sign in' do
   scenario 'User has not confirmed email address' do
     sign_in(not_confirmed_user.email, '123456')
 
-    expect(page).to have_content('You have to confirm your account before continuing.')
+    expect(page).to have_content('You have to confirm your email address before continuing.')
   end
 
   scenario 'User forgets his password' do
