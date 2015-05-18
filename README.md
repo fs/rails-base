@@ -4,10 +4,8 @@
 [![Test Coverage](https://codeclimate.com/github/fs/rails-base/badges/coverage.svg)](https://codeclimate.com/github/fs/rails-base)
 [![Code Climate](https://codeclimate.com/github/fs/rails-base.png)](https://codeclimate.com/github/fs/rails-base)
 
-
 Rails Base is the base Rails application template used at Flatstack.
 It's based on Rails 4 and Ruby 2.1.5.
-
 
 ## Application Gems
 
@@ -51,7 +49,6 @@ It's based on Rails 4 and Ruby 2.1.5.
 * [RSpec](https://github.com/rspec/rspec) for unit testing
 * [Shoulda Matchers](http://github.com/thoughtbot/shoulda-matchers) for common RSpec matchers
 * [Email Spec](https://github.com/bmabey/email-spec) for common matchers for testing emails
-
 ## Initializers
 
 * `01_config.rb` - shortcut for getting application config with `app_config`
@@ -67,63 +64,62 @@ It's based on Rails 4 and Ruby 2.1.5.
 
 ## Getting Started
 
-Clone application as new project with original repository named "rails-base"
+### Prepare dependencies
 
-    git clone --depth 1 git://github.com/fs/rails-base.git --origin rails-base [MY-NEW-PROJECT]
+Some gems have native extensions.
+You should have GCC installed on your development machine.
 
-**Note: we use depth parameter here in order not to copy the history of changes in base project**
+* `brew install qt` - to run specs with [Capybara Webkit](https://github.com/thoughtbot/capybara-webkit)
+* `brew install phantomjs198` - to run Javascript unit tests
 
-Create your new repo on GitHub and push master into it.
-Make sure master branch is tracking origin repo.
+### Bootstrap application
 
-    git remote add origin git@github.com:[MY-GITHUB-ACCOUNT]/[MY-NEW-PROJECT].git
-    git push -u origin master
+1. Clone application as new project with original repository named "rails-base". We use depth parameter here in order not to copy the history of changes in base project
 
-Run setup script
+   ```bash
+   git clone --depth 1 git://github.com/fs/rails-base.git --origin rails-base [MY-NEW-PROJECT]
+   ```
 
-    bin/setup
+2. Create your new repo on GitHub and push master into it. Make sure master branch is tracking origin repo.
 
-Install phantomjs 1.9.8 to run Javascript unit tests:
+  ```bash
+  git remote add origin git@github.com:[MY-GITHUB-ACCOUNT]/[MY-NEW-PROJECT].git
+  git push -u origin master
+  ```
 
-    brew install phantomjs198
+3. Run setup script
 
-Make sure all test are green
+  ```bash
+  bin/setup
+  ```
 
-    bin/ci
+4. Run test and quality suits to make sure all dependencies are satisfied and applications works correctly before making changes.
 
-Run app
+  ```bash
+  bin/ci
+  ```
 
-    bin/server
+5. Run app
 
-**Do not forget to update this file!**
+  ```bash
+  bin/server
+  ```
 
-    mv doc/README_TEMPLATE.md README.md
-    # update README.md
-    git commit -am "Update README.md"
+6. Update README
 
-## Updating Existing Projects With New Changes From Rails Base
+  Do not forget to update application `README.md` file with detailed information based on the
+  existing template.
 
-You can fetch latest changes from rails-base repo and merge or cherry-pick commits
-
-    git fetch rails-base
-    git flow feature start rails-base-update
-    git merge rails-base/master
-
-    # fix conflicts
-    # commit
-    # test
-
-    git flow feature finish rails-base-update
-
-## Overriding Foundation Settings
-
-Do your overrides in the `app/assets/stylesheets/core/_foundation_and_overrides.scss`
+  ```bash
+  mv doc/README_TEMPLATE.md README.md
+  # update README.md
+  git commit -am "Update README.md"
+  ```
 
 ## Credits
 
 Rails Base is maintained by [Timur Vafin](http://github.com/timurvafin).
 It was written by [Flatstack](http://www.flatstack.com) with the help of our
 [contributors](http://github.com/fs/rails-base/contributors).
-
 
 [![Flatstack](https://avatars0.githubusercontent.com/u/15136?v=2&s=200)](http://www.flatstack.com)
