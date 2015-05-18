@@ -1,7 +1,7 @@
-require 'rollbar/rails'
+require "rollbar/rails"
 
 Rollbar.configure do |config|
-  config.access_token = ENV['ROLLBAR_KEY']
+  config.access_token = ENV["ROLLBAR_KEY"]
 
   # Without configuration, Rollbar is enabled by in all environments.
   # To disable in specific environments, set config.enabled=false.

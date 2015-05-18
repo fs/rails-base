@@ -2,7 +2,7 @@ Rails.application.config.app_generators do |g|
   g.stylesheets false
   g.helper false
   g.integration_tool false
-  g.fixture_replacement(:factory_girl, dir: 'spec/factories')
+  g.fixture_replacement(:factory_girl, dir: "spec/factories")
   g.test_framework(
     :rspec,
     controller_specs: false,

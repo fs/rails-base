@@ -1,6 +1,6 @@
-require 'rails_helper'
+require "rails_helper"
 
-feature 'Sign up' do
+feature "Sign up" do
   let(:user) { User.first }
   let(:user_attributes) { attributes_for(:user).slice(:full_name, :email, :password, :password_confirmation) }
 
@@ -9,32 +9,32 @@ feature 'Sign up' do
 
     fill_form(:user, user_attributes)
 
-    click_button 'Sign up'
+    click_button "Sign up"
   end
 
-  scenario 'User signs up successfully' do
+  scenario "User signs up successfully" do
     open_email(user.email)
 
-    expect(current_email).to have_subject 'Confirmation instructions'
+    expect(current_email).to have_subject "Confirmation instructions"
     expect(current_email).to have_body_text(user.full_name)
   end
 
-  scenario 'User confirms account' do
+  scenario "User confirms account" do
     open_email(user.email)
-    visit_in_email 'Confirm my account'
+    visit_in_email "Confirm my account"
 
     expect(page).to have_text(user.email)
   end
 
-  scenario 'User resents email confirmation instructions' do
+  scenario "User resents email confirmation instructions" do
     visit new_user_confirmation_path
 
-    fill_in 'user_email', with: user.email
-    click_button 'Resend confirmation instructions'
+    fill_in "user_email", with: user.email
+    click_button "Resend confirmation instructions"
 
     open_email(user.email)
 
-    expect(current_email).to have_subject 'Confirmation instructions'
+    expect(current_email).to have_subject "Confirmation instructions"
     expect(current_email).to have_body_text(user.full_name)
   end
 end
