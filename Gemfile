@@ -12,7 +12,6 @@ gem 'foundation-icons-sass-rails'
 gem 'foundation-rails'
 gem 'jquery-rails'
 gem 'sass-rails', '~> 4.0.0'
-gem 'scss-lint'
 gem 'skim'
 gem 'therubyracer', platforms: :ruby
 gem 'uglifier', '>= 1.3.0'
@@ -64,6 +63,7 @@ group :development, :test do
   gem 'rails_best_practices'
   gem 'rspec-rails', '~> 3.0'
   gem 'rubocop'
+  gem 'scss-lint'
 end
 
 group :development do
