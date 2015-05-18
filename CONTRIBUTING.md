@@ -19,7 +19,9 @@ We do not strictly follow [Semantic Versioning](http://semver.org/) as we use on
 * Increment the `MINOR` version when you make any other changes.
   That includes backwards-compatible changes and bug fixes.
 
-When ready to release and specs are all green:
+When ready to release:
 
-1. Update the changelog with the new version
-2. Add corresponding git tag (`v1.1`)
+1. Make sure that tests are green.
+2. Update the changelog with the new version and commit it with message "release <version>".
+3. Tag the release by running `git tag v<version>`. Push the tag: `git push --tags`.
+4. Verify that everything was pushed correctly on the Github: https://github.com/fs/rails-base/releases
