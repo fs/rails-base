@@ -71,4 +71,5 @@ group :development do
   gem 'letter_opener'
   gem 'quiet_assets'
   gem 'slim-rails'
+  gem 'web-console', '~> 2.0'
 end
