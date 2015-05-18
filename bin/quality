@@ -5,8 +5,8 @@ set -e
 bin/rubocop
 bin/brakeman --quiet --skip-libs --exit-on-warn
 bin/rails_best_practices --silent --spec --features -x lib/templates, config
+scss-lint app/assets/stylesheets/
 
 bin/bundle-audit update
 bin/bundle-audit
 
-scss-lint app/assets/stylesheets/

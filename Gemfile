@@ -63,7 +63,7 @@ group :development, :test do
   gem 'rails_best_practices'
   gem 'rspec-rails', '~> 3.0'
   gem 'rubocop'
-  gem 'scss-lint'
+  gem 'scss_lint'
 end
 
 group :development do
