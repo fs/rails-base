@@ -140,7 +140,7 @@ SimpleForm.setup do |config|
   # config.label_class = 'column large-4'
 
   # You can define the class to use on all forms. Default is simple_form.
-  config.form_class = 'simple-form'
+  config.default_form_class = 'simple-form'
 
   # You can define which elements should obtain additional classes
   # config.generate_additional_classes_for = [:wrapper, :label, :input]
