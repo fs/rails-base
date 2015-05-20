@@ -38,7 +38,8 @@ It's based on Rails 4 and Ruby 2.2.2.
 * [Bundler Audit](https://github.com/rubysec/bundler-audit) for scanning the Gemfile for
   insecure dependencies based on published CVEs
 * [Web Console](https://github.com/rails/web-console) for better debugging via
-  in-browser IRB consoles.
+  in-browser IRB consoles
+* [SCSS-Lint](https://github.com/brigade/scss-lint) for reporting violations of SCSS coding conventions
 
 ## Testing Gems
 
@@ -51,6 +52,7 @@ It's based on Rails 4 and Ruby 2.2.2.
 * [RSpec](https://github.com/rspec/rspec) for unit testing
 * [Shoulda Matchers](http://github.com/thoughtbot/shoulda-matchers) for common RSpec matchers
 * [Email Spec](https://github.com/bmabey/email-spec) for common matchers for testing emails
+
 ## Initializers
 
 * `01_config.rb` - shortcut for getting application config with `app_config`
