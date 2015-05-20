@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Add scss-lint for reporting violations of SCSS coding conventions
 - Style Kaminari pagination to make it look like [Foundation's pagination](http://foundation.zurb.com/docs/v/4.3.2/components/pagination.html)
 - Add [Spring](https://github.com/rails/spring) for fast Rails actions via pre-loading
 
