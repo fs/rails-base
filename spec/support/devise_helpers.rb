@@ -2,7 +2,7 @@ module DeviseHelpers
   def sign_in(email, password)
     visit new_user_session_path
 
-    click_link 'Sign in'
+    click_link "Sign in"
 
     fill_form(
       :user,
@@ -10,6 +10,6 @@ module DeviseHelpers
       password: password
     )
 
-    click_button 'Sign in'
+    click_button "Sign in"
   end
 end

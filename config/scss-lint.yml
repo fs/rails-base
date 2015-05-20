@@ -5,3 +5,6 @@ linters:
     enabled: true
     allow_leading_underscore: true
     convention: "[^A-Z]"
+
+  StringQuotes:
+    style: double_quotes

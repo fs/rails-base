@@ -2,9 +2,9 @@ FactoryGirl.define do
   factory :user do
     email
 
-    full_name 'John Smith'
-    password '123456'
-    password_confirmation '123456'
+    full_name "John Smith"
+    password "123456"
+    password_confirmation "123456"
   end
 
   trait :confirmed do
