@@ -4,4 +4,4 @@ linters:
   NameFormat:
     enabled: true
     allow_leading_underscore: true
-    convention: snake_case
+    convention: "[^A-Z]"
