@@ -1,0 +1,7 @@
+scss_files: "app/assets/stylesheets/**/*.scss"
+
+linters:
+  NameFormat:
+    enabled: true
+    allow_leading_underscore: true
+    convention: "[^A-Z]"

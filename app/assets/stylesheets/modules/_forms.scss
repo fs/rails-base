@@ -1,24 +1,28 @@
 legend {
-  margin-bottom: 1rem;
   display: inline-block;
+  margin-bottom: 1rem;
 }
 
-abbr[title="required"] {
-  color: $alert-color;
-  border: 0;
+.required {
+  abbr {
+    border: 0;
+    color: $alert-color;
+  }
 }
 
 .boolean {
   @include clearfix;
   margin-bottom: 1rem;
+
   input {
     float: left;
-    margin: 0.2rem 0.5rem 0 0;
+    margin: .2rem .5rem 0 0;
   }
+
   label {
     display: inline-block;
-    vertical-align: top;
     margin: 0;
+    vertical-align: top;
   }
 }
 
@@ -30,32 +34,38 @@ abbr[title="required"] {
   input {
     border-color: lighten($alert-color, 20%);
   }
+
   label {
     color: $body-font-color;
   }
+
   .error {
-    margin-bottom: 1rem;
-    line-height: 1.5;
-    display: block;
     color: $alert-color;
+    display: block;
+    line-height: 1.5;
+    margin-bottom: 1rem;
   }
 }
 
-.has_hint {
+.has-hint {
   input,
   textarea,
   select {
     margin-bottom: 0;
   }
+
   .hint {
-    margin-bottom: 1rem;
-    line-height: 1.5;
-    display: block;
-    font-size: 0.75rem;
     color: lighten($body-font-color, 45%);
+    display: block;
+    font-size: .75rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
   }
-  small.error {
-    margin-bottom: 0;
+
+  &.error {
+    .error {
+      margin-bottom: 0;
+    }
   }
 }
 
