@@ -37,6 +37,8 @@ It's based on Rails 4 and Ruby 2.2.2.
 * [Pry Rails](https://github.com/rweng/pry-rails) for interactively exploring objects
 * [Bundler Audit](https://github.com/rubysec/bundler-audit) for scanning the Gemfile for
   insecure dependencies based on published CVEs
+* [Spring](https://github.com/rails/spring) for fast Rails actions via
+  pre-loading
 * [Web Console](https://github.com/rails/web-console) for better debugging via
   in-browser IRB consoles
 * [SCSS-Lint](https://github.com/brigade/scss-lint) for reporting violations of SCSS coding conventions
