@@ -5,6 +5,10 @@ set -e
 bin/rubocop --config config/rubocop.yml
 bin/brakeman --quiet --skip-libs --exit-on-warn
 bin/rails_best_practices --silent --spec --features -x lib/templates, config
+
+# Using rake-task here since coffeelint.rb cmd doesn't exit with non-zero status
+# when code contains errors
+bin/rake coffeelint
 bin/scss-lint --config config/scss-lint.yml
 
 bin/bundle-audit update

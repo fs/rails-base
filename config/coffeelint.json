@@ -1,0 +1,19 @@
+{
+  "arrow_spacing": "error",
+  "camel_case_classes": "error",
+  "duplicate_key": "error",
+  "max_line_length": {
+    "value": "120",
+    "level": "error"
+  },
+  "missing_fat_arrows": "error",
+  "newlines_after_classes": "error",
+  "no_backticks": "error",
+  "no_stand_alone_at": "error",
+  "no_tabs": "error",
+  "no_trailing_semicolons": "error",
+  "no_trailing_whitespace": "error",
+  "no_unnecessary_fat_arrows": "error",
+  "non_empty_constructor_needs_parens": "error",
+  "space_operators": "error"
+}
