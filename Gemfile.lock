@@ -90,6 +90,10 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    coffeelint (1.9.1)
+      coffee-script
+      execjs
+      json
     colored (1.2)
     columnize (0.8.9)
     crack (0.4.2)
@@ -365,6 +369,7 @@ DEPENDENCIES
   capybara-webkit
   codeclimate-test-reporter
   coffee-rails
+  coffeelint
   database_cleaner
   decent_exposure
   devise

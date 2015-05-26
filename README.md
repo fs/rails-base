@@ -42,6 +42,7 @@ It's based on Rails 4 and Ruby 2.2.2.
 * [Web Console](https://github.com/rails/web-console) for better debugging via
   in-browser IRB consoles
 * [SCSS-Lint](https://github.com/brigade/scss-lint) for reporting violations of SCSS coding conventions
+* [Coffeelint](https://github.com/clutchski/coffeelint) to keep Coffeescript code clean and consistent
 
 ## Testing Gems
 

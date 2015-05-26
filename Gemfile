@@ -54,6 +54,7 @@ group :development, :test do
   gem "brakeman", require: false
   gem "bundler-audit"
   gem "byebug"
+  gem "coffeelint"
   gem "dotenv-rails"
   gem "factory_girl_rails"
   gem "fuubar", "~> 2.0.0.rc1"
