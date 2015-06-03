@@ -3,7 +3,7 @@ require "rails_helper"
 feature "Sign In" do
   let(:user) { create :user, :confirmed }
 
-  scenario "User resets his password" do
+  scenario "Visitor resets his password" do
     visit new_user_password_path
 
     fill_in "Enter your email address", with: user.email

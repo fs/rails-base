@@ -1,21 +1,22 @@
 require "rails_helper"
 
-feature "Update account with valid data" do
+feature "Update Account" do
+  let(:user_password) { "123456" }
   let(:user) { create :user, :confirmed }
 
-  before(:each) do
-    sign_in(user.email, "123456")
+  before do
+    sign_in(user.email, user_password)
     visit edit_user_registration_path(user)
   end
 
-  scenario "I submit update account form with valid data" do
-    fill_form(:user, full_name: "New Name", current_password: "123456")
+  scenario "User updates account with valid data" do
+    fill_form(:user, full_name: "New Name", current_password: user_password)
     click_on "Update"
 
     expect(page).to have_content("New Name")
   end
 
-  scenario "Wrong current password" do
+  scenario "User updates account with invalid password" do
     fill_form(:user, full_name: "New Name", current_password: "wrong")
     click_on "Update"
 

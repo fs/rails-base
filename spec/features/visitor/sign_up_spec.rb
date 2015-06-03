@@ -12,14 +12,14 @@ feature "Sign Up" do
     click_button "Sign up"
   end
 
-  scenario "User signs up" do
+  scenario "Visitor signs up" do
     open_email(user.email)
 
     expect(current_email).to have_subject "Confirmation instructions"
     expect(current_email).to have_body_text(user.full_name)
   end
 
-  scenario "User confirms account" do
+  scenario "Visitor confirms account" do
     open_email(user.email)
     visit_in_email "Confirm my account"
 

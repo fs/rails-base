@@ -3,7 +3,7 @@ require "rails_helper"
 feature "Resend Confirmation Email" do
   let(:user) { create :user }
 
-  scenario "User resends email confirmation instructions" do
+  scenario "Visitor resends email confirmation instructions" do
     visit new_user_confirmation_path
 
     fill_in "Enter your email address", with: user.email
