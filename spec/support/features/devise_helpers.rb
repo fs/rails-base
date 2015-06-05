@@ -1,4 +1,4 @@
-module DeviseHelpers
+module Features
   def sign_in(email, password)
     visit new_user_session_path
 
