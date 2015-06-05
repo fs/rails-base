@@ -1,11 +1,10 @@
 require "rails_helper"
 
 feature "Cancel Account" do
-  let(:user_password) { "123456" }
   let(:user) { create :user, :confirmed }
 
   before do
-    sign_in(user.email, user_password)
+    login_as user
     visit edit_user_registration_path(user)
   end
 
@@ -16,7 +15,7 @@ feature "Cancel Account" do
     expect(page).to have_content("Bye! Your account has been successfully cancelled. We hope to see you again soon.")
 
     visit new_user_session_path
-    sign_in(user.email, user_password)
+    sign_in(user.email, user.password)
 
     expect(page).to have_content("Invalid email or password.")
   end
