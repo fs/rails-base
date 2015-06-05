@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.1 - 2015-06-05
+
 - Add [Coffeelint](https://github.com/zmbush/coffeelint-ruby) to keep Coffeescript code clean and consistent
 - Force double quotes everywhere: SCSS, Ruby. For more details see: https://github.com/fs/rails-base/pull/274
 - Add [SCSS-Lint](https://github.com/brigade/scss-lint) for reporting violations of SCSS coding conventions
