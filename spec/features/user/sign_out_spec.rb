@@ -4,7 +4,7 @@ feature "Sign Out" do
   let(:user) { create :user, :confirmed }
 
   background do
-    sign_in(user.email, "123456")
+    sign_in(user.email, user.password)
   end
 
   scenario "User signs out" do

@@ -5,7 +5,7 @@ feature "Sign In" do
   let(:unconfirmed_user) { create :user, :not_confirmed }
 
   scenario "Visitor signs in with valid credentials" do
-    sign_in(user.email, "123456")
+    sign_in(user.email, user.password)
 
     expect(page).to have_content("Sign out")
   end
@@ -18,7 +18,7 @@ feature "Sign In" do
   end
 
   scenario "Visitor signs in with unconfirmed email address" do
-    sign_in(unconfirmed_user.email, "123456")
+    sign_in(unconfirmed_user.email, user.password)
 
     expect(page).to have_content("You have to confirm your email address before continuing.")
   end
