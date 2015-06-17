@@ -1,6 +1,6 @@
 require "rails_helper"
 
-feature "Sign In" do
+feature "Password Reset" do
   let(:user) { create :user, :confirmed }
 
   scenario "Visitor resets his password" do

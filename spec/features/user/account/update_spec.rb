@@ -3,7 +3,7 @@ require "rails_helper"
 feature "Update Account" do
   let(:user) { create :user, :confirmed }
 
-  before do
+  background do
     login_as user
     visit edit_user_registration_path(user)
   end
