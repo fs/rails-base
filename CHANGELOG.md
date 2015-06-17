@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Update the following gems: `rails`, `jquery-rails`, `rack`, `web-console`. It fixes the security vulnerabilities, see http://weblog.rubyonrails.org/2015/6/16/Rails-3-2-22-4-1-11-and-4-2-2-have-been-released-and-more/
+
 ## 1.1 - 2015-06-05
 
 - Add [Coffeelint](https://github.com/zmbush/coffeelint-ruby) to keep Coffeescript code clean and consistent
