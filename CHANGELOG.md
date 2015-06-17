@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Update the following gems: `rails`, `jquery-rails`, `rack`, `web-console`.
+
 ## 1.1 - 2015-06-05
 
 - Add [Coffeelint](https://github.com/zmbush/coffeelint-ruby) to keep Coffeescript code clean and consistent
