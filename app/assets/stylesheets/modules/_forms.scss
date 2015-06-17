@@ -1,27 +1,32 @@
 legend {
   display: inline-block;
+
   margin-bottom: 1rem;
 }
 
 .required {
   abbr {
-    border: 0;
     color: $alert-color;
+    border: 0;
   }
 }
 
 .boolean {
   @include clearfix;
+
   margin-bottom: 1rem;
 
   input {
     float: left;
+
     margin: .2rem .5rem 0 0;
   }
 
   label {
     display: inline-block;
+
     margin: 0;
+
     vertical-align: top;
   }
 }
@@ -40,10 +45,13 @@ legend {
   }
 
   .error {
-    color: $alert-color;
     display: block;
-    line-height: 1.5;
+
     margin-bottom: 1rem;
+
+    color: $alert-color;
+
+    line-height: 1.5;
   }
 }
 
@@ -55,11 +63,14 @@ legend {
   }
 
   .hint {
-    color: lighten($body-font-color, 45%);
     display: block;
+
+    margin-bottom: 1rem;
+
+    color: lighten($body-font-color, 45%);
+
     font-size: .75rem;
     line-height: 1.5;
-    margin-bottom: 1rem;
   }
 
   &.error {
