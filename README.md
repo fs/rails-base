@@ -76,8 +76,14 @@ It's based on Rails 4 and Ruby 2.2.2.
 Some gems have native extensions.
 You should have GCC installed on your development machine.
 
-* `brew install qt` - to run specs with [Capybara Webkit](https://github.com/thoughtbot/capybara-webkit)
-* `brew install phantomjs198` - to run Javascript unit tests
+* `qt` - to run specs with [Capybara Webkit](https://github.com/thoughtbot/capybara-webkit)
+* `phantomjs198` - to run Javascript unit tests
+
+Setup required dependencies from `Brewfile`:
+```bash
+brew tap Homebrew/bundle
+brew bundle
+```
 
 ### Bootstrap application
 
