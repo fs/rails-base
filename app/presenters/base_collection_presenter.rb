@@ -1,4 +1,4 @@
-class CollectionPresenter
+class BaseCollectionPresenter
   include Enumerable
 
   attr_reader :collection, :presenter
