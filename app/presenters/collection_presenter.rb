@@ -23,6 +23,6 @@ class CollectionPresenter
   private
 
   def infer_presenter
-    self.class.name.gsub('sPresenter', 'Presenter').constantize
+    self.class.name.gsub("sPresenter", "Presenter").constantize
   end
 end
