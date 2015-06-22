@@ -10,7 +10,10 @@ LawOfDemeterCheck: { }
 # LongLineCheck: { max_line_length: 79 }
 MoveCodeIntoControllerCheck: { }
 MoveCodeIntoHelperCheck: { array_count: 3 }
-MoveCodeIntoModelCheck: { use_count: 2 }
+MoveCodeIntoModelCheck: {
+  use_count: 2,
+  ignored_files: ['app/views/kaminari/_paginator.html.slim']
+}
 MoveFinderToNamedScopeCheck: { }
 MoveModelLogicIntoModelCheck: { use_count: 4 }
 NeedlessDeepNestingCheck: { nested_count: 2 }

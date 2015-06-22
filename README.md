@@ -4,10 +4,8 @@
 [![Test Coverage](https://codeclimate.com/github/fs/rails-base/badges/coverage.svg)](https://codeclimate.com/github/fs/rails-base)
 [![Code Climate](https://codeclimate.com/github/fs/rails-base.png)](https://codeclimate.com/github/fs/rails-base)
 
-
 Rails Base is the base Rails application template used at Flatstack.
-It's based on Rails 4 and Ruby 2.1.5.
-
+It's based on Rails 4 and Ruby 2.2.2.
 
 ## Application Gems
 
@@ -39,6 +37,12 @@ It's based on Rails 4 and Ruby 2.1.5.
 * [Pry Rails](https://github.com/rweng/pry-rails) for interactively exploring objects
 * [Bundler Audit](https://github.com/rubysec/bundler-audit) for scanning the Gemfile for
   insecure dependencies based on published CVEs
+* [Spring](https://github.com/rails/spring) for fast Rails actions via
+  pre-loading
+* [Web Console](https://github.com/rails/web-console) for better debugging via
+  in-browser IRB consoles
+* [SCSS-Lint](https://github.com/brigade/scss-lint) for reporting violations of SCSS coding conventions
+* [Coffeelint](https://github.com/clutchski/coffeelint) to keep Coffeescript code clean and consistent
 
 ## Testing Gems
 
@@ -67,63 +71,68 @@ It's based on Rails 4 and Ruby 2.1.5.
 
 ## Getting Started
 
-Clone application as new project with original repository named "rails-base"
+### Prepare dependencies
 
-    git clone --depth 1 git://github.com/fs/rails-base.git --origin rails-base [MY-NEW-PROJECT]
+Some gems have native extensions.
+You should have GCC installed on your development machine.
 
-**Note: we use depth parameter here in order not to copy the history of changes in base project**
+* `qt` - to run specs with [Capybara Webkit](https://github.com/thoughtbot/capybara-webkit)
+* `phantomjs198` - to run Javascript unit tests
 
-Create your new repo on GitHub and push master into it.
-Make sure master branch is tracking origin repo.
+Setup required dependencies from `Brewfile`:
+```bash
+brew tap Homebrew/bundle
+brew bundle
+```
 
-    git remote add origin git@github.com:[MY-GITHUB-ACCOUNT]/[MY-NEW-PROJECT].git
-    git push -u origin master
+### Bootstrap application
 
-Run setup script
+1. Clone application as new project with original repository named "rails-base". We use depth parameter here in order not to copy the history of changes in base project
 
-    bin/setup
+   ```bash
+   git clone --depth 1 git://github.com/fs/rails-base.git --origin rails-base [MY-NEW-PROJECT]
+   ```
 
-Install phantomjs 1.9.8 to run Javascript unit tests:
+2. Create your new repo on GitHub and push master into it. Make sure master branch is tracking origin repo.
 
-    brew install phantomjs198
+  ```bash
+  git remote add origin git@github.com:[MY-GITHUB-ACCOUNT]/[MY-NEW-PROJECT].git
+  git push -u origin master
+  ```
 
-Make sure all test are green
+3. Run setup script
 
-    bin/ci
+  ```bash
+  bin/setup
+  ```
 
-Run app
+4. Run test and quality suits to make sure all dependencies are satisfied and applications works correctly before making changes.
 
-    bin/server
+  ```bash
+  bin/ci
+  ```
 
-**Do not forget to update this file!**
+5. Run app
 
-    mv doc/README_TEMPLATE.md README.md
-    # update README.md
-    git commit -am "Update README.md"
+  ```bash
+  bin/server
+  ```
 
-## Updating Existing Projects With New Changes From Rails Base
+6. Update README
 
-You can fetch latest changes from rails-base repo and merge or cherry-pick commits
+  Do not forget to update application `README.md` file with detailed information based on the
+  existing template.
 
-    git fetch rails-base
-    git flow feature start rails-base-update
-    git merge rails-base/master
-
-    # fix conflicts
-    # commit
-    # test
-
-    git flow feature finish rails-base-update
-
-## Overriding Foundation Settings
-
-Do your overrides in the `app/assets/stylesheets/core/_foundation_and_overrides.scss`
+  ```bash
+  mv doc/README_TEMPLATE.md README.md
+  # update README.md
+  git commit -am "Update README.md"
+  ```
 
 ## Credits
 
 Rails Base is maintained by [Timur Vafin](http://github.com/timurvafin).
 It was written by [Flatstack](http://www.flatstack.com) with the help of our
 [contributors](http://github.com/fs/rails-base/contributors).
-
 
 [![Flatstack](https://avatars0.githubusercontent.com/u/15136?v=2&s=200)](http://www.flatstack.com)

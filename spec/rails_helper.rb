@@ -1,15 +1,17 @@
-ENV['RAILS_ENV'] ||= 'test'
-require 'spec_helper'
-require File.expand_path('../../config/environment', __FILE__)
-require 'rspec/rails'
+ENV["RAILS_ENV"] ||= "test"
+
+require "spec_helper"
+require File.expand_path("../../config/environment", __FILE__)
+require "rspec/rails"
+require "shoulda/matchers"
 
 # Run codeclimate-test-reporter only in CI
-if ENV['CI']
-  require 'codeclimate-test-reporter'
+if ENV["CI"]
+  require "codeclimate-test-reporter"
   CodeClimate::TestReporter.start
 end
 
-Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
+Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
 RSpec.configure do |config|
   config.use_transactional_fixtures = false

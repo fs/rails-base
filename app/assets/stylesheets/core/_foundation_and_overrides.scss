@@ -99,7 +99,7 @@
 // $medium: $medium-up;
 // $large: $large-up;
 
-//We use this as cursors values for enabling the option of having custom cursors in the whole site's stylesheet
+//We use this as cursors values for enabling the option of having custom cursors in the whole sites stylesheet
 // $cursor-crosshair-value: crosshair;
 // $cursor-default-value: default;
 // $cursor-pointer-value: pointer;
@@ -154,7 +154,7 @@
 
 // We use these to style <code> tags
 // $code-color: scale-color($alert-color, $lightness: -27%);
-// $code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
+// $code-font-family: Consolas, "Liberation Mono", Courier, monospace;
 // $code-font-weight: bold;
 
 // We use these to style anchors
@@ -1193,4 +1193,4 @@
 
 // $include-html-visibility-classes: $include-html-classes;
 
-@import 'foundation';
+@import "foundation";

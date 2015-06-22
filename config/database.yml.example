@@ -3,8 +3,6 @@
 defaults_development: &defaults_development
   adapter: postgresql
   encoding: unicode
-  username: postgres
-  password: postgres
   host: localhost
 
 development:

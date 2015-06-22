@@ -49,7 +49,7 @@ SimpleForm.setup do |config|
     b.use :error, wrap_with: { tag: :span, class: :error }
   end
 
-  config.wrappers :foundation, class: :input, hint_class: :has_hint, error_class: :error do |b|
+  config.wrappers :foundation, class: :input, hint_class: "has-hint", error_class: :error do |b|
     b.use :html5
     b.use :placeholder
     b.use :label
@@ -67,7 +67,7 @@ SimpleForm.setup do |config|
     b.use :hint,  wrap_with: { tag: :small, class: :hint }
   end
 
-  config.wrappers :with_labels, class: :row, hint_class: :has_hint, error_class: :error do |b|
+  config.wrappers :with_labels, class: :row, hint_class: "has-hint", error_class: :error do |b|
     b.use :html5
     b.use :placeholder
 
@@ -76,11 +76,11 @@ SimpleForm.setup do |config|
     b.optional :min_max
     b.optional :readonly
 
-    b.use :label, wrap_with: { class: 'large-4 medium-4 column' }
-    b.use :input, wrap_with: { class: 'large-8 medium-8 column' }
+    b.use :label, wrap_with: { class: "large-4 medium-4 column" }
+    b.use :input, wrap_with: { class: "large-8 medium-8 column" }
 
-    b.wrapper tag: 'div', class: 'large-8 medium-8 column' do |error|
-      error.use :error, wrap_with: { tag: :small, class: 'error' }
+    b.wrapper tag: "div", class: "large-8 medium-8 column" do |error|
+      error.use :error, wrap_with: { tag: :small, class: "error" }
     end
   end
 
@@ -97,7 +97,7 @@ SimpleForm.setup do |config|
   config.boolean_style = :inline
 
   # Default class for buttons
-  config.button_class = 'button'
+  config.button_class = "button"
 
   # Method used to tidy up errors. Specify any Rails Array method.
   # :first lists the first message for each field.
@@ -108,7 +108,7 @@ SimpleForm.setup do |config|
   config.error_notification_tag = :div
 
   # CSS class to add for error notification helper.
-  config.error_notification_class = 'alert-box alert'
+  config.error_notification_class = "alert-box alert"
 
   # ID to add for error notification helper.
   # config.error_notification_id = nil
@@ -140,7 +140,7 @@ SimpleForm.setup do |config|
   # config.label_class = 'column large-4'
 
   # You can define the class to use on all forms. Default is simple_form.
-  config.form_class = 'simple-form'
+  config.default_form_class = "simple-form"
 
   # You can define which elements should obtain additional classes
   # config.generate_additional_classes_for = [:wrapper, :label, :input]
