@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Introduce [CSSComb](https://github.com/csscomb/csscomb.js). For more details see: https://github.com/fs/rails-base/pull/284
 - Add `Brewfile` to track application dependencies.
 
 ## 1.2 - 2015-06-19
