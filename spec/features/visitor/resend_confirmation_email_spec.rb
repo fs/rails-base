@@ -11,7 +11,7 @@ feature "Resend Confirmation Email" do
 
     open_email(user.email)
 
-    expect(current_email).to have_subject "Confirmation instructions"
+    expect(current_email).to have_subject("Confirmation instructions")
     expect(current_email).to have_body_text(user.full_name)
   end
 end
