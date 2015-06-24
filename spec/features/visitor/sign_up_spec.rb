@@ -17,12 +17,8 @@ feature "Sign Up" do
 
     expect(current_email).to have_subject "Confirmation instructions"
     expect(current_email).to have_body_text(registered_user.full_name)
-  end
 
-  scenario "Visitor confirms account" do
-    open_email(registered_user.email)
-    visit_in_email "Confirm my account"
-
+    visit_in_email("Confirm my account")
     expect(page).to have_content("Your email address has been successfully confirmed")
     expect(page).to have_text(registered_user.email)
   end
