@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Intoduce presenters and depricate helpers.
 - Add `Brewfile` to track application dependencies.
 
 ## 1.2 - 2015-06-19
