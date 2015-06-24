@@ -1,6 +1,14 @@
 module Authentication
   extend ActiveSupport::Concern
 
+  included do
+    helper do
+      def current_user
+        UserPresenter.new(warden.authenticate(scope: :user))
+      end
+    end
+  end
+
   private
 
   def devise_parameter_sanitizer
