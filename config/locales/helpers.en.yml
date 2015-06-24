@@ -1,6 +1,0 @@
-en:
-  helpers:
-    submit:
-      user:
-        create: 'Sign up'
-        update: 'Update'
