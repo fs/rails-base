@@ -4,7 +4,7 @@ set -e
 
 bin/rubocop --config config/rubocop.yml
 bin/brakeman --quiet --skip-libs --exit-on-warn
-bin/rails_best_practices --silent --spec --features -x lib/templates, config
+bin/rails_best_practices --silent --spec --features -x lib/templates
 
 # Using rake-task here since coffeelint.rb cmd doesn't exit with non-zero status
 # when code contains errors
