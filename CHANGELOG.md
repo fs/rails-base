@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+* Add [Reek](https://github.com/troessner/reek) for detecting code smells in Ruby
+
 ## 1.3 - 2015-07-03
 
 - Deprecate using i18n for submits, see: https://github.com/fs/rails-base/commit/ed4e55992e671cb3c9281cd10a4f5c26e7f1c02d

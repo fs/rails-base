@@ -34,6 +34,7 @@ It's based on Rails 4 and Ruby 2.2.2.
 * [Rubocop](https://github.com/bbatsov/rubocop) for reporting violations of the Ruby style guide
 * [Rails Best Practices](https://github.com/railsbp/rails_best_practices) for checking the code quality
 * [Brakeman](https://github.com/presidentbeef/brakeman) for checking application for common security vulnerabilities
+* [Reek](https://github.com/troessner/reek) for detecting code smells
 * [Pry Rails](https://github.com/rweng/pry-rails) for interactively exploring objects
 * [Bundler Audit](https://github.com/rubysec/bundler-audit) for scanning the Gemfile for
   insecure dependencies based on published CVEs
