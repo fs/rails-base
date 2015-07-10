@@ -62,6 +62,7 @@ group :development, :test do
   gem "jasmine-jquery-rails"
   gem "pry-rails"
   gem "rails_best_practices"
+  gem "reek", require: false
   gem "rspec-rails", "~> 3.0"
   gem "rubocop"
   gem "scss_lint", require: false
