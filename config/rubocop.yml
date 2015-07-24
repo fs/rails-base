@@ -11,6 +11,12 @@ Style/Documentation:
   Description: 'Document classes and non-namespace modules.'
   Enabled: false
 
+Style/MethodCalledOnDoEndBlock:
+  Enabled: true
+
+Style/CollectionMethods:
+  Enabled: true
+
 Style/SymbolArray:
   Description: 'Use %i or %I for arrays of symbols.'
   Enabled: true
