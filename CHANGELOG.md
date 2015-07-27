@@ -2,6 +2,7 @@
 
 ## Unreleased
 - Add gem [rack-canonical-host](https://github.com/tylerhunt/rack-canonical-host) for the definition a single host name as the canonical host for your application.
+- Add Google Analytics
 
 ## 1.3 - 2015-07-03
 
