@@ -2,8 +2,11 @@
 
 ## Unreleased
 
+## 1.3 - 2015-07-03
+
 - Deprecate using i18n for submits, see: https://github.com/fs/rails-base/commit/ed4e55992e671cb3c9281cd10a4f5c26e7f1c02d
 - Fix wrong titles and submit labels on devise pages after submit
+- Fix `rails_best_practices` invocation from `bin/quality`, `config/rails_best_practices.yml` was ignored before.
 - Introduce [CSSComb](https://github.com/csscomb/csscomb.js). For more details see: https://github.com/fs/rails-base/pull/284
 - Add `Brewfile` to track application dependencies.
 
