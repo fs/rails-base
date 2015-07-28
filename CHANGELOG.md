@@ -4,6 +4,8 @@
 - Add gem [rack-canonical-host](https://github.com/tylerhunt/rack-canonical-host) for the definition a single host name as the canonical host for your application.
 - Add Google Analytics
 
+- Add ability to close app from unauthorized viewers, see: https://github.com/fs/rails-base/pull/302/files
+
 ## 1.3 - 2015-07-03
 
 - Deprecate using i18n for submits, see: https://github.com/fs/rails-base/commit/ed4e55992e671cb3c9281cd10a4f5c26e7f1c02d
