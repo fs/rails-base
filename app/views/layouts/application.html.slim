@@ -16,6 +16,8 @@ html class='no-js' lang='en'
     /! Le modernizr
     = javascript_include_tag 'vendor/modernizr'
 
+    == analytics_init if GA.tracker
+
   body
     #root
       = render 'navigation'

@@ -25,6 +25,7 @@ gem "title"
 # all other gems
 gem "decent_exposure"
 gem "devise"
+gem "google-analytics-rails"
 gem "interactor"
 gem "kaminari"
 gem "responders"
