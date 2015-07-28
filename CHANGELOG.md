@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Replace [title](https://github.com/calebthompson/title) gem with [metamagic](https://github.com/lassebunk/metamagic)
+
 ## 1.4 - 2015-07-31
 
 - Add gem [rack-canonical-host](https://github.com/tylerhunt/rack-canonical-host) for the definition a single host name as the canonical host for your application.
