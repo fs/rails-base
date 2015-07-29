@@ -10,11 +10,11 @@ html class='no-js' lang='en'
 
     = csrf_meta_tags
 
-    /! Le styles
     = stylesheet_link_tag :application
 
-    /! Le modernizr
     = javascript_include_tag 'vendor/modernizr'
+
+    = javascript_tag 'window.App = {}'
 
     == analytics_init if GA.tracker
 
@@ -26,5 +26,8 @@ html class='no-js' lang='en'
       = yield
 
     = render 'footer'
+
+    javascript:
+      App.currentUserData = #{raw current_user.to_json};
 
     = javascript_include_tag :application
