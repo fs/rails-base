@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add [Rails ERD](https://github.com/voormedia/rails-erd) gem for generating a diagram based on application's AR models
+
 ## 1.5 - 2015-08-14
 
 - Replace [title](https://github.com/calebthompson/title) gem with [metamagic](https://github.com/lassebunk/metamagic)
