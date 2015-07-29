@@ -31,7 +31,7 @@ gem "kaminari"
 gem "responders"
 gem "rollbar", "~> 0.10.3"
 gem "seedbank"
-gem "thin"
+gem "puma"
 gem "pundit"
 gem "rack-canonical-host"
 
