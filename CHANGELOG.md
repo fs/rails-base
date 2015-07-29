@@ -3,8 +3,9 @@
 ## Unreleased
 - Add gem [rack-canonical-host](https://github.com/tylerhunt/rack-canonical-host) for the definition a single host name as the canonical host for your application.
 - Add Google Analytics
-
 - Add ability to close app from unauthorized viewers, see: https://github.com/fs/rails-base/pull/302/files
+- Add [Rails ERD](https://github.com/voormedia/rails-erd) gem for generating a diagram based on application's AR models
+
 
 ## 1.3 - 2015-07-03
 

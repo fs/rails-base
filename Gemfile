@@ -74,6 +74,7 @@ group :development do
   gem "foreman"
   gem "letter_opener"
   gem "quiet_assets"
+  gem "rails-erd"
   gem "slim-rails"
   gem "spring"
   gem "spring-commands-rspec"
