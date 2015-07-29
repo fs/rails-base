@@ -13,4 +13,3 @@ vendor/ruby
 ._*
 .env
 .pryrc
-*.swp
