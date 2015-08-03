@@ -4,6 +4,7 @@ defaults_development: &defaults_development
   adapter: postgresql
   encoding: unicode
   host: localhost
+  pool: <%= ENV.fetch("DB_POOL", ENV.fetch("MAX_THREADS", 5)) %>
 
 development:
   database: application_dev
