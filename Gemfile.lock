@@ -175,6 +175,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    metamagic (3.1.7)
+      rails (>= 3.0.0)
     method_source (0.8.2)
     mime-types (2.6.1)
     mini_portile (0.6.2)
@@ -337,9 +339,6 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (1.4.1)
-    title (0.0.5)
-      i18n
-      rails (>= 3.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.4.0)
@@ -394,6 +393,7 @@ DEPENDENCIES
   kaminari
   launchy
   letter_opener
+  metamagic
   pg
   pry-rails
   pundit
@@ -418,7 +418,6 @@ DEPENDENCIES
   spring-commands-rspec
   therubyracer
   thin
-  title
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
   webmock
