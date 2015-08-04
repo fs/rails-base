@@ -1,13 +1,14 @@
 require "rails_helper"
 
-feature "Sign out" do
+feature "Sign Out" do
   let(:user) { create :user, :confirmed }
 
-  before(:each) do
-    sign_in(user.email, "123456")
+  background do
+    login_as user
   end
 
-  scenario "Logged in user signs out" do
+  scenario "User signs out" do
+    visit "/"
     click_link "Sign out"
 
     expect(page).to have_content("Sign in")
