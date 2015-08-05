@@ -1,6 +1,6 @@
 .row
   .columns
-    h2 = title('Change password')
+    h2 = title("Change password")
 
 .row
   .medium-6.columns
@@ -17,7 +17,7 @@
         = f.input :password_confirmation, required: true
 
       .form-actions
-        = f.button :submit, 'Update password'
+        = f.button :submit, "Update password"
 
   .medium-6.columns.end
-    = render 'users/shared/links'
+    = render "users/shared/links"

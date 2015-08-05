@@ -1,6 +1,6 @@
 .row
   .columns
-    h2 = title('Forgot your password?')
+    h2 = title("Forgot your password?")
 
 .row
   .medium-6.columns
@@ -12,7 +12,7 @@
       .form-inputs
         = f.input :email, required: true
       .form-actions
-        = f.button :submit, 'Send me reset password instructions'
+        = f.button :submit, "Send me reset password instructions"
 
   .medium-6.columns.end
-    = render 'users/shared/links'
+    = render "users/shared/links"

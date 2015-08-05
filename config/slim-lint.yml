@@ -39,6 +39,7 @@ linters:
       - Style/TrailingBlankLines
       - Style/TrailingWhitespace
       - Style/WhileUntilModifier
+      - Style/NestedTernaryOperator
 
   TagCase:
     enabled: true
