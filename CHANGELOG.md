@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Add [Slim-Lint](https://github.com/sds/slim-lint) for reporting violations of Ruby style guide in `.slim` templates
 - Update Ruby to 2.2.3
 - Improve assets caching on Heroku: headers, gzipping, Cloudfront
 - Move Rack::CanonicalHost and Rack::Auth::Basic configuration to initializers

@@ -10,6 +10,7 @@ bin/rails_best_practices --silent --spec --features -x lib/templates
 # when code contains errors
 bin/rake coffeelint
 bin/scss-lint --config config/scss-lint.yml
+SLIM_LINT_RUBOCOP_CONF=config/rubocop.yml bin/slim-lint --config config/slim-lint.yml app/views
 
 bin/bundle-audit update
 bin/bundle-audit
