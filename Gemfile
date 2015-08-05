@@ -12,7 +12,7 @@ gem "foundation-icons-sass-rails"
 gem "foundation-rails"
 gem "jquery-rails"
 gem "sass-rails", "~> 5.0.0"
-gem "skim"
+gem "skim", git: "https://github.com/jfirebaugh/skim"
 gem "therubyracer", platforms: :ruby
 gem "uglifier", ">= 1.3.0"
 
