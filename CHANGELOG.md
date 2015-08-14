@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.5 - 2015-08-14
+
 - Replace [title](https://github.com/calebthompson/title) gem with [metamagic](https://github.com/lassebunk/metamagic)
 
 ## 1.4 - 2015-07-31
