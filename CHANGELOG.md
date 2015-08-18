@@ -2,8 +2,8 @@
 
 ## Unreleased
 
+- Add [Gaffe](https://github.com/mirego/gaffe) to handle Rails error pages in a clean, simple way
 - Update [rails](https://github.com/rails/rails) version up to 4.2.3
-
 - Add [Rails ERD](https://github.com/voormedia/rails-erd) gem for generating a diagram based on application's AR models
 
 ## 1.5 - 2015-08-14

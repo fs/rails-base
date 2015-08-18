@@ -25,6 +25,7 @@ It's based on Rails 4 and Ruby 2.2.2.
 * [Devise](http://github.com/plataformatec/devise) for basic auth
 * [Rollbar](https://github.com/rollbar/rollbar-gem) for exception notification
 * [Google Analytics Rails](https://github.com/bgarret/google-analytics-rails) for Google Analytics support
+* [Gaffe](https://github.com/mirego/gaffe) to handle Rails error pages in a clean, simple way
 
 ## Development Gems
 

@@ -25,15 +25,16 @@ gem "slim"
 # all other gems
 gem "decent_exposure"
 gem "devise"
+gem "gaffe"
 gem "google-analytics-rails"
 gem "interactor"
 gem "kaminari"
+gem "pundit"
+gem "rack-canonical-host"
 gem "responders"
 gem "rollbar", "~> 0.10.3"
 gem "seedbank"
 gem "thin"
-gem "pundit"
-gem "rack-canonical-host"
 
 group :staging, :production do
   gem "rails_12factor"
