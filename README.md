@@ -80,6 +80,7 @@ You should have GCC installed on your development machine.
 
 * `qt` - to run specs with [Capybara Webkit](https://github.com/thoughtbot/capybara-webkit)
 * `phantomjs198` - to run Javascript unit tests
+* `graphviz` - to generate Entity-Relationship Diagram
 
 Setup required dependencies from `Brewfile`:
 ```bash
