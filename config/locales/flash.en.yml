@@ -10,3 +10,7 @@ en:
       destroy:
         notice: '%{resource_name} was successfully destroyed.'
         alert: '%{resource_name} could not be destroyed.'
+
+    feedbacks:
+        create:
+          notice: "Email was successfully sent."
