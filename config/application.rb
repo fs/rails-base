@@ -33,5 +33,8 @@ module RailsBase
 
     # Default host for action mailer, initializers/mailer.rb
     config.host = "localhost:5000"
+
+    # We send all feedback email to this address
+    config.feedback_email = ENV.fetch("FEEDBACK_EMAIL", "feedback@example.com")
   end
 end
