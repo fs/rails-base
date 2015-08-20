@@ -122,11 +122,13 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.7)
     execjs (2.2.2)
-    factory_girl (4.4.0)
+    factory_girl (4.5.0)
       activesupport (>= 3.0.0)
-    factory_girl_rails (4.4.0)
-      factory_girl (~> 4.4.0)
+    factory_girl_rails (4.5.0)
+      factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
+    faker (1.5.0)
+      i18n (~> 0.5)
     fastercsv (1.5.5)
     foreman (0.63.0)
       dotenv (>= 0.7)
@@ -172,7 +174,7 @@ GEM
     letter_opener (1.2.0)
       launchy (~> 2.2)
     libv8 (3.16.14.7)
-    loofah (2.0.2)
+    loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
@@ -387,6 +389,7 @@ DEPENDENCIES
   dotenv-rails
   email_spec
   factory_girl_rails
+  faker
   foreman
   formulaic
   foundation-icons-sass-rails
