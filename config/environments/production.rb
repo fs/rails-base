@@ -24,6 +24,12 @@ Rails.application.configure do
   # Apache or NGINX already handles this.
   config.serve_static_files = ENV["RAILS_SERVE_STATIC_FILES"].present?
 
+  # Set Cache Headers for static files to 1 year.
+  config.static_cache_control = "public, max-age=#{1.year.to_i}"
+
+  # Enable deflate / gzip compression of controller-generated responses
+  config.middleware.use Rack::Deflater
+
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
