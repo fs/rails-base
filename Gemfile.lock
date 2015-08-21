@@ -46,6 +46,12 @@ GEM
     autoprefixer-rails (4.0.2.2)
       execjs
     awesome_print (1.6.1)
+    aws-sdk (2.1.15)
+      aws-sdk-resources (= 2.1.15)
+    aws-sdk-core (2.1.15)
+      jmespath (~> 1.0)
+    aws-sdk-resources (2.1.15)
+      aws-sdk-core (= 2.1.15)
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -113,6 +119,8 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
     docile (1.1.5)
+    domain_name (0.5.24)
+      unf (>= 0.0.5, < 1.0.0)
     dotenv (0.9.0)
     dotenv-rails (0.9.0)
       dotenv (= 0.9.0)
@@ -152,6 +160,8 @@ GEM
     haml (4.0.6)
       tilt
     highline (1.6.21)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
     i18n (0.7.0)
     interactor (3.1.0)
     jasmine (2.3.0)
@@ -161,6 +171,8 @@ GEM
       rake
     jasmine-core (2.3.0)
     jasmine-jquery-rails (2.0.3)
+    jmespath (1.0.2)
+      multi_json (~> 1.0)
     jquery-rails (4.0.4)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
@@ -182,9 +194,11 @@ GEM
       rails (>= 3.0.0)
     method_source (0.8.2)
     mime-types (2.6.1)
+    mini_magick (4.2.10)
     mini_portile (0.6.2)
     minitest (5.8.0)
     multi_json (1.11.0)
+    netrc (0.10.3)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
@@ -207,6 +221,8 @@ GEM
     rack-canonical-host (0.1.0)
       addressable
       rack (~> 1.0)
+    rack-protection (1.5.3)
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.3)
@@ -255,9 +271,23 @@ GEM
     rainbow (2.0.0)
     rake (10.4.2)
     ref (1.0.5)
+    refile (0.5.5)
+      mime-types
+      rest-client (~> 1.8)
+      sinatra (~> 1.4.5)
+    refile-mini_magick (0.1.0)
+      mini_magick (~> 4.0)
+      refile (~> 0.5)
+    refile-s3 (0.1.0)
+      aws-sdk (~> 2.0)
+      refile (~> 0.5.0)
     require_all (1.3.2)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
+    rest-client (1.8.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     rollbar (0.10.14)
       multi_json (~> 1.5)
     rspec (3.0.0)
@@ -316,6 +346,10 @@ GEM
       json (~> 1.8)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.0)
+    sinatra (1.4.6)
+      rack (~> 1.4)
+      rack-protection (~> 1.4)
+      tilt (>= 1.3, < 3)
     skim (0.9.3)
       coffee-script
       coffee-script-source (>= 1.2.0)
@@ -353,6 +387,9 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.1)
     uniform_notifier (1.9.0)
     warden (1.2.3)
       rack (>= 1.0)
@@ -413,6 +450,9 @@ DEPENDENCIES
   rails-erd
   rails_12factor
   rails_best_practices
+  refile
+  refile-mini_magick
+  refile-s3
   responders
   rollbar (~> 0.10.3)
   rspec-rails (~> 3.0)
@@ -432,3 +472,6 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
   webmock
+
+BUNDLED WITH
+   1.10.6

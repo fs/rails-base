@@ -5,6 +5,8 @@ class User
       email
       password
       password_confirmation
+      profile_image
+      remove_profile_image
     )
 
     def sign_up
