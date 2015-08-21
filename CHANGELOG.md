@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Move Rack::CanonicalHost and Rack::Auth::Basic configuration to initializers
 - Support [Heroku Review Apps](https://devcenter.heroku.com/articles/github-integration#review-apps)
 - Update [rails](https://github.com/rails/rails) version up to 4.2.3
 - Add [Rails ERD](https://github.com/voormedia/rails-erd) gem for generating a diagram based on application's AR models
