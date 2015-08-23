@@ -19,8 +19,8 @@ Information about ruby and rails versions.
 
 - PostgreSQL 9.3
   - `brew install postgres`
-- Ruby 2.2.2
-  - `rbenv install 2.2.2`
+- Ruby 2.2.3
+  - `rbenv install 2.2.3`
 - PhantomJS
   - `brew install phantomjs198`
 - Rails 4

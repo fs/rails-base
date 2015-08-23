@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Update Ruby to 2.2.3
+- Improve assets caching on Heroku: headers, gzipping, Cloudfront
 - Move Rack::CanonicalHost and Rack::Auth::Basic configuration to initializers
 - Support [Heroku Review Apps](https://devcenter.heroku.com/articles/github-integration#review-apps)
 - Update [rails](https://github.com/rails/rails) version up to 4.2.3
