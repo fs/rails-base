@@ -54,7 +54,7 @@ end
 group :development, :test do
   gem "awesome_print"
   gem "brakeman", require: false
-  gem "bundler-audit"
+  gem "bundler-audit", require: false
   gem "byebug"
   gem "coffeelint"
   gem "dotenv-rails"
@@ -64,15 +64,15 @@ group :development, :test do
   gem "jasmine", "> 2.0"
   gem "jasmine-jquery-rails"
   gem "pry-rails"
-  gem "rails_best_practices"
+  gem "rails_best_practices", require: false
   gem "rspec-rails", "~> 3.0"
-  gem "rubocop"
+  gem "rubocop", require: false
   gem "scss_lint", require: false
 end
 
 group :development do
   gem "bullet"
-  gem "foreman"
+  gem "foreman", require: false
   gem "letter_opener"
   gem "quiet_assets"
   gem "rails-erd"
