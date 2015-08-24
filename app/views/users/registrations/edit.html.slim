@@ -7,9 +7,14 @@
     = simple_form_for resource,
         as: resource_name,
         url: registration_path(resource_name),
-        html: { method: :put } do |f|
+        html: { multipart: true, method: :put } do |f|
 
       .form-inputs
+        = f.input :profile_image do
+          = f.attachment_field :profile_image, direct: true, presigned: true
+          = attachment_image_tag(resource, :profile_image, :fill, 100, 100, fallback: "default_profile_image.jpg", data: { "refile-preview" => { input: "user_profile_image" } })
+          = f.input :remove_profile_image, as: :boolean, label: "Remove"
+
         = f.input :full_name, required: true, autofocus: true
         = f.input :email, required: true
         = f.input :password,

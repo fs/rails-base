@@ -7,6 +7,7 @@
 #= require jquery
 #= require jquery_ujs
 #= require foundation
+#= require refile
 #= require current_user
 #= require skim
 #= require_tree ../templates
