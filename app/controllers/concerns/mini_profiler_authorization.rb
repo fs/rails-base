@@ -8,6 +8,10 @@ module MiniProfilerAuthorization
   private
 
   def authorize_mini_profiler
-    Rack::MiniProfiler.authorize_request if app_config.mini_profiler_ip_whitelist.include?(request.remote_ip)
+    Rack::MiniProfiler.authorize_request if mini_profiler_authorized?
+  end
+
+  def mini_profiler_authorized?
+    ENV.fetch("MINI_PROFILER_IP_WHITELIST",  "").split(",").include?(request.remote_ip)
   end
 end
