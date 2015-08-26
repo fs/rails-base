@@ -44,6 +44,7 @@ It's based on Rails 4 and Ruby 2.2.3.
   in-browser IRB consoles
 * [SCSS-Lint](https://github.com/brigade/scss-lint) for reporting violations of SCSS coding conventions
 * [Coffeelint](https://github.com/clutchski/coffeelint) to keep Coffeescript code clean and consistent
+* [Slim-Lint](https://github.com/sds/slim-lint) for reporting violations of Ruby style guide in `.slim` templates
 * [Rails ERD](https://github.com/voormedia/rails-erd) for generating a diagram based on application's AR models
 
 ## Testing Gems

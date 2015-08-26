@@ -1,31 +1,31 @@
 doctype html
 
-html class='no-js' lang='en'
+html class="no-js" lang="en"
 
   head
-    meta charset='utf-8'
-    meta name='viewport' content='width=device-width, initial-scale=1.0'
-    meta name='robots' content='NOODP,NOYDIR'
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    meta name="robots" content="NOODP,NOYDIR"
 
-    = metamagic site: 'RailsBase', title: [:title, :site], separator: ' - '
+    = metamagic site: "RailsBase", title: %i(title site), separator: " - "
     = csrf_meta_tags
 
     = stylesheet_link_tag :application
 
-    = javascript_include_tag 'vendor/modernizr'
+    = javascript_include_tag "vendor/modernizr"
 
-    = javascript_tag 'window.App = {}'
+    = javascript_tag "window.App = {}"
 
     == analytics_init if GA.tracker
 
   body
     #root
-      = render 'navigation'
-      = render 'messages'
+      = render "navigation"
+      = render "messages"
 
       = yield
 
-    = render 'footer'
+    = render "footer"
 
     javascript:
       App.currentUserData = #{raw current_user.to_json};

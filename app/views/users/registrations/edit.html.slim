@@ -21,7 +21,7 @@
             required: true
 
       .form-actions
-        = f.button :submit, 'Update'
+        = f.button :submit, "Update"
 
   .medium-6.columns.end
     h6
@@ -29,7 +29,7 @@
     p
       | Unhappy?
       '
-      = link_to 'Cancel my account.',
+      = link_to "Cancel my account.",
           registration_path(resource_name),
-          data: { confirm: 'Are you sure?' },
+          data: { confirm: "Are you sure?" },
           method: :delete

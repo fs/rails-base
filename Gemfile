@@ -12,7 +12,7 @@ gem "foundation-icons-sass-rails"
 gem "foundation-rails"
 gem "jquery-rails"
 gem "sass-rails", "~> 5.0.0"
-gem "skim"
+gem "skim", git: "https://github.com/jfirebaugh/skim"
 gem "therubyracer", platforms: :ruby
 gem "uglifier", ">= 1.3.0"
 
@@ -68,6 +68,7 @@ group :development, :test do
   gem "rspec-rails", "~> 3.0"
   gem "rubocop", require: false
   gem "scss_lint", require: false
+  gem "slim_lint", require: false
 end
 
 group :development do
