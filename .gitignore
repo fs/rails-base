@@ -4,7 +4,6 @@ log/*.log
 tmp/*
 coverage/*
 rerun.txt
-config/database.yml
 doc/**/*
 vendor/bundle
 vendor/cache
