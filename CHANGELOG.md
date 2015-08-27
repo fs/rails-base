@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Update [Uglifier](https://github.com/lautis/uglifier) version up to 2.7.2
 - Add [Rubocop-Rspec](https://github.com/nevir/rubocop-rspec) for reporting violations of Ruby style guide in specs
 - Add [Slim-Lint](https://github.com/sds/slim-lint) for reporting violations of Ruby style guide in `.slim` templates
 - Update Ruby to 2.2.3
