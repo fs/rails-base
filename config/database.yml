@@ -6,11 +6,11 @@ defaults: &defaults
   pool: <%= [ENV.fetch("MAX_THREADS", 5), ENV.fetch("DB_POOL", 5)].max %>
 
 development:
-  database: application_dev
+  database: <%= ENV.fetch("DATABASE_NAME", File.basename(Rails.root)) %>_dev
   <<: *defaults
 
 test:
-  database: application_test
+  database: <%= ENV.fetch("DATABASE_NAME", File.basename(Rails.root)) %>_test
   <<: *defaults
 
 production: &deploy

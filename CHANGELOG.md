@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Implement the dynamic database name
+
 ## 1.6 - 2015-08-28
 
 - Switch web server from [Thin](https://github.com/macournoyer/thin) to [Puma](https://github.com/puma/puma)
