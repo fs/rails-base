@@ -16,11 +16,6 @@ rm -f .bundle/config
 bundle check --path .bundle > /dev/null 2>&1 ||
   bundle install --path=.bundle $BUNDLER_ARGS
 
-# Set up database configuration file
-if [ ! -f config/database.yml ]; then
-  cp config/database.yml.example config/database.yml
-fi
-
 # Set up configurable environment variables
 if [ ! -f .env ]; then
   cp .env.example .env
