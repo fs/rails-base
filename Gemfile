@@ -28,14 +28,15 @@ gem "devise"
 gem "google-analytics-rails"
 gem "interactor"
 gem "kaminari"
-gem "responders"
-gem "rollbar", "~> 0.10.3"
-gem "seedbank"
 gem "puma"
 gem "pundit"
 gem "rack-canonical-host"
+gem "responders"
+gem "rollbar", "~> 0.10.3"
+gem "seedbank"
 
 group :staging, :production do
+  gem "newrelic_rpm"
   gem "rails_12factor"
 end
 

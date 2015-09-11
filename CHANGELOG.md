@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Add configuration for [NewRelic](https://devcenter.heroku.com/articles/newrelic) Heroku-addon
 - Implement the dynamic database name
 
 ## 1.6 - 2015-08-28
