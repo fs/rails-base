@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Add gem [rack-mini-profiler](https://github.com/MiniProfiler/rack-mini-profiler) for displaying speed badge for every html page.
 - Add configuration for [NewRelic](https://devcenter.heroku.com/articles/newrelic) Heroku-addon
 - Implement the dynamic database name
 
