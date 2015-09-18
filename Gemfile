@@ -35,7 +35,7 @@ gem "pundit"
 gem "rack-mini-profiler"
 gem "rack-canonical-host"
 gem "responders"
-gem "rollbar", "~> 0.10.3"
+gem "rollbar"
 gem "seedbank"
 gem "stackprof"
 
