@@ -14,11 +14,13 @@
         = f.input :email, required: true
         = f.input :password,
             autocomplete: "off",
-            required: false
+            required: false,
+            hint: true
         = f.input :password_confirmation,
             required: false
         = f.input :current_password,
-            required: true
+            required: true,
+            hint: true
 
       .form-actions
         = f.button :submit, "Update"

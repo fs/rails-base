@@ -12,11 +12,17 @@ en:
       default_message: 'Please review the problems below:'
     labels:
       user:
+        full_name: Full name
         new:
           email: Enter your email address
+          password: Password
+          password_confirmation: Confirm password
+          remember_me: Remember me
         edit:
+          email: Email
           password: Enter new password
           password_confirmation: Confirm your new password
+          current_password: Current password
     hints:
       user:
         password: Leave it blank if you dont want to change it
