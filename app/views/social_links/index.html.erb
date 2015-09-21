@@ -1,0 +1,34 @@
+<% title "Sign In" %>
+<% if @social_links %>
+  <% unless @social_links.empty? %>
+    <p><strong>You can sign in to this account using:</strong></p>
+    <div class="authentications">
+      <% @social_links.each do |social_link| %>
+        <div class="social_link">
+          <%= image_tag "#{social_link.provider}_icon.png",
+              :size => "32x32" %>
+          <div class="provider"><%= social_link.provider.titleize
+          %></div>
+          <div class="uid"><%= social_link.uid %></div>
+          <%= link_to "X", social_link, :confirm =>
+              'Are you sure you want to remove this social_link
+      option?', :method => :delete, :class => "remove" %>
+        </div>
+      <% end %>
+      <div class="clear"></div>
+    </div>
+  <% end %>
+  <p><strong>Add another service to sign in with:</strong></p>
+<% else %>
+  <p><strong>Sign in through one of these services:</strong></p>
+<% end %>
+
+<a href="/auth/facebook" class="auth_provider">
+  <%= image_tag "facebook_icon.ico", :size => "64x64", :alt => "Facebook" %>
+  Facebook
+</a>
+<a href="/auth/google_oauth2" class="auth_provider">
+  <%= image_tag "google_icon.png", :size => "64x64", :alt => "Google" %>
+  Google
+</a>
+<div class="clear"></div>

@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :social_links
+
   devise :database_authenticatable, :registerable, :confirmable,
     :recoverable, :rememberable, :trackable, :validatable
 
