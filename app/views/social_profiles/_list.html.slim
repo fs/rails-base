@@ -6,7 +6,11 @@ h6
         li
           = t "active_record.attributes.social_profile.provider_name.#{social_profile.provider}"
           |  (#{social_profile.uid})
-          |  #{link_to "x", social_profile, data: {confirm: 'Are you sure you want to remove this social profile?'}, method: :delete}
+          | &nbsp;
+          = link_to "x",
+                    social_profile,
+                    data: { confirm: "Are you sure you want to remove this social profile?" },
+                    method: :delete
     b Add another service to sign in with:
   - else
     b Sign in through one of these services:
