@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Replace [rails_12factor](https://github.com/heroku/rails_12factor) with [rails_stdout_logging](https://github.com/heroku/rails_stdout_logging)
 - Update [foundation-rails gem](https://github.com/zurb/foundation-rails)
 - Update [rollbar gem](https://github.com/rollbar/rollbar-gem)
 - Add gem [rack-mini-profiler](https://github.com/MiniProfiler/rack-mini-profiler) for displaying speed badge for every html page.

@@ -41,7 +41,7 @@ gem "stackprof"
 
 group :staging, :production do
   gem "newrelic_rpm"
-  gem "rails_12factor"
+  gem "rails_stdout_logging"
 end
 
 group :test do
