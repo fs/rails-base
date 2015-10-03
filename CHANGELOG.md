@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Turning on Partial Double Verification for Rspec
 - Replace [rails_12factor](https://github.com/heroku/rails_12factor) with [rails_stdout_logging](https://github.com/heroku/rails_stdout_logging)
 - Update [foundation-rails gem](https://github.com/zurb/foundation-rails)
 - Update [rollbar gem](https://github.com/rollbar/rollbar-gem)
