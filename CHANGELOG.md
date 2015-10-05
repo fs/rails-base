@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Update [foundation-rails gem](https://github.com/zurb/foundation-rails)
 - Update [rollbar gem](https://github.com/rollbar/rollbar-gem)
 - Add gem [rack-mini-profiler](https://github.com/MiniProfiler/rack-mini-profiler) for displaying speed badge for every html page.
 - Add configuration for [NewRelic](https://devcenter.heroku.com/articles/newrelic) Heroku-addon
