@@ -1,11 +1,19 @@
 module Users
   class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     def google_oauth2
-      handle_callback
+      if !CheckOmniauth.verified?(auth)
+        when_social_profile_not_verified
+      else
+        handle_callback
+      end
     end
 
     def facebook
-      handle_callback
+      if !CheckOmniauth.verified?(auth)
+        when_social_profile_not_verified
+      else
+        handle_callback
+      end
     end
 
     private
@@ -28,6 +36,11 @@ module Users
 
     def auth
       request.env["omniauth.auth"]
+    end
+
+    def when_social_profile_not_verified
+      flash[:notice] = t "flash.social_profile_not_verified"
+      redirect_to root_url
     end
 
     def when_current_user_and_social_profile
