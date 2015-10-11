@@ -16,11 +16,12 @@ class User < ActiveRecord::Base
   end
 
   def self.from_omniauth(auth)
-    where(email: auth.info.email).first_or_initialize.tap do |user|
-      user.full_name = auth.info.name
-      user.password = Devise.friendly_token[0, 20]
-      user.skip_confirmation!
-      user.save!
-    end
+    where(email: auth.info.email).first_or_initialize
+  end
+
+  def apply_omniauth(auth)
+    self.email = auth["info"]["email"] if email.blank?
+    self.full_name = auth["info"]["name"] if full_name.blank?
+    social_profiles.build(provider: auth["provider"], uid: auth["uid"])
   end
 end

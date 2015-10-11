@@ -60,9 +60,14 @@ module Users
     end
 
     def when_first_visit
-      user_from_omniauth.social_profiles.create!(provider: auth.provider, uid: auth.uid)
-      flash[:notice] = t "flash.when_first_visit"
-      sign_in_and_redirect(:user, user_from_omniauth)
+      user_from_omniauth.apply_omniauth(auth)
+      if user_from_omniauth.save
+        flash[:notice] = t "flash.when_first_visit"
+        sign_in_and_redirect(:user, user_from_omniauth)
+      else
+        session[:omniauth] = auth.except('extra')
+        redirect_to new_user_registration_url
+      end
     end
 
     def user_from_omniauth
