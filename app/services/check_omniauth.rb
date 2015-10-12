@@ -5,6 +5,8 @@ class CheckOmniauth
       auth.info.verified?
     when "google_oauth2"
       auth.extra.raw_info.email_verified?
+    else
+      false
     end
   end
 end

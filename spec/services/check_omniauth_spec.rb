@@ -29,5 +29,11 @@ describe CheckOmniauth do
         expect(subject).to eq(true)
       end
     end
+
+    context "when provider is not in the case statement" do
+      let(:provider) { "another" }
+
+      it { is_expected.to eq(false) }
+    end
   end
 end

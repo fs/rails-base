@@ -59,19 +59,21 @@ module Users
       sign_in_and_redirect(:user, social_profile.user)
     end
 
+    # rubocop:disable Metrics/AbcSize
     def when_first_visit
-      user_from_omniauth.apply_omniauth(auth)
-      if user_from_omniauth.save
+      user.apply_omniauth(auth)
+      if user.save
         flash[:notice] = t "flash.when_first_visit"
-        sign_in_and_redirect(:user, user_from_omniauth)
+        sign_in_and_redirect(:user, user)
       else
-        session[:omniauth] = auth.except('extra')
+        session[:omniauth] = auth.except("extra")
         redirect_to new_user_registration_url
       end
     end
+    # rubocop:enable Metrics/AbcSize
 
-    def user_from_omniauth
-      @user_from_omniauth ||= User.from_omniauth(auth)
+    def user
+      @user ||= User.from_omniauth(auth)
     end
   end
 end
