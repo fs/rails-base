@@ -1,0 +1,7 @@
+en:
+  active_record:
+    attributes:
+      social_profile:
+        provider_name:
+          google_oauth2: Google
+          facebook: Facebook

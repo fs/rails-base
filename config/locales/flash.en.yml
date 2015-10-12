@@ -10,3 +10,8 @@ en:
       destroy:
         notice: '%{resource_name} was successfully destroyed.'
         alert: '%{resource_name} could not be destroyed.'
+    when_current_user: Social profile was successfully created.
+    when_current_user_and_social_profile: Social profile already linked.
+    when_social_profile: Signed in successfully.
+    when_first_visit: Signed up successfully.
+    social_profile_not_verified: Social account is not verified.

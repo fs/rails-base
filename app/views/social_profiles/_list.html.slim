@@ -1,0 +1,21 @@
+h6
+  - if social_profiles.any?
+    b Linked social networks:
+    ul.js-social-profiles
+      - social_profiles.each do |social_profile|
+        li
+          = t "active_record.attributes.social_profile.provider_name.#{social_profile.provider}"
+          |  (#{social_profile.uid})
+          | &nbsp;
+          = link_to "x",
+                    social_profile,
+                    data: { confirm: "Are you sure you want to remove this social profile?" },
+                    method: :delete
+    b Add another service to sign in with:
+  - else
+    b Sign in through one of these services:
+
+  p
+    = link_to "Google", user_omniauth_authorize_path(:google_oauth2)
+    | &emsp;
+    = link_to "Facebook", user_omniauth_authorize_path(:facebook)
