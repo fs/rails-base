@@ -2,7 +2,11 @@ require "rails_helper"
 
 feature "Sign Up" do
   let(:uid) { "12345" }
-  let(:user_attributes) { attributes_for(:user).slice(:full_name, :email, :password, :password_confirmation) }
+  let(:user_attributes) do
+    ActiveSupport::HashWithIndifferentAccess.new(
+      attributes_for(:user).slice(:full_name, :email, :password, :password_confirmation)
+    )
+  end
   let(:registered_user) { User.find_by_email(user_attributes[:email]) }
   let(:omniauth_params) { omniauth_mock(provider, uid, user_attributes) }
 
@@ -21,8 +25,14 @@ feature "Sign Up" do
 
         scenario "Visitor signs up through provider" do
           click_link "Sign in with Google"
+          expect(page).to have_field("user_full_name", with: user_attributes[:full_name])
+          expect(page).to have_field("user_email", with: user_attributes[:email])
 
-          expect(page).to have_content(I18n.t "flash.when_first_visit")
+          fill_in "user_password", with: user_attributes[:password]
+          fill_in "user_password_confirmation", with: user_attributes[:password_confirmation]
+          click_button "Sign up"
+
+          expect(page).to have_content(I18n.t "devise.registrations.signed_up")
           expect(page).to have_text(registered_user.email)
         end
       end
@@ -32,8 +42,14 @@ feature "Sign Up" do
 
         scenario "Visitor signs up through provider" do
           click_link "Sign in with Facebook"
+          expect(page).to have_field("user_full_name", with: user_attributes[:full_name])
+          expect(page).to have_field("user_email", with: user_attributes[:email])
 
-          expect(page).to have_content(I18n.t "flash.when_first_visit")
+          fill_in "user_password", with: user_attributes[:password]
+          fill_in "user_password_confirmation", with: user_attributes[:password_confirmation]
+          click_button "Sign up"
+
+          expect(page).to have_content(I18n.t "devise.registrations.signed_up")
           expect(page).to have_text(registered_user.email)
         end
       end
