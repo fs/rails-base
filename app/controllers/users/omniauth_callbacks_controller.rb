@@ -49,7 +49,8 @@ module Users
     end
 
     def when_current_user
-      current_user.social_profiles.create!(provider: auth.provider, uid: auth.uid)
+      current_user.apply_omniauth(auth)
+      current_user.save!
       flash[:notice] = t "flash.when_current_user"
       redirect_to edit_user_registration_url
     end

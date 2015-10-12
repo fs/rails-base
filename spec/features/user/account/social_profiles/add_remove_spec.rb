@@ -9,6 +9,7 @@ feature "Add/Remove social profiles" do
   before do
     stub_omniauth(provider, omniauth_params)
     allow(CheckOmniauth).to receive(:verified?).and_return(verified)
+
     login_as user
     visit edit_user_registration_path
   end

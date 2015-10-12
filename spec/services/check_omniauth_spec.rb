@@ -33,7 +33,10 @@ describe CheckOmniauth do
     context "when provider is not in the case statement" do
       let(:provider) { "another" }
 
-      it { is_expected.to eq(false) }
+      it "raises Exception" do
+        expect { subject }
+          .to raise_error(ArgumentError, "Verification checking is not implemented for provider: '#{auth.provider}'")
+      end
     end
   end
 end

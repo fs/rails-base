@@ -2,17 +2,19 @@ require "rails_helper"
 
 feature "Sign Up" do
   let(:uid) { "12345" }
+  let(:registered_user) { User.find_by_email(user_attributes[:email]) }
+  let(:omniauth_params) { omniauth_mock(provider, uid, user_attributes) }
+
   let(:user_attributes) do
     ActiveSupport::HashWithIndifferentAccess.new(
       attributes_for(:user).slice(:full_name, :email, :password, :password_confirmation)
     )
   end
-  let(:registered_user) { User.find_by_email(user_attributes[:email]) }
-  let(:omniauth_params) { omniauth_mock(provider, uid, user_attributes) }
 
   before do
     stub_omniauth(provider, omniauth_params)
     allow(CheckOmniauth).to receive(:verified?).and_return(verified)
+
     visit root_path
   end
 
