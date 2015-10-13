@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add ability to sign in/sign up via Social networks. And connect/disconnect network with current account from the profile page.
+- Update [uglifier](https://github.com/lautis/uglifier) gem up to 2.7.2
 - Move Rack::CanonicalHost and Rack::Auth::Basic configuration to initializers
 - Support [Heroku Review Apps](https://devcenter.heroku.com/articles/github-integration#review-apps)
 - Update [rails](https://github.com/rails/rails) version up to 4.2.3

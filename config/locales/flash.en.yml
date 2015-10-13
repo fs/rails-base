@@ -14,3 +14,10 @@ en:
     feedbacks:
         create:
           notice: "Email was successfully sent."
+
+    omniauth:
+      social_profile_created: 'Social profile was successfully created.'
+      already_linked: 'Social profile already linked.'
+      sign_in: 'Signed in successfully.'
+      sign_up: 'Signed up successfully.'
+      not_verified: 'Social account is not verified.'
