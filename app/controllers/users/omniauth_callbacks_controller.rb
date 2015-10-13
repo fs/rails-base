@@ -1,19 +1,15 @@
 module Users
   class OmniauthCallbacksController < Devise::OmniauthCallbacksController
+    before_action :check_omniauth_verification
+
+    expose(:user) { User.from_omniauth(auth) }
+
     def google_oauth2
-      if !CheckOmniauth.verified?(auth)
-        when_social_profile_not_verified
-      else
-        handle_callback
-      end
+      handle_callback
     end
 
     def facebook
-      if !CheckOmniauth.verified?(auth)
-        when_social_profile_not_verified
-      else
-        handle_callback
-      end
+      handle_callback
     end
 
     private
@@ -36,11 +32,6 @@ module Users
 
     def auth
       request.env["omniauth.auth"]
-    end
-
-    def when_social_profile_not_verified
-      flash[:notice] = t "flash.omniauth.not_verified"
-      redirect_to root_url
     end
 
     def when_current_user_and_social_profile
@@ -73,8 +64,11 @@ module Users
     end
     # rubocop:enable Metrics/AbcSize
 
-    def user
-      @user ||= User.from_omniauth(auth)
+    def check_omniauth_verification
+      return if OmniauthVerificationPolicy.new(auth).verified?
+
+      flash[:notice] = t "flash.omniauth.not_verified"
+      redirect_to root_url
     end
   end
 end

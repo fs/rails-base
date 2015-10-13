@@ -13,7 +13,7 @@ feature "Sign Up" do
 
   before do
     stub_omniauth(provider, omniauth_params)
-    allow(CheckOmniauth).to receive(:verified?).and_return(verified)
+    allow(OmniauthVerificationPolicy).to receive_message_chain(:new, :verified?).and_return(verified)
 
     visit root_path
   end

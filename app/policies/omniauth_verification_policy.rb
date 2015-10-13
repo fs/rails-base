@@ -1,5 +1,11 @@
-class CheckOmniauth
-  def self.verified?(auth)
+class OmniauthVerificationPolicy
+  attr_reader :auth
+
+  def initialize(auth)
+    @auth = auth
+  end
+
+  def verified?
     case auth.provider
     when "facebook"
       auth.info.verified?
