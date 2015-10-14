@@ -32,7 +32,7 @@ gem "kaminari"
 gem "memory_profiler"
 gem "puma"
 gem "pundit"
-gem "rack-mini-profiler"
+gem "rack-mini-profiler", require: false
 gem "rack-canonical-host"
 gem "responders"
 gem "rollbar"

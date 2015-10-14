@@ -23,6 +23,9 @@ module RailsBase
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
+    # Enable deflate / gzip compression of controller-generated responses
+    config.middleware.use Rack::Deflater
+
     # Set default From address for all Mailers
     config.action_mailer.default from: ENV.fetch("MAILER_SENDER_ADDRESS")
 
