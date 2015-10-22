@@ -1,74 +1,45 @@
 module Users
   class OmniauthCallbacksController < Devise::OmniauthCallbacksController
-    before_action :check_omniauth_verification
+    expose(:user) { OauthOrganizer.new(auth, current_user).call }
+    expose(:social_profile) { SocialProfile.from_omniauth(auth) }
 
-    expose(:user) { User.from_omniauth(auth) }
-
-    def google_oauth2
-      handle_callback
-    end
-
-    def facebook
-      handle_callback
+    SocialProfile::PROVIDERS.each do |provider|
+      define_method "#{provider}" do
+        begin
+          handle_user(user_from_oauth, provider)
+        rescue OauthOrganizer::OauthError => e
+          handle_error(e, provider)
+        end
+      end
     end
 
     private
 
-    def handle_callback
-      if current_user && social_profile
-        when_current_user_and_social_profile
-      elsif current_user
-        when_current_user
-      elsif social_profile
-        when_social_profile
+    def handle_user(user, provider)
+      if user.persisted?
+        sign_in_and_redirect user, event: :authentication
+        set_flash_message(:notice, :success, kind: "#{provider.titleize}") if is_navigational_format?
       else
-        when_first_visit
+        session["devise.#{provider}_data"] = auth
+        redirect_to new_user_registration_url
       end
     end
 
-    def social_profile
-      @social_profile ||= SocialProfile.from_omniauth(auth)
+    def handle_error(e, provider)
+      if user_signed_in?
+        redirect_to root_path, notice: e.message
+      else
+        redirect_to new_user_session_path,
+                    notice: "Your #{provider.titleize} account can't be used to sign in. Please verify it via profile page."
+      end
     end
 
     def auth
       request.env["omniauth.auth"]
     end
 
-    def when_current_user_and_social_profile
-      flash[:notice] = t "flash.omniauth.already_linked"
-      redirect_to edit_user_registration_url
-    end
-
-    def when_current_user
-      current_user.apply_omniauth(auth)
-      current_user.save!
-      flash[:notice] = t "flash.omniauth.social_profile_created"
-      redirect_to edit_user_registration_url
-    end
-
-    def when_social_profile
-      flash[:notice] = t "flash.omniauth.already_linked"
-      sign_in_and_redirect(:user, social_profile.user)
-    end
-
-    # rubocop:disable Metrics/AbcSize
-    def when_first_visit
-      user.apply_omniauth(auth)
-      if user.save
-        flash[:notice] = t "devise.registrations.signed_up"
-        sign_in_and_redirect(:user, user)
-      else
-        session[:omniauth] = auth.except("extra")
-        redirect_to new_user_registration_url
-      end
-    end
-    # rubocop:enable Metrics/AbcSize
-
-    def check_omniauth_verification
-      return if OmniauthVerificationPolicy.new(auth).verified?
-
-      flash[:notice] = t "flash.omniauth.not_verified"
-      redirect_to root_url
+    def auth_verified?
+      OmniauthVerificationPolicy.new(auth).verified?
     end
   end
 end
