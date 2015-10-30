@@ -26,6 +26,12 @@ class User < ActiveRecord::Base
   end
 
   def connect_social_profile(auth)
-    apply_omniauth(auth) && save unless SocialProfile.from_omniauth(auth)
+    social_profile = SocialProfile.from_omniauth(auth)
+
+    if social_profile
+      social_profile.update_attribute(:user, self)
+    else
+      apply_omniauth(auth) && save
+    end
   end
 end
