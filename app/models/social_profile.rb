@@ -9,8 +9,4 @@ class SocialProfile < ActiveRecord::Base
   def self.from_omniauth(auth)
     find_by(provider: auth.provider, uid: auth.uid)
   end
-
-  def self.find_for_oauth(auth)
-    find_or_create_by(uid: auth.uid, provider: auth.provider)
-  end
 end

@@ -1,16 +1,17 @@
 require "rails_helper"
 
-describe OmniauthVerificationPolicy do
+describe AuthVerificationPolicy do
   let(:auth) { double(:omniauth, provider: provider) }
 
-  describe "#verified?" do
-    subject { described_class.new(auth).verified? }
+  describe ".verified?" do
+    subject { described_class.verified?(auth) }
 
     context "when provider is Facebook" do
       let(:provider) { "facebook" }
 
       before do
         allow(auth).to receive_message_chain(:info, :verified?).and_return(true)
+        allow(auth).to receive_message_chain(:extra, :raw_info, :verified?).and_return(true)
       end
 
       it "returns corresponding value" do
@@ -35,7 +36,7 @@ describe OmniauthVerificationPolicy do
 
       it "raises Exception" do
         expect { subject }
-          .to raise_error(ArgumentError, "Verification checking is not implemented for provider: '#{auth.provider}'")
+          .to raise_error(ArgumentError, I18n.t("omniauth.verification.not_implemented", kind: provider))
       end
     end
   end

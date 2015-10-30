@@ -1,4 +1,4 @@
-module FeatureHelpers
+module OauthHelpers
   def stub_omniauth(provider, omniauth_mock)
     OmniAuth.config.test_mode                     = true
     OmniAuth.config.mock_auth[provider]           = omniauth_mock
@@ -7,7 +7,7 @@ module FeatureHelpers
 
   def omniauth_mock(provider, uid, user_attrs = {})
     OmniAuth::AuthHash.new(
-      provider: provider,
+      provider: provider.to_s,
       uid: uid,
       info: { name: user_attrs[:full_name], email: user_attrs[:email] }
     )
