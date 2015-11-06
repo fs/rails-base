@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Add ability to configure SMTP Mailer options not only with SendGrid via `config/initializers/mailer.rb`
 - [Remove `app_config`](https://github.com/fs/rails-base/pull/342) shortcut and use `ENV` exclusively
 - Turning on Partial Double Verification for Rspec
 - Replace [rails_12factor](https://github.com/heroku/rails_12factor) with [rails_stdout_logging](https://github.com/heroku/rails_stdout_logging)
