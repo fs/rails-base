@@ -62,7 +62,6 @@ It's based on Rails 4 and Ruby 2.2.3.
 
 ## Initializers
 
-* `01_config.rb` - shortcut for getting application config with `app_config`
 * `mailer.rb` - setup default hosts for mailer from configuration
 * `requires.rb` - automatically requires everything in lib/ & lib/extensions
 

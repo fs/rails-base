@@ -22,16 +22,5 @@ module RailsBase
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
-
-    # Application specific options
-
-    # Slim engine default option, initializers/slim.rb
-    config.slim_options = {}
-
-    # Default e-mail address which will be shown in the "from" devise emails, initializers/devise.rb,
-    config.noreply = "noreply@fs-rails-base.herokuapp.com"
-
-    # Default host for action mailer, initializers/mailer.rb
-    config.host = "localhost:5000"
   end
 end

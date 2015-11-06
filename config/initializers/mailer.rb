@@ -1,4 +1,4 @@
 ActionMailer::Base.instance_eval do
-  default from: app_config.noreply
-  default_url_options[:host] = app_config.host
+  default from: ENV.fetch("MAILER_SENDER_ADDRESS")
+  default_url_options[:host] = ENV.fetch("HOST")
 end

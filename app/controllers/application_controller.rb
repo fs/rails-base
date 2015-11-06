@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
   include Authentication
   include Authorization
-  include MiniProfilerAuthorization
 
   protect_from_forgery with: :exception
   responders :flash
