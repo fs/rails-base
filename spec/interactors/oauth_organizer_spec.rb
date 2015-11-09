@@ -18,7 +18,7 @@ describe OauthOrganizer do
   context "when user not present" do
     before do
       allow(FetchOauthUser).to receive_message_chain(:new, :call)
-      allow(AuthVerificationPolicy).to receive(:verified?)
+      allow_any_instance_of(AuthVerificationPolicy).to receive(:verified?)
     end
 
     let(:current_user) { nil }

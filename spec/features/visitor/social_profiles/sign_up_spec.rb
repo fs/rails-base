@@ -7,7 +7,7 @@ feature "Sign Up" do
 
   before do
     stub_omniauth(provider, oauth)
-    allow(AuthVerificationPolicy).to receive(:verified?).and_return(verified)
+    allow_any_instance_of(AuthVerificationPolicy).to receive(:verified?).and_return(verified)
 
     visit root_path
   end

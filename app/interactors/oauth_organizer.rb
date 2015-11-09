@@ -26,7 +26,7 @@ class OauthOrganizer
   end
 
   def auth_verified?
-    AuthVerificationPolicy.verified?(auth)
+    AuthVerificationPolicy.new(auth).verified?
   end
 
   def build_user

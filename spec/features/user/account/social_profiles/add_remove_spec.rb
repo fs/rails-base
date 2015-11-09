@@ -7,7 +7,7 @@ feature "Add/Remove social profiles" do
 
   before do
     stub_omniauth(provider, oauth)
-    allow(AuthVerificationPolicy).to receive(:verified?)
+    allow_any_instance_of(AuthVerificationPolicy).to receive(:verified?)
 
     login_as user
     visit edit_user_registration_path
@@ -21,7 +21,7 @@ feature "Add/Remove social profiles" do
       expect(page).not_to have_content("Successfully authorized via:")
 
       click_link "Facebook"
-      expect(page).to have_content(I18n.t "devise.omniauth_callbacks.success", kind: "Facebook")
+      expect(page).to have_content("Successfully authenticated from Facebook account.")
       expect(page).to have_content("Successfully authorized via:")
       expect(page).to have_css(".js-social-profiles", text: "Facebook")
 
@@ -39,7 +39,7 @@ feature "Add/Remove social profiles" do
       expect(page).not_to have_content("Successfully authorized via:")
 
       click_link "Google"
-      expect(page).to have_content(I18n.t "devise.omniauth_callbacks.success", kind: "Google")
+      expect(page).to have_content("Successfully authenticated from Google account.")
       expect(page).to have_content("Successfully authorized via:")
       expect(page).to have_css(".js-social-profiles", text: "Google")
 

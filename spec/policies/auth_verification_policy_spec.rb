@@ -4,7 +4,7 @@ describe AuthVerificationPolicy do
   let(:auth) { double(:omniauth, provider: provider) }
 
   describe ".verified?" do
-    subject { described_class.verified?(auth) }
+    subject { described_class.new(auth).verified? }
 
     context "when provider is Facebook" do
       let(:provider) { "facebook" }
