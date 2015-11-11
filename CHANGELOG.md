@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Introduce [Draper](https://github.com/drapergem/draper) for presenting models into views
 - Move Rack::MiniProfiler authorization to initializers
 - Add ability to configure SMTP Mailer options not only with SendGrid via `config/initializers/mailer.rb`
 - [Remove `app_config`](https://github.com/fs/rails-base/pull/342) shortcut and use `ENV` exclusively
