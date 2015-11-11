@@ -22,5 +22,11 @@ module RailsBase
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # Set default From address for all Mailers
+    config.action_mailer.default from: ENV.fetch("MAILER_SENDER_ADDRESS")
+
+    # Set URL options to be able to use url_for helpers
+    config.action_mailer.default_url_options = { host: ENV.fetch("HOST") }
   end
 end

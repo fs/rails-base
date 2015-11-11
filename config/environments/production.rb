@@ -69,12 +69,6 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
-  # Set default From address for all Mailers
-  config.action_mailer.default from: ENV.fetch("MAILER_SENDER_ADDRESS")
-
-  # Set URL options to be able to use url_for helpers
-  config.action_mailer.default_url_options = { host: ENV.fetch("HOST") }
-
   # Enable Email delivery via custom SMTP server or via SendGrid by default
   if ENV["SMTP_USERNAME"] || ENV["SENDGRID_USERNAME"]
     config.action_mailer.delivery_method = :smtp
