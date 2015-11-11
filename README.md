@@ -133,6 +133,25 @@ brew bundle
   git commit -am "Update README.md"
   ```
 
+## Deployment
+
+### Heroku
+
+Out of the box Rails Base ready to be deployed to [Heroku.com](http://heroku.com).
+
+* [Heroku Postgres](https://www.heroku.com/postgres) add-on will be used for database.
+* [SendGrid](https://devcenter.heroku.com/articles/sendgrid#ruby-rails) add-on required to be able to send emails.
+* [NewRelic](https://devcenter.heroku.com/articles/newrelic#ruby-installation-and-configuration) add-on could be used to monitor application performance.
+* [Rollbar](https://elements.heroku.com/addons/rollbar) add-on could be used to application errors.
+
+```bash
+heroku create --addons=heroku-postgresql,sendgrid,newrelic,rollbar --remote staging rails-base-example
+heroku config:add HOST="rails-base-example.herokuapp.com" MAILER_SENDER_ADDRESS="noreply@rails-base-example.herokuapp.com" NEW_RELIC_APP_NAME="Rails Base"
+git push staging master
+heroku run rake db:schema:load
+heroku open
+```
+
 ## Credits
 
 Rails Base is maintained by [Timur Vafin](http://github.com/timurvafin).
