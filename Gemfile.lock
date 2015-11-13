@@ -112,6 +112,8 @@ GEM
     database_cleaner (1.3.0)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
+    decent_decoration (0.0.6)
+      decent_exposure (>= 2.0)
     decent_exposure (2.3.1)
     devise (3.4.1)
       bcrypt (~> 3.0)
@@ -126,6 +128,11 @@ GEM
     dotenv-rails (2.0.2)
       dotenv (= 2.0.2)
       railties (~> 4.0)
+    draper (2.1.0)
+      actionpack (>= 3.0)
+      activemodel (>= 3.0)
+      activesupport (>= 3.0)
+      request_store (~> 1.0)
     email_spec (1.6.0)
       launchy (~> 2.1)
       mail (~> 2.2)
@@ -273,6 +280,7 @@ GEM
     rake-compiler (0.9.5)
       rake
     ref (1.0.5)
+    request_store (1.2.0)
     require_all (1.3.2)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
@@ -400,9 +408,11 @@ DEPENDENCIES
   coffee-rails
   coffeelint
   database_cleaner
+  decent_decoration
   decent_exposure
   devise
   dotenv-rails
+  draper
   email_spec
   factory_girl_rails
   faker

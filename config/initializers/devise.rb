@@ -13,7 +13,7 @@ Devise.setup do |config|
   config.mailer_sender = ENV.fetch("MAILER_SENDER_ADDRESS")
 
   # Configure the class responsible to send e-mails.
-  config.mailer = "UserMailer"
+  config.mailer = "DeviseMailer"
 
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and

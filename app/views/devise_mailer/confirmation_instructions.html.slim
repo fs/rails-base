@@ -1,0 +1,6 @@
+p
+  | Welcome #{@user.full_name}!
+p
+  | You can confirm your account email through the link below:
+p
+  = link_to "Confirm my account", confirmation_url(@user, confirmation_token: @token)

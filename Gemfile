@@ -23,17 +23,19 @@ gem "simple_form"
 gem "slim"
 
 # all other gems
+gem "decent_decoration"
 gem "decent_exposure"
 gem "devise"
+gem "draper"
+gem "flamegraph"
 gem "google-analytics-rails"
 gem "interactor"
-gem "flamegraph"
 gem "kaminari"
 gem "memory_profiler"
 gem "puma"
 gem "pundit"
-gem "rack-mini-profiler", require: false
 gem "rack-canonical-host"
+gem "rack-mini-profiler", require: false
 gem "responders"
 gem "rollbar"
 gem "seedbank"
