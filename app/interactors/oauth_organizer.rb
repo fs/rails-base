@@ -11,7 +11,7 @@ class OauthOrganizer
   end
 
   def call
-    user.present? ? user.connect_social_profile(auth) : fail_oauth
+    user.present? ? connect_social_profile : fail_oauth
     user
   end
 
@@ -30,11 +30,11 @@ class OauthOrganizer
   end
 
   def build_user
-    User.build_from_omniauth(auth) if auth_verified? && !found_user_by_email?
+    User.build_from_omniauth(auth) if auth_verified?
   end
 
-  def found_user_by_email?
-    User.find_by(email: auth["info"]["email"]).present?
+  def connect_social_profile
+    ConnectSocialProfile.new(user, auth).call
   end
 
   def fail_oauth
