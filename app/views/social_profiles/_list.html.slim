@@ -1,0 +1,14 @@
+- if social_profiles.any?
+  b Successfully authorized via:
+  ul.js-social-profiles
+    - social_profiles.each do |social_profile|
+      li = link_to "#{provider_name(social_profile.provider)} (#{social_profile.uid.truncate(9)}). Unauthorize?",
+                   social_profile,
+                   data: { confirm: "Are you sure you want to remove this social profile?" },
+                   method: :delete,
+                   class: "js-unauthorize"
+
+b Add service to sign in with:
+ul
+  - SocialProfile::PROVIDERS.each do |provider|
+    li = link_to provider_name(provider), user_omniauth_authorize_path(provider)

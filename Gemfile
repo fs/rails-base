@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.2.2"
+ruby "2.2.3"
 
 gem "rails", "4.2.3"
 gem "pg"
@@ -14,7 +14,7 @@ gem "jquery-rails"
 gem "sass-rails", "~> 5.0.0"
 gem "skim"
 gem "therubyracer", platforms: :ruby
-gem "uglifier", ">= 1.3.0"
+gem "uglifier"
 
 # views
 gem "active_link_to"
@@ -28,6 +28,8 @@ gem "devise"
 gem "google-analytics-rails"
 gem "interactor"
 gem "kaminari"
+gem "omniauth-facebook"
+gem "omniauth-google-oauth2"
 gem "responders"
 gem "rollbar", "~> 0.10.3"
 gem "seedbank"

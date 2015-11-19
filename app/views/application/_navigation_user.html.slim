@@ -13,3 +13,9 @@ ul.right
   - else
     = active_link_to 'Sign in', new_user_session_path, active: :exclusive, wrap_tag: :li
     = active_link_to 'Sign up', new_user_registration_path, active: :exclusive, wrap_tag: :li
+
+    - SocialProfile::PROVIDERS.each do |provider|
+      = active_link_to "Sign in with #{provider_name(provider)}",
+                       user_omniauth_authorize_path(provider),
+                       active: :exclusive,
+                       wrap_tag: :li
