@@ -28,6 +28,6 @@ html class="no-js" lang="en"
     = render "footer"
 
     javascript:
-      App.currentUserData = #{raw current_user.to_json};
+      App.currentUserData = #{{current_user.to_json}};
 
     = javascript_include_tag :application
