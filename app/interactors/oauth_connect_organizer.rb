@@ -1,4 +1,4 @@
-class ConnectAccountOrganizer
+class OauthConnectOrganizer
   class OauthError < StandardError
   end
 
