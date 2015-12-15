@@ -32,7 +32,7 @@ class OauthConnectOrganizer
 
   def process_user_confirmation
     user.reset_password(new_password, new_password)
-    user.confirm!
+    user.confirm
     user.send_reset_password_instructions
   end
 

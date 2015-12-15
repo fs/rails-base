@@ -1,4 +1,4 @@
-class OauthSignupOrganizer
+class OauthSignupOrganizerOld
   attr_reader :auth
   private :auth
 
@@ -12,16 +12,16 @@ class OauthSignupOrganizer
         if user_found_by_uid.confirmed?
           user_found_by_uid.sign_in # pseudocode
         else
-          user_found_by_uid.sign_in
           user_found_by_uid.reset_password(new_password, new_password)
           user_found_by_uid.confirm!
-          user_found_by_uid.send_reset_password_instructions
+          user_found_by_uid.sign_in
+          redirect_to finish_signup_page_path # pseudocode
         end
       else
         if user_found_by_email.present?
           if user_found_by_email.confirmed?
-            user_found_by_email.sign_in
             create_social_profile(user_found_by_email)
+            user_found_by_email.sign_in
           else
             user_found_by_email.sign_in
             create_social_profile(user_found_by_email)
@@ -55,7 +55,7 @@ class OauthSignupOrganizer
   end
 
   def user_found_by_uid
-    @user_found_by_uid |= SocialProfile.from_omniauth(auth).try(:user)
+    @user_found_by_uid ||= SocialProfile.from_omniauth(auth).try(:user)
   end
 
   def user_found_by_email

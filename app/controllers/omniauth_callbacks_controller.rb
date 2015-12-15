@@ -12,10 +12,20 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private
 
   def handle_user
-    fail unless current_user # temporarily handling only connecting account from profile page
+    if current_user
+      OauthConnectOrganizer.new(auth, current_user).call
+      redirect_to edit_user_registration_path
+    else
+      user = OauthSignUpOrganizer.new(auth).user
 
-    OauthConnectOrganizer.new(auth, current_user).call
-    redirect_to edit_user_registration_path
+      unless user.confirmed?
+        user.reset_password(new_password, new_password)
+        user.confirm!
+        # fail "Need to finish sign-up!"
+        redirect_to finish_signup_path
+      end
+
+    end
   end
 
   def handle_error(message)
