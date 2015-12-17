@@ -8,7 +8,7 @@ class UnverifiedAuthOrganizer
 
   def call
     if user_found_by_email.present?
-      fail AuthVerificationPolicy::OauthError, "Alert: Please, connect your account from profile page."
+      fail AuthVerificationPolicy::OauthError, "Please, connect your account from profile page."
     else
       user.send_confirmation_instructions unless user.confirmed?
       user

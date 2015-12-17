@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  expose(:user, attributes: :user_params)
-
   before_action :authenticate_user!, only: :home
+
+  expose(:user, attributes: :user_params)
 
   def home
   end
@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   end
 
   def sign_in_user
-    user.skip_reconfirmation!
+    # user.skip_reconfirmation!
     confirm_user
     sign_in(user, bypass: true)
     redirect_to root_path, notice: "Welcome!"
