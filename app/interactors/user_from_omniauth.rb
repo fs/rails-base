@@ -7,13 +7,14 @@ class UserFromOmniauth
   end
 
   def call
-    user = User.new
-    user.email = auth["info"]["email"]
-    user.full_name = auth["info"]["name"]
-    user.reset_password(new_password, new_password)
+    user = User.new(
+      email: auth["info"]["email"],
+      full_name: auth["info"]["name"],
+      password: new_password,
+      password_confirmation: new_password
+    )
+    user.skip_confirmation_notification! && user.save!
     user
-    # user.confirm
-    # fail "Need to finish signup"
   end
 
   private

@@ -7,7 +7,7 @@ class VerifiedAuthOrganizer
   end
 
   def user
-    user_found_by_uid || user_found_by_email || user_from_omniauth
+    user_found_by_uid || user_found_by_email || new_user
   end
 
   private
@@ -20,7 +20,7 @@ class VerifiedAuthOrganizer
     @user_found_by_email ||= UserFoundByEmail.new(auth).call
   end
 
-  def user_from_omniauth
-    @user_from_omniauth ||= UserFromOmniauth.new(auth).call
+  def new_user
+    @new_user ||= UserFromOmniauth.new(auth).call
   end
 end

@@ -2,7 +2,12 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   SocialProfile::PROVIDERS.each do |provider|
     define_method(provider.to_s) do
       begin
-        handle_user
+        if current_user
+          OauthConnectOrganizer.new(auth, current_user).call
+          redirect_to edit_user_registration_path
+        else
+          handle_user
+        end
       rescue OauthConnectOrganizer::OauthError => e
         handle_error(e)
       end
@@ -11,28 +16,34 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   private
 
+  def auth
+    request.env["omniauth.auth"]
+  end
+
   def handle_user
-    if current_user
-      OauthConnectOrganizer.new(auth, current_user).call
-      redirect_to edit_user_registration_path
+    if auth_verified?
+      user = VerifiedAuthOrganizer.new(auth).user
+      user.reset_password(new_password, new_password) unless user.confirmed?
     else
-      user = OauthSignUpOrganizer.new(auth).user
-
-      unless user.confirmed?
-        user.reset_password(new_password, new_password)
-        user.confirm!
-        # fail "Need to finish sign-up!"
-        redirect_to finish_signup_path
-      end
-
+      user = UnverifiedAuthOrganizer.new(auth).call
+      session[:auth_not_verified] = true
     end
+    sign_in_and_redirect user, event: :authentication
   end
 
   def handle_error(message)
     redirect_to root_url, error: message
   end
 
-  def auth
-    request.env["omniauth.auth"]
+  def auth_verified?
+    AuthVerificationPolicy.new(auth).verified?
+  end
+
+  def after_sign_in_path_for(resource)
+    if resource.confirmed?
+      super resource
+    else
+      finish_signup_path(resource)
+    end
   end
 end
