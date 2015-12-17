@@ -1,4 +1,7 @@
 class AuthVerificationPolicy
+  class OauthError < StandardError
+  end
+
   attr_reader :auth
   private :auth
 

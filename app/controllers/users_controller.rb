@@ -30,11 +30,6 @@ class UsersController < ApplicationController
   end
 
   def confirm_user
-    if session[:auth_not_verified]
-      user.send_confirmation_instructions
-      reset_session
-    else
-      user.update_attribute(:confirmed_at, Time.zone.now)
-    end
+    user.update_attribute(:confirmed_at, Time.zone.now)
   end
 end

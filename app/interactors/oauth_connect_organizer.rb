@@ -1,7 +1,4 @@
 class OauthConnectOrganizer
-  class OauthError < StandardError
-  end
-
   attr_reader :auth, :user
   private :auth, :user
 
@@ -19,7 +16,7 @@ class OauthConnectOrganizer
   private
 
   def fail_oauth
-    fail OauthError, "Please confirm your account before connecting your #{auth.provider} account."
+    fail AuthVerificationPolicy::OauthError, "Please confirm your account before connecting your #{auth.provider} account."
   end
 
   def auth_verified?
