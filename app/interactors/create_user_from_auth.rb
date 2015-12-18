@@ -1,4 +1,4 @@
-class UserFromOmniauth
+class CreateUserFromAuth
   attr_reader :auth
   private :auth
 

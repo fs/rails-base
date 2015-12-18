@@ -6,12 +6,12 @@ class UnverifiedAuthOrganizer
     @auth = auth
   end
 
-  def call
+  def user
     if user_found_by_email.present?
       fail AuthVerificationPolicy::OauthError, "Please, connect your account from profile page."
     else
-      user.send_confirmation_instructions unless user.confirmed?
-      user
+      found_user.send_confirmation_instructions unless found_user.confirmed?
+      found_user
     end
   end
 
@@ -21,7 +21,7 @@ class UnverifiedAuthOrganizer
     @user_found_by_email ||= User.find_by(email: auth["info"]["email"])
   end
 
-  def user
+  def found_user
     user_found_by_uid || new_user
   end
 
@@ -30,6 +30,6 @@ class UnverifiedAuthOrganizer
   end
 
   def new_user
-    @new_user ||= UserFromOmniauth.new(auth).call
+    @new_user ||= CreateUserFromAuth.new(auth).call
   end
 end

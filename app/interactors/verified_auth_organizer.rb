@@ -21,6 +21,6 @@ class VerifiedAuthOrganizer
   end
 
   def new_user
-    @new_user ||= UserFromOmniauth.new(auth).call
+    @new_user ||= CreateUserFromAuth.new(auth).call
   end
 end

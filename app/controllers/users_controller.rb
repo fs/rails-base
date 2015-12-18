@@ -19,8 +19,8 @@ class UsersController < ApplicationController
   end
 
   def sign_in_user
-    # user.skip_reconfirmation!
     confirm_user
+    reset_session
     sign_in(user, bypass: true)
     redirect_to root_path, notice: "Welcome!"
   end
@@ -30,6 +30,10 @@ class UsersController < ApplicationController
   end
 
   def confirm_user
-    user.update_attribute(:confirmed_at, Time.zone.now)
+    if session[:auth_confirmed?]
+      user.update_attribute(:confirmed_at, Time.zone.now)
+    else
+      user.send_confirmation_instructions
+    end
   end
 end

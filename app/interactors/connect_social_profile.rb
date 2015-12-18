@@ -10,7 +10,7 @@ class ConnectSocialProfile
     if social_profile
       social_profile.update_attribute(:user, user)
     else
-      user.apply_omniauth(auth) && user.save!
+      create_social_profile!
     end
   end
 
@@ -18,5 +18,9 @@ class ConnectSocialProfile
 
   def social_profile
     @social_profile ||= SocialProfile.from_omniauth(auth)
+  end
+
+  def create_social_profile!
+    user.social_profiles.create!(provider: auth["provider"], uid: auth["uid"])
   end
 end
