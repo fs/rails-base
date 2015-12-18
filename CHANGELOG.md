@@ -1,6 +1,7 @@
 # Change Log
 
 ## Unreleased
+- Update [nokogiri gem](https://github.com/sparklemotion/nokogiri)
 
 ## 1.7 - 2015-11-27
 
