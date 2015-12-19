@@ -32,7 +32,7 @@ module RailsBaseExample
     config.noreply = "noreply@fs-rails-base.herokuapp.com"
 
     # Default host for action mailer, initializers/mailer.rb
-    config.host = "localhost:5000"
+    config.host = "localhost:3000"
 
     # We send all feedback email to this address
     config.feedback_email = ENV.fetch("FEEDBACK_EMAIL", "feedback@example.com")

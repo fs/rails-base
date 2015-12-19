@@ -30,7 +30,7 @@ class UsersController < ApplicationController
   end
 
   def confirm_user
-    if session[:auth_confirmed?]
+    if session[:auth_verified?]
       user.update_attribute(:confirmed_at, Time.zone.now)
     else
       user.send_confirmation_instructions

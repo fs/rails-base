@@ -1,0 +1,16 @@
+.row
+  h3 Finish Signup
+
+  .medium-6.columns
+    = simple_form_for user,
+      as: 'user',
+      url: finish_signup_path(user),
+      html: { method: :patch } do |f|
+
+      .form-inputs
+        = f.input :email, required: true, autofocus: true,  placeholder: "Your email here"
+
+        = f.input :password, required: true, hint: '', placeholder: "Your password here"
+
+      .form-actions
+        = f.button :submit, "Finish Signup"

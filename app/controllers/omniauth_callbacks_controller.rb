@@ -42,4 +42,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       finish_signup_path(resource)
     end
   end
+
+  def new_password
+    @new_password ||= Devise.friendly_token.first(8)
+  end
 end
