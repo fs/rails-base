@@ -2,7 +2,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   SocialProfile::PROVIDERS.each do |provider|
     define_method(provider.to_s) do
       begin
-        current_user ? handle_connection : handle_sign_up
+        current_user ? connect_social_profile : handle_sign_in
       rescue AuthVerificationPolicy::OauthError => e
         redirect_to root_url, error: e.message
       end
@@ -11,7 +11,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   private
 
-  def handle_connection
+  def connect_social_profile
     OauthConnectOrganizer.new(auth, current_user).call
     redirect_to edit_user_registration_path
   end
@@ -20,7 +20,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     request.env["omniauth.auth"]
   end
 
-  def handle_sign_up
+  def handle_sign_in
     user = if auth_verified?
       VerifiedAuthOrganizer.new(auth).user
     else

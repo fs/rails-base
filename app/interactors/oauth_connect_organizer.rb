@@ -7,7 +7,7 @@ class OauthConnectOrganizer
   end
 
   def call
-    fail_oauth if !auth_verified? && !user.confirmed?
+    fail_oauth unless auth_verified? && user.confirmed?
 
     connect_social_profile
     process_user_confirmation unless user.confirmed?

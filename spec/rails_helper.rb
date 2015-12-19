@@ -6,6 +6,7 @@ require "rspec/rails"
 require "shoulda/matchers"
 
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
+OmniAuth.config.test_mode = true
 
 RSpec.configure do |config|
   config.use_transactional_fixtures = false

@@ -14,10 +14,4 @@ class User < ActiveRecord::Base
   def full_name_with_email
     "#{self[:full_name]} (#{email})"
   end
-
-  def apply_omniauth(auth)
-    self.email = auth["info"]["email"] if email.blank?
-    self.full_name = auth["info"]["name"] if full_name.blank?
-    social_profiles.build(provider: auth["provider"], uid: auth["uid"])
-  end
 end
