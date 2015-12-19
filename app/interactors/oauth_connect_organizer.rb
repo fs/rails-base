@@ -7,10 +7,11 @@ class OauthConnectOrganizer
   end
 
   def call
-    fail_oauth unless auth_verified? && user.confirmed?
+    unless user.confirmed?
+      auth_verified? ? process_user_confirmation : fail_oauth
+    end
 
     connect_social_profile
-    process_user_confirmation unless user.confirmed?
   end
 
   private
@@ -28,12 +29,6 @@ class OauthConnectOrganizer
   end
 
   def process_user_confirmation
-    user.reset_password(new_password, new_password)
-    user.confirm
-    user.send_reset_password_instructions
-  end
-
-  def new_password
-    @new_password ||= Devise.friendly_token.first(8)
+    ProcessUserConfirmation.new(user).call
   end
 end
