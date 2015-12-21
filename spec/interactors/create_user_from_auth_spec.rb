@@ -12,5 +12,7 @@ describe CreateUserFromAuth do
   it "creates new user from auth hash" do
     expect { subject }.to change { User.count }.by(1)
     expect(sent_emails).to eq(0)
+    expect(user.email).to eq(auth_hashie.info.email)
+    expect(user.full_name).to eq(auth_hashie.info.name)
   end
 end

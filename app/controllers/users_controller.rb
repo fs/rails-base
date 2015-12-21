@@ -20,7 +20,6 @@ class UsersController < ApplicationController
 
   def sign_in_user
     confirm_user
-    reset_session
     sign_in(user, bypass: true)
     redirect_to root_path, notice: "Welcome!"
   end
@@ -31,6 +30,7 @@ class UsersController < ApplicationController
 
   def confirm_user
     if session[:auth_verified?]
+      session[:auth_verified?] = nil
       user.update_attribute(:confirmed_at, Time.zone.now)
     else
       user.send_confirmation_instructions

@@ -13,14 +13,14 @@ class VerifiedAuthOrganizer
   private
 
   def user_found_by_uid
-    @user_found_by_uid ||= SocialProfile.from_omniauth(auth).try(:user)
+    SocialProfile.from_omniauth(auth).try(:user)
   end
 
   def user_found_by_email
-    @user_found_by_email ||= UserFoundByEmail.new(auth).call
+    UserFoundByEmail.new(auth).call
   end
 
   def new_user
-    @new_user ||= CreateUserFromAuth.new(auth).call
+    CreateUserFromAuth.new(auth).call
   end
 end
