@@ -1,47 +1,35 @@
 require "rails_helper"
 
-feature "Sign In with social account" do
-  include_context :stub_omniauth
+feature "Sign in with social account" do
+  context "when oauth confirmed" do
+    context "when user found by uid" do
+      context "when user confirmed" do
+      end
 
-  let!(:user) { create :user, :confirmed, :from_auth_hashie }
+      context "when user not confirmed" do
+      end
+    end
 
-  def sign_in_with_facebook
-    visit new_user_session_path
+    context "when user found by email" do
+      context "when user confirmed" do
+      end
 
-    click_link "Sign in with Facebook"
+      context "when user not confirmed" do
+      end
+    end
+
+    context "when user not found" do
+    end
   end
 
-  scenario "user signs in directly to main page" do
-    sign_in_with_facebook
+  context "when oauth not confirmed" do
+    context "when user found by uid" do
+    end
 
-    expect(page).to have_content("Home")
-    expect(page).to have_content(user.full_name)
-    expect(page).to have_content(user.email)
-  end
+    context "when user found by email" do
+    end
 
-  context "when social network account is not verified" do
-    include_context :stub_not_verified_omniauth
-
-    # scenario "is notified with notice" do
-    #   sign_in_with_facebook
-    #
-    #   expect(page).to have_content("Your Facebook account can't be used to sign in. Please verify it via profile page.")
-    #   expect(page).not_to have_content(user.full_name)
-    #   expect(page).not_to have_content(user.email)
-    # end
-  end
-
-  context "when user account is not confirmed" do
-    let!(:user) { create :user, :not_confirmed, :from_auth_hashie }
-
-    scenario "user is offered to create new account", :js do
-      sign_in_with_facebook
-      save_and_open_screenshot
-
-      expect(page).to have_content("You have to confirm your email address before continuing")
-      expect(page).to have_field("Enter your email address")
-      expect(page).to have_field("Password")
-      expect(page).to have_button("Sign in")
+    context "when user not found" do
     end
   end
 end
