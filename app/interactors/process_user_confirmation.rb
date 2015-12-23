@@ -7,8 +7,8 @@ class ProcessUserConfirmation
   end
 
   def call
-    user.reset_password(new_password, new_password)
     user.confirm
+    # user.update(password: new_password, password_confirmation: new_password)
     user.send_reset_password_instructions
   end
 
