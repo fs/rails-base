@@ -4,7 +4,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       begin
         current_user ? connect_social_profile : handle_sign_in
       rescue AuthVerificationPolicy::OauthError => e
-        redirect_to edit_user_registration_path, flash: { notice: e.to_s }
+        redirect_to root_path, flash: { notice: e.to_s }
       end
     end
   end
