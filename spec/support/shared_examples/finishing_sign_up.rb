@@ -1,4 +1,4 @@
-RSpec.shared_examples "finishing_sign_up" do
+shared_examples_for "finishing sign up" do
   before do
     visit new_user_session_path
     click_link "Sign in with Facebook"

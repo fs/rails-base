@@ -7,24 +7,18 @@ feature "Sign in with social account" do
     context "when user found by uid" do
       let!(:social_profile) { create(:social_profile, user: user) }
 
-      before do
-        visit new_user_session_path
-        click_link "Sign in with Facebook"
-      end
+      before { click_sign_in_with_fb }
 
       context "when user confirmed" do
         let!(:user) { create(:user, :confirmed, :from_auth_hashie) }
 
-        scenario "User signs up" do
-          expect(page).to have_text(user.full_name)
-          expect(current_path).to eq(root_path)
-        end
+        it_behaves_like "success sign in"
       end
 
       context "when user not confirmed" do
         let!(:user) { create(:user, :from_auth_hashie) }
 
-        include_examples "finishing_sign_up" do
+        it_behaves_like "finishing sign up" do
           let(:name) { user.full_name }
           let(:email) { "mailer@mail.com" }
           let(:password) { "123456qwe" }
@@ -36,21 +30,15 @@ feature "Sign in with social account" do
       context "when user confirmed" do
         let!(:user) { create(:user, :confirmed, :from_auth_hashie) }
 
-        before do
-          visit new_user_session_path
-          click_link "Sign in with Facebook"
-        end
+        before { click_sign_in_with_fb }
 
-        scenario "Users connects social profile" do
-          expect(page).to have_text(user.full_name)
-          expect(current_path).to eq(root_path)
-        end
+        it_behaves_like "success sign in"
       end
 
       context "when user not confirmed" do
         let!(:user) { create(:user, :from_auth_hashie) }
 
-        include_examples "finishing_sign_up" do
+        it_behaves_like "finishing sign up" do
           let(:name) { user.full_name }
           let(:email) { "mailer@mail.com" }
           let(:password) { "123456qwe" }
@@ -59,7 +47,7 @@ feature "Sign in with social account" do
     end
 
     context "when user not found" do
-      include_examples "finishing_sign_up" do
+      it_behaves_like "finishing sign up" do
         let(:name) { "Joe Bloggs" }
         let(:email) { "mailer@mail.com" }
         let(:password) { "123456qwe" }
@@ -74,36 +62,33 @@ feature "Sign in with social account" do
       let!(:social_profile) { create(:social_profile, user: user) }
       let!(:user) { create(:user, :confirmed) }
 
-      before do
-        visit new_user_session_path
-        click_link "Sign in with Facebook"
-      end
+      before { click_sign_in_with_fb }
 
-      scenario "User signs in" do
-        expect(page).to have_text(user.full_name)
-      end
+      it_behaves_like "success sign in"
     end
 
     context "when user found by email" do
       let!(:user) { create(:user, :confirmed, :from_auth_hashie) }
 
-      before do
-        visit new_user_session_path
-        click_link "Sign in with Facebook"
-      end
+      before { click_sign_in_with_fb }
 
-      scenario "Users connects social profile" do
+      scenario "User sees alert message" do
         expect(page).to have_text("Please, connect your account from profile page.")
         expect(current_path).to eq(root_path)
       end
     end
 
     context "when user not found" do
-      include_examples "finishing_sign_up" do
+      it_behaves_like "finishing sign up" do
         let(:name) { "Joe Bloggs" }
         let(:email) { "mailer@mail.com" }
         let(:password) { "123456qwe" }
       end
     end
+  end
+
+  def click_sign_in_with_fb
+    visit new_user_session_path
+    click_link "Sign in with Facebook"
   end
 end
