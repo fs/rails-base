@@ -35,7 +35,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def after_sign_in_path_for(resource)
     if resource.confirmed?
-      super resource
+      edit_user_registration_path
     else
       session[:auth_verified?] = auth_verified?
       resource.reset_password(new_password, new_password)

@@ -12,7 +12,6 @@ describe ProcessUserConfirmation do
   end
 
   it "invokes user confirmation methods" do
-    expect(user).to have_received(:reset_password)
     expect(user).to have_received(:confirm)
     expect(user).to have_received(:send_reset_password_instructions)
   end
