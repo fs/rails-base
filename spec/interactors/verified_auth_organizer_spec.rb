@@ -5,16 +5,28 @@ describe VerifiedAuthOrganizer do
 
   let(:service) { described_class.new(auth_hashie) }
 
-  before do
-    allow(SocialProfile).to receive_message_chain(:from_omniauth, :user)
-    allow(UserFoundByEmail).to receive_message_chain(:new, :call)
-    allow(CreateUserFromAuth).to receive_message_chain(:new, :call)
-    service.user
+  subject { service.user }
+
+  context "when social profile exists" do
+    let!(:social_profile) { create(:social_profile, uid: auth_hashie.uid, provider: auth_hashie.provider) }
+
+    it { is_expected.to eq(social_profile.user) }
   end
 
-  it "fetches existing user or create new one" do
-    expect(SocialProfile).to have_received(:from_omniauth)
-    expect(UserFoundByEmail).to have_received(:new)
-    expect(CreateUserFromAuth).to have_received(:new)
+  context "when social profile not exists" do
+    context "when user exists" do
+      let!(:user) { create(:user, :from_auth_hashie) }
+
+      it "creates related social profile" do
+        expect { subject }.to change { user.social_profiles.count }.by(1)
+        expect(subject).to eq(user)
+      end
+    end
+
+    context "when user not exists" do
+      it "creates new one" do
+        expect { subject }.to change { User.count }.by(1)
+      end
+    end
   end
 end

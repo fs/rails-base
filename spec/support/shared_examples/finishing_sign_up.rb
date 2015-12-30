@@ -11,13 +11,13 @@ shared_examples_for "finishing sign up" do
     fill_in :user_password, with: password
     click_button "Finish Signup"
 
-    open_email("mailer@mail.com")
+    open_email(email)
     expect(current_email).to have_subject("Confirmation instructions")
     expect(current_email).to have_body_text(name)
 
     visit_in_email("Confirm my account")
     expect(page).to have_content("Your email address has been successfully confirmed")
     expect(page).to have_text(name)
-    expect(page).to have_text("mailer@mail.com")
+    expect(page).to have_text(email)
   end
 end

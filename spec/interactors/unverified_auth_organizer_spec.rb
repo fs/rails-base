@@ -18,21 +18,23 @@ describe UnverifiedAuthOrganizer do
   context "when user found by uid" do
     let!(:social_profile) { create(:social_profile, provider: auth_hashie.provider, uid: auth_hashie.uid, user: user) }
 
-    let(:email) { ActionMailer::Base.deliveries.last }
+    let(:emails) { ActionMailer::Base.deliveries }
 
     context "when user confirmed" do
       let!(:user) { create(:user, :confirmed, :from_auth_hashie) }
 
       it "not sends confirmation notification" do
-        expect(email).to be_nil
+        expect(emails).to be_empty
       end
     end
 
     context "when user not confirmed" do
       let!(:user) { create(:user, :from_auth_hashie) }
+      let(:email) { ActionMailer::Base.deliveries.last }
 
       it "sends confirmation notification" do
-        expect(email).to be_truthy
+        expect(email.subject).to eq("Confirmation instructions")
+        expect(email.to).to eq([user.email])
       end
     end
   end

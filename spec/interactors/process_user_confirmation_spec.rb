@@ -5,7 +5,6 @@ describe ProcessUserConfirmation do
   let(:service) { described_class.new(user) }
 
   before do
-    allow(user).to receive(:reset_password)
     allow(user).to receive(:confirm)
     allow(user).to receive(:send_reset_password_instructions)
     service.call
