@@ -4,7 +4,9 @@
     "postdeploy": "bundle exec rake db:setup"
   },
   "env": {
+    "HOST": { "required": true },
     "LANG": { "required": true },
+    "MAILER_SENDER_ADDRESS": { "required": true },
     "RACK_ENV": { "required": true },
     "RAILS_ENV": { "required": true },
     "RAILS_SERVE_STATIC_FILES": { "required": true },
