@@ -7,18 +7,17 @@ class UnverifiedAuthOrganizer
   end
 
   def user
-    if user_found_by_email.present?
-      fail AuthVerificationPolicy::OauthError, "Please, connect your account from profile page."
-    else
-      found_user.send_confirmation_instructions unless found_user.confirmed?
-      found_user
-    end
+    check_user_with_email!
+
+    found_user.send_confirmation_instructions unless found_user.confirmed?
+    found_user
   end
 
   private
 
-  def user_found_by_email
-    @user_found_by_email ||= User.find_by(email: auth["info"]["email"])
+  def check_user_with_email!
+    user_with_email = User.find_by(email: auth["info"]["email"])
+    fail AuthVerificationPolicy::OauthError, "Please, connect your account from profile page." if user_with_email
   end
 
   def found_user

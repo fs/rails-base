@@ -45,7 +45,6 @@ feature "Connect social account" do
       let!(:user) { create(:user, :from_auth_hashie) }
 
       scenario "User sees alert" do
-        expect(page).not_to have_css(".js-social-profiles")
         expect(page).to have_text("Please confirm your account before connecting your facebook account.")
         expect(current_path).to eq(root_path)
       end

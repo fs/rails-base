@@ -21,12 +21,12 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def handle_sign_in
-    user = if auth_verified?
-      VerifiedAuthOrganizer.new(auth).user
-    else
-      UnverifiedAuthOrganizer.new(auth).user
-    end
+    user = auth_organizer.new(auth).user
     sign_in_and_redirect user, event: :authentication
+  end
+
+  def auth_organizer
+    auth_verified? ? VerifiedAuthOrganizer : UnverifiedAuthOrganizer
   end
 
   def auth_verified?
