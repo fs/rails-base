@@ -17,7 +17,7 @@ class VerifiedAuthOrganizer
   end
 
   def user_found_by_email
-    UserFoundByEmail.new(auth).call
+    FindUserByEmailService.new(auth).call
   end
 
   def new_user

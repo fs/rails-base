@@ -1,4 +1,4 @@
-class UserFoundByEmail
+class FindUserByEmailService
   attr_reader :auth
   private :auth
 
@@ -15,10 +15,10 @@ class UserFoundByEmail
   private
 
   def user
-    @user ||= User.find_by(email: auth["info"]["email"])
+    @user ||= User.find_by(email: auth.info.email)
   end
 
   def create_social_profile
-    user.social_profiles.create!(provider: auth["provider"], uid: auth["uid"])
+    user.social_profiles.create!(provider: auth.provider, uid: auth.uid)
   end
 end

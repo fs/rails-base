@@ -8,8 +8,8 @@ class CreateUserFromAuth
 
   def call
     user = User.new(
-      email: auth["info"]["email"],
-      full_name: auth["info"]["name"],
+      email: auth.info.email,
+      full_name: auth.info.name,
       password: new_password,
       password_confirmation: new_password
     )
