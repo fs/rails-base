@@ -1,7 +1,7 @@
 require "rails_helper"
 
 describe SocialProfile do
-  subject { create :social_profile }
+  subject { create(:social_profile, uid: "abc123") }
 
   it { is_expected.to belong_to :user }
   it { is_expected.to validate_presence_of :user }
