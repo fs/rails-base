@@ -44,5 +44,5 @@ Rails.application.configure do
 
   # Application specific options
   #
-  config.slim_options =  { pretty: true }
+  config.slim_options = { pretty: true }
 end
