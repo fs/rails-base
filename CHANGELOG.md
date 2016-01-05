@@ -1,6 +1,8 @@
 # Change Log
 
 ## Unreleased
+- Upgrade Ruby to 2.2.4
+- Upgrade Rails to 4.2.5
 - Update [nokogiri gem](https://github.com/sparklemotion/nokogiri)
 
 ## 1.7 - 2015-11-27
