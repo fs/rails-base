@@ -3,15 +3,12 @@ class ConnectSocialProfile
   private :user, :auth
 
   def initialize(user, auth)
-    @user, @auth = user, auth
+    @user = user
+    @auth = auth
   end
 
   def call
-    if social_profile
-      social_profile.update_attribute(:user, user)
-    else
-      create_social_profile!
-    end
+    social_profile ? update_social_profile : create_social_profile
   end
 
   private
@@ -20,7 +17,11 @@ class ConnectSocialProfile
     @social_profile ||= SocialProfile.from_omniauth(auth)
   end
 
-  def create_social_profile!
-    user.social_profiles.create!(provider: auth["provider"], uid: auth["uid"])
+  def update_social_profile
+    social_profile.update_attribute(:user, user)
+  end
+
+  def create_social_profile
+    user.social_profiles.create!(provider: auth.provider, uid: auth.uid)
   end
 end

@@ -7,9 +7,10 @@ class FindUserByEmailService
   end
 
   def call
-    return unless user
-    create_social_profile
-    user
+    if user
+      create_social_profile
+      user
+    end
   end
 
   private

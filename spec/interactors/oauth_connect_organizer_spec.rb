@@ -33,12 +33,14 @@ describe OauthConnectOrganizer do
 
     context "when auth verified" do
       before do
-        allow(ProcessUserConfirmation).to receive_message_chain(:new, :call)
+        allow(user).to receive(:confirm)
+        allow(user).to receive(:send_reset_password_instructions)
         service.call
       end
 
-      it "invokes ProcessUserConfirmation" do
-        expect(ProcessUserConfirmation).to have_received(:new).with(user)
+      it "confirms user" do
+        expect(user).to have_received(:confirm)
+        expect(user).to have_received(:send_reset_password_instructions)
       end
     end
   end

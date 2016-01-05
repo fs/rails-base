@@ -30,7 +30,7 @@ describe UnverifiedAuthOrganizer do
 
     context "when user not confirmed" do
       let!(:user) { create(:user, :from_auth_hashie) }
-      let(:email) { ActionMailer::Base.deliveries.last }
+      let(:email) { emails.last }
 
       it "sends confirmation notification" do
         expect(email.subject).to eq("Confirmation instructions")

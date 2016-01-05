@@ -3,7 +3,8 @@ class OauthConnectOrganizer
   private :auth, :user
 
   def initialize(auth, user)
-    @auth, @user = auth, user
+    @auth = auth
+    @user = user
   end
 
   def call
@@ -16,19 +17,21 @@ class OauthConnectOrganizer
 
   private
 
-  def fail_oauth
-    fail AuthVerificationPolicy::OauthError, "Please confirm your account before connecting your #{auth.provider} account."
-  end
-
   def auth_verified?
     AuthVerificationPolicy.new(auth).verified?
   end
 
-  def connect_social_profile
-    ConnectSocialProfile.new(user, auth).call
+  def process_user_confirmation
+    user.confirm
+    user.send_reset_password_instructions
   end
 
-  def process_user_confirmation
-    ProcessUserConfirmation.new(user).call
+  def fail_oauth
+    fail AuthVerificationPolicy::OauthError,
+      "Please confirm your account before connecting your #{auth.provider} account."
+  end
+
+  def connect_social_profile
+    ConnectSocialProfile.new(user, auth).call
   end
 end
