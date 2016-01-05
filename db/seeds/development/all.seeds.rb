@@ -1,1 +1,1 @@
-FactoryGirl.create(:user, :confirmed, email: "user@example.com")
+FactoryGirl.create(:user, email: "user@example.com")

@@ -1,7 +1,7 @@
 require "rails_helper"
 
 feature "Sign In" do
-  let(:user) { create :user, :confirmed }
+  let(:user) { create :user }
   let(:unconfirmed_user) { create :user, :not_confirmed }
 
   def sign_in(email, password)

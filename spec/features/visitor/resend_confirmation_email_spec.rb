@@ -1,7 +1,7 @@
 require "rails_helper"
 
 feature "Resend Confirmation Email" do
-  let(:user) { create :user }
+  let(:user) { create :user, :not_confirmed }
 
   scenario "Visitor resends email confirmation instructions" do
     visit new_user_confirmation_path
