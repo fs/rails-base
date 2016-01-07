@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Update [simple_form gem](https://github.com/plataformatec/simple_form)
 - User factory generate confirmed user by default
 - Upgrade Ruby to 2.2.4
 - Upgrade Rails to 4.2.5
