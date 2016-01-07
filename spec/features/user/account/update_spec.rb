@@ -1,7 +1,7 @@
 require "rails_helper"
 
 feature "Update Account" do
-  let(:user) { create :user, :confirmed }
+  let(:user) { create :user }
 
   background do
     login_as user

@@ -1,7 +1,7 @@
 require "rails_helper"
 
 feature "Sign Out" do
-  let(:user) { create :user, :confirmed }
+  let(:user) { create :user }
 
   background do
     login_as user
