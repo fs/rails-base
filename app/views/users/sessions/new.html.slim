@@ -17,7 +17,7 @@
 
       .form-inputs
         = f.input :email, required: false, autofocus: true
-        = f.input :password, required: false
+        = f.input :password, required: false, hint: true
         = f.input :remember_me, as: :boolean
 
       .form-actions
