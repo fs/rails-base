@@ -8,6 +8,7 @@
 - Upgrade Ruby to 2.2.4
 - Upgrade Rails to 4.2.5
 - Update [nokogiri gem](https://github.com/sparklemotion/nokogiri)
+- Introduce [repository patern](https://www.amberbit.com/blog/2015/11/30/using-repository-pattern-to-migrate-rails-app-from-mongodb-to-postgresql/)
 
 ## 1.7 - 2015-11-27
 
