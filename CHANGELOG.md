@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Fix alerts closing button on iOs devices
 - Update [simple_form gem](https://github.com/plataformatec/simple_form)
 - User factory generate confirmed user by default
 - Upgrade Ruby to 2.2.4
