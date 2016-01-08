@@ -11,7 +11,7 @@ FactoryGirl.define do
     confirmed_at nil
 
     after(:create) do |user|
-      user.update(confirmation_sent_at: 3.days.ago)
+      UsersRepository.new.update(user, confirmation_sent_at: 3.days.ago)
     end
   end
 end

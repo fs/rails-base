@@ -2,7 +2,7 @@ require "rails_helper"
 
 feature "Sign Up" do
   let(:user_attributes) { attributes_for(:user).slice(:full_name, :email, :password, :password_confirmation) }
-  let(:registered_user) { User.find_by_email(user_attributes[:email]) }
+  let(:registered_user) { UsersRepository.new.find_by_email(user_attributes[:email]) }
 
   scenario "Visitor signs up" do
     visit new_user_registration_path
