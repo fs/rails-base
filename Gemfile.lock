@@ -172,6 +172,8 @@ GEM
     google-analytics-rails (0.0.6)
     haml (4.0.6)
       tilt
+    health_check (1.5.1)
+      rails (>= 2.3.0)
     highline (1.6.21)
     i18n (0.7.0)
     interactor (3.1.0)
@@ -423,6 +425,7 @@ DEPENDENCIES
   foundation-rails
   fuubar (~> 2.0.0.rc1)
   google-analytics-rails
+  health_check
   interactor
   jasmine (> 2.0)
   jasmine-jquery-rails
