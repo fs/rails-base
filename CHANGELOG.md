@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Install [health_check](https://github.com/ianheggie/health_check)
 - Fix alerts closing button on iOs devices
 - Update [simple_form gem](https://github.com/plataformatec/simple_form)
 - User factory generate confirmed user by default
