@@ -154,6 +154,11 @@ heroku run rake db:schema:load
 heroku open
 ```
 
+### Custom Server
+
+To be able to deploy to your custom server [Cloud66.com](http://cloud66.com) recommended as a provisioning and deployment service.
+Make sure to review and configure `cloud66/manifest.yml` before deployment.
+
 ## Credits
 
 Rails Base is maintained by [Timur Vafin](http://github.com/timurvafin).

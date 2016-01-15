@@ -1,0 +1,19 @@
+production:
+  postgresql:
+    configuration:
+      version: 9.3.4
+  rails:
+    server:
+      unique_name: app
+    configuration:
+      ruby_version: 2.2.3
+      asset_pipeline_precompile: true
+      do_initial_db_schema_load: true
+  environment_variables:
+    MAILER_SENDER_ADDRESS: noreply@example.com
+    HOST: example.com
+    SMTP_ADDRESS: smtp.sendgrid.net
+    SMTP_PORT: 587
+    SMTP_USERNAME:
+    SMTP_PASSWORD:
+    SMTP_DOMAIN: {{ HOST }}
