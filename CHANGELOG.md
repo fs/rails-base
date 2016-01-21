@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Removed wrong underfield hint on sign_up page
+- Fix flash messages at new password and email confirmation sending
 - Install [health_check](https://github.com/ianheggie/health_check)
 - Fix alerts closing button on iOs devices
 - Update [simple_form gem](https://github.com/plataformatec/simple_form)
