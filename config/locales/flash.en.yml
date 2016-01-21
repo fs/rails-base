@@ -1,5 +1,14 @@
 en:
   flash:
+    devise:
+      passwords:
+        create:
+          alert: "Password could not be sent."
+        update:
+          alert: "Password could not be updated."
+      confirmations:
+        create:
+          alert: "Confirmations could not be sent"
     actions:
       create:
         notice: '%{resource_name} was successfully created.'
