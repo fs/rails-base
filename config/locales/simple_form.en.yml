@@ -19,6 +19,6 @@ en:
           password_confirmation: Confirm your new password
     hints:
       user:
-        password: Leave it blank if you dont want to change it
-        current_password: We need your current password to confirm your changes
-
+        edit:
+          password: Leave it blank if you dont want to change it
+          current_password: We need your current password to confirm your changes
