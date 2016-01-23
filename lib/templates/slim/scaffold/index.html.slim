@@ -18,7 +18,7 @@ table.table.table-striped
         = link_to(edit_<%= singular_table_name %>_path(<%= singular_table_name %>), class: 'btn') do
           i.fi-pencil
           |  Edit
-        = link_to(<%= singular_table_name %>, confirm: 'Are you sure?', method: :delete, class: 'btn btn-danger') do
+        = link_to(<%= singular_table_name %>, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure?' }) do
           i.fi-trash
           |  Delete
 
