@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Upgrade Rails to 4.2.5.1
 - Update [devise gem](https://github.com/plataformatec/devise)
 - Removed wrong underfield hint on sign_up page
 - Fix flash messages at new password and email confirmation sending
