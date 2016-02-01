@@ -24,6 +24,8 @@
         = f.button :submit, 'Update'
 
   .medium-6.columns.end
+    = render "social_profiles/list", social_profiles: current_user.social_profiles
+
     h6
       b Cancel my account
     p

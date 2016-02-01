@@ -17,4 +17,8 @@ FactoryGirl.define do
       user.update(confirmation_sent_at: 3.days.ago)
     end
   end
+
+  trait :from_auth_hashie do
+    email "joe@bloggs.com"
+  end
 end
