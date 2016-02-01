@@ -1,5 +1,5 @@
 class SocialProfile < ActiveRecord::Base
-  PROVIDERS = OmniAuth.strategies.map { |s| s.to_s.demodulize.underscore }.last(2)
+  PROVIDERS = OmniAuth.strategies.map { |s| s.to_s.demodulize.underscore }.drop(1)
 
   belongs_to :user
 
