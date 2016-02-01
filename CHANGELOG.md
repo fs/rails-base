@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Fix flaky specs based on encoded user's full_name
+
 ## 1.9 - 2016-04-22
 
 - Introduce [Rspec-Its](https://github.com/rspec/rspec-its)
