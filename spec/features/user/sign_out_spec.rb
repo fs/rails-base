@@ -1,11 +1,7 @@
 require "rails_helper"
 
 feature "Sign Out" do
-  let(:user) { create :user }
-
-  background do
-    login_as user
-  end
+  include_context "current user signed in"
 
   scenario "User signs out" do
     visit "/"
