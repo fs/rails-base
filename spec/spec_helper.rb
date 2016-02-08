@@ -8,5 +8,5 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
 
-  config.profile_examples = 2 unless ENV["CI"]
+  config.profile_examples = 2 if ENV["CI"]
 end
