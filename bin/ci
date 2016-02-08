@@ -2,6 +2,6 @@
 
 set -e
 
-bin/rspec spec SPEC_OPTS="--format progress --format json --out rspec_report.json --profile 2"
+SPEC_OPTS="--format progress --format json --out rspec_report.json --profile 2" bin/rspec spec
 bin/rake jasmine:ci
 bin/quality
