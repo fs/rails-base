@@ -7,4 +7,6 @@ RSpec.configure do |config|
     mocks.syntax = :expect
     mocks.verify_partial_doubles = true
   end
+
+  config.profile_examples = 2 if ENV["CI"]
 end
