@@ -2,6 +2,6 @@
 
 set -e
 
-SPEC_OPTS="--profile 2 --out rspec_report.json" bin/rspec spec
+bin/rspec spec
 bin/rake jasmine:ci
 bin/quality
