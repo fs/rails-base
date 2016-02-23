@@ -1,9 +1,7 @@
 require "rails_helper"
-include ERB::Util
 
 feature "Resend Confirmation Email" do
   let(:user) { create :user, :not_confirmed }
-  let(:full_name) { html_escape(user.full_name) }
 
   scenario "Visitor resends email confirmation instructions" do
     visit new_user_confirmation_path
@@ -14,6 +12,6 @@ feature "Resend Confirmation Email" do
     open_email(user.email)
 
     expect(current_email).to have_subject("Confirmation instructions")
-    expect(current_email).to have_body_text(full_name)
+    expect(current_email).to have_body_text(user.full_name)
   end
 end
