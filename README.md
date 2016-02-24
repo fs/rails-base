@@ -99,7 +99,7 @@ brew bundle
    git clone git://github.com/fs/rails-base.git --origin rails-base [MY-NEW-PROJECT]
    ```
 
-2. Initialize new repo in your project directory, create new repo on GitHub and push master into it. Make sure master branch is tracking origin repo.
+2. Create your new repo on GitHub and push master into it. Make sure master branch is tracking origin repo.
 
   ```bash
   git remote add origin git@github.com:[MY-GITHUB-ACCOUNT]/[MY-NEW-PROJECT].git
