@@ -93,7 +93,7 @@ brew bundle
 
 ### Bootstrap application
 
-1. Clone application as new project with original repository named "rails-base" and delete `.git` directory to remove history of changes in base project.
+1. Clone application as new project with original repository named "rails-base".
 
    ```bash
    git clone git://github.com/fs/rails-base.git --origin rails-base [MY-NEW-PROJECT]
