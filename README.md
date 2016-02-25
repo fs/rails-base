@@ -93,10 +93,10 @@ brew bundle
 
 ### Bootstrap application
 
-1. Clone application as new project with original repository named "rails-base". We use depth parameter here in order not to copy the history of changes in base project
+1. Clone application as new project with original repository named "rails-base".
 
    ```bash
-   git clone --depth 1 git://github.com/fs/rails-base.git --origin rails-base [MY-NEW-PROJECT]
+   git clone git://github.com/fs/rails-base.git --origin rails-base [MY-NEW-PROJECT]
    ```
 
 2. Create your new repo on GitHub and push master into it. Make sure master branch is tracking origin repo.
