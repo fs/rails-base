@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Upgrade Rails to 4.2.5.2
 - Show 2 slowest specs during specs run [#415](https://github.com/fs/rails-base/pull/415) [#410](https://github.com/fs/rails-base/pull/410/files)
 - Upgrade Rails to 4.2.5.1
 - Update [devise gem](https://github.com/plataformatec/devise)
