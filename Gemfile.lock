@@ -164,9 +164,6 @@ GEM
     foundation-rails (5.5.2.1)
       railties (>= 3.1.0)
       sass (>= 3.3.0, < 3.5)
-    fuubar (2.0.0.rc1)
-      rspec (~> 3.0.rc1)
-      ruby-progressbar (~> 1.4)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     google-analytics-rails (0.0.6)
@@ -288,10 +285,6 @@ GEM
       railties (>= 4.2.0, < 5.1)
     rollbar (2.3.0)
       oj (~> 2.12.14)
-    rspec (3.0.0)
-      rspec-core (~> 3.0.0)
-      rspec-expectations (~> 3.0.0)
-      rspec-mocks (~> 3.0.0)
     rspec-core (3.0.2)
       rspec-support (~> 3.0.0)
     rspec-expectations (3.0.2)
@@ -423,7 +416,6 @@ DEPENDENCIES
   formulaic
   foundation-icons-sass-rails
   foundation-rails
-  fuubar (~> 2.0.0.rc1)
   google-analytics-rails
   health_check
   interactor
