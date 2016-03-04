@@ -319,8 +319,6 @@ GEM
       sass (~> 3.4.1)
     seedbank (0.3.0)
     sexp_processor (4.5.1)
-    shoulda-matchers (2.8.0)
-      activesupport (>= 3.0.0)
     simple_form (3.2.1)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
@@ -444,7 +442,6 @@ DEPENDENCIES
   sass-rails (~> 5.0.0)
   scss_lint
   seedbank
-  shoulda-matchers
   simple_form
   skim
   slim
