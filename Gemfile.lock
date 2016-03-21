@@ -1,13 +1,3 @@
-GIT
-  remote: https://github.com/jfirebaugh/skim
-  revision: ca1e39fae0f957634575d6f8b53c5d66fda7f925
-  specs:
-    skim (0.9.3)
-      coffee-script
-      coffee-script-source (>= 1.2.0)
-      slim (>= 3.0)
-      sprockets (>= 2, <= 3.0.0.rc1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -100,13 +90,14 @@ GEM
     coffee-script (2.4.1)
       coffee-script-source
       execjs
-    coffee-script-source (1.9.1.1)
+    coffee-script-source (1.10.0)
     coffeelint (1.9.1)
       coffee-script
       execjs
       json
     colored (1.2)
     columnize (0.8.9)
+    concurrent-ruby (1.0.1)
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
     database_cleaner (1.3.0)
@@ -339,6 +330,11 @@ GEM
       json (~> 1.8)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.0)
+    skim (0.10.0)
+      coffee-script
+      coffee-script-source (>= 1.2.0)
+      slim (>= 3.0)
+      sprockets (>= 2, < 4)
     slim (3.0.6)
       temple (~> 0.7.3)
       tilt (>= 1.3.3, < 2.1)
@@ -352,8 +348,9 @@ GEM
     spring (1.3.6)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
-    sprockets (3.0.0.rc.1)
-      rack (~> 1.0)
+    sprockets (3.5.2)
+      concurrent-ruby (~> 1.0)
+      rack (> 1, < 3)
     sprockets-rails (2.3.3)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
@@ -450,7 +447,7 @@ DEPENDENCIES
   seedbank
   shoulda-matchers
   simple_form
-  skim!
+  skim
   slim
   slim-rails
   slim_lint
