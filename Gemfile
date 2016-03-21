@@ -68,12 +68,11 @@ group :development, :test do
   gem "dotenv-rails"
   gem "factory_girl_rails"
   gem "faker"
-  gem "fuubar", "~> 2.0.0.rc1"
   gem "jasmine", "> 2.0"
   gem "jasmine-jquery-rails"
   gem "pry-rails"
   gem "rails_best_practices", require: false
-  gem "rspec-rails", "~> 3.0"
+  gem "rspec-rails", "~> 3.4"
   gem "rubocop", require: false
   gem "rubocop-rspec", require: false
   gem "scss_lint", require: false

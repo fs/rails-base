@@ -1,4 +1,3 @@
 --colour
---format <%= ENV["CI"] ? "progress" : "Fuubar" %>
 --require spec_helper
 --profile 2
