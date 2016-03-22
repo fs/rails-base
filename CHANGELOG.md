@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.8 - 2016-03-22
+
 - Upgrade Rails to 4.2.6, Ruby to 2.3.0, Rollbar to 2.8.3, Spring to 1.6.4
 - Remove [fuubar](https://github.com/thekompanee/fuubar)
 - Show 2 slowest specs during specs run [#415](https://github.com/fs/rails-base/pull/415) [#410](https://github.com/fs/rails-base/pull/410/files)
