@@ -1,8 +1,8 @@
 source "https://rubygems.org"
 
-ruby "2.2.4"
+ruby "2.3.0"
 
-gem "rails", "4.2.5.1"
+gem "rails", "4.2.6"
 gem "pg"
 
 # assets
@@ -12,7 +12,7 @@ gem "foundation-icons-sass-rails"
 gem "foundation-rails"
 gem "jquery-rails"
 gem "sass-rails", "~> 5.0.0"
-gem "skim", git: "https://github.com/jfirebaugh/skim"
+gem "skim"
 gem "therubyracer", platforms: :ruby
 gem "uglifier", ">= 2.7.2"
 
@@ -68,12 +68,11 @@ group :development, :test do
   gem "dotenv-rails"
   gem "factory_girl_rails"
   gem "faker"
-  gem "fuubar", "~> 2.0.0.rc1"
   gem "jasmine", "> 2.0"
   gem "jasmine-jquery-rails"
   gem "pry-rails"
   gem "rails_best_practices", require: false
-  gem "rspec-rails", "~> 3.0"
+  gem "rspec-rails", "~> 3.4"
   gem "rubocop", require: false
   gem "rubocop-rspec", require: false
   gem "scss_lint", require: false

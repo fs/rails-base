@@ -1,48 +1,38 @@
-GIT
-  remote: https://github.com/jfirebaugh/skim
-  revision: ca1e39fae0f957634575d6f8b53c5d66fda7f925
-  specs:
-    skim (0.9.3)
-      coffee-script
-      coffee-script-source (>= 1.2.0)
-      slim (>= 3.0)
-      sprockets (>= 2, <= 3.0.0.rc1)
-
 GEM
   remote: https://rubygems.org/
   specs:
-    actionmailer (4.2.5.1)
-      actionpack (= 4.2.5.1)
-      actionview (= 4.2.5.1)
-      activejob (= 4.2.5.1)
+    actionmailer (4.2.6)
+      actionpack (= 4.2.6)
+      actionview (= 4.2.6)
+      activejob (= 4.2.6)
       mail (~> 2.5, >= 2.5.4)
       rails-dom-testing (~> 1.0, >= 1.0.5)
-    actionpack (4.2.5.1)
-      actionview (= 4.2.5.1)
-      activesupport (= 4.2.5.1)
+    actionpack (4.2.6)
+      actionview (= 4.2.6)
+      activesupport (= 4.2.6)
       rack (~> 1.6)
       rack-test (~> 0.6.2)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    actionview (4.2.5.1)
-      activesupport (= 4.2.5.1)
+    actionview (4.2.6)
+      activesupport (= 4.2.6)
       builder (~> 3.1)
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
     active_link_to (1.0.2)
       actionpack
-    activejob (4.2.5.1)
-      activesupport (= 4.2.5.1)
+    activejob (4.2.6)
+      activesupport (= 4.2.6)
       globalid (>= 0.3.0)
-    activemodel (4.2.5.1)
-      activesupport (= 4.2.5.1)
+    activemodel (4.2.6)
+      activesupport (= 4.2.6)
       builder (~> 3.1)
-    activerecord (4.2.5.1)
-      activemodel (= 4.2.5.1)
-      activesupport (= 4.2.5.1)
+    activerecord (4.2.6)
+      activemodel (= 4.2.6)
+      activesupport (= 4.2.6)
       arel (~> 6.0)
-    activesupport (4.2.5.1)
+    activesupport (4.2.6)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
@@ -100,13 +90,14 @@ GEM
     coffee-script (2.4.1)
       coffee-script-source
       execjs
-    coffee-script-source (1.9.1.1)
+    coffee-script-source (1.10.0)
     coffeelint (1.9.1)
       coffee-script
       execjs
       json
     colored (1.2)
     columnize (0.8.9)
+    concurrent-ruby (1.0.1)
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
     database_cleaner (1.3.0)
@@ -164,9 +155,6 @@ GEM
     foundation-rails (5.5.2.1)
       railties (>= 3.1.0)
       sass (>= 3.3.0, < 3.5)
-    fuubar (2.0.0.rc1)
-      rspec (~> 3.0.rc1)
-      ruby-progressbar (~> 1.4)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     google-analytics-rails (0.0.6)
@@ -205,14 +193,13 @@ GEM
     metamagic (3.1.7)
       rails (>= 3.0.0)
     method_source (0.8.2)
-    mime-types (2.99)
+    mime-types (2.99.1)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     multi_json (1.11.0)
     newrelic_rpm (3.13.0.299)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
-    oj (2.12.14)
     orm_adapter (0.5.0)
     parser (2.2.2.3)
       ast (>= 1.1, < 3.0)
@@ -238,16 +225,16 @@ GEM
       rack (>= 1.1.3)
     rack-test (0.6.3)
       rack (>= 1.0)
-    rails (4.2.5.1)
-      actionmailer (= 4.2.5.1)
-      actionpack (= 4.2.5.1)
-      actionview (= 4.2.5.1)
-      activejob (= 4.2.5.1)
-      activemodel (= 4.2.5.1)
-      activerecord (= 4.2.5.1)
-      activesupport (= 4.2.5.1)
+    rails (4.2.6)
+      actionmailer (= 4.2.6)
+      actionpack (= 4.2.6)
+      actionview (= 4.2.6)
+      activejob (= 4.2.6)
+      activemodel (= 4.2.6)
+      activerecord (= 4.2.6)
+      activesupport (= 4.2.6)
       bundler (>= 1.3.0, < 2.0)
-      railties (= 4.2.5.1)
+      railties (= 4.2.6)
       sprockets-rails
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
@@ -272,13 +259,13 @@ GEM
       require_all
       ruby-progressbar
     rails_stdout_logging (0.0.4)
-    railties (4.2.5.1)
-      actionpack (= 4.2.5.1)
-      activesupport (= 4.2.5.1)
+    railties (4.2.6)
+      actionpack (= 4.2.6)
+      activesupport (= 4.2.6)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rainbow (2.0.0)
-    rake (10.5.0)
+    rake (11.1.1)
     rake-compiler (0.9.5)
       rake
     ref (1.0.5)
@@ -286,28 +273,25 @@ GEM
     require_all (1.3.2)
     responders (2.1.1)
       railties (>= 4.2.0, < 5.1)
-    rollbar (2.3.0)
-      oj (~> 2.12.14)
-    rspec (3.0.0)
-      rspec-core (~> 3.0.0)
-      rspec-expectations (~> 3.0.0)
-      rspec-mocks (~> 3.0.0)
-    rspec-core (3.0.2)
-      rspec-support (~> 3.0.0)
-    rspec-expectations (3.0.2)
+    rollbar (2.8.3)
+      multi_json
+    rspec-core (3.4.3)
+      rspec-support (~> 3.4.0)
+    rspec-expectations (3.4.0)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.0.0)
-    rspec-mocks (3.0.2)
-      rspec-support (~> 3.0.0)
-    rspec-rails (3.0.1)
-      actionpack (>= 3.0)
-      activesupport (>= 3.0)
-      railties (>= 3.0)
-      rspec-core (~> 3.0.0)
-      rspec-expectations (~> 3.0.0)
-      rspec-mocks (~> 3.0.0)
-      rspec-support (~> 3.0.0)
-    rspec-support (3.0.2)
+      rspec-support (~> 3.4.0)
+    rspec-mocks (3.4.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-rails (3.4.2)
+      actionpack (>= 3.0, < 4.3)
+      activesupport (>= 3.0, < 4.3)
+      railties (>= 3.0, < 4.3)
+      rspec-core (~> 3.4.0)
+      rspec-expectations (~> 3.4.0)
+      rspec-mocks (~> 3.4.0)
+      rspec-support (~> 3.4.0)
+    rspec-support (3.4.1)
     rubocop (0.31.0)
       astrolabe (~> 1.3)
       parser (>= 2.2.2.1, < 3.0)
@@ -322,7 +306,7 @@ GEM
       sexp_processor (~> 4.0)
     ruby_parser (3.6.6)
       sexp_processor (~> 4.1)
-    safe_yaml (1.0.1)
+    safe_yaml (1.0.4)
     sass (3.4.18)
     sass-rails (5.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -345,6 +329,11 @@ GEM
       json (~> 1.8)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.0)
+    skim (0.10.0)
+      coffee-script
+      coffee-script-source (>= 1.2.0)
+      slim (>= 3.0)
+      sprockets (>= 2, < 4)
     slim (3.0.6)
       temple (~> 0.7.3)
       tilt (>= 1.3.3, < 2.1)
@@ -355,11 +344,12 @@ GEM
       slim (~> 3.0)
       sysexits (~> 1.1)
     slop (3.6.0)
-    spring (1.3.6)
+    spring (1.6.4)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
-    sprockets (3.0.0.rc.1)
-      rack (~> 1.0)
+    sprockets (3.5.2)
+      concurrent-ruby (~> 1.0)
+      rack (> 1, < 3)
     sprockets-rails (2.3.3)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
@@ -423,7 +413,6 @@ DEPENDENCIES
   formulaic
   foundation-icons-sass-rails
   foundation-rails
-  fuubar (~> 2.0.0.rc1)
   google-analytics-rails
   health_check
   interactor
@@ -443,13 +432,13 @@ DEPENDENCIES
   quiet_assets
   rack-canonical-host
   rack-mini-profiler
-  rails (= 4.2.5.1)
+  rails (= 4.2.6)
   rails-erd
   rails_best_practices
   rails_stdout_logging
   responders
   rollbar
-  rspec-rails (~> 3.0)
+  rspec-rails (~> 3.4)
   rubocop
   rubocop-rspec
   sass-rails (~> 5.0.0)
@@ -457,7 +446,7 @@ DEPENDENCIES
   seedbank
   shoulda-matchers
   simple_form
-  skim!
+  skim
   slim
   slim-rails
   slim_lint
