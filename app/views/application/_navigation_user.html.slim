@@ -3,13 +3,10 @@ ul.right
     li.has-dropdown
       a.user-dropdown(href="#") = current_user.full_name_with_email
       ul.dropdown
-        new_user_registration_path
         li
-          a href = edit_user_registration_path
-            | Edit profile
+          = link_to "Edit profile", edit_user_registration_path
         li
-          a href = destroy_user_session_path
-            | Sign out
+          = link_to "Sign out", destroy_user_session_path
   - else
     = active_link_to "Sign in", new_user_session_path, active: :exclusive, wrap_tag: :li
     = active_link_to "Sign up", new_user_registration_path, active: :exclusive, wrap_tag: :li
