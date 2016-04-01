@@ -18,12 +18,12 @@ feature "Password Reset" do
 
     open_email(user.email)
 
-    expect(current_email).to have_subject("Reset password instructions")
+    expect(current_email).to have_subject(I18n.t("devise.mailer.reset_password_instructions.subject"))
     expect(current_email).to have_body_text(user.full_name)
 
     visit_in_email("Change my password")
     update_password
 
-    expect(page).to have_content("Your password has been changed successfully")
+    expect(page).to have_content(I18n.t("devise.passwords.updated_not_active"))
   end
 end
