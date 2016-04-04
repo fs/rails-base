@@ -11,12 +11,12 @@ feature "Cancel Account" do
     click_link "Cancel my account"
 
     expect(page).to have_content("Sign in")
-    expect(page).to have_content("Bye! Your account has been successfully cancelled. We hope to see you again soon.")
+    expect(page).to have_content(I18n.t("devise.registrations.destroyed"))
 
     click_link "Sign in"
     fill_form(:user, current_user.attributes.slice(:email, :password))
     click_button "Sign in"
 
-    expect(page).to have_content("Invalid email or password.")
+    expect(page).to have_content(I18n.t("devise.failure.invalid", authentication_keys: "email"))
   end
 end
