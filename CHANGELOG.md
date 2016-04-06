@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Configure `.gitattributes` to avoid merge conflicts due to `CHANGELOG`
+
 ## 1.8 - 2016-03-22
 
 - Upgrade Rails to 4.2.6, Ruby to 2.3.0, Rollbar to 2.8.3, Spring to 1.6.4
