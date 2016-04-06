@@ -21,12 +21,12 @@ feature "Sign In" do
     sign_in(user.email, "wrong password")
 
     expect(page).to have_content("Sign in")
-    expect(page).to have_content("Invalid email or password")
+    expect(page).to have_content(I18n.t("devise.failure.invalid", authentication_keys: "email"))
   end
 
   scenario "Visitor signs in with unconfirmed email address" do
     sign_in(unconfirmed_user.email, user.password)
 
-    expect(page).to have_content("You have to confirm your email address before continuing.")
+    expect(page).to have_content(I18n.t("devise.failure.unconfirmed"))
   end
 end
