@@ -1,7 +1,10 @@
 require: rubocop-rspec
 
+Rails:
+  Enabled: true
+
 AllCops:
-  RunRailsCops: true
+  TargetRubyVersion: 2.3
   DisplayCopNames: true
   Exclude:
     - bin/**/*
@@ -25,6 +28,7 @@ Style/SymbolArray:
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
+  ConsistentQuotesInMultiline: true
 
 Metrics/LineLength:
   Description: 'Limit lines to 120 characters.'
@@ -41,3 +45,9 @@ Style/AlignParameters:
   SupportedStyles:
     - with_first_parameter
     - with_fixed_indentation
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/StringMethods:
+  Enabled: true

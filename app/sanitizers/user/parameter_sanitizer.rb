@@ -5,7 +5,7 @@ class User
       email
       password
       password_confirmation
-    )
+    ).freeze
 
     def sign_up
       default_params.permit(USER_PARAMS)

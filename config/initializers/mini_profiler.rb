@@ -14,7 +14,7 @@ Rack::MiniProfiler.config.storage = Rack::MiniProfiler::MemoryStore
 Rack::MiniProfiler.config.enabled = false
 
 # Configure authorization hook based on IP whitelist
-ip_whitelist = ENV.fetch("MINI_PROFILER_IP_WHITELIST",  "").split(",")
+ip_whitelist = ENV.fetch("MINI_PROFILER_IP_WHITELIST", "").split(",")
 Rack::MiniProfiler.config.authorization_mode = :allow_all
 Rack::MiniProfiler.config.pre_authorize_cb = lambda { |env|
   request = Rack::Request.new(env)
