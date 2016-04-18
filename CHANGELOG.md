@@ -4,6 +4,7 @@
 
 - Configure `.gitattributes` to avoid merge conflicts due to `CHANGELOG`
 - Upgrade rubocop to 0.39.0, rubocop-rspec to 1.4.1, active_link_to to 1.0.3, faker to 1.6.3, slim_lint to 0.7.2
+- Introduce [Deadweight](https://github.com/aanand/deadweight) to track unused CSS selectors
 
 ## 1.8 - 2016-03-22
 
