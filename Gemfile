@@ -57,6 +57,7 @@ group :test do
   gem "launchy"
   gem "shoulda-matchers", require: false
   gem "webmock", require: false
+  gem "deadweight"
 end
 
 group :development, :test do

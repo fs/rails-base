@@ -39,4 +39,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   config.action_view.raise_on_missing_translations = true
+
+  # Enable response data logging during tests run
+  config.middleware.use "ResponseLoggerMiddleware"
 end
