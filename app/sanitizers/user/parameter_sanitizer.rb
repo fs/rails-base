@@ -12,7 +12,7 @@ class User
     end
 
     def account_update
-      default_params.permit(USER_PARAMS, :current_password)
+      default_params.permit(USER_PARAMS)
     end
   end
 end
