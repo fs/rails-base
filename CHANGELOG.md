@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.9 - 2016-04-22
+
 - Introduce [Rspec-Its](https://github.com/rspec/rspec-its)
 - Configure `.gitattributes` to avoid merge conflicts due to `CHANGELOG`
 - Upgrade rubocop to 0.39.0, rubocop-rspec to 1.4.1, active_link_to to 1.0.3, faker to 1.6.3, slim_lint to 0.7.2
