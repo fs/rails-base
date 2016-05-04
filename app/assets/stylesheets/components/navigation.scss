@@ -1,0 +1,29 @@
+.top-bar {
+  @include breakpoint(small only) {
+    &-menu {
+      flex-direction: column;
+
+      align-items: flex-start;
+    }
+  }
+
+  @include breakpoint(medium) {
+    &-right {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.no-js {
+  @include breakpoint(small only) {
+    .top-bar {
+      display: none;
+    }
+  }
+
+  @include breakpoint(medium) {
+    .title-bar {
+      display: none;
+    }
+  }
+}

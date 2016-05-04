@@ -18,6 +18,6 @@ feature "Sign Up" do
     visit_in_email("Confirm my account")
 
     expect(page).to have_content("Your email address has been successfully confirmed")
-    expect(page).to have_text(registered_user.email)
+    expect(page).to have_text(registered_user.full_name)
   end
 end
