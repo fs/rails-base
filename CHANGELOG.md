@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Update [rails_best_practices gem](https://github.com/railsbp/rails_best_practices)
 - Update [email_spec gem](https://github.com/email-spec/email-spec) to avoid flaky specs based on encoded html entities
 
 ## 1.9 - 2016-04-22
