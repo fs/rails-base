@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-- Fix flaky specs based on encoded user's full_name
+- Update [email_spec gem](https://github.com/email-spec/email-spec) to avoid flaky specs based on encoded html entities
 
 ## 1.9 - 2016-04-22
 
