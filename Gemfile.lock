@@ -267,7 +267,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rainbow (2.1.0)
     rake (11.1.2)
-    rake-compiler (0.9.5)
+    rake-compiler (0.9.9)
       rake
     ref (1.0.5)
     request_store (1.2.0)
