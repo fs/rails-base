@@ -56,7 +56,7 @@ group :test do
   gem "formulaic"
   gem "launchy"
   gem "rspec-its"
-  gem "shoulda-matchers", require: false
+  gem "shoulda-matchers"
   gem "webmock", require: false
 end
 
