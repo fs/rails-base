@@ -15,3 +15,5 @@ SLIM_LINT_RUBOCOP_CONF=config/rubocop.yml bin/slim-lint --config config/slim-lin
 bin/bundle-audit update
 bin/bundle-audit
 
+bin/rake assets:precompile
+cat public/stylesheets/*.css | bin/deadweight log/responses/*

@@ -58,6 +58,7 @@ group :test do
   gem "rspec-its"
   gem "shoulda-matchers"
   gem "webmock", require: false
+  gem "deadweight"
 end
 
 group :development, :test do
