@@ -40,23 +40,14 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.4.0)
     arel (6.0.3)
-    ast (2.2.0)
+    ast (2.3.0)
     autoprefixer-rails (6.3.6)
       execjs
     awesome_print (1.6.1)
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    brakeman (3.0.3)
-      erubis (~> 2.6)
-      fastercsv (~> 1.5)
-      haml (>= 3.0, < 5.0)
-      highline (~> 1.6.20)
-      multi_json (~> 1.2)
-      ruby2ruby (~> 2.1.1)
-      ruby_parser (~> 3.6.2)
-      sass (~> 3.0)
-      terminal-table (~> 1.4)
+    brakeman (3.3.2)
     builder (3.2.2)
     bullet (4.14.7)
       activesupport (>= 3.0.0)
@@ -78,8 +69,6 @@ GEM
       capybara (>= 2.3.0, < 2.8.0)
       json
     choice (0.2.0)
-    code_analyzer (0.4.5)
-      sexp_processor
     codeclimate-test-reporter (0.4.7)
       simplecov (>= 0.7.1, < 1.0.0)
     coderay (1.1.1)
@@ -90,7 +79,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
-    coffeelint (1.9.1)
+    coffeelint (1.14.0)
       coffee-script
       execjs
       json
@@ -127,7 +116,7 @@ GEM
       launchy (~> 2.1)
       mail (~> 2.6.3)
     erubis (2.7.0)
-    execjs (2.6.0)
+    execjs (2.7.0)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.5.0)
@@ -138,7 +127,6 @@ GEM
     fast_stack (0.1.0)
       rake
       rake-compiler
-    fastercsv (1.5.5)
     flamegraph (0.1.0)
       fast_stack
     foreman (0.63.0)
@@ -157,11 +145,8 @@ GEM
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     google-analytics-rails (1.1.0)
-    haml (4.0.6)
-      tilt
     health_check (1.5.1)
       rails (>= 2.3.0)
-    highline (1.6.21)
     htmlentities (4.3.4)
     i18n (0.7.0)
     interactor (3.1.0)
@@ -198,13 +183,13 @@ GEM
     mime-types-data (3.2016.0221)
     mini_portile2 (2.1.0)
     minitest (5.8.4)
-    multi_json (1.11.0)
+    multi_json (1.12.1)
     newrelic_rpm (3.13.0.299)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
     orm_adapter (0.5.0)
-    parser (2.3.0.7)
+    parser (2.3.1.2)
       ast (~> 2.2)
     pg (0.17.1)
     phantomjs (1.9.8.0)
@@ -253,14 +238,6 @@ GEM
       ruby-graphviz (~> 1.2)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
-    rails_best_practices (1.16.0)
-      activesupport
-      code_analyzer (>= 0.4.3)
-      erubis
-      i18n
-      json
-      require_all
-      ruby-progressbar
     rails_stdout_logging (0.0.4)
     railties (4.2.6)
       actionpack (= 4.2.6)
@@ -268,12 +245,11 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rainbow (2.1.0)
-    rake (11.1.2)
+    rake (11.2.2)
     rake-compiler (0.9.9)
       rake
     ref (1.0.5)
     request_store (1.2.0)
-    require_all (1.3.3)
     responders (2.1.1)
       railties (>= 4.2.0, < 5.1)
     rollbar (2.8.3)
@@ -298,34 +274,28 @@ GEM
       rspec-mocks (~> 3.4.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
-    rubocop (0.39.0)
-      parser (>= 2.3.0.7, < 3.0)
+    rubocop (0.40.0)
+      parser (>= 2.3.1.0, < 3.0)
       powerpack (~> 0.1)
       rainbow (>= 1.99.1, < 3.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
-    rubocop-rspec (1.4.1)
-      rubocop (= 0.39.0)
+    rubocop-rspec (1.5.0)
+      rubocop (>= 0.40.0)
     ruby-graphviz (1.2.2)
-    ruby-progressbar (1.8.0)
-    ruby2ruby (2.1.4)
-      ruby_parser (~> 3.1)
-      sexp_processor (~> 4.0)
-    ruby_parser (3.6.6)
-      sexp_processor (~> 4.1)
+    ruby-progressbar (1.8.1)
     safe_yaml (1.0.4)
-    sass (3.4.18)
+    sass (3.4.22)
     sass-rails (5.0.3)
       railties (>= 4.0.0, < 5.0)
       sass (~> 3.1)
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (~> 1.1)
-    scss_lint (0.38.0)
-      rainbow (~> 2.0)
-      sass (~> 3.4.1)
+    scss_lint (0.48.0)
+      rake (>= 0.9, < 12)
+      sass (~> 3.4.15)
     seedbank (0.3.0)
-    sexp_processor (4.7.0)
     shoulda-matchers (3.1.1)
       activesupport (>= 4.0.0)
     simple_form (3.2.1)
@@ -350,7 +320,7 @@ GEM
       activesupport (>= 3.1, < 5.0)
       railties (>= 3.1, < 5.0)
       slim (~> 3.0)
-    slim_lint (0.7.2)
+    slim_lint (0.8.0)
       rake (>= 10, < 12)
       rubocop (>= 0.36.0)
       slim (~> 3.0)
@@ -369,7 +339,6 @@ GEM
     stackprof (0.2.7)
     sysexits (1.2.0)
     temple (0.7.7)
-    terminal-table (1.5.2)
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
       ref
@@ -381,7 +350,7 @@ GEM
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    unicode-display_width (1.0.3)
+    unicode-display_width (1.0.5)
     uniform_notifier (1.9.0)
     warden (1.2.4)
       rack (>= 1.0)
@@ -447,7 +416,6 @@ DEPENDENCIES
   rack-mini-profiler
   rails (= 4.2.6)
   rails-erd
-  rails_best_practices
   rails_stdout_logging
   responders
   rollbar
@@ -472,8 +440,5 @@ DEPENDENCIES
   web-console (~> 2.0)
   webmock
 
-RUBY VERSION
-   ruby 2.3.0p0
-
 BUNDLED WITH
-   1.12.3
+   1.12.5
