@@ -36,7 +36,6 @@ It's based on Rails 4 and Ruby 2.3.0.
 * [Bullet](https://github.com/flyerhzm/bullet) for detecting N+1 queries and unused eager loading
 * [Rubocop](https://github.com/bbatsov/rubocop) and [Rubocop-Rspec](https://github.com/nevir/rubocop-rspec)
   for reporting violations of the Ruby style guide
-* [Rails Best Practices](https://github.com/railsbp/rails_best_practices) for checking the code quality
 * [Brakeman](https://github.com/presidentbeef/brakeman) for checking application for common security vulnerabilities
 * [Pry Rails](https://github.com/rweng/pry-rails) for interactively exploring objects
 * [Bundler Audit](https://github.com/rubysec/bundler-audit) for scanning the Gemfile for

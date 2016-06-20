@@ -72,7 +72,6 @@ group :development, :test do
   gem "jasmine", "> 2.0"
   gem "jasmine-jquery-rails"
   gem "pry-rails"
-  gem "rails_best_practices", require: false
   gem "rspec-rails", "~> 3.4"
   gem "rubocop", require: false
   gem "rubocop-rspec", require: false
