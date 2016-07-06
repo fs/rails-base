@@ -10,15 +10,3 @@ en:
       # html: '<abbr title="required">*</abbr>'
     error_notification:
       default_message: 'Please review the problems below:'
-    labels:
-      user:
-        new:
-          email: Enter your email address
-        edit:
-          password: Enter new password
-          password_confirmation: Confirm your new password
-    hints:
-      user:
-        edit:
-          password: Leave it blank if you dont want to change it
-          current_password: We need your current password to confirm your changes
