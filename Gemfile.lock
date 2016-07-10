@@ -127,6 +127,7 @@ GEM
     fast_stack (0.1.0)
       rake
       rake-compiler
+    ffi (1.9.13)
     flamegraph (0.1.0)
       fast_stack
     foreman (0.63.0)
@@ -292,6 +293,17 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (~> 1.1)
+    sassc (1.10.0)
+      bundler
+      ffi (~> 1.9.6)
+      sass (>= 3.3.0)
+    sassc-rails (1.2.1)
+      railties (>= 4.0.0)
+      sass
+      sassc (~> 1.9)
+      sprockets (> 2.11)
+      sprockets-rails
+      tilt
     scss_lint (0.48.0)
       rake (>= 0.9, < 12)
       sass (~> 3.4.15)
@@ -423,7 +435,7 @@ DEPENDENCIES
   rspec-rails (~> 3.4)
   rubocop
   rubocop-rspec
-  sass-rails (~> 5.0.0)
+  sassc-rails
   scss_lint
   seedbank
   shoulda-matchers
@@ -439,6 +451,9 @@ DEPENDENCIES
   uglifier (>= 2.7.2)
   web-console (~> 2.0)
   webmock
+
+RUBY VERSION
+   ruby 2.3.0p0
 
 BUNDLED WITH
    1.12.5
