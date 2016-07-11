@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Update bin/setup script to clean old log files and tmp directory
 - Update [nokogiri gem](https://github.com/sparklemotion/nokogiri)
 - Update [rails_best_practices gem](https://github.com/railsbp/rails_best_practices)
 - Update [email_spec gem](https://github.com/email-spec/email-spec) to avoid flaky specs based on encoded html entities
