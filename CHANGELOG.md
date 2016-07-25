@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Update Ruby to 2.3.1
 - Update bin/setup script to clean old log files and tmp directory
 - Update [nokogiri gem](https://github.com/sparklemotion/nokogiri)
 - Update [rails_best_practices gem](https://github.com/railsbp/rails_best_practices)
