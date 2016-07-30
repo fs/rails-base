@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Minor improvements in newrelick.yml
 - Update Ruby to 2.3.1
 - Update bin/setup script to clean old log files and tmp directory
 - Update [nokogiri gem](https://github.com/sparklemotion/nokogiri)
