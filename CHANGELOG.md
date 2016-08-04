@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Update [rack-mini-profiler gem](https://github.com/MiniProfiler/rack-mini-profiler)
 - Minor improvements in newrelick.yml
 - Update Ruby to 2.3.1
 - Update bin/setup script to clean old log files and tmp directory
