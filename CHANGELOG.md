@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Upgrade [rack-mini-profiler gem](https://github.com/MiniProfiler/rack-mini-profiler) to 0.10.1 to avoid [vulnerability](https://github.com/MiniProfiler/rack-mini-profiler/commit/4273771d65f1a7411e3ef5843329308d0e2d257c)
 - Minor improvements in newrelick.yml
 - Update Ruby to 2.3.1
 - Update bin/setup script to clean old log files and tmp directory
