@@ -34,6 +34,7 @@ It's based on Rails 4 and Ruby 2.3.1.
 * [Foreman](https://github.com/ddollar/foreman) for managing development stack with Procfile
 * [Letter Opener](https://github.com/ryanb/letter_opener) for opening mail in the browser instead of sending it
 * [Bullet](https://github.com/flyerhzm/bullet) for detecting N+1 queries and unused eager loading
+* [Scout](https://github.com/scoutapp/scout-client) for memory leak detection
 * [Rubocop](https://github.com/bbatsov/rubocop) and [Rubocop-Rspec](https://github.com/nevir/rubocop-rspec)
   for reporting violations of the Ruby style guide
 * [Brakeman](https://github.com/presidentbeef/brakeman) for checking application for common security vulnerabilities
@@ -143,10 +144,11 @@ Out of the box Rails Base ready to be deployed to [Heroku.com](http://heroku.com
 * [Heroku Postgres](https://www.heroku.com/postgres) add-on will be used for database.
 * [SendGrid](https://devcenter.heroku.com/articles/sendgrid#ruby-rails) add-on required to be able to send emails.
 * [NewRelic](https://devcenter.heroku.com/articles/newrelic#ruby-installation-and-configuration) add-on could be used to monitor application performance.
-* [Rollbar](https://elements.heroku.com/addons/rollbar) add-on could be used to application errors.
+* [Rollbar](https://elements.heroku.com/addons/rollbar) add-on could be used to investigate application errors.
+* [Scout](https://elements.heroku.com/addons/scout) add-on could be used to detect memory leaks.
 
 ```bash
-heroku create --addons=heroku-postgresql,sendgrid,newrelic,rollbar --remote staging rails-base-example
+heroku create --addons=heroku-postgresql,sendgrid,newrelic,rollbar,scout:test --remote staging rails-base-example
 heroku config:add HOST="rails-base-example.herokuapp.com" MAILER_SENDER_ADDRESS="noreply@rails-base-example.herokuapp.com" NEW_RELIC_APP_NAME="Rails Base"
 git push staging master
 heroku run rake db:schema:load
