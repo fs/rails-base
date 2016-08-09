@@ -3,7 +3,7 @@
     h2 = title("Didn't receive confirmation instructions?")
 
 .row
-  .medium-6.columns
+  .medium-5.columns
     = simple_form_for resource,
         as: resource_name,
         url: confirmation_path(resource_name),
@@ -15,5 +15,5 @@
       .form-actions
         = f.button :submit, "Resend confirmation instructions"
 
-  .medium-6.columns.end
+  .medium-5.medium-offset-1.columns.end
     = render "users/shared/links"

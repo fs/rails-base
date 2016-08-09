@@ -1,12 +1,3 @@
-// The core components:
-// 1. Settings (@font-face, fonts, colors, global variables)
-// 2. Helpers (extends, functions, mixins)
-// 3. Base (base-level tags)
-// 4. Content (base-level typography - colors, fonts)
-// 5. Layout (base-level layout - margin, padding, sizing)
-
 @import "settings";
-@import "helpers";
-@import "base";
-@import "content";
-@import "layout";
+
+@include foundation-everything();
