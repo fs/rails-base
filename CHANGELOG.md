@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Upgrade [rails](https://github.com/rails/rails) to 4.2.7.1
 - Update foundation to 6 version
 - Change csscomb & scss-lint configs
 - Upgrade [rack-mini-profiler gem](https://github.com/MiniProfiler/rack-mini-profiler) to 0.10.1 to avoid [vulnerability](https://github.com/MiniProfiler/rack-mini-profiler/commit/4273771d65f1a7411e3ef5843329308d0e2d257c)
