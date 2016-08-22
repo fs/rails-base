@@ -45,7 +45,7 @@ gem "stackprof"
 group :staging, :production do
   gem "newrelic_rpm"
   gem "rails_stdout_logging"
-  gem "scout_apm", "~> 2.0.x"
+  gem "scout_apm"
 end
 
 group :test do

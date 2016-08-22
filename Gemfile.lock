@@ -298,7 +298,7 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (~> 1.1)
-    scout_apm (2.0.0)
+    scout_apm (2.1.1)
       rusage (~> 0.2.0)
     scss_lint (0.48.0)
       rake (>= 0.9, < 12)
@@ -436,7 +436,7 @@ DEPENDENCIES
   rubocop
   rubocop-rspec
   sass-rails (~> 5.0.0)
-  scout_apm (~> 2.0.x)
+  scout_apm
   scss_lint
   seedbank
   shoulda-matchers
