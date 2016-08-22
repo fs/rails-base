@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Add [scout gem](https://github.com/scoutapp/scout-client) for [memory leak detection](https://elements.heroku.com/addons/scout)
 - Upgrade [rails](https://github.com/rails/rails) to 4.2.7.1
 - Update foundation to 6 version
 - Change csscomb & scss-lint configs
