@@ -2,8 +2,8 @@
 class <%= controller_class_name %>Controller < ApplicationController
   respond_to :html
 
-  expose(:<%= singular_table_name %>, attributes: :<%= singular_table_name %>_params)
-  expose(:<%= plural_table_name %>) { <%= class_name %>.page(params[:page]) }
+  expose :<%= singular_table_name %>
+  expose :<%= plural_table_name %>, -> { <%= class_name %>.page(params[:page]) }
 
   def create
     flash[:notice] = '<%= human_name %> was successfully created.' if <%= singular_table_name %>.save
@@ -11,7 +11,10 @@ class <%= controller_class_name %>Controller < ApplicationController
   end
 
   def update
-    flash[:notice] = '<%= human_name %> was successfully updated.' if <%= singular_table_name %>.save
+    if <%= singular_table_name %>.update_attributes(<%= singular_table_name %>_params)
+      flash[:notice] = '<%= human_name %> was successfully updated.'
+    end
+
     respond_with(<%= singular_table_name %>)
   end
 
