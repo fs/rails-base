@@ -3,7 +3,7 @@
     h2 = title("Edit #{current_user.full_name}")
 
 .row
-  .medium-6.columns
+  .medium-5.columns
     = simple_form_for resource,
         as: resource_name,
         url: registration_path(resource_name),
@@ -21,7 +21,7 @@
       .form-actions
         = f.button :submit, "Update"
 
-  .medium-6.columns.end
+  .medium-5.medium-offset-1.columns.end
     h6
       b Cancel my account
     p

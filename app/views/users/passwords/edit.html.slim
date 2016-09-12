@@ -3,7 +3,7 @@
     h2 = title("Change password")
 
 .row
-  .medium-6.columns
+  .medium-5.columns
     = simple_form_for resource,
         as: resource_name,
         url: password_path(resource_name),
@@ -19,5 +19,5 @@
       .form-actions
         = f.button :submit, "Update password"
 
-  .medium-6.columns.end
+  .medium-5.medium-offset-1.columns.end
     = render "users/shared/links"

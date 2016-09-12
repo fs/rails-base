@@ -1,3 +1,5 @@
-ul.left
-  - if user_signed_in?
-    = active_link_to "Home", root_path, active: :exclusive, wrap_tag: :li
+.top-bar-left
+  ul.menu
+    li = link_to "Rails Base example site", root_path
+    - if user_signed_in?
+      = active_link_to "Home", root_path, active: :exclusive, wrap_tag: :li
