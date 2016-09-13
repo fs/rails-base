@@ -15,12 +15,14 @@ gem "sass-rails", "~> 5.0.0"
 gem "skim"
 gem "therubyracer", platforms: :ruby
 gem "uglifier", ">= 2.7.2"
+gem "premailer-rails"
 
 # views
 gem "active_link_to"
 gem "metamagic"
 gem "simple_form"
 gem "slim"
+gem "inky-rb", require: "inky"
 
 # all other gems
 gem "decent_decoration"
