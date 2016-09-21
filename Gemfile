@@ -11,6 +11,7 @@ gem "coffee-rails"
 gem "foundation-icons-sass-rails"
 gem "foundation-rails"
 gem "jquery-rails"
+gem "premailer-rails"
 gem "sass-rails", "~> 5.0.0"
 gem "skim"
 gem "therubyracer", platforms: :ruby
@@ -18,6 +19,7 @@ gem "uglifier", ">= 2.7.2"
 
 # views
 gem "active_link_to"
+gem "inky-rb", require: "inky"
 gem "metamagic"
 gem "simple_form"
 gem "slim"
