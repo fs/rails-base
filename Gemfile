@@ -20,7 +20,7 @@ gem "uglifier", ">= 2.7.2"
 # views
 gem "active_link_to"
 gem "inky-rb", require: "inky"
-gem "metamagic"
+gem "meta-tags"
 gem "simple_form"
 gem "slim"
 

@@ -186,8 +186,8 @@ GEM
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
     memory_profiler (0.9.4)
-    metamagic (3.1.7)
-      rails (>= 3.0.0)
+    meta-tags (2.4.0)
+      actionpack (>= 3.2.0, <= 5.1.0)
     method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
@@ -427,7 +427,7 @@ DEPENDENCIES
   launchy
   letter_opener
   memory_profiler
-  metamagic
+  meta-tags
   newrelic_rpm
   pg
   premailer-rails
@@ -467,4 +467,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.12.5
+   1.13.6
