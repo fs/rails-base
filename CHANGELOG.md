@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Replace gem [metamagic](https://github.com/lassebunk/metamagic) to [meta-tags](https://github.com/kpumuk/meta-tags). Using for CEO.
 - Upgrade [decent exposure](https://github.com/hashrocket/decent_exposure) to 3.0
 - Email previews for `DeviseMailer` at http://lvh.me:5000/rails/mailers
 - Upgrade [rails](https://github.com/rails/rails) to 4.2.7.1
