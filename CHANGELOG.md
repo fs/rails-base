@@ -34,6 +34,7 @@
 - Update [simple_form gem](https://github.com/plataformatec/simple_form)
 - User factory generate confirmed user by default
 - Update [nokogiri gem](https://github.com/sparklemotion/nokogiri)
+- Introduce [repository patern](https://www.amberbit.com/blog/2015/11/30/using-repository-pattern-to-migrate-rails-app-from-mongodb-to-postgresql/)
 
 ## 1.7 - 2015-11-27
 
