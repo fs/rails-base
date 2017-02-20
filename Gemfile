@@ -84,7 +84,6 @@ end
 group :development do
   gem "bullet"
   gem "letter_opener"
-  # gem "quiet_assets"
   gem "rails-erd"
   gem "slim-rails"
   gem "spring"
