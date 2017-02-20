@@ -1,29 +1,21 @@
-#!/usr/bin/env ruby
-require 'pathname'
-require 'fileutils'
-include FileUtils
+#!/usr/bin/env sh
 
-# path to your application root.
-APP_ROOT = Pathname.new File.expand_path('../../', __FILE__)
+set -e
 
-def system!(*args)
-  system(*args) || abort("\n== Command #{args} failed ==")
-end
+# Make sure we have Bundler installed
+gem install bundler --conservative
 
-chdir APP_ROOT do
-  # This script is a way to update your development environment automatically.
-  # Add necessary update steps to this file.
+# Set up Ruby dependencies via Bundler into .bundle folder
+rm -f .bundle/config
 
-  puts '== Installing dependencies =='
-  system! 'gem install bundler --conservative'
-  system('bundle check') || system!('bundle install')
+bundle check --path .bundle > /dev/null 2>&1 ||
+  bundle install --path=.bundle
 
-  puts "\n== Updating database =="
-  system! 'bin/rails db:migrate'
+# Updating database
+bin/rails db:migrate
 
-  puts "\n== Removing old logs and tempfiles =="
-  system! 'bin/rails log:clear tmp:clear'
+# Removing old logs and tempfiles
+bin/rails log:clear tmp:clear
 
-  puts "\n== Restarting application server =="
-  system! 'bin/rails restart'
-end
+# Restarting application server
+bin/rails restart
