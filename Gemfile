@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby "2.3.1"
 
-gem "rails", "4.2.7.1"
+gem "rails", "5.0.0.1"
 gem "pg"
 
 # assets
@@ -28,7 +28,7 @@ gem "slim"
 gem "decent_decoration"
 gem "decent_exposure"
 gem "devise"
-gem "draper"
+gem "draper", "3.0.0.pre1"
 gem "flamegraph"
 gem "google-analytics-rails"
 gem "health_check"
@@ -85,7 +85,7 @@ group :development do
   gem "bullet"
   gem "foreman", require: false
   gem "letter_opener"
-  gem "quiet_assets"
+  # gem "quiet_assets"
   gem "rails-erd"
   gem "slim-rails"
   gem "spring"
