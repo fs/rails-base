@@ -22,7 +22,7 @@ if [ ! -f .env ]; then
 fi
 
 # Set up database and add any development seed data
-bin/rake db:setup
+bin/rails db:setup
 
 # Clean log files and tmp directory
-bin/rake log:clear tmp:clear
+bin/rails log:clear tmp:clear
