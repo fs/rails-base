@@ -42,6 +42,7 @@ gem "rack-mini-profiler", require: false
 gem "responders"
 gem "rollbar"
 gem "seedbank"
+gem "sprockets", "3.6.3"
 gem "stackprof"
 
 group :staging, :production do
