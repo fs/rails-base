@@ -47,7 +47,6 @@ gem "stackprof"
 
 group :staging, :production do
   gem "newrelic_rpm"
-  gem "rails_stdout_logging"
 end
 
 group :test do
@@ -84,7 +83,6 @@ end
 
 group :development do
   gem "bullet"
-  gem "foreman", require: false
   gem "letter_opener"
   # gem "quiet_assets"
   gem "rails-erd"
