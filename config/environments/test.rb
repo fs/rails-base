@@ -27,7 +27,6 @@ Rails.application.configure do
 
   # Disable request forgery protection in test environment.
   config.action_controller.allow_forgery_protection = false
-
   config.action_mailer.perform_caching = false
 
   # Tell Action Mailer not to deliver emails to the real world.
@@ -39,7 +38,7 @@ Rails.application.configure do
   config.active_support.deprecation = :stderr
 
   # Raises error for missing translations
-  config.action_view.raise_on_missing_translations = true
+  # config.action_view.raise_on_missing_translations = true
 
   # Run specs in order
   config.active_support.test_order = :sorted

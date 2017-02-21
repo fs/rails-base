@@ -32,6 +32,9 @@ Rails.application.configure do
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
+  # Enable serving of images, stylesheets, and JavaScripts from an asset server.
+  # config.action_controller.asset_host = 'http://assets.example.com'
+
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
@@ -49,39 +52,19 @@ Rails.application.configure do
   config.log_level = :debug
 
   # Prepend all log lines with the following tags.
-  # config.log_tags = [ :request_id ]
-
-  # Use a real queuing backend for Active Job (and separate queues per environment)
-  # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "rewards_#{Rails.env}"
+  config.log_tags = [ :request_id ]
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
-  # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.action_controller.asset_host = ENV["ASSET_HOST"] if ENV["ASSET_HOST"]
-
+  # Use a real queuing backend for Active Job (and separate queues per environment)
+  # config.active_job.queue_adapter     = :resque
+  # config.active_job.queue_name_prefix = "rails_base_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
-
-  # Enable Email delivery via custom SMTP server or via SendGrid by default
-  if ENV["SMTP_USERNAME"] || ENV["SENDGRID_USERNAME"]
-    config.action_mailer.delivery_method = :smtp
-
-    config.action_mailer.smtp_settings = {
-      authentication:       :plain,
-      enable_starttls_auto: true,
-      openssl_verify_mode:  ENV.fetch("SMTP_OPENSSL_VERIFY_MODE", nil),
-      address:              ENV.fetch("SMTP_ADDRESS", "smtp.sendgrid.net"),
-      port:                 ENV.fetch("SMTP_PORT", 587),
-      domain:               ENV.fetch("SMTP_DOMAIN", "heroku.com"),
-      user_name:            ENV.fetch("SMTP_USERNAME") { ENV.fetch("SENDGRID_USERNAME") },
-      password:             ENV.fetch("SMTP_PASSWORD") { ENV.fetch("SENDGRID_PASSWORD") }
-    }
-  end
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
