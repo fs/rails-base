@@ -72,6 +72,7 @@ end
 group :development, :test do
   gem "awesome_print"
   gem "brakeman", require: false
+  gem "bullet"
   gem "bundler-audit", require: false
   gem "byebug"
   gem "coffeelint"
@@ -89,7 +90,6 @@ group :development, :test do
 end
 
 group :development do
-  gem "bullet"
   gem "letter_opener"
   gem "rails-erd"
   gem "slim-rails"
