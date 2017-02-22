@@ -35,7 +35,7 @@ gem "slim"
 gem "decent_decoration"
 gem "decent_exposure"
 gem "devise"
-gem "draper", "3.0.0.pre1"
+gem "draper"
 gem "flamegraph"
 gem "google-analytics-rails"
 gem "health_check"
@@ -49,7 +49,7 @@ gem "rack-mini-profiler", require: false, git: "https://github.com/MiniProfiler/
 gem "responders"
 gem "rollbar"
 gem "seedbank"
-gem "sprockets", "3.6.3"
+gem "sprockets"
 gem "stackprof"
 
 group :staging, :production do

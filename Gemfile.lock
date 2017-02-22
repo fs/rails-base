@@ -424,7 +424,7 @@ DEPENDENCIES
   decent_exposure
   devise
   dotenv-rails
-  draper (= 3.0.0.pre1)
+  draper
   email_spec
   factory_girl_rails
   faker
@@ -475,7 +475,7 @@ DEPENDENCIES
   slim_lint
   spring
   spring-commands-rspec
-  sprockets (= 3.6.3)
+  sprockets
   stackprof
   therubyracer
   uglifier (>= 2.7.2)
