@@ -17,6 +17,13 @@ gem "skim"
 gem "therubyracer", platforms: :ruby
 gem "uglifier", ">= 2.7.2"
 
+source "https://rails-assets.org" do
+  gem "rails-assets-autosize"
+  gem "rails-assets-jquery2"
+  gem "rails-assets-jquery-textcomplete"
+  gem "rails-assets-jquery-ujs"
+end
+
 # views
 gem "active_link_to"
 gem "inky-rb", require: "inky"
