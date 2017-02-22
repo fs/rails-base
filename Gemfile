@@ -63,9 +63,11 @@ group :test do
   gem "database_cleaner"
   gem "email_spec"
   gem "formulaic"
+  gem "guard-rspec"
   gem "launchy"
   gem "rspec-its"
   gem "shoulda-matchers"
+  gem "terminal-notifier-guard"
   gem "webmock", require: false
 end
 
