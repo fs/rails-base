@@ -11,10 +11,10 @@ gem "coffee-rails"
 gem "foundation-icons-sass-rails"
 gem "foundation-rails"
 gem "jquery-rails"
+gem "mini_racer"
 gem "premailer-rails"
 gem "sass-rails", "~> 5.0.0"
 gem "skim"
-gem "therubyracer", platforms: :ruby
 gem "uglifier", ">= 2.7.2"
 
 source "https://rails-assets.org" do
