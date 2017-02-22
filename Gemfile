@@ -38,7 +38,7 @@ gem "memory_profiler"
 gem "puma"
 gem "pundit"
 gem "rack-canonical-host"
-gem "rack-mini-profiler", require: false
+gem "rack-mini-profiler", require: false, git: "https://github.com/MiniProfiler/rack-mini-profiler.git"
 gem "responders"
 gem "rollbar"
 gem "seedbank"
