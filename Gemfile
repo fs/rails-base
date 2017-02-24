@@ -18,9 +18,6 @@ gem "skim"
 gem "uglifier", ">= 2.7.2"
 
 source "https://rails-assets.org" do
-  gem "rails-assets-autosize"
-  gem "rails-assets-jquery-textcomplete"
-  gem "rails-assets-jquery-timeago"
   gem "rails-assets-jquery-ujs"
   gem "rails-assets-jquery2"
 end

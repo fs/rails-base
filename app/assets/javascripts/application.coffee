@@ -8,9 +8,7 @@
 #= require jquery-ujs
 #= require foundation
 #= require jade/runtime
-#= require jquery-textcomplete
 #= require current_user
-#= require jquery-timeago
 #= require skim
 #= require_tree ../templates
 #= require_tree .
