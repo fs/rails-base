@@ -13,8 +13,7 @@ gem "foundation-rails", "~> 6.2.3.0"
 gem "jade-rails"
 gem "mini_racer"
 gem "premailer-rails"
-gem "sass-rails", "~> 5.0.0"
-gem "skim"
+gem "sass-rails", "~> 5.0.0", ">= 5.0.6"
 gem "uglifier", ">= 2.7.2"
 
 source "https://rails-assets.org" do
@@ -48,7 +47,6 @@ gem "rack-mini-profiler", require: false, git: "https://github.com/MiniProfiler/
 gem "responders"
 gem "rollbar"
 gem "seedbank"
-gem "sprockets"
 gem "stackprof"
 
 group :staging, :production do
