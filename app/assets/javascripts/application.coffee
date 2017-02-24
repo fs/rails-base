@@ -4,9 +4,11 @@
 # It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 # the compiled file.
 #
-#= require jquery
-#= require jquery_ujs
+#= require jquery2
+#= require jquery-ujs
 #= require foundation
+#= require jade/runtime
+#= require jquery-textcomplete
 #= require current_user
 #= require jquery-timeago
 #= require skim
