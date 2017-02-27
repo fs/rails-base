@@ -18,6 +18,8 @@
 - Upgrade [rack-mini-profiler gem](https://github.com/MiniProfiler/rack-mini-profiler) to 0.10.2
 - Remove foreman and save logs to STDOUT
 - Remove capybara-webkit and install [poltergeist](https://github.com/teampoltergeist/poltergeist)
+- [Bullet](https://github.com/flyerhzm/bullet) helper added
+- [Skim](https://github.com/appjudo/skim) removed
 
 ## 1.9 - 2016-04-22
 
