@@ -7,7 +7,6 @@
 #= require jquery2
 #= require jquery-ujs
 #= require foundation
-#= require jade/runtime
 #= require current_user
 #= require_tree ../templates
 #= require_tree .
