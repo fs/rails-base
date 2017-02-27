@@ -92,5 +92,6 @@ group :development do
   gem "slim-rails"
   gem "spring"
   gem "spring-commands-rspec"
+  gem "spring-watcher-listen"
   gem "web-console", "~> 2.0"
 end
