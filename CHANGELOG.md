@@ -13,7 +13,7 @@
 - Update [email_spec gem](https://github.com/email-spec/email-spec) to avoid flaky specs based on encoded html entities
 
 ## 2.0 - 2017-02-27
-- Upgrade Rails to 5.0.1, draper to 3.0.0.pre1, foundation-rails to 6.2.3.0, spring to 2.0.1
+- Upgrade Rails to 5.0.1, draper to 3.0.0.pre1, foundation-rails to 6.2.3.0
 - Add [guard-rspec](https://github.com/guard/guard-rspec) to spead up TDD
 - Upgrade [rack-mini-profiler gem](https://github.com/MiniProfiler/rack-mini-profiler) to 0.10.2
 - Remove foreman and save logs to STDOUT
