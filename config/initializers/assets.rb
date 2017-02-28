@@ -6,4 +6,4 @@ Rails.application.config.assets.precompile += %w(mailer)
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-Rails.application.config.assets.precompile += ["**/*.woff", "**/*.woff2"]
+# Rails.application.config.assets.precompile += ["**/*.woff", "**/*.woff2"]
