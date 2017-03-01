@@ -4,11 +4,10 @@
 # It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 # the compiled file.
 #
-#= require jquery
-#= require jquery_ujs
+#= require jquery2
+#= require jquery-ujs
 #= require foundation
 #= require current_user
-#= require skim
 #= require_tree ../templates
 #= require_tree .
 

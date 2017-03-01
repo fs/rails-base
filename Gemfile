@@ -2,20 +2,23 @@ source "https://rubygems.org"
 
 ruby "2.3.1"
 
-gem "rails", "4.2.7.1"
 gem "pg"
+gem "rails", "5.0.1"
 
 # assets
 gem "autoprefixer-rails"
 gem "coffee-rails"
 gem "foundation-icons-sass-rails"
 gem "foundation-rails"
-gem "jquery-rails"
+gem "mini_racer"
 gem "premailer-rails"
-gem "sass-rails", "~> 5.0.0"
-gem "skim"
-gem "therubyracer", platforms: :ruby
+gem "sass-rails", "~> 5.0.0", ">= 5.0.6"
 gem "uglifier", ">= 2.7.2"
+
+source "https://rails-assets.org" do
+  gem "rails-assets-jquery-ujs"
+  gem "rails-assets-jquery2"
+end
 
 # views
 gem "active_link_to"
@@ -38,7 +41,7 @@ gem "memory_profiler"
 gem "puma"
 gem "pundit"
 gem "rack-canonical-host"
-gem "rack-mini-profiler", require: false
+gem "rack-mini-profiler", require: false, git: "https://github.com/MiniProfiler/rack-mini-profiler.git"
 gem "responders"
 gem "rollbar"
 gem "seedbank"
@@ -46,25 +49,27 @@ gem "stackprof"
 
 group :staging, :production do
   gem "newrelic_rpm"
-  gem "rails_stdout_logging"
 end
 
 group :test do
   gem "capybara"
-  gem "capybara-webkit"
   gem "codeclimate-test-reporter", require: false
   gem "database_cleaner"
   gem "email_spec"
   gem "formulaic"
+  gem "guard-rspec"
   gem "launchy"
+  gem "poltergeist"
   gem "rspec-its"
   gem "shoulda-matchers"
+  gem "terminal-notifier-guard"
   gem "webmock", require: false
 end
 
 group :development, :test do
   gem "awesome_print"
   gem "brakeman", require: false
+  gem "bullet"
   gem "bundler-audit", require: false
   gem "byebug"
   gem "coffeelint"
@@ -82,13 +87,11 @@ group :development, :test do
 end
 
 group :development do
-  gem "bullet"
-  gem "foreman", require: false
   gem "letter_opener"
-  gem "quiet_assets"
   gem "rails-erd"
   gem "slim-rails"
   gem "spring"
   gem "spring-commands-rspec"
+  gem "spring-watcher-listen"
   gem "web-console", "~> 2.0"
 end

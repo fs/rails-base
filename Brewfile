@@ -1,4 +1,4 @@
 brew "postgresql"
 brew "qt"
-brew "phantomjs198"
+brew "phantomjs"
 brew "graphviz"

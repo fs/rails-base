@@ -21,7 +21,7 @@ feature "Sign In" do
     sign_in(user.email, "wrong password")
 
     expect(page).to have_content("Sign in")
-    expect(page).to have_content("Invalid email or password")
+    expect(page).to have_content("Invalid Email or password")
   end
 
   scenario "Visitor signs in with unconfirmed email address" do

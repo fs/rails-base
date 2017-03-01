@@ -9,11 +9,30 @@ AllCops:
   Exclude:
     - bin/**/*
     - db/**/*
-    - lib/templates/**/*
     - vendor/**/*
 
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
+Rails/OutputSafety:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/RepeatedDescription:
+  Enabled: false
+
+RSpec/MessageSpies:
+  EnforcedStyle: receive
+
+Style/AndOr:
+  Enabled: false
+
 Style/Documentation:
-  Description: 'Document classes and non-namespace modules.'
   Enabled: false
 
 Style/MethodCalledOnDoEndBlock:
@@ -23,22 +42,17 @@ Style/CollectionMethods:
   Enabled: true
 
 Style/SymbolArray:
-  Description: 'Use %i or %I for arrays of symbols.'
   Enabled: true
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
   ConsistentQuotesInMultiline: true
 
-Metrics/LineLength:
-  Description: 'Limit lines to 120 characters.'
-  Max: 120
-
-Lint/EndAlignment:
-  AlignWith: variable
+Style/EmptyMethod:
+  EnforcedStyle: expanded
   SupportedStyles:
-    - keyword
-    - variable
+    - compact
+    - expanded
 
 Style/AlignParameters:
   EnforcedStyle: with_fixed_indentation
@@ -51,3 +65,15 @@ Style/FrozenStringLiteralComment:
 
 Style/StringMethods:
   Enabled: true
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/BlockLength:
+  Enabled: false
+
+Lint/EndAlignment:
+  EnforcedStyleAlignWith: variable
+  SupportedStylesAlignWith:
+    - keyword
+    - variable
