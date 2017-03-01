@@ -15,7 +15,6 @@ It's based on Rails 4 and Ruby 2.3.1.
 * [Foundation Icon Font](https://github.com/zaiste/foundation-icons-sass-rails) for icons. Browse [icon set](http://zurb.com/playground/foundation-icon-fonts-3) examples
 * [Autoprefixer](https://github.com/ai/autoprefixer-rails) for writing CSS without vendor prefixes
 * [Slim](https://github.com/slim-template/slim) for views
-* [Skim](https://github.com/jfirebaugh/skim) for client-side templates (Slim with embedded Coffeescript)
 * [Simple Form](https://github.com/plataformatec/simple_form) for forms
 * [Responders](https://github.com/plataformatec/responders) to DRY controllers
 * [Decent Exposure](https://github.com/voxdolo/decent_exposure) to DRY controllers
@@ -31,7 +30,6 @@ It's based on Rails 4 and Ruby 2.3.1.
 ## Development Gems
 
 * [Puma](https://github.com/puma/puma) as Rails web server
-* [Foreman](https://github.com/ddollar/foreman) for managing development stack with Procfile
 * [Letter Opener](https://github.com/ryanb/letter_opener) for opening mail in the browser instead of sending it
 * [Bullet](https://github.com/flyerhzm/bullet) for detecting N+1 queries and unused eager loading
 * [Rubocop](https://github.com/bbatsov/rubocop) and [Rubocop-Rspec](https://github.com/nevir/rubocop-rspec)
@@ -81,7 +79,7 @@ Some gems have native extensions.
 You should have GCC installed on your development machine.
 
 * `qt` - to run specs with [Capybara Webkit](https://github.com/thoughtbot/capybara-webkit)
-* `phantomjs198` - to run Javascript unit tests
+* `phantomjs` - to run Javascript unit tests
 * `graphviz` - to generate Entity-Relationship Diagram
 
 Setup required dependencies from `Brewfile`:

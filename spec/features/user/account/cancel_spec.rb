@@ -17,6 +17,6 @@ feature "Cancel Account" do
     fill_form(:user, current_user.attributes.slice(:email, :password))
     click_button "Sign in"
 
-    expect(page).to have_content("Invalid email or password.")
+    expect(page).to have_content("Invalid Email or password.")
   end
 end

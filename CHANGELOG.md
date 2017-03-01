@@ -4,7 +4,6 @@
 
 - Upgrade [decent exposure](https://github.com/hashrocket/decent_exposure) to 3.0
 - Email previews for `DeviseMailer` at http://lvh.me:5000/rails/mailers
-- Upgrade [rails](https://github.com/rails/rails) to 4.2.7.1
 - Update foundation to 6 version
 - Change csscomb & scss-lint configs
 - Upgrade [rack-mini-profiler gem](https://github.com/MiniProfiler/rack-mini-profiler) to 0.10.1 to avoid [vulnerability](https://github.com/MiniProfiler/rack-mini-profiler/commit/4273771d65f1a7411e3ef5843329308d0e2d257c)
@@ -14,6 +13,13 @@
 - Update [nokogiri gem](https://github.com/sparklemotion/nokogiri)
 - Update [rails_best_practices gem](https://github.com/railsbp/rails_best_practices)
 - Update [email_spec gem](https://github.com/email-spec/email-spec) to avoid flaky specs based on encoded html entities
+- Upgrade [rails](https://github.com/rails/rails) to 5.0.1, draper to 3.0.0.pre1
+- Add [guard-rspec](https://github.com/guard/guard-rspec) to spead up TDD
+- Add [bullet](https://github.com/flyerhzm/bullet) helper
+- Replace [thetubyracer](https://github.com/cowboyd/therubyracer) with [mini-racer](https://github.com/discourse/mini_racer)
+- Remove foreman and save logs to STDOUT
+- Remove capybara-webkit and install [poltergeist](https://github.com/teampoltergeist/poltergeist)
+- Remove [skim](https://github.com/appjudo/skim)
 
 ## 1.9 - 2016-04-22
 
