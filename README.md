@@ -51,7 +51,7 @@ It's based on Rails 5 and Ruby 2.3.1.
 
 ## Testing Gems
 
-* [Capybara](https://github.com/jnicklas/capybara) and [Capybara Webkit](https://github.com/thoughtbot/capybara-webkit)
+* [Capybara](https://github.com/jnicklas/capybara) and [poltergeist](https://github.com/teampoltergeist/poltergeist)
   for integration testing, including JavaScript behavior
 * [Jasmine](http://jasmine.github.io/) for unit testing JavaScript code
 * [Jasmine jQuery](https://github.com/velesin/jasmine-jquery) for jQuery matchers and
