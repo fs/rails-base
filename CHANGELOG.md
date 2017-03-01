@@ -16,6 +16,7 @@
 - Upgrade [rails](https://github.com/rails/rails) to 5.0.1, draper to 3.0.0.pre1
 - Add [guard-rspec](https://github.com/guard/guard-rspec) to spead up TDD
 - Add [bullet](https://github.com/flyerhzm/bullet) helper
+- Replace [thetubyracer](https://github.com/cowboyd/therubyracer) with [mini-racer](https://github.com/discourse/mini_racer)
 - Remove foreman and save logs to STDOUT
 - Remove capybara-webkit and install [poltergeist](https://github.com/teampoltergeist/poltergeist)
 - Remove [skim](https://github.com/appjudo/skim)
