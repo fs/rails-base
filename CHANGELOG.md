@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Upgrade Ruby to 2.3.3, Nokogiri to 1.7.1
 - Upgrade [decent exposure](https://github.com/hashrocket/decent_exposure) to 3.0
 - Email previews for `DeviseMailer` at http://lvh.me:5000/rails/mailers
 - Update foundation to 6 version
