@@ -78,7 +78,6 @@ It's based on Rails 5 and Ruby 2.3.3.
 Some gems have native extensions.
 You should have GCC installed on your development machine.
 
-* `qt` - to run specs with [Capybara Webkit](https://github.com/thoughtbot/capybara-webkit)
 * `phantomjs` - to run Javascript unit tests
 * `graphviz` - to generate Entity-Relationship Diagram
 
