@@ -3,7 +3,7 @@ source "https://rubygems.org"
 ruby "2.4.1"
 
 gem "pg"
-gem "rails", "5.0.2"
+gem "rails", "5.1.2"
 
 # assets
 gem "autoprefixer-rails"
@@ -79,7 +79,7 @@ group :development, :test do
   gem "jasmine", "> 2.0"
   gem "jasmine-jquery-rails"
   gem "pry-rails"
-  gem "rspec-rails", "~> 3.4"
+  gem "rspec-rails", "~> 3.5"
   gem "rubocop", require: false
   gem "rubocop-rspec", require: false
   gem "scss_lint", require: false
@@ -93,5 +93,5 @@ group :development do
   gem "spring"
   gem "spring-commands-rspec"
   gem "spring-watcher-listen"
-  gem "web-console", "~> 2.0"
+  gem "web-console"
 end

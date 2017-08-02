@@ -67,7 +67,7 @@ Metrics/LineLength:
 Metrics/BlockLength:
   Enabled: false
 
-Style/AlignParameters:
+Layout/AlignParameters:
   EnforcedStyle: with_fixed_indentation
   SupportedStyles:
     - with_first_parameter
