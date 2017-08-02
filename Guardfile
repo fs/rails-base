@@ -1,7 +1,7 @@
 require "guard/rspec/dsl"
 
 guard :rspec, cmd: "bin/rspec" do
-  notification :terminal_notifier if `uname` =~ /Darwin/
+  notification :terminal_notifier if `uname`.match?(/Darwin/)
 
   dsl = Guard::RSpec::Dsl.new(self)
 
