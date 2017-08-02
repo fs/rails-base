@@ -4,7 +4,7 @@ Rails:
   Enabled: true
 
 AllCops:
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 2.4
   DisplayCopNames: true
   Exclude:
     - bin/**/*
@@ -55,12 +55,6 @@ Style/EmptyMethod:
     - compact
     - expanded
 
-Layout/AlignParameters:
-  EnforcedStyle: with_fixed_indentation
-  SupportedStyles:
-    - with_first_parameter
-    - with_fixed_indentation
-
 Style/FrozenStringLiteralComment:
   Enabled: false
 
@@ -72,6 +66,12 @@ Metrics/LineLength:
 
 Metrics/BlockLength:
   Enabled: false
+
+Layout/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+  SupportedStyles:
+    - with_first_parameter
+    - with_fixed_indentation
 
 Lint/EndAlignment:
   EnforcedStyleAlignWith: variable

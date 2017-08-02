@@ -5,7 +5,7 @@
 [![Code Climate](https://codeclimate.com/github/fs/rails-base.png)](https://codeclimate.com/github/fs/rails-base)
 
 Rails Base is the base Rails application template used at Flatstack.
-It's based on Rails 5 and Ruby 2.3.3.
+It's based on Rails 5 and Ruby 2.4
 
 ## Application Gems
 
