@@ -12,17 +12,15 @@ html class="no-js" lang="en"
 
     = stylesheet_link_tag :application
 
-    = javascript_include_tag "vendor/modernizr"
-
     = javascript_tag "window.App = {}"
 
     == analytics_init if GA.tracker
 
   body
-    #root
-      = render "navigation"
-      = render "messages"
+    = render "navigation"
+    = render "messages"
 
+    main.container
       = yield
 
     = render "footer"

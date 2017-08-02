@@ -60,11 +60,11 @@ SimpleForm.setup do |config|
     b.optional :readonly
 
     b.use :input
-    b.use :error, wrap_with: { tag: :small, class: :error }
+    b.use :error, wrap_with: { tag: :small, class: "error is-visible" }
 
     # Uncomment the following line to enable hints. The line is commented out by default since Foundation
     # does't provide styles for hints. You will need to provide your own CSS styles for hints.
-    b.use :hint,  wrap_with: { tag: :small, class: :hint }
+    b.use :hint,  wrap_with: { tag: :p, class: "help-text" }
   end
 
   config.wrappers :with_labels, class: :row, hint_class: "has-hint", error_class: :error do |b|
@@ -82,6 +82,11 @@ SimpleForm.setup do |config|
     b.wrapper tag: "div", class: "large-8 medium-8 column" do |error|
       error.use :error, wrap_with: { tag: :small, class: "error" }
     end
+  end
+
+  config.wrappers :right_label do |b|
+    b.use :input
+    b.use :label
   end
 
   # Wrappers for forms and inputs using the Twitter Bootstrap toolkit.
@@ -159,6 +164,7 @@ SimpleForm.setup do |config|
   # to match as key, and the input type that will be used when the field name
   # matches the regexp as value.
   # config.input_mappings = { /count/ => :integer }
+  config.wrapper_mappings = { boolean: :right_label }
 
   # Default priority for time_zone inputs.
   # config.time_zone_priority = nil
