@@ -55,7 +55,7 @@ Style/EmptyMethod:
     - compact
     - expanded
 
-Style/AlignParameters:
+Layout/AlignParameters:
   EnforcedStyle: with_fixed_indentation
   SupportedStyles:
     - with_first_parameter

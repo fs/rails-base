@@ -16,7 +16,7 @@ guard :rspec, cmd: "bin/rspec" do
   dsl.watch_spec_files_for(ruby.lib_files)
 
   # Rails files
-  rails = dsl.rails(view_extensions: %w(slim))
+  rails = dsl.rails(view_extensions: %w[slim])
   dsl.watch_spec_files_for(rails.app_files)
 
   # Rails config changes
