@@ -8,8 +8,9 @@ production:
   environment_variables:
     MAILER_SENDER_ADDRESS: noreply@example.com
     HOST: example.com
+    SMTP_DOMAIN: example.com
     SMTP_ADDRESS: smtp.sendgrid.net
     SMTP_PORT: 587
     SMTP_USERNAME:
     SMTP_PASSWORD:
-    SMTP_DOMAIN: {{ HOST }}
+
