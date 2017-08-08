@@ -1,11 +1,11 @@
 # Rails Base
 
-[![Build Status](https://semaphoreapp.com/api/v1/projects/31b68af8b073708a56e4e005bbcba2af4802816d/76140/shields_badge.png)](https://semaphoreapp.com/fs/rails-base)
+[![Build Status](https://semaphoreci.com/api/v1/fs/rails-base/branches/master/shields_badge.svg)](https://semaphoreci.com/fs/rails-base)
 [![Test Coverage](https://codeclimate.com/github/fs/rails-base/badges/coverage.svg)](https://codeclimate.com/github/fs/rails-base)
 [![Code Climate](https://codeclimate.com/github/fs/rails-base.png)](https://codeclimate.com/github/fs/rails-base)
 
 Rails Base is the base Rails application template used at Flatstack.
-It's based on Rails 4 and Ruby 2.2.3.
+It's based on Rails 5 and Ruby 2.4
 
 ## Application Gems
 
@@ -15,7 +15,6 @@ It's based on Rails 4 and Ruby 2.2.3.
 * [Foundation Icon Font](https://github.com/zaiste/foundation-icons-sass-rails) for icons. Browse [icon set](http://zurb.com/playground/foundation-icon-fonts-3) examples
 * [Autoprefixer](https://github.com/ai/autoprefixer-rails) for writing CSS without vendor prefixes
 * [Slim](https://github.com/slim-template/slim) for views
-* [Skim](https://github.com/jfirebaugh/skim) for client-side templates (Slim with embedded Coffeescript)
 * [Simple Form](https://github.com/plataformatec/simple_form) for forms
 * [Responders](https://github.com/plataformatec/responders) to DRY controllers
 * [Decent Exposure](https://github.com/voxdolo/decent_exposure) to DRY controllers
@@ -31,12 +30,10 @@ It's based on Rails 4 and Ruby 2.2.3.
 ## Development Gems
 
 * [Puma](https://github.com/puma/puma) as Rails web server
-* [Foreman](https://github.com/ddollar/foreman) for managing development stack with Procfile
 * [Letter Opener](https://github.com/ryanb/letter_opener) for opening mail in the browser instead of sending it
 * [Bullet](https://github.com/flyerhzm/bullet) for detecting N+1 queries and unused eager loading
 * [Rubocop](https://github.com/bbatsov/rubocop) and [Rubocop-Rspec](https://github.com/nevir/rubocop-rspec)
   for reporting violations of the Ruby style guide
-* [Rails Best Practices](https://github.com/railsbp/rails_best_practices) for checking the code quality
 * [Brakeman](https://github.com/presidentbeef/brakeman) for checking application for common security vulnerabilities
 * [Pry Rails](https://github.com/rweng/pry-rails) for interactively exploring objects
 * [Bundler Audit](https://github.com/rubysec/bundler-audit) for scanning the Gemfile for
@@ -52,7 +49,7 @@ It's based on Rails 4 and Ruby 2.2.3.
 
 ## Testing Gems
 
-* [Capybara](https://github.com/jnicklas/capybara) and [Capybara Webkit](https://github.com/thoughtbot/capybara-webkit)
+* [Capybara](https://github.com/jnicklas/capybara) and [poltergeist](https://github.com/teampoltergeist/poltergeist)
   for integration testing, including JavaScript behavior
 * [Jasmine](http://jasmine.github.io/) for unit testing JavaScript code
 * [Jasmine jQuery](https://github.com/velesin/jasmine-jquery) for jQuery matchers and
@@ -81,8 +78,7 @@ It's based on Rails 4 and Ruby 2.2.3.
 Some gems have native extensions.
 You should have GCC installed on your development machine.
 
-* `qt` - to run specs with [Capybara Webkit](https://github.com/thoughtbot/capybara-webkit)
-* `phantomjs198` - to run Javascript unit tests
+* `phantomjs` - to run Javascript unit tests
 * `graphviz` - to generate Entity-Relationship Diagram
 
 Setup required dependencies from `Brewfile`:
@@ -93,10 +89,10 @@ brew bundle
 
 ### Bootstrap application
 
-1. Clone application as new project with original repository named "rails-base". We use depth parameter here in order not to copy the history of changes in base project
+1. Clone application as new project with original repository named "rails-base".
 
    ```bash
-   git clone --depth 1 git://github.com/fs/rails-base.git --origin rails-base [MY-NEW-PROJECT]
+   git clone git://github.com/fs/rails-base.git --origin rails-base [MY-NEW-PROJECT]
    ```
 
 2. Create your new repo on GitHub and push master into it. Make sure master branch is tracking origin repo.

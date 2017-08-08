@@ -1,0 +1,5 @@
+Welcome <%= @user.full_name %>!
+
+You can confirm your account email through the url below:
+
+<%= confirmation_url(@user, confirmation_token: @token) %>

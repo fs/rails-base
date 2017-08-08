@@ -18,8 +18,8 @@ HealthCheck.setup do |config|
   config.http_status_for_error_object = 500
 
   # You can customize which checks happen on a standard health check
-  config.standard_checks = %w(database migrations site)
+  config.standard_checks = %w[database migrations site]
 
   # You can set what tests are run with the 'full' or 'all' parameter
-  config.full_checks = %w(database migrations site email cache)
+  config.full_checks = %w[database migrations site email cache]
 end

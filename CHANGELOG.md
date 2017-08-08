@@ -2,6 +2,35 @@
 
 ## Unreleased
 
+- Remove `qt` from Brewfile and dependencies list
+- Upgrade Ruby to 2.3.3, Nokogiri to 1.7.1
+- Upgrade [decent exposure](https://github.com/hashrocket/decent_exposure) to 3.0
+- Email previews for `DeviseMailer` at http://lvh.me:5000/rails/mailers
+- Update foundation to 6 version
+- Change csscomb & scss-lint configs
+- Upgrade [rack-mini-profiler gem](https://github.com/MiniProfiler/rack-mini-profiler) to 0.10.1 to avoid [vulnerability](https://github.com/MiniProfiler/rack-mini-profiler/commit/4273771d65f1a7411e3ef5843329308d0e2d257c)
+- Minor improvements in newrelick.yml
+- Update Ruby to 2.3.1
+- Update bin/setup script to clean old log files and tmp directory
+- Update [nokogiri gem](https://github.com/sparklemotion/nokogiri)
+- Update [rails_best_practices gem](https://github.com/railsbp/rails_best_practices)
+- Update [email_spec gem](https://github.com/email-spec/email-spec) to avoid flaky specs based on encoded html entities
+- Upgrade [rails](https://github.com/rails/rails) to 5.0.2, draper to 3.0.0.pre1
+- Add [guard-rspec](https://github.com/guard/guard-rspec) to spead up TDD
+- Add [bullet](https://github.com/flyerhzm/bullet) helper
+- Replace [thetubyracer](https://github.com/cowboyd/therubyracer) with [mini-racer](https://github.com/discourse/mini_racer)
+- Remove foreman and save logs to STDOUT
+- Remove capybara-webkit and install [poltergeist](https://github.com/teampoltergeist/poltergeist)
+- Remove [skim](https://github.com/appjudo/skim)
+
+## 1.9 - 2016-04-22
+
+- Introduce [Rspec-Its](https://github.com/rspec/rspec-its)
+- Configure `.gitattributes` to avoid merge conflicts due to `CHANGELOG`
+- Upgrade rubocop to 0.39.0, rubocop-rspec to 1.4.1, active_link_to to 1.0.3, faker to 1.6.3, slim_lint to 0.7.2
+
+## 1.8 - 2016-03-22
+
 - Upgrade Rails to 4.2.6, Ruby to 2.3.0, Rollbar to 2.8.3, Spring to 1.6.4
 - Remove [fuubar](https://github.com/thekompanee/fuubar)
 - Show 2 slowest specs during specs run [#415](https://github.com/fs/rails-base/pull/415) [#410](https://github.com/fs/rails-base/pull/410/files)

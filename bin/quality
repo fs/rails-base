@@ -2,15 +2,14 @@
 
 set -e
 
-bin/rubocop --config config/rubocop.yml
+bin/rubocop --display-style-guide
 bin/brakeman --quiet --skip-libs --exit-on-warn
-bin/rails_best_practices --silent --spec --features -x lib/templates
 
 # Using rake-task here since coffeelint.rb cmd doesn't exit with non-zero status
 # when code contains errors
-bin/rake coffeelint
-bin/scss-lint --config config/scss-lint.yml
-SLIM_LINT_RUBOCOP_CONF=config/rubocop.yml bin/slim-lint --config config/slim-lint.yml app/views
+bin/rails coffeelint
+bin/scss-lint
+bin/slim-lint app/views
 
 bin/bundle-audit update
 bin/bundle-audit

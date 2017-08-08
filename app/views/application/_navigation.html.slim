@@ -1,12 +1,7 @@
-nav.top-bar( data-topbar )
+.title-bar data-hide-for="medium" data-responsive-toggle="navigation_menu"
+  button.menu-icon data-toggle="" type="button"
+  title-bar-title Menu
 
-  ul.title-area
-    li.name
-      h1 = link_to "Rails Base example site", root_path
-    li.toggle-topbar
-      a(href="#")
-        i.fi-list
-
-  section.top-bar-section
-    = render "navigation_main"
-    = render "navigation_user"
+nav.top-bar#navigation_menu
+  = render "navigation_main"
+  = render "navigation_user"
