@@ -1,12 +1,8 @@
 production:
-  postgresql:
-    configuration:
-      version: 9.3.4
   rails:
     server:
       unique_name: app
     configuration:
-      ruby_version: 2.2.3
       asset_pipeline_precompile: true
       do_initial_db_schema_load: true
   environment_variables:
