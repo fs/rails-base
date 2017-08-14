@@ -6,7 +6,7 @@
 namespace :assets do
   desc "Create .gz versions of assets"
   task gzip: :environment do
-    Dir["#{Rails.root}/public/assets/**/*.{css,html,js,otf,svg,txt,xml}"].each do |file|
+    Dir[Rails.root.join("public", "assets", "**", "*.{css,html,js,otf,svg,txt,xml}")].each do |file|
       mtime = File.mtime(file)
       gz_file = "#{file}.gz"
 
