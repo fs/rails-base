@@ -23,7 +23,7 @@ end
 # views
 gem "active_link_to"
 gem "inky-rb", require: "inky"
-gem "metamagic"
+gem "meta-tags"
 gem "simple_form"
 gem "slim"
 

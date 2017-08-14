@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Replace gem [metamagic](https://github.com/lassebunk/metamagic) to [meta-tags](https://github.com/kpumuk/meta-tags). Using for CEO.
 - Remove `qt` from Brewfile and dependencies list
 - Upgrade Ruby to 2.3.3, Nokogiri to 1.7.1
 - Upgrade [decent exposure](https://github.com/hashrocket/decent_exposure) to 3.0
