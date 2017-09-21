@@ -14,7 +14,7 @@ html class="no-js" lang="en"
 
     = javascript_tag "window.App = {}"
 
-    == analytics_init if GA.tracker
+    == analytics_init if GoogleAnalytics.valid_tracker?
 
   body
     = render "navigation"
