@@ -12,12 +12,12 @@ feature "Sign Up" do
 
     open_email(registered_user.email)
 
-    expect(current_email).to have_subject("Confirmation instructions")
-    expect(current_email).to have_body_text(registered_user.full_name)
+    expect(current_email.header("Subject")).to eq("Confirmation instructions")
+    expect(current_email).to have_content(registered_user.full_name)
 
-    visit_in_email("Confirm my account")
+    current_email.click_link("Confirm my account")
 
     expect(page).to have_content("Your email address has been successfully confirmed")
-    expect(page).to have_text(registered_user.full_name)
+    expect(page).to have_content(registered_user.full_name)
   end
 end

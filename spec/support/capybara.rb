@@ -1,4 +1,5 @@
 require "capybara/poltergeist"
+require "capybara/email/rspec"
 
 Capybara.configure do |config|
   config.match = :prefer_exact

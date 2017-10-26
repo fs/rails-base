@@ -42,4 +42,7 @@ Rails.application.configure do
 
   # Run specs in order
   config.active_support.test_order = :sorted
+
+  # Host for capybara-email gem
+  config.action_mailer.default_url_options = { host: "www.example.com" }
 end
