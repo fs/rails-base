@@ -1,0 +1,14 @@
+.row
+  .columns
+    h2 = title("Create your feedback")
+.row
+  .medium-5.columns
+    = simple_form_for feedback do |f|
+
+      .form-inputs
+        = f.input :name, required: true, autofocus: true
+        = f.input :email, required: true
+        = f.input :text, required: true, input_html: { rows: 4 }
+
+      .form-actions
+        = f.button :submit, "Submit feedback"

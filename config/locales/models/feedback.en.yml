@@ -1,0 +1,6 @@
+en:
+  flash:
+    feedbacks:
+      create:
+        notice: '%{resource_name} was successfully send!'
+
