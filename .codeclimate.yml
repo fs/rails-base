@@ -16,6 +16,10 @@ engines:
     enabled: true
   rubocop:
     enabled: true
+    channel: rubocop-0-48
+    checks:
+      Rubocop/Style/PercentLiteralDelimiters:
+        enabled: false
 ratings:
   paths:
   - Gemfile.lock

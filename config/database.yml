@@ -3,7 +3,7 @@ defaults: &defaults
   encoding: unicode
   min_messages: warning
   timeout: 5000
-  pool: <%= [ENV.fetch("MAX_THREADS", 5), ENV.fetch("DB_POOL", 5)].max %>
+  pool: <%= [ENV.fetch("MAX_THREADS", 5).to_i, ENV.fetch("DB_POOL", 5).to_i].max %>
 
 development:
   database: <%= ENV.fetch("DATABASE_NAME", File.basename(Rails.root)) %>_dev

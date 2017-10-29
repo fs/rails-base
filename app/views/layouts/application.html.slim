@@ -7,14 +7,14 @@ html class="no-js" lang="en"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     meta name="robots" content="NOODP,NOYDIR"
 
-    = metamagic site: "RailsBase", title: %i(title site), separator: " - "
+    = display_meta_tags site: "RailsBase", keywords: %w(title site)
     = csrf_meta_tags
 
     = stylesheet_link_tag :application
 
     = javascript_tag "window.App = {}"
 
-    == analytics_init if GA.tracker
+    == analytics_init if GoogleAnalytics.valid_tracker?
 
   body
     = render "navigation"

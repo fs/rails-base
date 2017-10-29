@@ -5,7 +5,7 @@
 [![Code Climate](https://codeclimate.com/github/fs/rails-base.png)](https://codeclimate.com/github/fs/rails-base)
 
 Rails Base is the base Rails application template used at Flatstack.
-It's based on Rails 5 and Ruby 2.3.1.
+It's based on Rails 5 and Ruby 2.4.2
 
 ## Application Gems
 
@@ -78,7 +78,6 @@ It's based on Rails 5 and Ruby 2.3.1.
 Some gems have native extensions.
 You should have GCC installed on your development machine.
 
-* `qt` - to run specs with [Capybara Webkit](https://github.com/thoughtbot/capybara-webkit)
 * `phantomjs` - to run Javascript unit tests
 * `graphviz` - to generate Entity-Relationship Diagram
 
@@ -150,6 +149,11 @@ git push staging master
 heroku run rake db:schema:load
 heroku open
 ```
+
+### Custom Server
+
+To be able to deploy to your custom server [Cloud66.com](http://cloud66.com) recommended as a provisioning and deployment service.
+Make sure to review and configure `cloud66/manifest.yml` before deployment.
 
 ## Credits
 

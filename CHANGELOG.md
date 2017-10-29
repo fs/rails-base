@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Replace gem [metamagic](https://github.com/lassebunk/metamagic) to [meta-tags](https://github.com/kpumuk/meta-tags). Using for CEO.
+- Remove `qt` from Brewfile and dependencies list
+- Upgrade Ruby to 2.3.3, Nokogiri to 1.7.1
 - Upgrade [decent exposure](https://github.com/hashrocket/decent_exposure) to 3.0
 - Email previews for `DeviseMailer` at http://lvh.me:5000/rails/mailers
 - Update foundation to 6 version
@@ -13,7 +16,7 @@
 - Update [nokogiri gem](https://github.com/sparklemotion/nokogiri)
 - Update [rails_best_practices gem](https://github.com/railsbp/rails_best_practices)
 - Update [email_spec gem](https://github.com/email-spec/email-spec) to avoid flaky specs based on encoded html entities
-- Upgrade [rails](https://github.com/rails/rails) to 5.0.1, draper to 3.0.0.pre1
+- Upgrade [rails](https://github.com/rails/rails) to 5.0.2, draper to 3.0.0.pre1
 - Add [guard-rspec](https://github.com/guard/guard-rspec) to spead up TDD
 - Add [bullet](https://github.com/flyerhzm/bullet) helper
 - Replace [thetubyracer](https://github.com/cowboyd/therubyracer) with [mini-racer](https://github.com/discourse/mini_racer)
