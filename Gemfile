@@ -53,14 +53,15 @@ end
 
 group :test do
   gem "capybara"
+  gem "chromedriver-helper"
   gem "codeclimate-test-reporter", require: false
   gem "database_cleaner"
   gem "email_spec"
   gem "formulaic"
   gem "guard-rspec"
   gem "launchy"
-  gem "poltergeist"
   gem "rspec-its"
+  gem "selenium-webdriver"
   gem "shoulda-matchers"
   gem "terminal-notifier-guard"
   gem "webmock", require: false
