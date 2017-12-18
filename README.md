@@ -49,7 +49,7 @@ It's based on Rails 5 and Ruby 2.4.2
 
 ## Testing Gems
 
-* [Capybara](https://github.com/jnicklas/capybara) and [poltergeist](https://github.com/teampoltergeist/poltergeist)
+* [Capybara](https://github.com/jnicklas/capybara) and [selenium-webdriver](https://github.com/SeleniumHQ/selenium/tree/master/rb)
   for integration testing, including JavaScript behavior
 * [Jasmine](http://jasmine.github.io/) for unit testing JavaScript code
 * [Jasmine jQuery](https://github.com/velesin/jasmine-jquery) for jQuery matchers and
