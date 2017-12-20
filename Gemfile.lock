@@ -103,7 +103,6 @@ GEM
       safe_yaml (~> 1.0.0)
     css_parser (1.4.9)
       addressable
-    database_cleaner (1.6.1)
     decent_decoration (0.1.0)
       decent_exposure (~> 3.0)
     decent_exposure (3.0.2)
@@ -446,7 +445,6 @@ DEPENDENCIES
   codeclimate-test-reporter
   coffee-rails
   coffeelint
-  database_cleaner
   decent_decoration
   decent_exposure
   devise
@@ -512,4 +510,4 @@ RUBY VERSION
    ruby 2.4.2p198
 
 BUNDLED WITH
-   1.15.4
+   1.16.0
