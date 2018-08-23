@@ -1,5 +1,3 @@
-export default function(dir) {
-  const req = require.context(dir, true, /\.js$/);
-
+export default function(req) {
   req.keys().forEach(req);
 }
