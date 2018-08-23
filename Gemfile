@@ -6,24 +6,13 @@ gem "pg"
 gem "rails", "5.1.2"
 
 # assets
-gem "autoprefixer-rails"
-gem "coffee-rails"
-gem "foundation-icons-sass-rails"
-gem "foundation-rails"
-gem "mini_racer"
-gem "premailer-rails"
-gem "sass-rails", "~> 5.0.0", ">= 5.0.6"
-gem "uglifier", ">= 2.7.2"
-
-source "https://rails-assets.org" do
-  gem "rails-assets-jquery-ujs"
-  gem "rails-assets-jquery2"
-end
+gem 'webpacker', '~> 3.5'
 
 # views
 gem "active_link_to"
 gem "inky-rb", require: "inky"
 gem "meta-tags"
+gem "premailer-rails"
 gem "simple_form"
 gem "slim"
 
@@ -76,8 +65,6 @@ group :development, :test do
   gem "dotenv-rails"
   gem "factory_girl_rails"
   gem "faker"
-  gem "jasmine", "> 2.0"
-  gem "jasmine-jquery-rails"
   gem "pry-rails"
   gem "rspec-rails", "~> 3.5"
   gem "rubocop", require: false

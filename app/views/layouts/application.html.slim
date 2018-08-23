@@ -10,9 +10,7 @@ html class="no-js" lang="en"
     = display_meta_tags site: "RailsBase", keywords: %w(title site)
     = csrf_meta_tags
 
-    = stylesheet_link_tag :application
-
-    = javascript_tag "window.App = {}"
+    = stylesheet_pack_tag "application"
 
     == analytics_init if GoogleAnalytics.valid_tracker?
 
@@ -25,7 +23,4 @@ html class="no-js" lang="en"
 
     = render "footer"
 
-    javascript:
-      App.currentUserData = #{{current_user.to_json}};
-
-    = javascript_include_tag :application
+    = javascript_pack_tag "application"

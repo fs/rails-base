@@ -16,6 +16,8 @@ rm -f .bundle/config
 bundle check --path .bundle > /dev/null 2>&1 ||
   bundle install --path=.bundle $BUNDLER_ARGS
 
+bin/yarn install
+
 # Set up configurable environment variables
 if [ ! -f .env ]; then
   cp .env.example .env

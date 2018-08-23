@@ -1,0 +1,52 @@
+{
+  "scripts": {
+    "stylelint": "stylelint './frontend/**/*.scss'",
+    "eslint": "eslint ./frontend --ext .js",
+    "lint": "stylelint './frontend/**/*.scss' && eslint ./frontend --ext .js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@rails/webpacker": "3.5",
+    "foundation-emails": "^2.2.1",
+    "foundation-icon-fonts": "^0.1.1",
+    "foundation-sites": "^6.5.0-rc.2",
+    "jquery": "^3.3.1",
+    "jquery-ujs": "^1.2.2",
+    "what-input": "^5.1.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-import-resolver-webpack": "^0.10.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.11.1",
+    "prettier": "^1.14.2",
+    "script-loader": "^0.7.2",
+    "stylelint": "^9.5.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^3.3.0",
+    "webpack-dev-server": "2.11.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "modulePaths": [
+      "frontend"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/config",
+      "/.bundle"
+    ]
+  }
+}
