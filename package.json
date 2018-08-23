@@ -24,11 +24,11 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.5.0",
     "prettier": "^1.14.2",
     "script-loader": "^0.7.2",
     "stylelint": "^9.5.0",
     "stylelint-config-recommended-scss": "^3.2.0",
-    "stylelint-config-standard": "^18.2.0",
     "stylelint-scss": "^3.3.0",
     "webpack-dev-server": "2.11.2"
   },
