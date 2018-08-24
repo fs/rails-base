@@ -6,7 +6,7 @@ gem "pg"
 gem "rails", "5.1.2"
 
 # assets
-gem 'webpacker', '~> 3.5'
+gem "webpacker", "~> 3.5"
 
 # views
 gem "active_link_to"
