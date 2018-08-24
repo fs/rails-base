@@ -6,8 +6,7 @@
     "jquery": true
   },
   "rules": {
-    "react/require-default-props": 0,
-    "import/no-webpack-loader-syntax": 0
+    "react/require-default-props": 0
   },
   "settings": {
     "import/resolver": {
