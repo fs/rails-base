@@ -78,8 +78,9 @@ It's based on Rails 5 and Ruby 2.4.2
 Some gems have native extensions.
 You should have GCC installed on your development machine.
 
-* `phantomjs` - to run Javascript unit tests
 * `graphviz` - to generate Entity-Relationship Diagram
+* `node` - JavaScript runtime
+* `phantomjs` - to run Javascript unit tests
 
 Setup required dependencies from `Brewfile`:
 ```bash
