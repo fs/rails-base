@@ -25,12 +25,18 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       t.string   :current_sign_in_ip
       t.string   :last_sign_in_ip
 
+      # Lockable
+      t.integer :failed_attempts, default: 0, null: false
+      t.string :users, :unlock_token
+      t.datetime :locked_at
+
       t.timestamps
       t.string :full_name
     end
 
     add_index :users, :email,                unique: true
     add_index :users, :reset_password_token, unique: true
+    add_index :users, :unlock_token,         unique: true
   end
 
   def self.down

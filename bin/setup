@@ -8,7 +8,7 @@ if [ "$CI" ]; then
 fi
 
 # Make sure we have Bundler installed
-gem install bundler --conservative
+gem install bundler -v 1.17.3 --conservative
 
 # Set up Ruby dependencies via Bundler into .bundle folder
 rm -f .bundle/config

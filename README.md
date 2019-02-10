@@ -80,6 +80,7 @@ You should have GCC installed on your development machine.
 
 * `phantomjs` - to run Javascript unit tests
 * `graphviz` - to generate Entity-Relationship Diagram
+* `node` - JavaScript runtime
 
 Setup required dependencies from `Brewfile`:
 ```bash

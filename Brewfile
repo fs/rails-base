@@ -1,4 +1,6 @@
-brew "postgresql"
-brew "phantomjs"
+cask "phantomjs"
+
 brew "graphviz"
+brew "node"
+brew "postgresql"
 brew "yarn"
