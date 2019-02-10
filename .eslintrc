@@ -1,0 +1,22 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "plugin:prettier/recommended", "prettier/react"],
+  "env": {
+    "browser": true,
+    "jquery": true
+  },
+  "rules": {
+    "react/require-default-props": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": {
+          "resolve": {
+            "modules": ["frontend", "node_modules"]
+          }
+        }
+      }
+    }
+  }
+}

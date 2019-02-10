@@ -1,0 +1,7 @@
+@import '~foundation-sites/scss/foundation';
+
+$fi-path: "~foundation-icon-fonts/";
+
+@import "~foundation-icon-fonts/foundation-icons";
+
+@include foundation-everything;
