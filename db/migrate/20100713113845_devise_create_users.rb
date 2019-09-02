@@ -27,7 +27,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
 
       # Lockable
       t.integer :failed_attempts, default: 0, null: false
-      t.string :users, :unlock_token
+      t.string :unlock_token
       t.datetime :locked_at
 
       t.timestamps
