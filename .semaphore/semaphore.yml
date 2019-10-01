@@ -32,5 +32,10 @@ blocks:
             - checkout
             - cache restore
             - bundle install --deployment --without development staging production --jobs 4
+            - sem-service start postgres
+            - cp .env.example .env
+            - bin/rails db:setup
+            - bin/rspec
+            - bin/quality
             - cache store
 
