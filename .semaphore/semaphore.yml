@@ -23,12 +23,8 @@ global_job_config:
       value: 'test'
     - name: DATABASE_URL
       value: 'postgresql://postgres@localhost/test?encoding=utf8'
-    - name: BUNDLE_WITHOUT
-      value: 'development:staging:production'
-    - name: BUNDLE_DEPLOYMENT
-      value: 'true'
-    - name: BUNDLE_JOBS
-      value: '4'
+    - name: BUNDLE_ARGS
+      value: '--deployment --without development staging production --jobs 4'
 
   prologue:
     commands:
@@ -41,14 +37,14 @@ blocks:
       jobs:
         - name: Bundle
           commands:
-          - bundle install
+          - bundle install ${BUNDLE_ARGS}
           - cache store
 
   - name: Test
     task:
       prologue:
         commands:
-          - bundle install --local
+          - bundle install ${BUNDLE_ARGS} --local
           - sem-service start postgres
           - cp .env.example .env
           - bin/rails db:setup
