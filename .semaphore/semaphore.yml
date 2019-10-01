@@ -24,3 +24,6 @@ blocks:
         - name: Build
           commands:
             - checkout
+            - >-
+              bundle install --deployment --without development staging
+              production --jobs 4
