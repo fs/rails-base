@@ -1,0 +1,31 @@
+---
+services:
+
+##NEWLINE##
+  web:
+    git_url: git@github.com:fs/rails-base.git
+    git_branch: master
+    command: bundle exec puma -C config/puma.rb
+    build_command: /bin/sh -c "RAILS_ENV=_env:RAILS_ENV bundle exec rake db:schema:load"
+    deploy_command: /bin/sh -c "RAILS_ENV=_env:RAILS_ENV bundle exec rake db:migrate"
+    build_root: .
+
+    ports:
+      - container: 5000
+        http: 80
+        https: 443
+        
+        
+    
+
+    env_vars:
+      RAILS_ENV: production
+    
+      RACK_ENV: production
+    
+
+
+
+##NEWLINE##
+databases:
+  - 
