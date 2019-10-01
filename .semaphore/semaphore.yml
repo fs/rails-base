@@ -26,16 +26,21 @@ blocks:
         - name: DATABASE_URL
           value: 'postgresql://postgres@localhost/test?encoding=utf8'
 
-      jobs:
-        - name: Build
-          commands:
-            - checkout
-            - cache restore
-            - bundle install --deployment --without development staging production --jobs 4
-            - sem-service start postgres
-            - cp .env.example .env
-            - bin/rails db:setup
-            - bin/rspec
-            - bin/quality
-            - cache store
+      prologue:
+        commands:
+          - checkout
+          - cache restore
+          - bundle install --deployment --without development staging production --jobs 4
+          - sem-service start postgres
+          - cp .env.example .env
+          - bin/rails db:setup
+          - cache store
 
+      jobs:
+        - name: RSpec
+          commands:
+            - bin/rspec
+
+        - name: Quality
+          commands:
+            - bin/quality
