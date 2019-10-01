@@ -43,8 +43,6 @@ blocks:
 
   - name: Test
     task:
-      env_vars:
-
       prologue:
         commands:
           - bundle install --local
