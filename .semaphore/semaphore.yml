@@ -1,19 +1,26 @@
 version: v1.0
-name: Hello Semaphore
+name: Rails Base
 agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
+execution_time_limit:
+  hours: 1
+auto_cancel:
+  queued:
+    when: 'true'
+fail_fast:
+  stop:
+    when: 'true'
 blocks:
-  - name: Simple example
+  - name: Build
     task:
       env_vars:
-        - name: APP_ENV
-          value: prod
+        - name: RAILS_ENV
+          value: test
+        - name: DATABASE_URL
+          value: 'postgresql://postgres@localhost/test?encoding=utf8'
       jobs:
-        - name: Download our code
+        - name: Build
           commands:
-            - echo "Hello from Semaphore!"
-            - echo $APP_ENV
             - checkout
-            - ls -alh
