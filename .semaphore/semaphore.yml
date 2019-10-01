@@ -1,17 +1,22 @@
 version: v1.0
 name: Rails Base
+
 agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
+
 execution_time_limit:
   hours: 1
+
 auto_cancel:
   queued:
     when: 'true'
+
 fail_fast:
   stop:
     when: 'true'
+
 blocks:
   - name: Build
     task:
@@ -20,10 +25,12 @@ blocks:
           value: test
         - name: DATABASE_URL
           value: 'postgresql://postgres@localhost/test?encoding=utf8'
+
       jobs:
         - name: Build
           commands:
             - checkout
-            - >-
-              bundle install --deployment --without development staging
-              production --jobs 4
+            - cache restore
+            - bundle install --deployment --without development staging production --jobs 4
+            - cache store
+
