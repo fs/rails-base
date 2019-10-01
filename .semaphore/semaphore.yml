@@ -20,17 +20,20 @@ fail_fast:
 global_job_config:
   env_vars:
     - name: RAILS_ENV
-      value: test
+      value: 'test'
     - name: DATABASE_URL
       value: 'postgresql://postgres@localhost/test?encoding=utf8'
-    - name: BUNDLER_ARGS
-      value: '--deployment --without development staging production --jobs 4'
+    - name: BUNDLE_WITHOUT
+      value: 'development:staging:production'
+    - name: BUNDLE_DEPLOYMENT
+      value: 'true'
+    - name: BUNDLE_JOBS
+      value: '4'
 
   prologue:
     commands:
       - checkout
       - cache restore
-
 
 blocks:
   - name: Setup
