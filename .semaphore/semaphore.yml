@@ -17,24 +17,40 @@ fail_fast:
   stop:
     when: 'true'
 
+global_job_config:
+  env_vars:
+    - name: RAILS_ENV
+      value: test
+    - name: DATABASE_URL
+      value: 'postgresql://postgres@localhost/test?encoding=utf8'
+    - name: BUNDLER_ARGS
+      value: '--deployment --without development staging production --jobs 4'
+
+  prologue:
+    commands:
+      - checkout
+      - cache restore
+
+
 blocks:
-  - name: Build
+  - name: Setup
+    task:
+      jobs:
+        - name: Bundle
+          commands:
+          - bundle install
+          - cache store
+
+  - name: Test
     task:
       env_vars:
-        - name: RAILS_ENV
-          value: test
-        - name: DATABASE_URL
-          value: 'postgresql://postgres@localhost/test?encoding=utf8'
 
       prologue:
         commands:
-          - checkout
-          - cache restore
-          - bundle install --deployment --without development staging production --jobs 4
+          - bundle install --local
           - sem-service start postgres
           - cp .env.example .env
           - bin/rails db:setup
-          - cache store
 
       jobs:
         - name: RSpec
