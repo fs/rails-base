@@ -17,7 +17,6 @@ blocks:
           # with the --use-cache option in order
           # to avoid the shallow clone of your GitHub repository.
           - checkout --use-cache
-
           # Setup SSH key from secrets
           - ssh-keyscan -H heroku.com >> ~/.ssh/known_hosts
           - chmod 600 ~/.ssh/id_rsa_semaphore_heroku
