@@ -68,7 +68,7 @@ It's based on Rails 5 and Ruby 2.4.2
 
 * `bin/setup` - setup required gems and migrate db if needed
 * `bin/quality` - runs rubocop, brakeman, rails_best_practices and bundle-audit for the app
-* `bin/ci` - should be used in the CI or locally
+* `bin/test` - runs all tests and quality checks
 * `bin/server` - to run server locally
 
 ## Getting Started
@@ -112,7 +112,7 @@ brew bundle
 4. Run test and quality suits to make sure all dependencies are satisfied and applications works correctly before making changes.
 
   ```bash
-  bin/ci
+  bin/test
   ```
 
 5. Run app
