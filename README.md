@@ -1,9 +1,5 @@
 # Rails Base
 
-[![Build Status](https://semaphoreci.com/api/v1/fs/rails-base/branches/master/shields_badge.svg)](https://semaphoreci.com/fs/rails-base)
-[![Test Coverage](https://codeclimate.com/github/fs/rails-base/badges/coverage.svg)](https://codeclimate.com/github/fs/rails-base)
-[![Code Climate](https://codeclimate.com/github/fs/rails-base.png)](https://codeclimate.com/github/fs/rails-base)
-
 Rails Base is the base Rails application template used at Flatstack.
 It's based on Rails 5 and Ruby 2.4.2
 
