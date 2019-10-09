@@ -73,6 +73,8 @@ blocks:
 promotions:
   - name: Deploy to Heroku
     pipeline_file: heroku.yml
+
+    # Continuous deployment from master branch
     auto_promote_on:
       - result: passed
         branch:

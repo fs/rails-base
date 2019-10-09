@@ -17,13 +17,15 @@ blocks:
           # with the --use-cache option in order
           # to avoid the shallow clone of your GitHub repository.
           - checkout --use-cache
+
           # Setup SSH key from secrets
           - ssh-keyscan -H heroku.com >> ~/.ssh/known_hosts
           - chmod 600 ~/.ssh/id_rsa_semaphore_heroku
           - ssh-add ~/.ssh/id_rsa_semaphore_heroku
           - git config --global url.ssh://git@heroku.com/.insteadOf https://git.heroku.com/
 
-      - name: Deploy to Production
-        commands:
-          - git remote add heroku https://git.heroku.com/fs-rails-base.git
-          - git push heroku -f $SEMAPHORE_GIT_BRANCH:master
+      jobs:
+        - name: Deploy to Production
+          commands:
+            - git remote add heroku https://git.heroku.com/fs-rails-base.git
+            - git push heroku -f $SEMAPHORE_GIT_BRANCH:master
