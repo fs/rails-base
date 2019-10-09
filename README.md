@@ -1,9 +1,5 @@
 # Rails Base
 
-[![Build Status](https://semaphoreci.com/api/v1/fs/rails-base/branches/master/shields_badge.svg)](https://semaphoreci.com/fs/rails-base)
-[![Test Coverage](https://codeclimate.com/github/fs/rails-base/badges/coverage.svg)](https://codeclimate.com/github/fs/rails-base)
-[![Code Climate](https://codeclimate.com/github/fs/rails-base.png)](https://codeclimate.com/github/fs/rails-base)
-
 Rails Base is the base Rails application template used at Flatstack.
 It's based on Rails 5 and Ruby 2.4.2
 
@@ -68,7 +64,7 @@ It's based on Rails 5 and Ruby 2.4.2
 
 * `bin/setup` - setup required gems and migrate db if needed
 * `bin/quality` - runs rubocop, brakeman, rails_best_practices and bundle-audit for the app
-* `bin/ci` - should be used in the CI or locally
+* `bin/test` - runs all tests and quality checks
 * `bin/server` - to run server locally
 
 ## Getting Started
@@ -112,7 +108,7 @@ brew bundle
 4. Run test and quality suits to make sure all dependencies are satisfied and applications works correctly before making changes.
 
   ```bash
-  bin/ci
+  bin/test
   ```
 
 5. Run app
