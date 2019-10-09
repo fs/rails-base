@@ -70,3 +70,10 @@ blocks:
         commands:
           - bundle exec rails jasmine:ci
 
+promotions:
+  - name: Deploy to Heroku
+    pipeline_file: heroku.yml
+    auto_promote_on:
+      - result: passed
+        branch:
+          - master
