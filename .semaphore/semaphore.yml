@@ -30,6 +30,7 @@ global_job_config:
     commands:
       - checkout
       - cache restore
+      - cp .env.example .env
 
 blocks:
   - name: Setup
@@ -40,20 +41,27 @@ blocks:
           - bundle install ${BUNDLE_ARGS}
           - cache store
 
+  - name: Quality
+    task:
+      jobs:
+        - name: Quality
+          commands:
+            - bundle install ${BUNDLE_ARGS} --local
+            - bin/quality
+
   - name: Test
     task:
       prologue:
         commands:
           - bundle install ${BUNDLE_ARGS} --local
           - sem-service start postgres
-          - cp .env.example .env
           - bin/rails db:setup
 
       jobs:
-        - name: RSpec
-          commands:
-            - bin/rspec
+      - name: Unit
+        commands:
+          - bin/rspec --tag ~type:feature
 
-        - name: Quality
-          commands:
-            - bin/quality
+      - name: Features
+        commands:
+          - bin/rspec --tag type:feature
