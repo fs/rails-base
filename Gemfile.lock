@@ -256,8 +256,6 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    pry-rails (0.3.5)
-      pry (>= 0.9.10)
     public_suffix (4.0.1)
     puma (3.9.1)
     pundit (1.1.0)
@@ -477,7 +475,6 @@ DEPENDENCIES
   pg
   poltergeist
   premailer-rails
-  pry-rails
   puma
   pundit
   rack-canonical-host
@@ -510,7 +507,7 @@ DEPENDENCIES
   webmock
 
 RUBY VERSION
-   ruby 2.4.2p198
+   ruby 2.5.7p206
 
 BUNDLED WITH
    1.17.3

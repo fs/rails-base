@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.4.2"
+ruby "2.5.7"
 
 gem "pg"
 gem "rails", "5.1.6.2"
@@ -77,7 +77,6 @@ group :development, :test do
   gem "faker"
   gem "jasmine", "> 2.0"
   gem "jasmine-jquery-rails"
-  gem "pry-rails"
   gem "rspec-rails", "~> 3.5"
   gem "rubocop", require: false
   gem "rubocop-rspec", require: false
