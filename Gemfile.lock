@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/MiniProfiler/rack-mini-profiler.git
-  revision: 1b79f49f36dfe16f7a8c9c75753decb37bec186c
+  revision: 6e32b8c1804895027ae3b3910318bd6282827ec2
   specs:
-    rack-mini-profiler (0.10.2)
+    rack-mini-profiler (1.1.3)
       rack (>= 1.2.0)
 
 GEM
