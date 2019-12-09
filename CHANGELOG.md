@@ -1,7 +1,7 @@
 # Change Log
 
 ## Unreleased
-
+- Ruby updated to version 2.5.7
 - Replace gem [metamagic](https://github.com/lassebunk/metamagic) to [meta-tags](https://github.com/kpumuk/meta-tags). Using for CEO.
 - Remove `qt` from Brewfile and dependencies list
 - Upgrade Ruby to 2.3.3, Nokogiri to 1.7.1
