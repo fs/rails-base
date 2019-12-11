@@ -31,7 +31,7 @@ It's based on Rails 5 and Ruby 2.5
 * [Rubocop](https://github.com/bbatsov/rubocop) and [Rubocop-Rspec](https://github.com/nevir/rubocop-rspec)
   for reporting violations of the Ruby style guide
 * [Brakeman](https://github.com/presidentbeef/brakeman) for checking application for common security vulnerabilities
-* [Pry Rails](https://github.com/rweng/pry-rails) for interactively exploring objects
+* [ByeBug](https://github.com/deivid-rodriguez/byebug) as debugger
 * [Bundler Audit](https://github.com/rubysec/bundler-audit) for scanning the Gemfile for
   insecure dependencies based on published CVEs
 * [Spring](https://github.com/rails/spring) for fast Rails actions via
@@ -50,7 +50,7 @@ It's based on Rails 5 and Ruby 2.5
 * [Jasmine](http://jasmine.github.io/) for unit testing JavaScript code
 * [Jasmine jQuery](https://github.com/velesin/jasmine-jquery) for jQuery matchers and
   fixtures in Jasmine
-* [Factory Girl](https://github.com/thoughtbot/factory_girl) for test data
+* [Factory Bot](https://github.com/thoughtbot/factory_bot_rails) for test data
 * [RSpec](https://github.com/rspec/rspec) for unit testing
 * [Shoulda Matchers](http://github.com/thoughtbot/shoulda-matchers) for common RSpec matchers
 * [Email Spec](https://github.com/bmabey/email-spec) for common matchers for testing emails
