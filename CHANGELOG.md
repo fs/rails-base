@@ -1,6 +1,7 @@
 # Change Log
 
 ## Unreleased
+- Updated rack-mini-profiler to version 1.1.3
 - Ruby updated to version 2.5.7
 - Replace gem [metamagic](https://github.com/lassebunk/metamagic) to [meta-tags](https://github.com/kpumuk/meta-tags). Using for CEO.
 - Remove `qt` from Brewfile and dependencies list
