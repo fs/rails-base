@@ -60,7 +60,7 @@ GEM
     ast (2.4.0)
     autoprefixer-rails (6.7.4)
       execjs
-    awesome_print (1.7.0)
+    awesome_print (1.8.0)
     babel-source (5.8.35)
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
