@@ -12,5 +12,6 @@ bin/scss-lint
 bin/slim-lint app/views
 
 bin/bundle-audit update
-bin/bundle-audit
+bin/bundle-audit check --ignore CVE-2020-8164 CVE-2020-8166 CVE-2020-8167 CVE-2020-8162 CVE-2020-8165
+# ignore warnings about version of rails (not 6.0)
 
