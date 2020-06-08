@@ -3,13 +3,13 @@ source "https://rubygems.org"
 ruby "2.5.7"
 
 gem "pg"
-gem "rails", "5.1.6.2"
+gem "rails", "5.2.4.3"
 
 # assets
 gem "autoprefixer-rails"
 gem "coffee-rails"
 gem "foundation-icons-sass-rails"
-gem "foundation-rails"
+gem "foundation-rails", "6.2.3.0"
 gem "premailer-rails"
 gem "sass-rails", "~> 5.0.0", ">= 5.0.6"
 gem "uglifier", ">= 2.7.2"
@@ -27,6 +27,7 @@ gem "simple_form"
 gem "slim"
 
 # all other gems
+gem "bootsnap"
 gem "decent_decoration"
 gem "decent_exposure"
 gem "devise"
