@@ -1,6 +1,8 @@
 # Change Log
 
 ## Unreleased
+- Updated Rails version to 5.2.4.3
+- Updated most important gems (pundit, draper etc) to fresh versions
 - Updated rack-mini-profiler to version 1.1.3
 - Ruby updated to version 2.5.7
 - Replace gem [metamagic](https://github.com/lassebunk/metamagic) to [meta-tags](https://github.com/kpumuk/meta-tags). Using for CEO.
