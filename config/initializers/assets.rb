@@ -13,3 +13,8 @@ Rails.application.config.assets.paths << Rails.root.join("node_modules")
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 Rails.application.config.assets.precompile += %w[mailer]
+
+
+# Unknown asset fallback will return the path passed in when the given
+# asset is not present in the asset pipeline.
+# Rails.application.config.assets.unknown_asset_fallback = false
