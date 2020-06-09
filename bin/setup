@@ -17,7 +17,7 @@ bundle check --path .bundle > /dev/null 2>&1 ||
   bundle install --path=.bundle $BUNDLER_ARGS
 
 # Set up node.js modules
-yarn install
+bin/yarn install
 
 # Set up configurable environment variables
 if [ ! -f .env ]; then
