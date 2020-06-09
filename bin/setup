@@ -8,13 +8,16 @@ if [ "$CI" ]; then
 fi
 
 # Make sure we have Bundler installed
-gem install bundler -v 1.17.3 --conservative
+gem install bundler --conservative
 
 # Set up Ruby dependencies via Bundler into .bundle folder
 rm -f .bundle/config
 
 bundle check --path .bundle > /dev/null 2>&1 ||
   bundle install --path=.bundle $BUNDLER_ARGS
+
+# Set up node.js modules
+bin/yarn install
 
 # Set up configurable environment variables
 if [ ! -f .env ]; then

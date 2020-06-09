@@ -3,7 +3,7 @@ source "https://rubygems.org"
 ruby "2.5.7"
 
 gem "pg"
-gem "rails", "5.1.6.2"
+gem "rails", "5.2.4.3"
 
 # assets
 gem "autoprefixer-rails"
@@ -27,6 +27,7 @@ gem "simple_form"
 gem "slim"
 
 # all other gems
+gem "bootsnap"
 gem "decent_decoration"
 gem "decent_exposure"
 gem "devise"
