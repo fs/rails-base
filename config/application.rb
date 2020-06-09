@@ -1,18 +1,11 @@
 require_relative "boot"
 
-%w(
-  active_record/railtie
-  action_controller/railtie
-  action_view/railtie
-  action_mailer/railtie
-  active_job/railtie
-  sprockets/railtie
-).each do |railtie|
-  begin
-    require railtie
-  rescue LoadError
-  end
-end
+require "active_record/railtie"
+require "action_controller/railtie"
+require "action_view/railtie"
+require "action_mailer/railtie"
+require "active_job/railtie"
+require "sprockets/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.

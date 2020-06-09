@@ -1,16 +1,22 @@
-require: rubocop-rspec
+require:
+  - rubocop-rails
+  - rubocop-rspec
 
 Rails:
   Enabled: true
 
 AllCops:
-  TargetRubyVersion: 2.4
+  TargetRubyVersion: 2.5.7
   DisplayCopNames: true
   Exclude:
     - bin/**/*
     - db/**/*
     - vendor/**/*
+    - node_modules/**/*
     - tmp/**/*
+
+Rails/FilePath:
+  EnforcedStyle: arguments
 
 Rails/HasAndBelongsToMany:
   Enabled: false
@@ -24,6 +30,15 @@ RSpec/MultipleExpectations:
 RSpec/ExampleLength:
   Enabled: false
 
+Capybara/FeatureMethods:
+  Enabled: false
+
+Rails/UnknownEnv:
+  Environments:
+    - development
+    - test
+    - staging
+    - production
 RSpec/RepeatedDescription:
   Enabled: false
 
@@ -61,19 +76,24 @@ Style/FrozenStringLiteralComment:
 Style/StringMethods:
   Enabled: true
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 120
 
 Metrics/BlockLength:
   Enabled: false
 
-Layout/AlignParameters:
+Layout/ParameterAlignment:
   EnforcedStyle: with_fixed_indentation
   SupportedStyles:
     - with_first_parameter
     - with_fixed_indentation
 
-Lint/EndAlignment:
+Layout/HashAlignment:
+  SupportedColonStyles:
+    - key
+    - table
+
+Layout/EndAlignment:
   EnforcedStyleAlignWith: variable
   SupportedStylesAlignWith:
     - keyword

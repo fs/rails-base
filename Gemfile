@@ -7,6 +7,7 @@ gem "rails", "5.2.4.3"
 
 # assets
 gem "autoprefixer-rails"
+gem "aws-sdk-s3"
 gem "coffee-rails"
 gem "foundation-icons-sass-rails"
 gem "foundation-rails"
@@ -45,6 +46,7 @@ gem "rack-mini-profiler", require: false, git: "https://github.com/MiniProfiler/
 gem "responders"
 gem "rollbar"
 gem "seedbank"
+gem "shrine"
 gem "stackprof"
 
 group :staging, :production do
@@ -80,6 +82,7 @@ group :development, :test do
   gem "jasmine-jquery-rails"
   gem "rspec-rails", "~> 3.5"
   gem "rubocop", require: false
+  gem "rubocop-rails", require: false
   gem "rubocop-rspec", require: false
   gem "scss_lint", require: false
   gem "slim_lint", require: false
