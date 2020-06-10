@@ -14,4 +14,8 @@ FactoryBot.define do
       user.update(confirmation_sent_at: 3.days.ago)
     end
   end
+
+  trait :with_avatar do
+    avatar { File.open(Rails.root.join("spec", "support", "fixtures", "avatar.jpg")) }
+  end
 end

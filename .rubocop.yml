@@ -64,6 +64,9 @@ Style/StringMethods:
 Metrics/LineLength:
   Max: 120
 
+Metrics/MethodLength:
+  Max: 16
+
 Metrics/BlockLength:
   Enabled: false
 

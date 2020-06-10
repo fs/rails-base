@@ -2,13 +2,12 @@
   .columns
     h2 = title("Edit #{current_user.full_name}")
 
-.row
-  .medium-5.columns
-    = simple_form_for resource,
-        as: resource_name,
-        url: registration_path(resource_name),
-        html: { method: :put } do |f|
-
+= simple_form_for resource,
+  as: resource_name,
+  url: registration_path(resource_name),
+  html: { method: :put } do |f|
+  .row
+    .medium-5.columns
       .form-inputs
         = f.input :full_name, required: true, autofocus: true
         = f.input :email, required: true
@@ -17,17 +16,25 @@
             required: false
         = f.input :password_confirmation,
             required: false
-
       .form-actions
-        = f.button :submit, "Update"
+          = f.button :submit, "Update"
 
-  .medium-5.medium-offset-1.columns.end
-    h6
-      b Cancel my account
-    p
-      | Unhappy?
-      '
-      = link_to "Cancel my account.",
-          registration_path(resource_name),
-          data: { confirm: "Are you sure?" },
-          method: :delete
+    .medium-5.columns
+      .form-inputs
+        - if resource.avatar
+          = image_tag resource.avatar_url
+
+          = f.input :remove_avatar, as: :boolean
+
+        = f.hidden_field :avatar, value: resource.cached_avatar_data
+        = f.input :avatar
+
+      h6
+        b Cancel my account
+      p
+        | Unhappy?
+        '
+        = link_to "Cancel my account.",
+            registration_path(resource_name),
+            data: { confirm: "Are you sure?" },
+            method: :delete
