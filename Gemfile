@@ -7,9 +7,11 @@ gem "rails", "5.2.4.3"
 
 # assets
 gem "autoprefixer-rails"
+gem "aws-sdk-s3"
 gem "coffee-rails"
 gem "foundation-icons-sass-rails"
 gem "foundation-rails"
+gem "image_processing"
 gem "premailer-rails"
 gem "sass-rails", "~> 5.0.0", ">= 5.0.6"
 gem "uglifier", ">= 2.7.2"
@@ -45,6 +47,7 @@ gem "rack-mini-profiler", require: false, git: "https://github.com/MiniProfiler/
 gem "responders"
 gem "rollbar"
 gem "seedbank"
+gem "shrine"
 gem "stackprof"
 
 group :staging, :production do
