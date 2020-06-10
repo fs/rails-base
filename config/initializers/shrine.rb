@@ -28,8 +28,8 @@ end
 
 def local_storages
   {
-    cache: Shrine::Storage::FileSystem.new("public", prefix: "{Rails.env}/uploads/cache"),
-    store: Shrine::Storage::FileSystem.new("public", prefix: "{Rails.env}/uploads")
+    cache: Shrine::Storage::FileSystem.new("public", prefix: "#{Rails.env}/uploads/cache"),
+    store: Shrine::Storage::FileSystem.new("public", prefix: "#{Rails.env}/uploads")
   }
 end
 
