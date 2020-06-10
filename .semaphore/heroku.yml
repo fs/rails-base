@@ -29,3 +29,4 @@ blocks:
           commands:
             - git remote add heroku https://git.heroku.com/fs-rails-base.git
             - git push heroku -f $SEMAPHORE_GIT_BRANCH:master
+            - heroku run rails db:migrate
