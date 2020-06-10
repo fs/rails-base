@@ -10,37 +10,27 @@ Shrine.plugin :restore_cached_data
 Shrine.plugin :validation
 Shrine.plugin :validation_helpers
 
-def development_storages
+def s3_options
   {
-    cache: Shrine::Storage::FileSystem.new("public", prefix: "uploads/cache"),
-    store: Shrine::Storage::FileSystem.new("public", prefix: "uploads")
+    access_key_id: ENV["S3_ACCESS_KEY_ID"],
+    secret_access_key: ENV["S3_SECRET_ACCESS_KEY"],
+    region: ENV["S3_BUCKET_REGION"],
+    bucket: ENV["S3_BUCKET_NAME"]
   }
 end
 
-def test_storages
-  require "shrine/storage/memory"
-
-  {
-    cache: Shrine::Storage::Memory.new,
-    store: Shrine::Storage::Memory.new
-  }
-end
-
-def production_storages
+def amazon_s3_storages
   {
     cache: Shrine::Storage::S3.new(prefix: "cache", **s3_options),
     store: Shrine::Storage::S3.new(prefix: "store", upload_options: { acl: "public-read" }, **s3_options)
   }
 end
-alias staging_storages production_storages
 
-def s3_options
+def local_storages
   {
-    access_key_id: ENV.fetch("S3_ACCESS_KEY_ID"),
-    secret_access_key: ENV.fetch("S3_SECRET_ACCESS_KEY"),
-    region: ENV.fetch("S3_BUCKET_REGION"),
-    bucket: ENV.fetch("S3_BUCKET_NAME")
+    cache: Shrine::Storage::FileSystem.new("public", prefix: "{Rails.env}/uploads/cache"),
+    store: Shrine::Storage::FileSystem.new("public", prefix: "{Rails.env}/uploads")
   }
 end
 
-Shrine.storages = send "#{Rails.env}_storages"
+Shrine.storages = s3_options.values.all? ? amazon_s3_storages : local_storages
