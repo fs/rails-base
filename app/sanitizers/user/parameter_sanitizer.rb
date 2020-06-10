@@ -1,6 +1,6 @@
 class User
   class ParameterSanitizer < Devise::ParameterSanitizer
-    SIGM_UP_PARAMS = %i[
+    SIGN_UP_PARAMS = %i[
       full_name
       email
       password
@@ -18,7 +18,7 @@ class User
 
     def initialize(*)
       super
-      permit(:sign_up, keys: SIGM_UP_PARAMS)
+      permit(:sign_up, keys: SIGN_UP_PARAMS)
       permit(:account_update, keys: ACCOUNT_UPDATE_PARAMS)
     end
   end
