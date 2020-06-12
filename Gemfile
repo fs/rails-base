@@ -1,20 +1,21 @@
 source "https://rubygems.org"
 
-ruby "2.5.7"
+ruby "2.7.1"
 
 gem "pg"
-gem "rails", "5.2.4.3"
+# gem "rails", "5.2.4.3"
+gem "rails", "6.0.3.1"
 
 # assets
 gem "autoprefixer-rails"
 gem "aws-sdk-s3"
-gem "coffee-rails"
 gem "foundation-icons-sass-rails"
 gem "foundation-rails"
 gem "image_processing"
 gem "premailer-rails"
 gem "sass-rails", "~> 5.0.0", ">= 5.0.6"
 gem "uglifier", ">= 2.7.2"
+gem "webpacker"
 
 source "https://rails-assets.org" do
   gem "rails-assets-jquery-ujs"
