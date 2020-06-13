@@ -53,7 +53,7 @@ blocks:
     task:
       prologue:
         commands:
-          - nvm install --lts erbium
+          - nvm install --lts Erbium
           - sem-version node --lts Erbium
           - sem-version ruby 2.5.7
           - bundle install ${BUNDLE_ARGS} --local
