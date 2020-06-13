@@ -13,7 +13,7 @@ tmp/*
 vendor/bundle
 vendor/cache
 vendor/ruby
-
+/public/assets
 /public/packs
 /public/packs-test
 /node_modules
