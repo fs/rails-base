@@ -53,8 +53,7 @@ blocks:
     task:
       prologue:
         commands:
-          - nvm install --lts Erbium
-          - sem-version node --lts Erbium
+          - nvm use
           - sem-version ruby 2.5.7
           - bundle install ${BUNDLE_ARGS} --local
           - sem-service start postgres
