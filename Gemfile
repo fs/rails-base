@@ -84,6 +84,7 @@ group :development, :test do
   gem "jasmine-jquery-rails"
   gem "rspec-rails", "~> 3.5"
   gem "rubocop", require: false
+  gem "rubocop-rails", require: false
   gem "rubocop-rspec", require: false
   gem "scss_lint", require: false
   gem "slim_lint", require: false
