@@ -1,5 +1,7 @@
 # Rails Base
 
+[![Build Status](https://flatstack.semaphoreci.com/badges/rails-base.svg?key=1e8f53ac-b0b4-4dc7-bf8b-8027aa5a609e)](https://flatstack.semaphoreci.com/projects/rails-base)
+
 Rails Base is the base Rails application template used at Flatstack.
 It's based on Rails 6 and Ruby 2.7
 
