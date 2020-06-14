@@ -3,14 +3,13 @@
 set -e
 
 bin/rubocop --display-style-guide
-bin/brakeman --quiet --skip-libs --exit-on-warn
+bin/brakeman --quiet --skip-libs --no-pager --exit-on-warn
 
 # Using rake-task here since coffeelint.rb cmd doesn't exit with non-zero status
 # when code contains errors
-bin/rails coffeelint
 bin/scss-lint
 bin/slim-lint app/views
 
-# bin/bundle-audit update
-# bin/bundle-audit
+bin/bundle-audit update
+bin/bundle-audit
 

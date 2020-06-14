@@ -3,6 +3,7 @@ source "https://rubygems.org"
 ruby "2.7.1"
 
 gem "pg"
+
 # gem "rails", "5.2.4.3"
 gem "rails", "6.0.3.1"
 
@@ -75,7 +76,6 @@ group :development, :test do
   gem "bullet"
   gem "bundler-audit", require: false
   gem "byebug"
-  gem "coffeelint"
   gem "dotenv-rails"
   gem "factory_bot_rails"
   gem "faker"

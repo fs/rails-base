@@ -1,3 +1,3 @@
-#= require foundation
+//= require foundation
 
 $(document).foundation()

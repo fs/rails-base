@@ -121,14 +121,6 @@ GEM
     choice (0.2.0)
     cliver (0.3.2)
     coderay (1.1.1)
-    coffee-script (2.4.1)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.12.2)
-    coffeelint (1.14.0)
-      coffee-script
-      execjs
-      json
     concurrent-ruby (1.1.6)
     content_disposition (1.0.0)
     crack (0.4.3)
@@ -226,7 +218,6 @@ GEM
     jasmine-core (3.5.0)
     jasmine-jquery-rails (2.0.3)
     jmespath (1.4.0)
-    json (2.3.0)
     kaminari (1.2.1)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.2.1)
@@ -507,7 +498,6 @@ DEPENDENCIES
   bundler-audit
   byebug
   capybara
-  coffeelint
   database_cleaner
   decent_decoration
   decent_exposure
