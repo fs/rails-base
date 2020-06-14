@@ -18,4 +18,8 @@
 require("jquery")
 require("@rails/ujs").start()
 
-console.log('Hello World from Webpacker')
+import User from "../classes/user"
+
+if (App.currentUserData) {
+  App.currentUser = new User(App.currentUserData);
+}
