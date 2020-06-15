@@ -39,7 +39,7 @@ Rails/HasAndBelongsToMany:
 Rails/OutputSafety:
   Enabled: false
 
-#RSpec
+# RSpec
 
 RSpec/MultipleExpectations:
   Enabled: false
