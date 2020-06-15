@@ -4,7 +4,6 @@ ruby "2.7.1"
 
 gem "pg"
 
-# gem "rails", "5.2.4.3"
 gem "rails", "6.0.3.1"
 
 # assets
