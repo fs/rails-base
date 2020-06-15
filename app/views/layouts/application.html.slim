@@ -7,7 +7,7 @@ html class="no-js" lang="en"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     meta name="robots" content="NOODP,NOYDIR"
 
-    = display_meta_tags site: "RailsBase", keywords: %w(title site)
+    = display_meta_tags site: "RailsBase", keywords: %w[title site]
     = csrf_meta_tags
 
     = stylesheet_link_tag :application
@@ -28,4 +28,5 @@ html class="no-js" lang="en"
     javascript:
       App.currentUserData = #{{current_user.to_json}};
 
+    = javascript_pack_tag :application
     = javascript_include_tag :application

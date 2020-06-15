@@ -3,7 +3,7 @@ module Users
     protected
 
     def update_resource(resource, params)
-      resource.update_attributes(params)
+      resource.update(params)
     end
 
     def account_update_params

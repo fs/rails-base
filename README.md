@@ -1,7 +1,9 @@
 # Rails Base
 
+[![Build Status](https://flatstack.semaphoreci.com/badges/rails-base.svg?key=1e8f53ac-b0b4-4dc7-bf8b-8027aa5a609e)](https://flatstack.semaphoreci.com/projects/rails-base)
+
 Rails Base is the base Rails application template used at Flatstack.
-It's based on Rails 5 and Ruby 2.5
+It's based on Rails 6 and Ruby 2.7
 
 ## Application Gems
 
@@ -39,7 +41,6 @@ It's based on Rails 5 and Ruby 2.5
 * [Web Console](https://github.com/rails/web-console) for better debugging via
   in-browser IRB consoles
 * [SCSS-Lint](https://github.com/brigade/scss-lint) for reporting violations of SCSS coding conventions
-* [Coffeelint](https://github.com/clutchski/coffeelint) to keep Coffeescript code clean and consistent
 * [Slim-Lint](https://github.com/sds/slim-lint) for reporting violations of Ruby style guide in `.slim` templates
 * [Rails ERD](https://github.com/voormedia/rails-erd) for generating a diagram based on application's AR models
 

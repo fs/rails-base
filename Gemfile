@@ -1,25 +1,21 @@
 source "https://rubygems.org"
 
-ruby "2.5.7"
+ruby "2.7.1"
 
 gem "pg"
-gem "rails", "5.2.4.3"
+
+gem "rails", "6.0.3.1"
 
 # assets
 gem "autoprefixer-rails"
 gem "aws-sdk-s3"
-gem "coffee-rails"
 gem "foundation-icons-sass-rails"
 gem "foundation-rails"
 gem "image_processing"
 gem "premailer-rails"
 gem "sass-rails", "~> 5.0.0", ">= 5.0.6"
 gem "uglifier", ">= 2.7.2"
-
-source "https://rails-assets.org" do
-  gem "rails-assets-jquery-ujs"
-  gem "rails-assets-jquery2"
-end
+gem "webpacker"
 
 # views
 gem "active_link_to"
@@ -56,7 +52,6 @@ end
 
 group :test do
   gem "capybara"
-  gem "codeclimate-test-reporter", require: false
   gem "database_cleaner"
   gem "email_spec"
   gem "formulaic"
@@ -75,7 +70,6 @@ group :development, :test do
   gem "bullet"
   gem "bundler-audit", require: false
   gem "byebug"
-  gem "coffeelint"
   gem "dotenv-rails"
   gem "factory_bot_rails"
   gem "faker"
@@ -83,6 +77,7 @@ group :development, :test do
   gem "jasmine-jquery-rails"
   gem "rspec-rails", "~> 3.5"
   gem "rubocop", require: false
+  gem "rubocop-rails", require: false
   gem "rubocop-rspec", require: false
   gem "scss_lint", require: false
   gem "slim_lint", require: false
