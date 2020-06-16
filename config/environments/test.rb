@@ -45,7 +45,4 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   config.cache_classes = false
-
-  # Allowed hosts:
-  config.hosts << "www.example.com"
 end

@@ -492,7 +492,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_link_to
-  active_model_serializers (~> 0.10.0)
+  active_model_serializers
   autoprefixer-rails
   awesome_print
   aws-sdk-s3
