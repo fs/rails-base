@@ -1,6 +1,6 @@
 require "rails_helper"
 
-feature "Cancel Account" do
+feature "Cancel Account", js: true do
   include_context "when current user signed in"
 
   background do
