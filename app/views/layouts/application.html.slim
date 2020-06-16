@@ -25,8 +25,9 @@ html class="no-js" lang="en"
 
     = render "footer"
 
-    javascript:
-      App.currentUserData = #{{current_user.to_json}};
+    - if user_signed_in?
+      javascript:
+        App.currentUserData = #{{serialized_current_user_data}};
 
     = javascript_pack_tag :application
     = javascript_include_tag :application

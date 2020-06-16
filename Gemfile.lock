@@ -47,6 +47,11 @@ GEM
     active_link_to (1.0.5)
       actionpack
       addressable
+    active_model_serializers (0.10.10)
+      actionpack (>= 4.1, < 6.1)
+      activemodel (>= 4.1, < 6.1)
+      case_transform (>= 0.2)
+      jsonapi-renderer (>= 0.1.1.beta1, < 0.3)
     activejob (6.0.3.1)
       activesupport (= 6.0.3.1)
       globalid (>= 0.3.6)
@@ -117,6 +122,8 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
+    case_transform (0.2)
+      activesupport
     choice (0.2.0)
     cliver (0.3.2)
     coderay (1.1.1)
@@ -217,6 +224,7 @@ GEM
     jasmine-core (3.5.0)
     jasmine-jquery-rails (2.0.3)
     jmespath (1.4.0)
+    jsonapi-renderer (0.2.2)
     kaminari (1.2.1)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.2.1)
@@ -484,6 +492,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_link_to
+  active_model_serializers (~> 0.10.0)
   autoprefixer-rails
   awesome_print
   aws-sdk-s3
