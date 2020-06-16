@@ -25,7 +25,7 @@ gem "simple_form"
 gem "slim"
 
 # all other gems
-gem "active_model_serializers", "~> 0.10.0"
+gem "active_model_serializers"
 gem "bootsnap"
 gem "decent_decoration"
 gem "decent_exposure"
