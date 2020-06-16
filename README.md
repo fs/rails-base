@@ -46,8 +46,7 @@ It's based on Rails 6 and Ruby 2.7
 
 ## Testing Gems
 
-* [Capybara](https://github.com/jnicklas/capybara) and [poltergeist](https://github.com/teampoltergeist/poltergeist)
-  for integration testing, including JavaScript behavior
+* [Capybara](https://github.com/jnicklas/capybara) for integration testing
 * [Jasmine](http://jasmine.github.io/) for unit testing JavaScript code
 * [Jasmine jQuery](https://github.com/velesin/jasmine-jquery) for jQuery matchers and
   fixtures in Jasmine
