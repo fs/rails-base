@@ -1,13 +1,13 @@
-.row
-  .columns
+.grid-x
+  .cell
     h2 = title("Edit #{current_user.full_name}")
 
 = simple_form_for resource,
   as: resource_name,
   url: registration_path(resource_name),
   html: { method: :put } do |f|
-  .row
-    .medium-5.columns
+  .grid-x
+    .cell.medium-5
       .form-inputs
         = f.input :full_name, required: true, autofocus: true
         = f.input :email, required: true
@@ -19,7 +19,7 @@
       .form-actions
           = f.button :submit, "Update"
 
-    .medium-5.columns
+    .cell.medium-5.medium-offset-1
       .form-inputs
         - if resource.avatar
           = image_tag resource.avatar_url
