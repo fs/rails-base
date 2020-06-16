@@ -8,13 +8,14 @@ feature "Sign In" do
     visit new_user_session_path
 
     fill_form(:user, email: email, password: password)
+
     click_button "Sign in"
   end
 
   scenario "Visitor signs in with valid credentials" do
     sign_in(user.email, user.password)
 
-    expect(page).to have_content("Sign out")
+    expect(page).to have_content(user.full_name)
   end
 
   scenario "Visitor signs in with invalid credentials" do

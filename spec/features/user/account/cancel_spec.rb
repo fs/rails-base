@@ -8,7 +8,9 @@ feature "Cancel Account" do
   end
 
   scenario "User cancels account" do
-    click_link "Cancel my account"
+    accept_alert do
+      click_link "Cancel my account"
+    end
 
     expect(page).to have_content("Sign in")
     expect(page).to have_content("Bye! Your account has been successfully cancelled. We hope to see you again soon.")
