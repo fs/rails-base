@@ -38,6 +38,6 @@ module RailsBase
     config.action_mailer.default_url_options = { host: ENV.fetch("HOST") }
 
     # Allowed hosts:
-    config.hosts << ENV.fetch("HOST")
+    config.hosts << ["localhost", ENV.fetch("HOST")]
   end
 end
