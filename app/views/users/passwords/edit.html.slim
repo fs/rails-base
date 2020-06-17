@@ -1,9 +1,9 @@
-.row
-  .columns
+.grid-x
+  .cell
     h2 = title("Change password")
 
-.row
-  .medium-5.columns
+.grid-x
+  .cell.medium-5
     = simple_form_for resource,
         as: resource_name,
         url: password_path(resource_name),
@@ -19,5 +19,5 @@
       .form-actions
         = f.button :submit, "Update password"
 
-  .medium-5.medium-offset-1.columns.end
+  .cell.medium-5.medium-offset-1
     = render "users/shared/links"
