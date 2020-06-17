@@ -30,3 +30,7 @@ html class="no-js" lang="en"
 
     = javascript_pack_tag :application
     = javascript_include_tag :application
+
+    - if Rails.env.test?
+      = stylesheet_link_tag "styles_for_tests"
+      = javascript_pack_tag "js_for_tests"
