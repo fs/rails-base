@@ -1,5 +1,7 @@
 scss_files: "app/assets/stylesheets/**/*.scss"
 
+exclude: "app/assets/stylesheets/core/settings.scss"
+
 linters:
   NameFormat:
     enabled: true
