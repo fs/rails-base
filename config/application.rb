@@ -35,6 +35,9 @@ module RailsBase
     config.action_mailer.default_options = { from: ENV.fetch("MAILER_SENDER_ADDRESS") }
 
     # Set URL options to be able to use url_for helpers
-    config.action_mailer.default_url_options = { host: ENV.fetch("HOST") }
+    config.action_mailer.default_url_options = { host: ENV.fetch("HOST"), port: ENV.fetch("PORT") }
+
+    # Add HOST to allowed list
+    config.hosts << ENV.fetch("HOST")
   end
 end
