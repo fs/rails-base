@@ -4,4 +4,4 @@ Capybara.configure do |config|
   config.asset_host = "http://#{ENV.fetch('HOST')}:#{ENV.fetch('PORT')}"
 end
 
-Capybara.javascript_driver = :selenium_chrome
+Capybara.javascript_driver = :selenium_chrome_headless
