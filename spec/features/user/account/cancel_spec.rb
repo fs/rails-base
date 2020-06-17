@@ -1,6 +1,6 @@
 require "rails_helper"
 
-feature "Cancel Account", js: true do
+feature "Cancel Account" do
   include_context "when current user signed in"
 
   background do
@@ -8,9 +8,7 @@ feature "Cancel Account", js: true do
   end
 
   scenario "User cancels account" do
-    accept_alert do
-      click_link "Cancel my account"
-    end
+    click_link "Cancel my account"
 
     expect(page).to have_content("Sign in")
     expect(page).to have_content("Bye! Your account has been successfully cancelled. We hope to see you again soon.")
