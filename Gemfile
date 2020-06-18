@@ -4,7 +4,7 @@ ruby "2.7.1"
 
 gem "pg"
 
-gem "rails", "6.0.3.1"
+gem "rails", "6.0.3.2"
 
 # assets
 gem "autoprefixer-rails"
