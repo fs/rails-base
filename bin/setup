@@ -2,6 +2,11 @@
 
 set -e
 
+# Setup dependencies if running macOS and brew
+if [ `uname -s` = "Darwin" ] && [ -x "$(command -v brew)" ]; then
+  brew bundle check --no-upgrade || brew bundle --no-upgrade
+fi
+
 # Setup specific Bundler options if this is CI
 if [ "$CI" ]; then
   BUNDLER_ARGS="--without development staging production"
