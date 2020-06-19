@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import { makeStyles } from '@material-ui/core/styles';
 
 import AppBar from '@material-ui/core/AppBar';
-import Link from '@material-ui/core/Link';
+import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -16,6 +16,9 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
+  },
+  navButton: {
+    marginLeft: theme.spacing(2),
   },
   title: {
     flexGrow: 1,
@@ -35,8 +38,8 @@ export default function mainAppBar() {
           <Typography variant="h6" className={classes.title}>
             Rails Base 6
           </Typography>
-          <Link href="/users/sign_in" color="inherit" variant="inherit">Sign In</Link>
-          <Link href="/users/sign_up" color="inherit" variant="inherit">Sign Up</Link>
+          <Button color="inherit" variant="outlined" className={classes.navButton} onClick={ () => window.location.href = '/users/sign_in' }>Sign In</Button>
+          <Button color="inherit" variant="outlined" className={classes.navButton} onClick={ () => window.location.href = '/users/sign_up' }>Sign Up</Button>
         </Toolbar>
       </AppBar>
     </div>
