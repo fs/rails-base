@@ -15,10 +15,15 @@
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-require("jquery")
 require("@rails/ujs").start()
 
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 import User from "../classes/user"
+import MainAppBar from "./mainAppBar"
+
+ReactDOM.render(<MainAppBar />, document.querySelector('nav'));
 
 if (App.currentUserData) {
   App.currentUser = new User(App.currentUserData);
