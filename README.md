@@ -73,16 +73,11 @@ It's based on Rails 6 and Ruby 2.7
 
 Some gems have native extensions.
 You should have GCC installed on your development machine.
+Dependencies will be automatically installed via setup script.
 
 * `phantomjs` - to run Javascript unit tests
 * `graphviz` - to generate Entity-Relationship Diagram
 * `node` - JavaScript runtime
-
-Setup required dependencies from `Brewfile`:
-```bash
-brew tap Homebrew/bundle
-brew bundle
-```
 
 ### Bootstrap application
 
