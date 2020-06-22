@@ -5,3 +5,5 @@ Capybara.configure do |config|
 end
 
 Capybara.javascript_driver = :selenium_chrome_headless
+
+Capybara.disable_animation = true
