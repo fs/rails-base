@@ -7,12 +7,18 @@ html class="no-js" lang="en"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     meta name="robots" content="NOODP,NOYDIR"
 
+    link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+
     = display_meta_tags site: "RailsBase", keywords: %w[title site]
     = csrf_meta_tags
 
     = stylesheet_link_tag :application
 
-    = javascript_tag "window.App = {}"
+    javascript:
+      window.App = {}
+      App.currentUserData = #{{current_user.to_json}};
+
+    = javascript_pack_tag :application
 
     == analytics_init if GoogleAnalytics.valid_tracker?
 
@@ -24,9 +30,3 @@ html class="no-js" lang="en"
       = yield
 
     = render "footer"
-
-    javascript:
-      App.currentUserData = #{{current_user.to_json}};
-
-    = javascript_pack_tag :application
-    = javascript_include_tag :application
