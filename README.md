@@ -47,9 +47,6 @@ It's based on Rails 6 and Ruby 2.7
 ## Testing Gems
 
 * [Capybara](https://github.com/jnicklas/capybara) for integration testing
-* [Jasmine](http://jasmine.github.io/) for unit testing JavaScript code
-* [Jasmine jQuery](https://github.com/velesin/jasmine-jquery) for jQuery matchers and
-  fixtures in Jasmine
 * [Factory Bot](https://github.com/thoughtbot/factory_bot_rails) for test data
 * [RSpec](https://github.com/rspec/rspec) for unit testing
 * [Shoulda Matchers](http://github.com/thoughtbot/shoulda-matchers) for common RSpec matchers

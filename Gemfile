@@ -73,8 +73,6 @@ group :development, :test do
   gem "dotenv-rails"
   gem "factory_bot_rails"
   gem "faker"
-  gem "jasmine", "> 2.0"
-  gem "jasmine-jquery-rails"
   gem "rspec-rails"
   gem "rubocop", require: false
   gem "rubocop-rails", require: false

@@ -2,6 +2,7 @@
 
 set -e
 
-bin/rspec spec
-bin/rake jasmine:ci
 bin/quality
+
+bin/rspec spec
+yarn test --passWithNoTests
