@@ -13,7 +13,7 @@ gem "foundation-icons-sass-rails"
 gem "foundation-rails"
 gem "image_processing"
 gem "premailer-rails"
-gem "sass-rails", "~> 5.0.0", ">= 5.0.6"
+gem "sassc"
 gem "uglifier", ">= 2.7.2"
 gem "webpacker"
 
