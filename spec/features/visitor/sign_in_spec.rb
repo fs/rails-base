@@ -30,4 +30,12 @@ feature "Sign In" do
 
     expect(page).to have_content("You have to confirm your email address before continuing.")
   end
+
+  scenario "Visitor signs in with invalid credentials many times" do
+    Devise.maximum_attempts.times do
+      sign_in(user.email, "wrong password")
+    end
+
+    expect(page).to have_content("Your account is locked.")
+  end
 end
