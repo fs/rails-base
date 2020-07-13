@@ -396,6 +396,7 @@ GEM
     scss_lint (0.55.0)
       rake (>= 0.9, < 13)
       sass (~> 3.4.20)
+    secure_headers (6.3.1)
     seedbank (0.5.0)
       rake (>= 10.0)
     selenium-webdriver (3.142.7)
@@ -536,6 +537,7 @@ DEPENDENCIES
   rubocop-rspec
   sass-rails (~> 5.0.0, >= 5.0.6)
   scss_lint
+  secure_headers
   seedbank
   selenium-webdriver
   shoulda-matchers
