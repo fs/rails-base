@@ -10,6 +10,8 @@
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
+    "babel-jest": "^26.1.0",
+    "babel-preset-es2015": "^6.24.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "jest": "^26.1.0",
@@ -25,6 +27,9 @@
     "moduleDirectories": [
       "node_modules",
       "app/javascript"
+    ],
+    "setupFilesAfterEnv": [
+      "./spec/javascript/setupTests.js"
     ]
   }
 }

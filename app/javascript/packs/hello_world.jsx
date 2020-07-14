@@ -15,3 +15,5 @@ document.addEventListener("DOMContentLoaded", () => {
     <HelloWorld name="developer" />, document.getElementById("hello")
   )
 })
+
+export default HelloWorld
