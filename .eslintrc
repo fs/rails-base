@@ -1,0 +1,18 @@
+{
+  "env": {
+    "jest": true
+  },
+  "extends": [
+    "airbnb",
+    "prettier"
+  ],
+  "globals": {
+    "App": true,
+    "document": true,
+    "localStorage": true,
+    "window": true,
+    "navigator": true,
+    "fetch": true
+  },
+  "parser": "babel-eslint"
+}
