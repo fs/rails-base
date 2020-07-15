@@ -40,5 +40,6 @@
     "setupFilesAfterEnv": [
       "./spec/javascript/setupTests.js"
     ]
-  }
+  },
+  "license": "MIT"
 }

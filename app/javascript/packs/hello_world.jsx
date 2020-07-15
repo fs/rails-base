@@ -2,9 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 
-const HelloWorld = props => (
+const HelloWorld = ({ name }) => (
   <h2>
-    Hello, {props.name}!
+    Hello, 
+    {name}
+    !
   </h2>
 )
 
@@ -14,7 +16,7 @@ HelloWorld.propTypes = { name: PropTypes.string }
 
 document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(
-    <HelloWorld name="developer" />, document.getElementById("hello")
+    <HelloWorld />, document.getElementById("hello")
   )
 })
 
