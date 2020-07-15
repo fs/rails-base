@@ -12,7 +12,7 @@ describe('HelloWorld component', () => {
 
   describe('when a name is given as a prop', () => {
     it('render Hello, David!', () => {
-      const wrapper = shallow(<HelloWorld name={"David"} />);
+      const wrapper = shallow(<HelloWorld name='David' />);
       expect(wrapper.text()).toBe('Hello, David!')
     })
   })

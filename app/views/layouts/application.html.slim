@@ -12,11 +12,9 @@ html class="no-js" lang="en"
 
     = stylesheet_link_tag :application
 
-    = javascript_tag "window.App = {}"
-
     == analytics_init if GoogleAnalytics.valid_tracker?
 
-  body
+  body data-current-user="#{current_user.to_json}"
     = render "navigation"
     = render "messages"
 
@@ -24,9 +22,6 @@ html class="no-js" lang="en"
       = yield
 
     = render "footer"
-
-    javascript:
-      App.currentUserData = #{{current_user.to_json}};
 
     = javascript_pack_tag :application
     = javascript_include_tag :application
