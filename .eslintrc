@@ -6,5 +6,17 @@
     "airbnb",
     "prettier"
   ],
+  "globals": {
+    "App": true,
+    "document": true,
+    "localStorage": true,
+    "window": true,
+    "navigator": true,
+    "fetch": true
+  },
+  "rules": {
+    "react/destructuring-assignment": "off",
+    "react/jsx-one-expression-per-line": "off"
+  },
   "parser": "babel-eslint"
 }
