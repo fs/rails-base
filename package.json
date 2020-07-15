@@ -27,7 +27,7 @@
   },
   "scripts": {
     "test": "jest",
-    "lint": "eslint --ext .js,.jsx app/javascript spec/javascript"
+    "lint": "eslint --ext .js,.jsx app/javascript"
   },
   "jest": {
     "roots": [
