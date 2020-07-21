@@ -44,7 +44,7 @@ RUN rm -rf $FOLDERS_TO_REMOVE
 
 ###############################
 # Stage Final
-FROM ruby:2.6.6-alpine as Final
+FROM ruby:2.7.1-alpine as Final
 
 # Add Alpine packages
 RUN apk add --update --no-cache \
@@ -52,7 +52,9 @@ RUN apk add --update --no-cache \
     imagemagick \
     tzdata \
     file \
-    git
+    git \
+    nodejs \
+    npm
 
 # Copy app with gems from former build stage
 COPY --from=Builder /usr/local/bundle/ /usr/local/bundle/
