@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+set -e
+
+gem install docker-sync
+docker-sync start
+cp docker-compose.osx.yml docker-compose.override.yml

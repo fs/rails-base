@@ -1,0 +1,10 @@
+version: "3.4"
+
+services:
+  app:
+    volumes:
+      - app-files:/app:nocopy
+
+volumes:
+  app-files:
+    external: true
