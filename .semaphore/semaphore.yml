@@ -21,7 +21,7 @@ global_job_config:
   prologue:
     commands:
       # Setup dynamic environment variables b/c they do not support via env_vars yet
-      - export DOCKER_REPO="docker.pkg.github.com/fs/rails-base-graphql-api"
+      - export DOCKER_REPO="docker.pkg.github.com/fs/rails-base"
       - export BUILDER_NAME="${DOCKER_REPO}/builder:${SEMAPHORE_GIT_BRANCH}"
       - export IMAGE_NAME="${DOCKER_REPO}/final:${SEMAPHORE_GIT_BRANCH}"
       - export RAILS_ENV="test"
