@@ -31,7 +31,7 @@ global_job_config:
       - export MAILER_SENDER_ADDRESS="noreply@example.com"
 
       # Authenticate with DockerHub
-      - echo "${DOCKER_PASSWORD}" | docker login https://docker.pkg.github.com -u "${DOCKER_USERNAME}" --password-stdin
+      - echo "${GITHUB_TOKEN}" | docker login https://docker.pkg.github.com -u "${GITHUB_USERNAME}" --password-stdin
 
       - checkout
 
@@ -39,7 +39,7 @@ blocks:
   - name: Build
     task:
       secrets:
-        - name: github-docker-secrets
+        - name: semaphore-github-packages-secrets
       jobs:
       - name: Docker build
         commands:
