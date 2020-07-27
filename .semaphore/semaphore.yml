@@ -11,74 +11,68 @@ execution_time_limit:
 
 auto_cancel:
   queued:
-    when: 'true'
+    when: "true"
 
 fail_fast:
   stop:
-    when: 'true'
+    when: "true"
 
 global_job_config:
-  env_vars:
-    - name: RAILS_ENV
-      value: 'test'
-    - name: DATABASE_URL
-      value: 'postgresql://postgres@localhost/test?encoding=utf8'
-    - name: BUNDLE_ARGS
-      value: '--deployment --without development staging production --jobs 4'
-
   prologue:
     commands:
+      # Setup dynamic environment variables b/c they do not support via env_vars yet
+      - export DOCKER_REPO="docker.pkg.github.com/fs/rails-base"
+      - export BUILDER_NAME="${DOCKER_REPO}/builder:${SEMAPHORE_GIT_BRANCH}"
+      - export IMAGE_NAME="${DOCKER_REPO}/final:${SEMAPHORE_GIT_BRANCH}"
+      - export RAILS_ENV="test"
+      - export RACK_ENV="test"
+      - export BUNDLE_WITHOUT="development staging production"
+      - export DATABASE_CLEANER_ALLOW_REMOTE_DATABASE_URL="true"
+      - export MAILER_SENDER_ADDRESS="noreply@example.com"
+
+      # Authenticate with DockerHub
+      - echo "${GITHUB_TOKEN}" | docker login https://docker.pkg.github.com -u "${GITHUB_USERNAME}" --password-stdin
+
       - checkout
-      - cache restore
-      - cp .env.example .env
 
 blocks:
-  - name: Setup
+  - name: Build
     task:
+      secrets:
+        - name: semaphore-github-packages-secrets
       jobs:
-        - name: Bundle
-          commands:
-          - bundle install ${BUNDLE_ARGS}
-          - cache store
+      - name: Docker build
+        commands:
+          - docker pull "${BUILDER_NAME}" || true
+          - docker pull "${IMAGE_NAME}" || true
+          - docker build -t "${BUILDER_NAME}" --target Builder --cache-from="${BUILDER_NAME}" --build-arg BUNDLE_WITHOUT="${BUNDLE_WITHOUT}" --build-arg BUNDLER_VERSION=2.1.4 .
+          - docker build -t "${IMAGE_NAME}" --target Final --cache-from="${BUILDER_NAME}" --cache-from="${IMAGE_NAME}" --build-arg BUNDLE_WITHOUT="${BUNDLE_WITHOUT}" --build-arg BUNDLER_VERSION=2.1.4 .
+          - docker push "${BUILDER_NAME}"
+          - docker push "${IMAGE_NAME}"
 
-  - name: Quality
+  - name: Run
     task:
-      jobs:
-        - name: Quality
-          commands:
-            - bundle install ${BUNDLE_ARGS} --local
-            - bin/quality
+      secrets:
+        - name: github-docker-secrets
 
-  - name: Test
-    task:
       prologue:
         commands:
-          - nvm use
-          - sem-version ruby 2.5.7
-          - bundle install ${BUNDLE_ARGS} --local
-          - sem-service start postgres
-          - bin/rails db:setup
-          - bin/rails assets:precompile
+          - docker pull "${IMAGE_NAME}"
+          - cp docker-compose.linux.yml docker-compose.override.yml
+          - docker-compose up --detach
 
       jobs:
-      - name: Unit
+      - name: Run RSpec
         commands:
-          - bin/rspec --tag ~type:feature
+          - docker-compose exec app bin/rails db:create db:schema:load
+          - bin/tests
 
-      - name: Features
+      - name: Run Quality
         commands:
-          - bin/rspec --tag type:feature
-
-      # - name: Jasmine
-      #   commands:
-      #     - bundle exec rails jasmine:ci
+          - bin/quality
 
 promotions:
   - name: Deploy to Heroku
     pipeline_file: heroku.yml
-
-    # Continuous deployment from master branch
-    auto_promote_on:
-      - result: passed
-        branch:
-          - master
+    auto_promote:
+      when: "result = 'passed' and branch = 'master'"

@@ -1,0 +1,50 @@
+version: "3.4"
+
+x-app: &app_base
+  depends_on:
+    - db
+  image: ${IMAGE_NAME}
+  environment:
+    - DATABASE_URL=postgres://postgres:password@db
+    - RAILS_ENV
+    - RACK_ENV
+    - DATABASE_CLEANER_ALLOW_REMOTE_DATABASE_URL
+    - AUTH_SECRET_TOKEN
+    - MAILER_SENDER_ADDRESS
+    - PASSWORD_RECOVERY_LINK_TEMPLATE
+  build:
+    context: .
+    args:
+      - BUNDLE_WITHOUT="${BUNDLE_WITHOUT}"
+      - BUNDLER_VERSION=2.1.4
+      - FOLDERS_TO_REMOVE=""
+  links:
+    - db
+  volumes:
+    - ruby-bundle:/usr/local/bundle
+
+services:
+  db:
+    image: postgres:12-alpine
+    environment:
+      - POSTGRES_PASSWORD=password
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+  mailcatcher:
+    image: yappabe/mailcatcher
+    ports:
+      - "1025:1025"
+      - "1080:1080"
+  app:
+    <<: *app_base
+    depends_on:
+      - mailcatcher
+    ports:
+      - "3000:3000"
+    command: bin/docker-entrypoint
+
+volumes:
+  ruby-bundle:
+  db-data:

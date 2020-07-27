@@ -1,0 +1,6 @@
+version: "2"
+syncs:
+  app-files:
+    notify_terminal: true
+    src: './'
+    sync_excludes: ['.git', '.bundle']
