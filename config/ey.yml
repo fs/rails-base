@@ -1,0 +1,6 @@
+environments:
+  production:
+    copy_exclude:
+    - .git
+    bundle_without: test development staging
+    precompile_assets: true
