@@ -1,1 +1,1 @@
-#{config.shared_path}/config/env.cloud
+run ". #{config.shared_path}/config/env.cloud"
