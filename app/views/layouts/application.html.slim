@@ -14,7 +14,7 @@ html class="no-js" lang="en"
 
     == analytics_init if GoogleAnalytics.valid_tracker?
 
-  body data-current-user="#{current_user.to_json}"
+  body
     = render "navigation"
     = render "messages"
 
