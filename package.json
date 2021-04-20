@@ -1,7 +1,9 @@
 {
   "dependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@rails/ujs": "^6.0.3-1",
     "@rails/webpacker": "5.1.1",
+    "babel-plugin-remove-import-export": "^1.1.1",
     "jquery": "^3.5.1"
   },
   "devDependencies": {
