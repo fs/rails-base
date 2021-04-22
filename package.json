@@ -1,13 +1,10 @@
 {
   "dependencies": {
-    "@babel/preset-react": "^7.10.1",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@rails/ujs": "^6.0.3-1",
     "@rails/webpacker": "5.1.1",
-    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
-    "jquery": "^3.5.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "babel-plugin-remove-import-export": "^1.1.1",
+    "jquery": "^3.5.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
@@ -20,8 +17,6 @@
     "eslint-config-import": "^0.13.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-react": "^7.20.3",
     "jest": "^26.1.0",
     "webpack-dev-server": "^3.11.0"
   },

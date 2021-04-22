@@ -1,5 +1,5 @@
 .grid-x
   .cell
-    #hello
-
-= javascript_pack_tag "hello_world"
+    | Hello,
+    =< current_user&.full_name_with_email || "World"
+    | !
