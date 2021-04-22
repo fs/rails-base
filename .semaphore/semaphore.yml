@@ -54,7 +54,7 @@ blocks:
       prologue:
         commands:
           - nvm use
-          - sem-version ruby 2.5.7
+          - sem-version ruby 2.7.1
           - bundle install ${BUNDLE_ARGS} --local
           - sem-service start postgres
           - bin/rails db:setup
