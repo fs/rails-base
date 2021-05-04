@@ -69,10 +69,6 @@ blocks:
         commands:
           - bin/rspec --tag type:feature
 
-      # - name: Jasmine
-      #   commands:
-      #     - bundle exec rails jasmine:ci
-
 promotions:
   - name: Deploy to Heroku
     pipeline_file: heroku.yml
