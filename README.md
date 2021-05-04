@@ -19,7 +19,7 @@ It's based on Rails 6 and Ruby 2.7
 * [Draper](https://github.com/drapergem/draper) to decorate models for views
 * [Decent Decoration](https://github.com/netguru/decent_decoration) to extend Decent Exposure with Draper
 * [Interactors](https://github.com/collectiveidea/interactor) encapsulates application's business logic
-* [Pundit](https://github.com/elabs/pundit) to encapsulates authorization logic
+* [Action Policy](https://github.com/palkan/action_policy) to encapsulates authorization logic
 * [Kaminari](https://github.com/amatsuda/kaminari) for pagination
 * [Devise](http://github.com/plataformatec/devise) for basic auth
 * [Rollbar](https://github.com/rollbar/rollbar-gem) for exception notification
