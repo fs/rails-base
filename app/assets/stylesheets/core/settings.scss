@@ -60,7 +60,7 @@
 //  55. Top Bar
 //  56. Xy Grid
 
-@import 'util/util';
+// @import 'util/util';
 
 // 1. Global
 // ---------
@@ -75,6 +75,8 @@ $foundation-palette: (
   warning: #ffae00,
   alert: #cc4b37,
 );
+$warning-color: #ffae00;
+$alert-color: #cc4b37;
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
@@ -100,7 +102,7 @@ $global-color-pick-contrast-tolerance: 0;
 $print-transparent-backgrounds: true;
 $print-hrefs: true;
 
-@include add-foundation-colors;
+// @include add-foundation-colors;
 
 // 2. Breakpoints
 // --------------
@@ -808,9 +810,9 @@ $table-is-striped: true;
 $table-striped-background: smart-scale($table-background, $table-color-scale);
 $table-stripe: even;
 $table-head-background: smart-scale($table-background, $table-color-scale / 2);
-$table-head-row-hover: darken($table-head-background, $table-hover-scale);
+// $table-head-row-hover: darken($table-head-background, $table-hover-scale);
 $table-foot-background: smart-scale($table-background, $table-color-scale);
-$table-foot-row-hover: darken($table-foot-background, $table-hover-scale);
+// $table-foot-row-hover: darken($table-foot-background, $table-hover-scale);
 $table-head-font-color: $body-font-color;
 $table-foot-font-color: $body-font-color;
 $show-header-for-stacked: false;
