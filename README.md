@@ -7,7 +7,7 @@ It's based on Rails 6 and Ruby 2.7
 
 ## Application Gems
 
-* [SassC::Rails](https://github.com/sass/sassc-rails) for Sass/Scss stylesheets
+* [Sass](https://github.com/rails/sass-rails) for Sass/Scss stylesheets
 * [Zurb Foundation](https://github.com/zurb/foundation-rails) as CSS framework.
   For more information see [documentation on using Foundation in Rails apps](http://foundation.zurb.com/docs/applications.html)
 * [Foundation Icon Font](https://github.com/zaiste/foundation-icons-sass-rails) for icons. Browse [icon set](http://zurb.com/playground/foundation-icon-fonts-3) examples
