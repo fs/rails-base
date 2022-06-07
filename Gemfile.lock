@@ -210,7 +210,7 @@ GEM
       foundation_emails (~> 2)
       nokogiri
     interactor (3.1.0)
-    jmespath (1.4.0)
+    jmespath (1.6.1)
     kaminari (1.2.1)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.2.1)
